@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=qutebrowser
+export PYBUILD_DISABLE_python3=test
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_build:
+	python3 setup.py build
+	a2x -f manpage doc/qutebrowser.1.asciidoc
+	#dh_installchangelogs CHANGELOG.asciidoc
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -f debian/qutebrowser/usr/lib/python3/dist-packages/qutebrowser/html/COPYING.html
+	mv debian/qutebrowser/usr/lib/python3.4/dist-packages/qutebrowser/img/broken_qutebrowser_logo.png debian/qutebrowser/usr/share/qutebrowser/img/
+	#mv debian/qutebrowser/usr/lib/python3.4/dist-packages/qutebrowser/html/doc/img/cheatsheet-big.png debian/qutebrowser/usr/share/qutebrowser/img/
+	cp doc/img/cheatsheet-big.png debian/qutebrowser/usr/share/qutebrowser/img/
+	cp doc/img/cheatsheet-small.png debian/qutebrowser/usr/share/qutebrowser/img/
+	#mv debian/qutebrowser/usr/lib/python3.4/dist-packages/qutebrowser/html/doc/img/cheatsheet-small.png debian/qutebrowser/usr/share/qutebrowser/img/
+
+override_dh_auto_clean:
+	if [ -e .pybuild ]; then rm -rf .pybuild; fi
+	if [ -e doc/qutebrowser.1 ]; then rm doc/qutebrowser.1; fi
+	if [ -e scripts/__pycache__/ ]; then rm -rf scripts/__pycache__/; fi
+	if [ -e build/ ]; then rm -rf build/; fi
+	if [ -e qutebrowser.egg-info/ ]; then rm -rf qutebrowser.egg-info/; fi
