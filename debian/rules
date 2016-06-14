@@ -17,6 +17,7 @@ override_dh_auto_install:
 	cp doc/img/cheatsheet-big.png debian/qutebrowser/usr/share/qutebrowser/img/
 	cp doc/img/cheatsheet-small.png debian/qutebrowser/usr/share/qutebrowser/img/
 	#mv debian/qutebrowser/usr/lib/python3.4/dist-packages/qutebrowser/html/doc/img/cheatsheet-small.png debian/qutebrowser/usr/share/qutebrowser/img/
+	cp icons/qutebrowser.xpm debian/qutebrowser/usr/share/pixmaps/
 
 override_dh_auto_clean:
 	if [ -e .pybuild ]; then rm -rf .pybuild; fi
