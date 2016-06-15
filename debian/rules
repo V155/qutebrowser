@@ -14,11 +14,18 @@ override_dh_auto_install:
 	dh_auto_install
 	rm -f debian/qutebrowser/usr/lib/python3/dist-packages/qutebrowser/html/COPYING.html
 	mv debian/qutebrowser/usr/lib/python3.4/dist-packages/qutebrowser/img/broken_qutebrowser_logo.png debian/qutebrowser/usr/share/qutebrowser/img/
-	#mv debian/qutebrowser/usr/lib/python3.4/dist-packages/qutebrowser/html/doc/img/cheatsheet-big.png debian/qutebrowser/usr/share/qutebrowser/img/
 	cp doc/img/cheatsheet-big.png debian/qutebrowser/usr/share/qutebrowser/img/
 	cp doc/img/cheatsheet-small.png debian/qutebrowser/usr/share/qutebrowser/img/
-	#mv debian/qutebrowser/usr/lib/python3.4/dist-packages/qutebrowser/html/doc/img/cheatsheet-small.png debian/qutebrowser/usr/share/qutebrowser/img/
 	cp icons/qutebrowser.xpm debian/qutebrowser/usr/share/pixmaps/
+	install -Dm644 "icons/qutebrowser-16x16.png" "debian/qutebrowser/usr/share/icons/hicolor/16x16/apps/qutebrowser.png"
+	install -Dm644 "icons/qutebrowser-24x24.png" "debian/qutebrowser/usr/share/icons/hicolor/24x24/apps/qutebrowser.png"
+	install -Dm644 "icons/qutebrowser-32x32.png" "debian/qutebrowser/usr/share/icons/hicolor/32x32/apps/qutebrowser.png"
+	install -Dm644 "icons/qutebrowser-48x48.png" "debian/qutebrowser/usr/share/icons/hicolor/48x48/apps/qutebrowser.png"
+	install -Dm644 "icons/qutebrowser-64x64.png" "debian/qutebrowser/usr/share/icons/hicolor/64x64/apps/qutebrowser.png"
+	install -Dm644 "icons/qutebrowser-128x128.png" "debian/qutebrowser/usr/share/icons/hicolor/128x128/apps/qutebrowser.png"
+	install -Dm644 "icons/qutebrowser-256x256.png" "debian/qutebrowser/usr/share/icons/hicolor/256x256/apps/qutebrowser.png"
+	install -Dm644 "icons/qutebrowser-512x512.png" "debian/qutebrowser/usr/share/icons/hicolor/512x512/apps/qutebrowser.png"
+
 
 override_dh_auto_clean:
 	if [ -e .pybuild ]; then rm -rf .pybuild; fi
