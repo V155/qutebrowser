@@ -1,7 +1,7 @@
 qutebrowser (0.8.0-1) UNRELEASED; urgency=low
 
   [ Fritz Reichwald ]
-  * Initial release. (Closes: #XXXXXX)
+  * Initial release. 
   * Upstream release
   * pdf-js as new dep
 
@@ -10,5 +10,6 @@ qutebrowser (0.8.0-1) UNRELEASED; urgency=low
 
   [ Fritz Reichwald ]
   * New upstream release
+  * (Closes: #832159) 
 
  -- Fritz Reichwald <mail@fritzreichwald.de>  Tue, 26 Jul 2016 12:29:43 +0000
