@@ -1,0 +1,24 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qutebrowser
+Upstream-Contact: Florian Bruhin <me@the-compiler.org>
+Source: https://github.com/The-Compiler/qutebrowser/
+
+Files: *
+Copyright: 2014-2015 Florian Bruhin (The Compiler) <mail@qutebrowser.org>
+License: GPL-3+
+
+Files: debian/*
+Copyright: 2015 Fritz Reichwald
+License: GPL-3+
+
+License: GPL-3+
+ This software is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This software is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ It can be found in /usr/share/common-licenses/GPL-3
