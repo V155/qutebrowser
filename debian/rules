@@ -5,6 +5,7 @@ export PYBUILD_DISABLE_python3=test
 	dh $@ --with python3 --buildsystem=pybuild
 
 override_dh_auto_build:
+	python3 scripts/asciidoc2html.py
 	python3 setup.py build
 	a2x -f manpage doc/qutebrowser.1.asciidoc
 
