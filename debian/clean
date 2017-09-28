@@ -1,5 +1,0 @@
-.pybuild
-doc/qutebrowser.1
-scripts/__pycache__/
-build/
-qutebrowser.egg-info/

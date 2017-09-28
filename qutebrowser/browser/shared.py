@@ -21,9 +21,10 @@
 
 import html
 
+import jinja2
+
 from qutebrowser.config import config
-from qutebrowser.utils import usertypes, message, log, objreg, jinja
-from qutebrowser.mainwindow import mainwindow
+from qutebrowser.utils import usertypes, message, log, objreg
 
 
 class CallSuper(Exception):
@@ -34,18 +35,16 @@ class CallSuper(Exception):
 def custom_headers():
     """Get the combined custom headers."""
     headers = {}
+    dnt = b'1' if config.get('network', 'do-not-track') else b'0'
+    headers[b'DNT'] = dnt
+    headers[b'X-Do-Not-Track'] = dnt
 
-    dnt_config = config.val.content.headers.do_not_track
-    if dnt_config is not None:
-        dnt = b'1' if dnt_config else b'0'
-        headers[b'DNT'] = dnt
-        headers[b'X-Do-Not-Track'] = dnt
+    config_headers = config.get('network', 'custom-headers')
+    if config_headers is not None:
+        for header, value in config_headers.items():
+            headers[header.encode('ascii')] = value.encode('ascii')
 
-    conf_headers = config.val.content.headers.custom
-    for header, value in conf_headers.items():
-        headers[header.encode('ascii')] = value.encode('ascii')
-
-    accept_language = config.val.content.headers.accept_language
+    accept_language = config.get('network', 'accept-language')
     if accept_language is not None:
         headers[b'Accept-Language'] = accept_language.encode('ascii')
 
@@ -73,7 +72,7 @@ def authentication_required(url, authenticator, abort_on):
 def javascript_confirm(url, js_msg, abort_on):
     """Display a javascript confirm prompt."""
     log.js.debug("confirm: {}".format(js_msg))
-    if config.val.content.javascript.modal_dialog:
+    if config.get('ui', 'modal-js-dialog'):
         raise CallSuper
 
     msg = 'From <b>{}</b>:<br/>{}'.format(html.escape(url.toDisplayString()),
@@ -87,9 +86,9 @@ def javascript_confirm(url, js_msg, abort_on):
 def javascript_prompt(url, js_msg, default, abort_on):
     """Display a javascript prompt."""
     log.js.debug("prompt: {}".format(js_msg))
-    if config.val.content.javascript.modal_dialog:
+    if config.get('ui', 'modal-js-dialog'):
         raise CallSuper
-    if not config.val.content.javascript.prompt:
+    if config.get('content', 'ignore-javascript-prompt'):
         return (False, "")
 
     msg = '<b>{}</b> asks:<br/>{}'.format(html.escape(url.toDisplayString()),
@@ -108,32 +107,16 @@ def javascript_prompt(url, js_msg, default, abort_on):
 def javascript_alert(url, js_msg, abort_on):
     """Display a javascript alert."""
     log.js.debug("alert: {}".format(js_msg))
-    if config.val.content.javascript.modal_dialog:
+    if config.get('ui', 'modal-js-dialog'):
         raise CallSuper
 
-    if not config.val.content.javascript.alert:
+    if config.get('content', 'ignore-javascript-alert'):
         return
 
     msg = 'From <b>{}</b>:<br/>{}'.format(html.escape(url.toDisplayString()),
                                           html.escape(js_msg))
     message.ask('Javascript alert', msg, mode=usertypes.PromptMode.alert,
                 abort_on=abort_on)
-
-
-def javascript_log_message(level, source, line, msg):
-    """Display a JavaScript log message."""
-    logstring = "[{}:{}] {}".format(source, line, msg)
-    # Needs to line up with the values allowed for the
-    # content.javascript.log setting.
-    logmap = {
-        'none': lambda arg: None,
-        'debug': log.js.debug,
-        'info': log.js.info,
-        'warning': log.js.warning,
-        'error': log.js.error,
-    }
-    logger = logmap[config.val.content.javascript.log[level.name]]
-    logger(logstring)
 
 
 def ignore_certificate_errors(url, errors, abort_on):
@@ -146,7 +129,7 @@ def ignore_certificate_errors(url, errors, abort_on):
     Return:
         True if the error should be ignored, False otherwise.
     """
-    ssl_strict = config.val.content.ssl_strict
+    ssl_strict = config.get('network', 'ssl-strict')
     log.webview.debug("Certificate errors {!r}, strict {}".format(
         errors, ssl_strict))
 
@@ -154,7 +137,7 @@ def ignore_certificate_errors(url, errors, abort_on):
         assert error.is_overridable(), repr(error)
 
     if ssl_strict == 'ask':
-        err_template = jinja.environment.from_string("""
+        err_template = jinja2.Template("""
             Errors while loading <b>{{url.toDisplayString()}}</b>:<br/>
             <ul>
             {% for err in errors %}
@@ -172,7 +155,7 @@ def ignore_certificate_errors(url, errors, abort_on):
             ignore = False
         return ignore
     elif ssl_strict is False:
-        log.webview.debug("ssl_strict is False, only warning about errors")
+        log.webview.debug("ssl-strict is False, only warning about errors")
         for err in errors:
             # FIXME we might want to use warn here (non-fatal error)
             # https://github.com/qutebrowser/qutebrowser/issues/114
@@ -190,7 +173,7 @@ def feature_permission(url, option, msg, yes_action, no_action, abort_on):
 
     Args:
         url: The URL the request was done for.
-        option: An option name to check.
+        option: A (section, option) tuple for the option to check.
         msg: A string like "show notifications"
         yes_action: A callable to call if the request was approved
         no_action: A callable to call if the request was denied
@@ -199,7 +182,7 @@ def feature_permission(url, option, msg, yes_action, no_action, abort_on):
     Return:
         The Question object if a question was asked, None otherwise.
     """
-    config_val = config.instance.get(option)
+    config_val = config.get(*option)
     if config_val == 'ask':
         if url.isValid():
             text = "Allow the website at <b>{}</b> to {}?".format(
@@ -235,6 +218,7 @@ def get_tab(win_id, target):
     elif target == usertypes.ClickTarget.window:
         tabbed_browser = objreg.get('tabbed-browser', scope='window',
                                     window=win_id)
+        from qutebrowser.mainwindow import mainwindow
         window = mainwindow.MainWindow(private=tabbed_browser.private)
         window.show()
         win_id = window.win_id
@@ -249,14 +233,15 @@ def get_tab(win_id, target):
 
 def get_user_stylesheet():
     """Get the combined user-stylesheet."""
-    css = ''
-    stylesheets = config.val.content.user_stylesheets
+    filename = config.get('ui', 'user-stylesheet')
 
-    for filename in stylesheets:
+    if filename is None:
+        css = ''
+    else:
         with open(filename, 'r', encoding='utf-8') as f:
-            css += f.read()
+            css = f.read()
 
-    if not config.val.scrolling.bar:
+    if config.get('ui', 'hide-scrollbar'):
         css += '\nhtml > ::-webkit-scrollbar { width: 0px; height: 0px; }'
 
     return css

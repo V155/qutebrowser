@@ -22,7 +22,7 @@
 from PyQt5.QtCore import pyqtSlot, pyqtProperty, Qt, QUrl
 
 from qutebrowser.mainwindow.statusbar import textbase
-from qutebrowser.config import config
+from qutebrowser.config import style
 from qutebrowser.utils import usertypes, urlutils
 
 
@@ -53,27 +53,27 @@ class UrlText(textbase.TextBase):
 
     STYLESHEET = """
         QLabel#UrlText[urltype="normal"] {
-            color: {{ conf.colors.statusbar.url.fg }};
+            color: {{ color['statusbar.url.fg'] }};
         }
 
         QLabel#UrlText[urltype="success"] {
-            color: {{ conf.colors.statusbar.url.success.http.fg }};
+            color: {{ color['statusbar.url.fg.success'] }};
         }
 
         QLabel#UrlText[urltype="success_https"] {
-            color: {{ conf.colors.statusbar.url.success.https.fg }};
+            color: {{ color['statusbar.url.fg.success.https'] }};
         }
 
         QLabel#UrlText[urltype="error"] {
-            color: {{ conf.colors.statusbar.url.error.fg }};
+            color: {{ color['statusbar.url.fg.error'] }};
         }
 
         QLabel#UrlText[urltype="warn"] {
-            color: {{ conf.colors.statusbar.url.warn.fg }};
+            color: {{ color['statusbar.url.fg.warn'] }};
         }
 
         QLabel#UrlText[urltype="hover"] {
-            color: {{ conf.colors.statusbar.url.hover.fg }};
+            color: {{ color['statusbar.url.fg.hover'] }};
         }
     """
 
@@ -81,7 +81,7 @@ class UrlText(textbase.TextBase):
         """Override TextBase.__init__ to elide in the middle by default."""
         super().__init__(parent, Qt.ElideMiddle)
         self.setObjectName(self.__class__.__name__)
-        config.set_register_stylesheet(self)
+        style.set_register_stylesheet(self)
         self._hover_url = None
         self._normal_url = None
         self._normal_url_type = UrlType.normal
@@ -109,7 +109,7 @@ class UrlText(textbase.TextBase):
         else:
             self.setText('')
             self._urltype = UrlType.normal
-        config.set_register_stylesheet(self, update=False)
+        self.setStyleSheet(style.get_stylesheet(self.STYLESHEET))
 
     @pyqtSlot(str)
     def on_load_status_changed(self, status_str):

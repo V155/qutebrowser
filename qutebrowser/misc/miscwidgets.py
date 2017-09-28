@@ -24,8 +24,7 @@ from PyQt5.QtWidgets import (QLineEdit, QWidget, QHBoxLayout, QLabel,
                              QStyleOption, QStyle, QLayout, QApplication)
 from PyQt5.QtGui import QValidator, QPainter
 
-from qutebrowser.config import config
-from qutebrowser.utils import utils, qtutils, log, usertypes
+from qutebrowser.utils import utils, objreg, qtutils, log, usertypes
 from qutebrowser.misc import cmdhistory, objects
 
 
@@ -246,7 +245,8 @@ class WrapperLayout(QLayout):
     def sizeHint(self):
         return self._widget.sizeHint()
 
-    def itemAt(self, _index):
+    def itemAt(self, _index):  # pragma: no cover
+        # For some reason this sometimes gets called by Qt.
         return None
 
     def takeAt(self, _index):
@@ -289,7 +289,8 @@ class FullscreenNotification(QLabel):
             padding: 30px;
         """)
 
-        all_bindings = config.key_instance.get_reverse_bindings_for('normal')
+        key_config = objreg.get('key-config')
+        all_bindings = key_config.get_reverse_bindings_for('normal')
         bindings = all_bindings.get('fullscreen --leave')
         if bindings:
             key = bindings[0]

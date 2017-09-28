@@ -22,8 +22,8 @@
 import io
 import shutil
 import functools
+import collections
 
-import attr
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QTimer
 from PyQt5.QtNetwork import QNetworkRequest, QNetworkReply
 
@@ -34,11 +34,7 @@ from qutebrowser.browser.webkit import http
 from qutebrowser.browser.webkit.network import networkmanager
 
 
-@attr.s
-class _RetryInfo:
-
-    request = attr.ib()
-    manager = attr.ib()
+_RetryInfo = collections.namedtuple('_RetryInfo', ['request', 'manager'])
 
 
 class DownloadItem(downloads.AbstractDownloadItem):
@@ -372,7 +368,7 @@ class DownloadManager(downloads.AbstractDownloadManager):
         super().__init__(parent)
         self._networkmanager = networkmanager.NetworkManager(
             win_id=win_id, tab_id=None,
-            private=config.val.content.private_browsing, parent=self)
+            private=config.get('general', 'private-browsing'), parent=self)
 
     @pyqtSlot('QUrl')
     def get(self, url, *, user_agent=None, **kwargs):
@@ -416,8 +412,7 @@ class DownloadManager(downloads.AbstractDownloadManager):
                 mhtml.start_download_checked, tab=tab))
             message.global_bridge.ask(question, blocking=False)
 
-    def get_request(self, request, *, target=None,
-                    suggested_fn=None, **kwargs):
+    def get_request(self, request, *, target=None, **kwargs):
         """Start a download with a QNetworkRequest.
 
         Args:
@@ -433,9 +428,7 @@ class DownloadManager(downloads.AbstractDownloadManager):
         request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                              QNetworkRequest.AlwaysNetwork)
 
-        if suggested_fn is not None:
-            pass
-        elif request.url().scheme().lower() != 'data':
+        if request.url().scheme().lower() != 'data':
             suggested_fn = urlutils.filename_from_url(request.url())
         else:
             # We might be downloading a binary blob embedded on a page or even
@@ -487,7 +480,7 @@ class DownloadManager(downloads.AbstractDownloadManager):
             reply: The QNetworkReply to download.
             target: Where to save the download as downloads.DownloadTarget.
             auto_remove: Whether to remove the download even if
-                         downloads.remove_finished is set to -1.
+                         ui -> remove-finished-downloads is set to -1.
 
         Return:
             The created DownloadItem.

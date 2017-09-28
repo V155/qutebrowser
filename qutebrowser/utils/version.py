@@ -29,7 +29,6 @@ import importlib
 import collections
 import pkg_resources
 
-import attr
 from PyQt5.QtCore import PYQT_VERSION_STR, QLibraryInfo
 from PyQt5.QtNetwork import QSslSocket
 from PyQt5.QtWidgets import QApplication
@@ -45,20 +44,13 @@ except ImportError:  # pragma: no cover
     QWebEngineProfile = None
 
 import qutebrowser
-from qutebrowser.utils import log, utils, standarddir, usertypes
-from qutebrowser.misc import objects, earlyinit, sql
+from qutebrowser.utils import log, utils, standarddir, usertypes, qtutils
+from qutebrowser.misc import objects, earlyinit
 from qutebrowser.browser import pdfjs
 
 
-@attr.s
-class DistributionInfo:
-
-    """Information about the running distribution."""
-
-    id = attr.ib()
-    parsed = attr.ib()
-    version = attr.ib()
-    pretty = attr.ib()
+DistributionInfo = collections.namedtuple(
+    'DistributionInfo', ['id', 'parsed', 'version', 'pretty'])
 
 
 Distribution = usertypes.enum(
@@ -89,8 +81,6 @@ def distribution():
         return None
 
     pretty = info.get('PRETTY_NAME', 'Unknown')
-    if pretty == 'Linux':  # Thanks, Funtoo
-        pretty = info.get('NAME', pretty)
 
     if 'VERSION_ID' in info:
         dist_version = pkg_resources.parse_version(info['VERSION_ID'])
@@ -98,11 +88,8 @@ def distribution():
         dist_version = None
 
     dist_id = info.get('ID', None)
-    id_mappings = {
-        'funtoo': 'gentoo',  # does not have ID_LIKE=gentoo
-    }
     try:
-        parsed = Distribution[id_mappings.get(dist_id, dist_id)]
+        parsed = Distribution[dist_id]
     except KeyError:
         parsed = Distribution.unknown
 
@@ -198,25 +185,26 @@ def _module_versions():
         ('pygments', ['__version__']),
         ('yaml', ['__version__']),
         ('cssutils', ['__version__']),
-        ('attr', ['__version__']),
+        ('typing', []),
+        ('OpenGL', ['__version__']),
         ('PyQt5.QtWebEngineWidgets', []),
         ('PyQt5.QtWebKitWidgets', []),
     ])
-    for modname, attributes in modules.items():
+    for name, attributes in modules.items():
         try:
-            module = importlib.import_module(modname)
+            module = importlib.import_module(name)
         except ImportError:
-            text = '{}: no'.format(modname)
+            text = '{}: no'.format(name)
         else:
-            for name in attributes:
+            for attr in attributes:
                 try:
-                    text = '{}: {}'.format(modname, getattr(module, name))
+                    text = '{}: {}'.format(name, getattr(module, attr))
                 except AttributeError:
                     pass
                 else:
                     break
             else:
-                text = '{}: yes'.format(modname)
+                text = '{}: yes'.format(name)
         lines.append(text)
     return lines
 
@@ -227,17 +215,14 @@ def _path_info():
     Return:
         A dictionary of descriptive to actual path names.
     """
-    info = {
+    return {
         'config': standarddir.config(),
         'data': standarddir.data(),
+        'system_data': standarddir.system_data(),
         'cache': standarddir.cache(),
+        'download': standarddir.download(),
         'runtime': standarddir.runtime(),
     }
-    if standarddir.config() != standarddir.config(auto=True):
-        info['auto config'] = standarddir.config(auto=True)
-    if standarddir.data() != standarddir.data(system=True):
-        info['system data'] = standarddir.data(system=True)
-    return info
 
 
 def _os_info():
@@ -248,12 +233,12 @@ def _os_info():
     """
     lines = []
     releaseinfo = None
-    if utils.is_linux:
+    if sys.platform == 'linux':
         osver = ''
         releaseinfo = _release_info()
-    elif utils.is_windows:
+    elif sys.platform == 'win32':
         osver = ', '.join(platform.win32_ver())
-    elif utils.is_mac:
+    elif sys.platform == 'darwin':
         release, versioninfo, machine = platform.mac_ver()
         if all(not e for e in versioninfo):
             versioninfo = ''
@@ -312,7 +297,9 @@ def _chromium_version():
 def _backend():
     """Get the backend line with relevant information."""
     if objects.backend == usertypes.Backend.QtWebKit:
-        return 'new QtWebKit (WebKit {})'.format(qWebKitVersion())
+        return '{} (WebKit {})'.format(
+            'QtWebKit-NG' if qtutils.is_qtwebkit_ng() else 'legacy QtWebKit',
+            qWebKitVersion())
     else:
         webengine = usertypes.Backend.QtWebEngine
         assert objects.backend == webengine, objects.backend
@@ -339,11 +326,11 @@ def version():
 
     lines += _module_versions()
 
+    lines += ['pdf.js: {}'.format(_pdfjs_version())]
+
     lines += [
-        'pdf.js: {}'.format(_pdfjs_version()),
-        'sqlite: {}'.format(sql.version()),
-        'QtNetwork SSL: {}\n'.format(QSslSocket.sslLibraryVersionString()
-                                     if QSslSocket.supportsSsl() else 'no'),
+        'SSL: {}'.format(QSslSocket.sslLibraryVersionString()),
+        '',
     ]
 
     qapp = QApplication.instance()
@@ -379,7 +366,7 @@ def version():
         '',
         'Paths:',
     ]
-    for name, path in sorted(_path_info().items()):
+    for name, path in _path_info().items():
         lines += ['{}: {}'.format(name, path)]
 
     return '\n'.join(lines)

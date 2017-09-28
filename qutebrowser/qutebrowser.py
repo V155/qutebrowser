@@ -51,9 +51,9 @@ def get_argparser():
     parser.add_argument('-V', '--version', help="Show version and quit.",
                         action='store_true')
     parser.add_argument('-s', '--set', help="Set a temporary setting for "
-                        "this session.", nargs=2, action='append',
+                        "this session.", nargs=3, action='append',
                         dest='temp_settings', default=[],
-                        metavar=('OPTION', 'VALUE'))
+                        metavar=('SECTION', 'OPTION', 'VALUE'))
     parser.add_argument('-r', '--restore', help="Restore a named session.",
                         dest='session')
     parser.add_argument('-R', '--override-restore', help="Don't restore a "
@@ -95,6 +95,11 @@ def get_argparser():
                        action='store_false', dest='color')
     debug.add_argument('--force-color', help="Force colored logging",
                        action='store_true')
+    debug.add_argument('--harfbuzz', choices=['old', 'new', 'system', 'auto'],
+                       default='auto', help="HarfBuzz engine version to use. "
+                       "Default: auto.")
+    debug.add_argument('--relaxed-config', action='store_true',
+                       help="Silently remove unknown config options.")
     debug.add_argument('--nowindow', action='store_true', help="Don't show "
                        "the main window.")
     debug.add_argument('--temp-basedir', action='store_true', help="Use a "
@@ -145,7 +150,7 @@ def debug_flag_error(flag):
         debug-exit: Turn on debugging of late exit.
         pdb-postmortem: Drop into pdb on exceptions.
     """
-    valid_flags = ['debug-exit', 'pdb-postmortem', 'no-sql-history']
+    valid_flags = ['debug-exit', 'pdb-postmortem']
 
     if flag in valid_flags:
         return flag
@@ -165,8 +170,8 @@ def main():
         # from json.
         data = json.loads(args.json_args)
         args = argparse.Namespace(**data)
-    earlyinit.early_init(args)
+    earlyinit.earlyinit(args)
     # We do this imports late as earlyinit needs to be run first (because of
-    # version checking and other early initialization)
+    # the harfbuzz fix and version checking).
     from qutebrowser import app
     return app.run(args)

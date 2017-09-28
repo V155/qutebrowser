@@ -23,16 +23,18 @@ import os
 import os.path
 
 import sip
-from PyQt5.QtCore import QUrl, QObject, QPoint, QTimer
+from PyQt5.QtCore import pyqtSignal, QUrl, QObject, QPoint, QTimer
 from PyQt5.QtWidgets import QApplication
 import yaml
+try:
+    from yaml import CSafeLoader as YamlLoader, CSafeDumper as YamlDumper
+except ImportError:  # pragma: no cover
+    from yaml import SafeLoader as YamlLoader, SafeDumper as YamlDumper
 
-from qutebrowser.utils import (standarddir, objreg, qtutils, log, message,
-                               utils)
+from qutebrowser.utils import (standarddir, objreg, qtutils, log, usertypes,
+                               message, utils)
 from qutebrowser.commands import cmdexc, cmdutils
-from qutebrowser.config import config, configfiles
-from qutebrowser.completion.models import miscmodels
-from qutebrowser.mainwindow import mainwindow
+from qutebrowser.config import config
 
 
 default = object()  # Sentinel value
@@ -103,7 +105,13 @@ class SessionManager(QObject):
                               closed.
         _current: The name of the currently loaded session, or None.
         did_load: Set when a session was loaded.
+
+    Signals:
+        update_completion: Emitted when the session completion should get
+                           updated.
     """
+
+    update_completion = pyqtSignal()
 
     def __init__(self, base_path, parent=None):
         super().__init__(parent)
@@ -251,7 +259,7 @@ class SessionManager(QObject):
                   object.
         """
         if name is default:
-            name = config.val.session_default_name
+            name = config.get('general', 'session-default-name')
             if name is None:
                 if self._current is not None:
                     name = self._current
@@ -290,12 +298,15 @@ class SessionManager(QObject):
         log.sessions.vdebug("Saving data: {}".format(data))
         try:
             with qtutils.savefile_open(path) as f:
-                utils.yaml_dump(data, f)
+                yaml.dump(data, f, Dumper=YamlDumper, default_flow_style=False,
+                          encoding='utf-8', allow_unicode=True)
         except (OSError, UnicodeEncodeError, yaml.YAMLError) as e:
             raise SessionError(e)
-
+        else:
+            self.update_completion.emit()
         if load_next_time:
-            configfiles.state['general']['session'] = name
+            state_config = objreg.get('state-config')
+            state_config['general']['session'] = name
         return name
 
     def save_autosave(self):
@@ -372,10 +383,11 @@ class SessionManager(QObject):
             name: The name of the session to load.
             temp: If given, don't set the current session.
         """
+        from qutebrowser.mainwindow import mainwindow
         path = self._get_session_path(name, check_exists=True)
         try:
             with open(path, encoding='utf-8') as f:
-                data = utils.yaml_load(f)
+                data = yaml.load(f, Loader=YamlLoader)
         except (OSError, UnicodeDecodeError, yaml.YAMLError) as e:
             raise SessionError(e)
 
@@ -412,6 +424,7 @@ class SessionManager(QObject):
             os.remove(path)
         except OSError as e:
             raise SessionError(e)
+        self.update_completion.emit()
 
     def list_sessions(self):
         """Get a list of all session names."""
@@ -420,10 +433,10 @@ class SessionManager(QObject):
             base, ext = os.path.splitext(filename)
             if ext == '.yml':
                 sessions.append(base)
-        return sorted(sessions)
+        return sessions
 
     @cmdutils.register(instance='session-manager')
-    @cmdutils.argument('name', completion=miscmodels.session)
+    @cmdutils.argument('name', completion=usertypes.Completion.sessions)
     def session_load(self, name, clear=False, temp=False, force=False):
         """Load a session.
 
@@ -450,8 +463,8 @@ class SessionManager(QObject):
                 for win in old_windows:
                     win.close()
 
-    @cmdutils.register(instance='session-manager')
-    @cmdutils.argument('name', completion=miscmodels.session)
+    @cmdutils.register(name=['session-save', 'w'], instance='session-manager')
+    @cmdutils.argument('name', completion=usertypes.Completion.sessions)
     @cmdutils.argument('win_id', win_id=True)
     @cmdutils.argument('with_private', flag='p')
     def session_save(self, name: str = default, current=False, quiet=False,
@@ -461,7 +474,7 @@ class SessionManager(QObject):
 
         Args:
             name: The name of the session. If not given, the session configured
-                  in session_default_name is saved.
+                  in general -> session-default-name is saved.
             current: Save the current session instead of the default.
             quiet: Don't show confirmation message.
             force: Force saving internal sessions (starting with an underline).
@@ -479,7 +492,7 @@ class SessionManager(QObject):
         try:
             if only_active_window:
                 name = self.save(name, only_window=win_id,
-                                 with_private=True)
+                                 with_private=with_private)
             else:
                 name = self.save(name, with_private=with_private)
         except SessionError as e:
@@ -490,7 +503,7 @@ class SessionManager(QObject):
                 message.info("Saved session {}.".format(name))
 
     @cmdutils.register(instance='session-manager')
-    @cmdutils.argument('name', completion=miscmodels.session)
+    @cmdutils.argument('name', completion=usertypes.Completion.sessions)
     def session_delete(self, name, force=False):
         """Delete a session.
 

@@ -69,22 +69,15 @@ class UnsupportedOperationError(Exception):
 
 def download_dir():
     """Get the download directory to use."""
-    directory = config.val.downloads.location.directory
-    remember_dir = config.val.downloads.location.remember
+    directory = config.get('storage', 'download-directory')
+    remember_dir = config.get('storage', 'remember-download-directory')
 
     if remember_dir and last_used_directory is not None:
-        ddir = last_used_directory
+        return last_used_directory
     elif directory is None:
-        ddir = standarddir.download()
+        return standarddir.download()
     else:
-        ddir = directory
-
-    try:
-        os.makedirs(ddir)
-    except FileExistsError:
-        pass
-
-    return ddir
+        return directory
 
 
 def immediate_download_path(prompt_download_directory=None):
@@ -95,10 +88,11 @@ def immediate_download_path(prompt_download_directory=None):
     Args:
         prompt_download_directory: If this is something else than None, it
                                    will overwrite the
-                                   downloads.location.prompt setting.
+                                   storage->prompt-download-directory setting.
     """
     if prompt_download_directory is None:
-        prompt_download_directory = config.val.downloads.location.prompt
+        prompt_download_directory = config.get('storage',
+                                               'prompt-download-directory')
 
     if not prompt_download_directory:
         return download_dir()
@@ -110,7 +104,7 @@ def _path_suggestion(filename):
     Args:
         filename: The filename to use if included in the suggestion.
     """
-    suggestion = config.val.downloads.location.suggestion
+    suggestion = config.get('completion', 'download-path-suggestion')
     if suggestion == 'path':
         # add trailing '/' if not present
         return os.path.join(download_dir(), '')
@@ -174,7 +168,7 @@ def transform_path(path):
 
     Returns None if the path is invalid on the current platform.
     """
-    if not utils.is_windows:
+    if sys.platform != "win32":
         return path
     path = utils.expand_windows_drive(path)
     # Drive dependent working directories are not supported, e.g.
@@ -186,28 +180,6 @@ def transform_path(path):
     if pathlib.Path(path).is_reserved():
         return None
     return path
-
-
-def suggested_fn_from_title(url_path, title=None):
-    """Suggest a filename depending on the URL extension and page title.
-
-    Args:
-        url_path: a string with the URL path
-        title: the page title string
-
-    Return:
-        The download filename based on the title, or None if the extension is
-        not found in the whitelist (or if there is no page title).
-    """
-    ext_whitelist = [".html", ".htm", ".php", ""]
-    _, ext = os.path.splitext(url_path)
-    if ext.lower() in ext_whitelist and title:
-        suggested_fn = utils.sanitize_filename(title)
-        if not suggested_fn.lower().endswith((".html", ".htm")):
-            suggested_fn += ".html"
-    else:
-        suggested_fn = None
-    return suggested_fn
 
 
 class NoFilenameError(Exception):
@@ -500,13 +472,13 @@ class AbstractDownloadItem(QObject):
         Args:
             position: The color type requested, can be 'fg' or 'bg'.
         """
+        # pylint: disable=bad-config-call
+        # WORKAROUND for https://bitbucket.org/logilab/astroid/issue/104/
         assert position in ["fg", "bg"]
-        # pylint: disable=bad-config-option
-        start = getattr(config.val.colors.downloads.start, position)
-        stop = getattr(config.val.colors.downloads.stop, position)
-        system = getattr(config.val.colors.downloads.system, position)
-        error = getattr(config.val.colors.downloads.error, position)
-        # pylint: enable=bad-config-option
+        start = config.get('colors', 'downloads.{}.start'.format(position))
+        stop = config.get('colors', 'downloads.{}.stop'.format(position))
+        system = config.get('colors', 'downloads.{}.system'.format(position))
+        error = config.get('colors', 'downloads.{}.error'.format(position))
         if self.error_msg is not None:
             assert not self.successful
             return error
@@ -578,7 +550,7 @@ class AbstractDownloadItem(QObject):
         Args:
             cmdline: The command to use as string. A `{}` is expanded to the
                      filename. None means to use the system's default
-                     application or `downloads.open_dispatcher` if set. If no
+                     application or `default-open-dispatcher` if set. If no
                      `{}` is found, the filename is appended to the cmdline.
         """
         assert self.successful
@@ -763,7 +735,7 @@ class AbstractDownloadManager(QObject):
         download.remove_requested.connect(functools.partial(
             self._remove_item, download))
 
-        delay = config.val.downloads.remove_finished
+        delay = config.get('ui', 'remove-finished-downloads')
         if delay > -1:
             download.finished.connect(
                 lambda: QTimer.singleShot(delay, download.remove))
