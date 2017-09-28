@@ -17,70 +17,142 @@
 # You should have received a copy of the GNU General Public License
 # along with qutebrowser.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Functions that return config-related completion models."""
+"""CompletionModels for the config."""
 
-from qutebrowser.config import configdata, configexc
-from qutebrowser.completion.models import completionmodel, listcategory, util
-from qutebrowser.commands import runners, cmdexc
+from PyQt5.QtCore import pyqtSlot, Qt
 
-
-def option(*, info):
-    """A CompletionModel filled with settings and their descriptions."""
-    model = completionmodel.CompletionModel(column_widths=(20, 70, 10))
-    options = ((opt.name, opt.description, info.config.get_str(opt.name))
-               for opt in configdata.DATA.values())
-    model.add_category(listcategory.ListCategory("Options", sorted(options)))
-    return model
+from qutebrowser.config import config, configdata
+from qutebrowser.utils import log, qtutils, objreg
+from qutebrowser.completion.models import base
 
 
-def value(optname, *_values, info):
+class SettingSectionCompletionModel(base.BaseCompletionModel):
+
+    """A CompletionModel filled with settings sections."""
+
+    # https://github.com/qutebrowser/qutebrowser/issues/545
+    # pylint: disable=abstract-method
+
+    COLUMN_WIDTHS = (20, 70, 10)
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        cat = self.new_category("Sections")
+        for name in configdata.DATA:
+            desc = configdata.SECTION_DESC[name].splitlines()[0].strip()
+            self.new_item(cat, name, desc)
+
+
+class SettingOptionCompletionModel(base.BaseCompletionModel):
+
+    """A CompletionModel filled with settings and their descriptions.
+
+    Attributes:
+        _misc_items: A dict of the misc. column items which will be set later.
+        _section: The config section this model shows.
+    """
+
+    # https://github.com/qutebrowser/qutebrowser/issues/545
+    # pylint: disable=abstract-method
+
+    COLUMN_WIDTHS = (20, 70, 10)
+
+    def __init__(self, section, parent=None):
+        super().__init__(parent)
+        cat = self.new_category(section)
+        sectdata = configdata.DATA[section]
+        self._misc_items = {}
+        self._section = section
+        objreg.get('config').changed.connect(self.update_misc_column)
+        for name in sectdata:
+            try:
+                desc = sectdata.descriptions[name]
+            except (KeyError, AttributeError):
+                # Some stuff (especially ValueList items) don't have a
+                # description.
+                desc = ""
+            else:
+                desc = desc.splitlines()[0]
+            value = config.get(section, name, raw=True)
+            _valitem, _descitem, miscitem = self.new_item(cat, name, desc,
+                                                          value)
+            self._misc_items[name] = miscitem
+
+    @pyqtSlot(str, str)
+    def update_misc_column(self, section, option):
+        """Update misc column when config changed."""
+        if section != self._section:
+            return
+        try:
+            item = self._misc_items[option]
+        except KeyError:
+            log.completion.debug("Couldn't get item {}.{} from model!".format(
+                section, option))
+            # changed before init
+            return
+        val = config.get(section, option, raw=True)
+        idx = item.index()
+        qtutils.ensure_valid(idx)
+        ok = self.setData(idx, val, Qt.DisplayRole)
+        if not ok:
+            raise ValueError("Setting data failed! (section: {}, option: {}, "
+                             "value: {})".format(section, option, val))
+
+
+class SettingValueCompletionModel(base.BaseCompletionModel):
+
     """A CompletionModel filled with setting values.
 
-    Args:
-        optname: The name of the config option this model shows.
-        _values: The values already provided on the command line.
-        info: A CompletionInfo instance.
+    Attributes:
+        _section: The config section this model shows.
+        _option: The config option this model shows.
     """
-    model = completionmodel.CompletionModel(column_widths=(30, 70, 0))
 
-    try:
-        current = info.config.get_str(optname) or '""'
-    except configexc.NoOptionError:
-        return None
+    # https://github.com/qutebrowser/qutebrowser/issues/545
+    # pylint: disable=abstract-method
 
-    opt = info.config.get_opt(optname)
-    default = opt.typ.to_str(opt.default)
-    cur_cat = listcategory.ListCategory("Current/Default",
-        [(current, "Current value"), (default, "Default value")])
-    model.add_category(cur_cat)
+    COLUMN_WIDTHS = (20, 70, 10)
 
-    vals = opt.typ.complete()
-    if vals is not None:
-        model.add_category(listcategory.ListCategory("Completions",
-                                                     sorted(vals)))
-    return model
-
-
-def bind(key, *, info):
-    """A CompletionModel filled with all bindable commands and descriptions.
-
-    Args:
-        key: the key being bound.
-    """
-    model = completionmodel.CompletionModel(column_widths=(20, 60, 20))
-    cmd_text = info.keyconf.get_command(key, 'normal')
-
-    if cmd_text:
-        parser = runners.CommandParser()
-        try:
-            cmd = parser.parse(cmd_text).cmd
-        except cmdexc.NoSuchCommandError:
-            data = [(cmd_text, 'Invalid command!', key)]
+    def __init__(self, section, option, parent=None):
+        super().__init__(parent)
+        self._section = section
+        self._option = option
+        objreg.get('config').changed.connect(self.update_current_value)
+        cur_cat = self.new_category("Current/Default", sort=0)
+        value = config.get(section, option, raw=True)
+        if not value:
+            value = '""'
+        self.cur_item, _descitem, _miscitem = self.new_item(cur_cat, value,
+                                                            "Current value")
+        default_value = configdata.DATA[section][option].default()
+        if not default_value:
+            default_value = '""'
+        self.new_item(cur_cat, default_value, "Default value")
+        if hasattr(configdata.DATA[section], 'valtype'):
+            # Same type for all values (ValueList)
+            vals = configdata.DATA[section].valtype.complete()
         else:
-            data = [(cmd_text, cmd.desc, key)]
-        model.add_category(listcategory.ListCategory("Current", data))
+            if option is None:
+                raise ValueError("option may only be None for ValueList "
+                                 "sections, but {} is not!".format(section))
+            # Different type for each value (KeyValue)
+            vals = configdata.DATA[section][option].typ.complete()
+        if vals is not None:
+            cat = self.new_category("Completions", sort=1)
+            for (val, desc) in vals:
+                self.new_item(cat, val, desc)
 
-    cmdlist = util.get_cmd_completions(info, include_hidden=True,
-                                       include_aliases=True)
-    model.add_category(listcategory.ListCategory("Commands", cmdlist))
-    return model
+    @pyqtSlot(str, str)
+    def update_current_value(self, section, option):
+        """Update current value when config changed."""
+        if (section, option) != (self._section, self._option):
+            return
+        value = config.get(section, option, raw=True)
+        if not value:
+            value = '""'
+        idx = self.cur_item.index()
+        qtutils.ensure_valid(idx)
+        ok = self.setData(idx, value, Qt.DisplayRole)
+        if not ok:
+            raise ValueError("Setting data failed! (section: {}, option: {}, "
+                             "value: {})".format(section, option, value))

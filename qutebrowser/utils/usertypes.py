@@ -236,6 +236,13 @@ KeyMode = enum('KeyMode', ['normal', 'hint', 'command', 'yesno', 'prompt',
                            'jump_mark', 'record_macro', 'run_macro'])
 
 
+# Available command completions
+Completion = enum('Completion', ['command', 'section', 'option', 'value',
+                                 'helptopic', 'quickmark_by_name',
+                                 'bookmark_by_url', 'url', 'tab', 'sessions',
+                                 'bind'])
+
+
 # Exit statuses for errors. Needs to be an int for sys.exit.
 Exit = enum('Exit', ['ok', 'reserved', 'exception', 'err_ipc', 'err_init',
                      'err_config', 'err_key_config'], is_int=True, start=0)
@@ -252,11 +259,6 @@ Backend = enum('Backend', ['QtWebKit', 'QtWebEngine'])
 
 # JS world for QtWebEngine
 JsWorld = enum('JsWorld', ['main', 'application', 'user', 'jseval'])
-
-
-# Log level of a JS message. This needs to match up with the keys allowed for
-# the content.javascript.log setting.
-JsLogLevel = enum('JsLogLevel', ['unknown', 'info', 'warning', 'error'])
 
 
 MessageLevel = enum('MessageLevel', ['error', 'warning', 'info'])
@@ -355,8 +357,14 @@ class Question(QObject):
             log.misc.debug("Question was already aborted")
             return
         self.is_aborted = True
-        self.aborted.emit()
-        self.completed.emit()
+        try:
+            self.aborted.emit()
+            self.completed.emit()
+        except TypeError:
+            # WORKAROUND
+            # We seem to get "pyqtSignal must be bound to a QObject, not
+            # 'Question' here, which makes no sense at all..."
+            log.misc.exception("Error while aborting question")
 
 
 class Timer(QTimer):

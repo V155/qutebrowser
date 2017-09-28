@@ -77,9 +77,13 @@ class UrlMarkManager(QObject):
 
     Signals:
         changed: Emitted when anything changed.
+        added: Emitted when a new quickmark/bookmark was added.
+        removed: Emitted when an existing quickmark/bookmark was removed.
     """
 
     changed = pyqtSignal()
+    added = pyqtSignal(str, str)
+    removed = pyqtSignal(str)
 
     def __init__(self, parent=None):
         """Initialize and read quickmarks."""
@@ -117,6 +121,7 @@ class UrlMarkManager(QObject):
         """
         del self.marks[key]
         self.changed.emit()
+        self.removed.emit(key)
 
 
 class QuickmarkManager(UrlMarkManager):
@@ -128,6 +133,7 @@ class QuickmarkManager(UrlMarkManager):
         - self.marks maps names to URLs.
         - changed gets emitted with the name as first argument and the URL as
           second argument.
+        - removed gets emitted with the name as argument.
     """
 
     def _init_lineparser(self):
@@ -187,6 +193,7 @@ class QuickmarkManager(UrlMarkManager):
             """Really set the quickmark."""
             self.marks[name] = url
             self.changed.emit()
+            self.added.emit(name, url)
             log.misc.debug("Added quickmark {} for {}".format(name, url))
 
         if name in self.marks:
@@ -236,6 +243,7 @@ class BookmarkManager(UrlMarkManager):
         - self.marks maps URLs to titles.
         - changed gets emitted with the URL as first argument and the title as
           second argument.
+        - removed gets emitted with the URL as argument.
     """
 
     def _init_lineparser(self):
@@ -287,4 +295,5 @@ class BookmarkManager(UrlMarkManager):
         else:
             self.marks[urlstr] = title
             self.changed.emit()
+            self.added.emit(title, urlstr)
             return True

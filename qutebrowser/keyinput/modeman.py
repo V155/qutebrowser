@@ -21,7 +21,6 @@
 
 import functools
 
-import attr
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QObject, QEvent
 from PyQt5.QtWidgets import QApplication
 
@@ -32,7 +31,6 @@ from qutebrowser.utils import usertypes, log, objreg, utils
 from qutebrowser.misc import objects
 
 
-@attr.s(frozen=True)
 class KeyEvent:
 
     """A small wrapper over a QKeyEvent storing its data.
@@ -46,13 +44,18 @@ class KeyEvent:
         text: A string (QKeyEvent::text).
     """
 
-    key = attr.ib()
-    text = attr.ib()
+    def __init__(self, keyevent):
+        self.key = keyevent.key()
+        self.text = keyevent.text()
 
-    @classmethod
-    def from_event(cls, event):
-        """Initialize a KeyEvent from a QKeyEvent."""
-        return cls(event.key(), event.text())
+    def __repr__(self):
+        return utils.get_repr(self, key=self.key, text=self.text)
+
+    def __eq__(self, other):
+        return self.key == other.key and self.text == other.text
+
+    def __hash__(self):
+        return hash((self.key, self.text))
 
 
 class NotInModeError(Exception):
@@ -141,6 +144,9 @@ class ModeManager(QObject):
         self._parsers = {}
         self.mode = usertypes.KeyMode.normal
         self._releaseevents_to_pass = set()
+        self._forward_unbound_keys = config.get(
+            'input', 'forward-unbound-keys')
+        objreg.get('config').changed.connect(self.set_forward_unbound_keys)
 
     def __repr__(self):
         return utils.get_repr(self, mode=self.mode)
@@ -165,25 +171,23 @@ class ModeManager(QObject):
             event.modifiers() not in [Qt.NoModifier, Qt.ShiftModifier] or
             not event.text().strip())
 
-        forward_unbound_keys = config.val.input.forward_unbound_keys
-
         if handled:
             filter_this = True
-        elif (parser.passthrough or forward_unbound_keys == 'all' or
-              (forward_unbound_keys == 'auto' and is_non_alnum)):
+        elif (parser.passthrough or self._forward_unbound_keys == 'all' or
+              (self._forward_unbound_keys == 'auto' and is_non_alnum)):
             filter_this = False
         else:
             filter_this = True
 
         if not filter_this:
-            self._releaseevents_to_pass.add(KeyEvent.from_event(event))
+            self._releaseevents_to_pass.add(KeyEvent(event))
 
         if curmode != usertypes.KeyMode.insert:
             focus_widget = QApplication.instance().focusWidget()
-            log.modes.debug("handled: {}, forward_unbound_keys: {}, "
+            log.modes.debug("handled: {}, forward-unbound-keys: {}, "
                             "passthrough: {}, is_non_alnum: {} --> "
                             "filter: {} (focused: {!r})".format(
-                                handled, forward_unbound_keys,
+                                handled, self._forward_unbound_keys,
                                 parser.passthrough, is_non_alnum, filter_this,
                                 focus_widget))
         return filter_this
@@ -198,7 +202,7 @@ class ModeManager(QObject):
             True if event should be filtered, False otherwise.
         """
         # handle like matching KeyPress
-        keyevent = KeyEvent.from_event(event)
+        keyevent = KeyEvent(event)
         if keyevent in self._releaseevents_to_pass:
             self._releaseevents_to_pass.remove(keyevent)
             filter_this = False
@@ -308,6 +312,12 @@ class ModeManager(QObject):
         if self.mode == usertypes.KeyMode.normal:
             raise ValueError("Can't leave normal mode!")
         self.leave(self.mode, 'leave current')
+
+    @config.change_filter('input', 'forward-unbound-keys')
+    def set_forward_unbound_keys(self):
+        """Update local setting when config changed."""
+        self._forward_unbound_keys = config.get(
+            'input', 'forward-unbound-keys')
 
     def eventFilter(self, event):
         """Filter all events based on the currently set mode.

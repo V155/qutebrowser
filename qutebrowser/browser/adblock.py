@@ -67,7 +67,11 @@ def is_whitelisted_host(host):
     Args:
         host: The host of the request as string.
     """
-    for pattern in config.val.content.host_blocking.whitelist:
+    whitelist = config.get('content', 'host-blocking-whitelist')
+    if whitelist is None:
+        return False
+
+    for pattern in whitelist:
         if fnmatch.fnmatch(host, pattern.lower()):
             return True
     return False
@@ -110,16 +114,16 @@ class HostBlocker:
 
         data_dir = standarddir.data()
         self._local_hosts_file = os.path.join(data_dir, 'blocked-hosts')
-        self._update_files()
+        self.on_config_changed()
 
         config_dir = standarddir.config()
         self._config_hosts_file = os.path.join(config_dir, 'blocked-hosts')
 
-        config.instance.changed.connect(self._update_files)
+        objreg.get('config').changed.connect(self.on_config_changed)
 
     def is_blocked(self, url):
         """Check if the given URL (as QUrl) is blocked."""
-        if not config.val.content.host_blocking.enabled:
+        if not config.get('content', 'host-blocking-enabled'):
             return False
         host = url.host()
         return ((host in self._blocked_hosts or
@@ -160,9 +164,9 @@ class HostBlocker:
 
         if not found:
             args = objreg.get('args')
-            if (config.val.content.host_blocking.lists and
+            if (config.get('content', 'host-block-lists') is not None and
                     args.basedir is None and
-                    config.val.content.host_blocking.enabled):
+                    config.get('content', 'host-blocking-enabled')):
                 message.info("Run :adblock-update to get adblock lists.")
 
     @cmdutils.register(instance='host-blocker')
@@ -176,16 +180,18 @@ class HostBlocker:
                               self._config_blocked_hosts)
         self._blocked_hosts = set()
         self._done_count = 0
+        urls = config.get('content', 'host-block-lists')
         download_manager = objreg.get('qtnetwork-download-manager',
                                       scope='window', window='last-focused')
-        for url in config.val.content.host_blocking.lists:
+        if urls is None:
+            return
+        for url in urls:
             if url.scheme() == 'file':
-                filename = url.toLocalFile()
                 try:
-                    fileobj = open(filename, 'rb')
+                    fileobj = open(url.path(), 'rb')
                 except OSError as e:
                     message.error("adblock: Error while reading {}: {}".format(
-                        filename, e.strerror))
+                        url.path(), e.strerror))
                     continue
                 download = FakeDownload(fileobj)
                 self._in_progress.append(download)
@@ -286,10 +292,11 @@ class HostBlocker:
             message.info("adblock: Read {} hosts from {} sources.".format(
                 len(self._blocked_hosts), self._done_count))
 
-    @config.change_filter('content.host_blocking.lists')
-    def _update_files(self):
+    @config.change_filter('content', 'host-block-lists')
+    def on_config_changed(self):
         """Update files when the config changed."""
-        if not config.val.content.host_blocking.lists:
+        urls = config.get('content', 'host-block-lists')
+        if urls is None:
             try:
                 os.remove(self._local_hosts_file)
             except FileNotFoundError:

@@ -192,19 +192,21 @@ class FontFamilySetter(Setter):
 
 def init_mappings(mappings):
     """Initialize all settings based on a settings mapping."""
-    for option, mapping in mappings.items():
-        value = config.instance.get(option)
-        log.config.vdebug("Setting {} to {!r}".format(option, value))
-        mapping.set(value)
+    for sectname, section in mappings.items():
+        for optname, mapping in section.items():
+            value = config.get(sectname, optname)
+            log.config.vdebug("Setting {} -> {} to {!r}".format(
+                sectname, optname, value))
+            mapping.set(value)
 
 
-def update_mappings(mappings, option):
+def update_mappings(mappings, section, option):
     """Update global settings when QWeb(Engine)Settings changed."""
     try:
-        mapping = mappings[option]
+        mapping = mappings[section][option]
     except KeyError:
         return
-    value = config.instance.get(option)
+    value = config.get(section, option)
     mapping.set(value)
 
 

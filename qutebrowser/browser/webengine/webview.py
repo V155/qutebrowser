@@ -28,7 +28,8 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
 from qutebrowser.browser import shared
 from qutebrowser.browser.webengine import certificateerror, webenginesettings
 from qutebrowser.config import config
-from qutebrowser.utils import log, debug, usertypes, jinja, urlutils, message
+from qutebrowser.utils import (log, debug, usertypes, jinja, urlutils, message,
+                               objreg)
 
 
 class WebEngineView(QWebEngineView):
@@ -79,10 +80,10 @@ class WebEngineView(QWebEngineView):
             The new QWebEngineView object.
         """
         debug_type = debug.qenum_key(QWebEnginePage, wintype)
-        background = config.val.tabs.background
+        background_tabs = config.get('tabs', 'background-tabs')
 
-        log.webview.debug("createWindow with type {}, background {}".format(
-            debug_type, background))
+        log.webview.debug("createWindow with type {}, background_tabs "
+                          "{}".format(debug_type, background_tabs))
 
         if wintype == QWebEnginePage.WebBrowserWindow:
             # Shift-Alt-Click
@@ -94,13 +95,13 @@ class WebEngineView(QWebEngineView):
         elif wintype == QWebEnginePage.WebBrowserTab:
             # Middle-click / Ctrl-Click with Shift
             # FIXME:qtwebengine this also affects target=_blank links...
-            if background:
+            if background_tabs:
                 target = usertypes.ClickTarget.tab
             else:
                 target = usertypes.ClickTarget.tab_bg
         elif wintype == QWebEnginePage.WebBrowserBackgroundTab:
             # Middle-click / Ctrl-Click
-            if background:
+            if background_tabs:
                 target = usertypes.ClickTarget.tab_bg
             else:
                 target = usertypes.ClickTarget.tab
@@ -134,11 +135,11 @@ class WebEnginePage(QWebEnginePage):
             self._on_feature_permission_requested)
         self._theme_color = theme_color
         self._set_bg_color()
-        config.instance.changed.connect(self._set_bg_color)
+        objreg.get('config').changed.connect(self._set_bg_color)
 
-    @config.change_filter('colors.webpage.bg')
+    @config.change_filter('colors', 'webpage.bg')
     def _set_bg_color(self):
-        col = config.val.colors.webpage.bg
+        col = config.get('colors', 'webpage.bg')
         if col is None:
             col = self._theme_color
         self.setBackgroundColor(col)
@@ -147,10 +148,11 @@ class WebEnginePage(QWebEnginePage):
     def _on_feature_permission_requested(self, url, feature):
         """Ask the user for approval for geolocation/media/etc.."""
         options = {
-            QWebEnginePage.Geolocation: 'content.geolocation',
-            QWebEnginePage.MediaAudioCapture: 'content.media_capture',
-            QWebEnginePage.MediaVideoCapture: 'content.media_capture',
-            QWebEnginePage.MediaAudioVideoCapture: 'content.media_capture',
+            QWebEnginePage.Geolocation: ('content', 'geolocation'),
+            QWebEnginePage.MediaAudioCapture: ('content', 'media-capture'),
+            QWebEnginePage.MediaVideoCapture: ('content', 'media-capture'),
+            QWebEnginePage.MediaAudioVideoCapture:
+                ('content', 'media-capture'),
         }
         messages = {
             QWebEnginePage.Geolocation: 'access your location',
@@ -212,7 +214,7 @@ class WebEnginePage(QWebEnginePage):
         url_string = url.toDisplayString()
         error_page = jinja.render(
             'error.html', title="Error loading page: {}".format(url_string),
-            url=url_string, error=str(error))
+            url=url_string, error=str(error), icon='')
 
         if error.is_overridable():
             ignore = shared.ignore_certificate_errors(
@@ -274,12 +276,19 @@ class WebEnginePage(QWebEnginePage):
 
     def javaScriptConsoleMessage(self, level, msg, line, source):
         """Log javascript messages to qutebrowser's log."""
-        level_map = {
-            QWebEnginePage.InfoMessageLevel: usertypes.JsLogLevel.info,
-            QWebEnginePage.WarningMessageLevel: usertypes.JsLogLevel.warning,
-            QWebEnginePage.ErrorMessageLevel: usertypes.JsLogLevel.error,
+        # FIXME:qtwebengine maybe unify this in the tab api somehow?
+        setting = config.get('general', 'log-javascript-console')
+        if setting == 'none':
+            return
+
+        level_to_logger = {
+            QWebEnginePage.InfoMessageLevel: log.js.info,
+            QWebEnginePage.WarningMessageLevel: log.js.warning,
+            QWebEnginePage.ErrorMessageLevel: log.js.error,
         }
-        shared.javascript_log_message(level_map[level], source, line, msg)
+        logstring = "[{}:{}] {}".format(source, line, msg)
+        logger = level_to_logger[level]
+        logger(logstring)
 
     def acceptNavigationRequest(self,
                                 url: QUrl,

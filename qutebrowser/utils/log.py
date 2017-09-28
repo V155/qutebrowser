@@ -94,7 +94,7 @@ LOGGER_NAMES = [
     'commands', 'signals', 'downloads',
     'js', 'qt', 'rfc6266', 'ipc', 'shlexer',
     'save', 'message', 'config', 'sessions',
-    'webelem', 'prompt', 'network', 'sql'
+    'webelem', 'prompt', 'network'
 ]
 
 
@@ -141,7 +141,6 @@ sessions = logging.getLogger('sessions')
 webelem = logging.getLogger('webelem')
 prompt = logging.getLogger('prompt')
 network = logging.getLogger('network')
-sql = logging.getLogger('sql')
 
 
 ram_handler = None
@@ -345,7 +344,7 @@ def qt_message_handler(msg_type, context, msg):
     try:
         qt_to_logging[QtCore.QtInfoMsg] = logging.INFO
     except AttributeError:
-        # While we don't support Qt < 5.5 anymore, logging still needs to work
+        # Qt < 5.5
         pass
 
     # Change levels of some well-known messages to debug so they don't get
@@ -409,8 +408,6 @@ def qt_message_handler(msg_type, context, msg):
         # https://codereview.qt-project.org/176831
         "QObject::disconnect: Unexpected null parameter",
     ]
-    # not using utils.is_mac here, because we can't be sure we can successfully
-    # import the utils module here.
     if sys.platform == 'darwin':
         suppressed_msgs += [
             'libpng warning: iCCP: known incorrect sRGB profile',
