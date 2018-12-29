@@ -1,3 +1,9 @@
+========
+Commands
+========
+
+:Date:   2018-12-29
+
 In qutebrowser, all keybindings are mapped to commands.
 
 Some commands are hidden, which means they don’t show up in the command

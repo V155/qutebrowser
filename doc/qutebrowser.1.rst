@@ -1,3 +1,9 @@
+==============
+qutebrowser(1)
+==============
+
+:Date:   2018-12-12
+
 qutebrowser
 1
 qutebrowser

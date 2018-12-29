@@ -1,3 +1,10 @@
+==========================
+Frequently asked questions
+==========================
+
+:Author: The Compiler mail@qutebrowser.org
+:Date:   2018-12-29
+
 **Q:** What is qutebrowser based on?
 
 **A:** qutebrowser uses `Python <https://www.python.org/>`__,

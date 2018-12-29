@@ -1,3 +1,9 @@
+======================
+Installing qutebrowser
+======================
+
+:Date:   2018-12-29
+
    **Note**
 
    qutebrowser recently had some bigger dependency changes for v1.0.0,

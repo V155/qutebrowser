@@ -1,3 +1,10 @@
+===========================
+Contributing to qutebrowser
+===========================
+
+:Author: The Compiler mail@qutebrowser.org
+:Date:   2018-12-29
+
    **Important**
 
    **Currently, bigger changes are going on in qutebrowser, as part of

@@ -1,3 +1,9 @@
+===========
+qutebrowser
+===========
+
+:Date:   2018-12-29
+
 |qutebrowser logo| **A keyboard-driven, vim-like browser based on PyQt5
 and Qt.**
 
@@ -346,4 +352,3 @@ the Windows release or after running
 .. |qutebrowser key binding cheatsheet| image:: https://raw.githubusercontent.com/qutebrowser/qutebrowser/master/doc/img/cheatsheet-small.png
 .. |powered by MacStadium| image:: .github/img/macstadium.png
 .. |HSR Hochschule für Technik Rapperswil| image:: .github/img/hsr.png
-

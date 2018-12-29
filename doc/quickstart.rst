@@ -1,3 +1,10 @@
+======================
+qutebrowser quickstart
+======================
+
+:Author: The Compiler mail@qutebrowser.org
+:Date:   2018-12-12
+
    **Note**
 
    This page will only appear on the first start. To view it at a later
@@ -116,4 +123,3 @@ you, please get in touch!
    space
 
 .. |qutebrowser key binding cheatsheet| image:: https://raw.githubusercontent.com/qutebrowser/qutebrowser/master/doc/img/cheatsheet-small.png
-

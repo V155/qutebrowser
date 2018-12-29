@@ -1,3 +1,9 @@
+=================
+Setting reference
+=================
+
+:Date:   2018-12-29
+
 .. __all_settings:
 
 All settings

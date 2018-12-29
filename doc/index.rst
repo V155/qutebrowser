@@ -1,3 +1,9 @@
+================
+qutebrowser help
+================
+
+:Date:   2018-12-29
+
 .. __documentation:
 
 Documentation

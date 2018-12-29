@@ -1,3 +1,9 @@
+=======================
+Configuring qutebrowser
+=======================
+
+:Date:   2018-12-29
+
    **Important**
 
    qutebrowser’s configuration system was completely rewritten in

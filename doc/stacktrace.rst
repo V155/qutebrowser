@@ -1,3 +1,10 @@
+==============================
+Getting stacktraces on crashes
+==============================
+
+:Author: The Compiler mail@qutebrowser.org
+:Date:   2018-12-12
+
 When there is a fatal crash in qutebrowser - most of the times a
 `segfault <https://en.wikipedia.org/wiki/Segmentation_fault>`__ - the
 crash report usually doesn’t contain much viable information, as these

@@ -1,3 +1,9 @@
+==========
+Change Log
+==========
+
+:Date:   2018-12-29
+
 All notable changes to this project will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`__,
 though minor breaking changes (such as renamed commands) can happen in
