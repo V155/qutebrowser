@@ -557,7 +557,7 @@ Setting up a Windows Development Environment
 * Clone your favourite qutebrowser repository.
 * To install tox, open an elevated cmd, enter your working directory and run `pip install -rmisc/requirements/requirements-tox.txt`.
 
-Note that the `flake8` tox env might not run due to encoding errors despite having LANG/LC_* set correctly.
+Note that the `flake8` tox env might not run due to encoding errors despite having `LANG`/`LC_*` set correctly.
 
 Rebuilding the website
 ~~~~~~~~~~~~~~~~~~~~~~

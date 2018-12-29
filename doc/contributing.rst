@@ -689,7 +689,7 @@ Setting up a Windows Development Environment
    and run ``pip install -rmisc/requirements/requirements-tox.txt``.
 
 Note that the ``flake8`` tox env might not run due to encoding errors
-despite having LANG/LC_\* set correctly.
+despite having ``LANG``/``LC_*`` set correctly.
 
 
 Rebuilding the website
