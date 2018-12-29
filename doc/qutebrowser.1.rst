@@ -34,6 +34,7 @@ OPTIONS
 =======
 
 .. QUTE_OPTIONS_START
+
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 **':command'**::
@@ -111,6 +112,7 @@ debug arguments
 
 **-D** 'DEBUG_FLAGS', **--debug-flag** 'DEBUG_FLAGS'::
     Pass name of debugging feature to be turned on.
+
 .. QUTE_OPTIONS_END
 
 FILES
