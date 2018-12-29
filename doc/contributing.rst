@@ -1,0 +1,976 @@
+===========================
+Contributing to qutebrowser
+===========================
+
+:Author: The Compiler mail@qutebrowser.org
+:Date:   2018-10-08
+
+I ``&lt;3``  [1]_ contributors!
+
+This document contains guidelines for contributing to qutebrowser, as
+well as useful hints when doing so.
+
+If anything mentioned here would prevent you from contributing, please
+let me know, and contribute anyways! The guidelines are meant to make
+life easier for me, but if you don’t follow everything in here, I won’t
+be mad at you. In fact, I will probably change it for you.
+
+If you have any problems, I’m more than happy to help! You can get help
+in several ways:
+
+-  Send a mail to the mailing list at qutebrowser@lists.qutebrowser.org
+   (optionally
+   `subscribe <https://lists.schokokeks.org/mailman/listinfo.cgi/qutebrowser>`__
+   first).
+
+-  Join the IRC channel
+   ```#qutebrowser`` <irc://irc.freenode.org/#qutebrowser>`__ on
+   `Freenode <http://freenode.net/>`__
+   (`webchat <https://webchat.freenode.net/?channels=#qutebrowser>`__).
+
+.. __finding_something_to_work_on:
+
+Finding something to work on
+============================
+
+Chances are you already know something to improve or add when you’re
+reading this. It might be a good idea to ask on the mailing list or IRC
+channel to make sure nobody else started working on the same thing
+already.
+
+If you want to find something useful to do, check the `issue
+tracker <https://github.com/qutebrowser/qutebrowser/issues>`__. Some
+pointers:
+
+-  `Issues which should be easy to
+   solve <https://github.com/qutebrowser/qutebrowser/labels/easy>`__
+
+-  `Documentation issues which require little/no
+   coding <https://github.com/qutebrowser/qutebrowser/labels/component%3A%20docs>`__
+
+If you prefer C++ or Javascript to Python, see the relevant issues which
+involve work in those languages:
+
+-  `C++ <https://github.com/qutebrowser/qutebrowser/issues?q=is%3Aopen+is%3Aissue+label%3A%22language%3A+c%2B%2B%22>`__
+   (mostly work on Qt, the library behind qutebrowser)
+
+-  `JavaScript <https://github.com/qutebrowser/qutebrowser/issues?q=is%3Aopen+is%3Aissue+label%3A%22language%3A+javascript%22>`__
+
+There are also some things to do if you don’t want to write code:
+
+-  Help the community, e.g., on the mailinglist and the IRC channel.
+
+-  Improve the documentation.
+
+-  Help on the website and graphics (logo, etc.).
+
+.. __using_git:
+
+Using git
+=========
+
+qutebrowser uses `git <http://git-scm.com/>`__ for its development. You
+can clone the repo like this:
+
+::
+
+   git clone https://github.com/qutebrowser/qutebrowser.git
+
+If you don’t know git, a `git cheatsheet <http://git-scm.com/>`__ might
+come in handy. Of course, if using git is the issue which prevents you
+from contributing, feel free to send normal patches instead, e.g.,
+generated via ``diff -Nur``.
+
+.. __getting_patches:
+
+Getting patches
+---------------
+
+The preferred way of submitting changes is to `fork the
+repository <https://help.github.com/articles/fork-a-repo/>`__ and to
+`submit a pull
+request <https://help.github.com/articles/creating-a-pull-request/>`__.
+
+If you prefer to send a patch to the mailinglist, you can generate a
+patch based on your changes like this:
+
+::
+
+   git format-patch origin/master 
+
+-  Replace ``master`` by the branch your work was based on, e.g.,
+   ``origin/develop``.
+
+.. __running_qutebrowser:
+
+Running qutebrowser
+===================
+
+After `installing qutebrowser via tox <install.html#tox>`__, you can run
+``.venv/bin/qutebrowser --debug --temp-basedir`` to test your changes
+with debug logging enabled and without affecting existing running
+instances.
+
+Alternatively, you can install qutebrowser’s dependencies system-wide
+and run ``python3 -m qutebrowser --debug --temp-basedir``.
+
+.. __useful_utilities:
+
+Useful utilities
+================
+
+.. __checkers:
+
+Checkers
+--------
+
+qutebrowser uses `tox <http://tox.readthedocs.org/en/latest/>`__ to run
+its unittests and several linters/checkers.
+
+Currently, the following tox environments are available:
+
+-  Tests using `pytest <https://www.pytest.org>`__:
+
+   -  ``py35``, ``py36``: Run pytest for python 3.5/3.6 with the
+      system-wide PyQt.
+
+   -  ``py36-pyqt57``, …​, ``py36-pyqt59``: Run pytest with the given
+      PyQt version (``py35-*`` also works).
+
+   -  ``py36-pyqt59-cov``: Run with coverage support (other Python/PyQt
+      versions work too).
+
+-  ``flake8``: Run various linting checks via
+   `flake8 <https://pypi.python.org/pypi/flake8>`__.
+
+-  ``vulture``: Run `vulture <https://pypi.python.org/pypi/vulture>`__
+   to find unused code portions.
+
+-  ``pylint``: Run `pylint <http://pylint.org/>`__ static code analysis.
+
+-  ``pyroma``: Check packaging practices with
+   `pyroma <https://pypi.python.org/pypi/pyroma/>`__.
+
+-  ``eslint``: Run `ESLint <http://eslint.org/>`__ javascript checker.
+
+-  ``check-manifest``: Check MANIFEST.in completeness with
+   `check-manifest <https://github.com/mgedmin/check-manifest>`__.
+
+-  ``mkvenv``: Bootstrap a virtualenv for testing.
+
+-  ``misc``: Run ``scripts/misc_checks.py`` to check for:
+
+   -  untracked git files
+
+   -  VCS conflict markers
+
+   -  common spelling mistakes
+
+The default test suite is run with ``tox``; the list of default
+environments is obtained with ``tox -l``.
+
+Please make sure the checks run without any warnings on your new
+contributions.
+
+There’s always the possibility of false positives; the following
+techniques are useful to handle these:
+
+-  Use ``_foo`` for unused parameters, with ``foo`` being a descriptive
+   name. Using ``_`` is discouraged.
+
+-  If you think you have a good reason to suppress a message, then add
+   the following comment:
+
+   ::
+
+      # pylint: disable=message-name
+
+   Note you can add this per line, per function/class, or per file.
+   Please use the smallest scope which makes sense. Most of the time,
+   this will be line scope.
+
+-  If you really think a check shouldn’t be done globally as it yields a
+   lot of false-positives, let me know! I’m still tweaking the
+   parameters.
+
+.. __running_specific_tests:
+
+Running Specific Tests
+----------------------
+
+While you are developing you often don’t want to run the full test suite
+each time.
+
+Specific test environments can be run with ``tox -e <envlist>``.
+
+Additional parameters can be passed to the test scripts by separating
+them from ``tox`` arguments with ``--``.
+
+Examples:
+
+::
+
+   # run only pytest tests which failed in last run:
+   tox -e py35 -- --lf
+
+   # run only the end2end feature tests:
+   tox -e py35 -- tests/end2end/features
+
+   # run everything with undo in the generated name, based on the scenario text
+   tox -e py35 -- tests/end2end/features/test_tabs_bdd.py -k undo
+
+   # run coverage test for specific file (updates htmlcov/index.html)
+   tox -e py35-cov -- tests/unit/browser/test_webelem.py
+
+.. __profiling:
+
+Profiling
+---------
+
+In the *scripts/* subfolder there’s a ``run_profile.py`` which profiles
+the code and shows a graphical representation of what takes how much
+time.
+
+It uses the built-in Python
+`cProfile <https://docs.python.org/3.6/library/profile.html>`__ module
+and can show the output in four different ways:
+
+-  Raw profile file (``--profile-tool=none``)
+
+-  `pyprof2calltree <https://pypi.python.org/pypi/pyprof2calltree/>`__
+   and
+   `KCacheGrind <http://kcachegrind.sourceforge.net/html/Home.html>`__
+   (``--profile-tool=kcachegrind``)
+
+-  `SnakeViz <https://jiffyclub.github.io/snakeviz/>`__
+   (``--profile-tool=snakeviz``)
+
+-  `gprof2dot <https://github.com/jrfonseca/gprof2dot>`__ (needs ``dot``
+   from `Graphviz <http://graphviz.org/>`__ and
+   `feh <http://feh.finalrewind.org/>`__)
+
+.. __debugging:
+
+Debugging
+---------
+
+There are some useful functions for debugging in the
+``qutebrowser.utils.debug`` module.
+
+When starting qutebrowser with the ``--debug`` flag, you also get useful
+debug logs. You can add ``--logfilter [!]category[,category,…​]`` to
+restrict logging to the given categories.
+
+With ``--debug`` there are also some additional ``debug-*`` commands
+available, for example ``:debug-all-objects`` and ``:debug-all-widgets``
+which print a list of all Qt objects/widgets to the debug log — this is
+very useful for finding memory leaks.
+
+.. __useful_websites:
+
+Useful websites
+---------------
+
+Some resources which might be handy:
+
+-  `The Qt5 reference <http://doc.qt.io/qt-5/classes.html>`__
+
+-  `The Python
+   reference <https://docs.python.org/3/library/index.html>`__
+
+-  `httpbin, a test service for HTTP
+   requests/responses <http://httpbin.org/>`__
+
+-  `RequestBin, a service to inspect HTTP
+   requests <http://requestb.in/>`__
+
+Documentation of used Python libraries:
+
+-  `jinja2 <http://jinja.pocoo.org/docs/dev/>`__
+
+-  `pygments <http://pygments.org/docs/>`__
+
+-  `pyPEG2 <http://fdik.org/pyPEG/index.html>`__
+
+-  `setuptools <http://pythonhosted.org/setuptools/>`__
+
+-  `PyInstaller <http://www.pyinstaller.org/>`__
+
+-  `colorama <https://pypi.python.org/pypi/colorama>`__
+
+Related RFCs and standards:
+
+.. __http:
+
+HTTP
+~~~~
+
+-  `RFC 2616 - Hypertext Transfer
+   Protocol — HTTP/1.1 <https://tools.ietf.org/html/rfc2616>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=2616>`__)
+
+-  `RFC 7230 - Hypertext Transfer Protocol (HTTP/1.1): Message Syntax
+   and Routing <https://tools.ietf.org/html/rfc7230>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=7230>`__)
+
+-  `RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): Semantics and
+   Content <https://tools.ietf.org/html/rfc7231>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=7231>`__)
+
+-  `RFC 7232 - Hypertext Transfer Protocol (HTTP/1.1): Conditional
+   Requests <https://tools.ietf.org/html/rfc7232>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=7232>`__)
+
+-  `RFC 7233 - Hypertext Transfer Protocol (HTTP/1.1): Range
+   Requests <https://tools.ietf.org/html/rfc7233>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=7233>`__)
+
+-  `RFC 7234 - Hypertext Transfer Protocol (HTTP/1.1):
+   Caching <https://tools.ietf.org/html/rfc7234>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=7234>`__)
+
+-  `RFC 7235 - Hypertext Transfer Protocol (HTTP/1.1):
+   Authentication <https://tools.ietf.org/html/rfc7235>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=7235>`__)
+
+-  `RFC 5987 - Character Set and Language Encoding for Hypertext
+   Transfer Protocol (HTTP) Header Field
+   Parameters <https://tools.ietf.org/html/rfc5987>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=5987>`__)
+
+-  `RFC 6266 - Use of the Content-Disposition Header Field in the
+   Hypertext Transfer Protocol
+   (HTTP) <https://tools.ietf.org/html/rfc6266>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=6266>`__)
+
+-  `RFC 6265 - HTTP State Management Mechanism
+   (Cookies) <http://tools.ietf.org/html/rfc6265>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=6265>`__)
+
+-  `Netscape Cookie Format <http://www.cookiecentral.com/faq/#3.5>`__
+
+.. __other:
+
+Other
+~~~~~
+
+-  `RFC 5646 - Tags for Identifying
+   Languages <https://tools.ietf.org/html/rfc5646>`__
+   (`Errata <http://www.rfc-editor.org/errata_search.php?rfc=5646>`__)
+
+-  `Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
+   Specification <http://www.w3.org/TR/CSS2/>`__
+
+-  `Qt Style Sheets
+   Reference <http://doc.qt.io/qt-5/stylesheet-reference.html>`__
+
+-  `MIME Sniffing Standard <http://mimesniff.spec.whatwg.org/>`__
+
+-  `WHATWG specifications <http://spec.whatwg.org/>`__
+
+-  `HTML 5.1
+   Nightly <http://www.w3.org/html/wg/drafts/html/master/Overview.html>`__
+
+-  `Web Storage <http://www.w3.org/TR/webstorage/>`__
+
+-  `Cache directory tagging
+   standard <http://www.brynosaurus.com/cachedir/spec.html>`__
+
+-  `XDG basedir
+   specification <http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>`__
+
+.. __hints:
+
+Hints
+=====
+
+.. __python_and_qt_objects:
+
+Python and Qt objects
+---------------------
+
+For many tasks, there are solutions available in both Qt and the Python
+standard library.
+
+In qutebrowser, the policy is usually to use the Python libraries, as
+they provide exceptions and other benefits.
+
+There are some exceptions to that:
+
+-  ``QThread`` is used instead of Python threads because it provides
+   signals and slots.
+
+-  ``QProcess`` is used instead of Python’s ``subprocess``.
+
+-  ``QUrl`` is used instead of storing URLs as string, see the `handling
+   URLs <#handling-urls>`__ section for details.
+
+When using Qt objects, two issues must be taken care of:
+
+-  Methods of Qt objects report their status with their return values,
+   instead of using exceptions.
+
+   If a function gets or returns a Qt object which has an ``.isValid()``
+   method such as ``QUrl`` or ``QModelIndex``, there’s a helper function
+   ``ensure_valid`` in ``qutebrowser.utils.qtutils`` which should get
+   called on all such objects. It will raise
+   ``qutebrowser.utils.qtutils.QtValueError`` if the value is not valid.
+
+   If a function returns something else on error, the return value
+   should carefully be checked.
+
+-  Methods of Qt objects have certain maximum values based on their
+   underlying C++ types.
+
+   To avoid passing too large of a numeric parameter to a Qt function,
+   all numbers should be range-checked using
+   ``qutebrowser.qtutils.check_overflow``, or by other means (e.g. by
+   setting a maximum value for a config object).
+
+.. _object-registry:
+
+The object registry
+-------------------
+
+The object registry in ``qutebrowser.utils.objreg`` is a collection of
+dictionaries which map object names to the actual long-living objects.
+
+There are currently these object registries, also called *scopes*:
+
+-  The ``global`` scope, with objects which are used globally
+   (``config``, ``cookie-jar``, etc.).
+
+-  The ``tab`` scope with objects which are per-tab (``hintmanager``,
+   ``webview``, etc.). Passing this scope to ``objreg.get()`` selects
+   the object in the currently focused tab by default. A tab can be
+   explicitly selected by passing ``tab=tab-id, window=win-id`` to it.
+
+A new object can be registered by using
+``objreg.register(name, object[, scope=scope, window=win-id,
+tab=tab-id])``. An object should not be registered twice. To update it,
+``update=True`` has to be given.
+
+An object can be retrieved by using ``objreg.get(name[, scope=scope,
+window=win-id, tab=tab-id])``. The default scope is ``global``.
+
+All objects can be printed by starting with the ``--debug`` flag and
+using the ``:debug-all-objects`` command.
+
+The registry is mainly used for `command handlers <#commands>`__, but it
+can also be useful in places where using Qt’s `signals and
+slots <http://doc.qt.io/qt-5/signalsandslots.html>`__ mechanism would be
+difficult.
+
+.. __logging:
+
+Logging
+-------
+
+Logging is used at various places throughout the qutebrowser code. If
+you add a new feature, you should also add some strategic debug logging.
+
+Unlike other Python projects, qutebrowser doesn’t use a logger per file,
+instead it uses custom-named loggers.
+
+The existing loggers are defined in ``qutebrowser.utils.log``. If your
+feature doesn’t fit in any of the logging categories, simply add a new
+line like this:
+
+.. code:: python
+
+   foo = getLogger('foo')
+
+Then in your source files, do this:
+
+.. code:: python
+
+   from qutebrowser.utils import log
+   ...
+   log.foo.debug("Hello World")
+
+The following logging levels are available for every logger:
+
++-----------------+----------------------------------------------------+
+| critical        | Critical issue, qutebrowser can’t continue to run. |
++-----------------+----------------------------------------------------+
+| error           | There was an issue and some kind of operation was  |
+|                 | abandoned.                                         |
++-----------------+----------------------------------------------------+
+| warning         | There was an issue but the operation can continue  |
+|                 | running.                                           |
++-----------------+----------------------------------------------------+
+| info            | General informational messages.                    |
++-----------------+----------------------------------------------------+
+| debug           | Verbose debugging information.                     |
++-----------------+----------------------------------------------------+
+
+Commands
+--------
+
+qutebrowser has the concept of functions which are exposed to the user
+as commands.
+
+Creating a new command is straightforward:
+
+.. code:: python
+
+   import qutebrowser.commands.cmdutils
+
+   ...
+
+   @cmdutils.register(...)
+   def foo():
+       ...
+
+The commands arguments are automatically deduced by inspecting your
+function.
+
+If the function is a method of a class, the ``@cmdutils.register``
+decorator needs to have an ``instance=...`` parameter which points to
+the (single/main) instance of the class.
+
+The ``instance`` parameter is the name of an object in the object
+registry, which then gets passed as the ``self`` parameter to the
+handler. The ``scope`` argument selects which object registry (global,
+per-tab, etc.) to use. See the `object registry <#object-registry>`__
+section for details.
+
+There are also other arguments to customize the way the command is
+registered; see the class documentation for ``register`` in
+``qutebrowser.commands.cmdutils`` for details.
+
+The types of the function arguments are inferred based on their default
+values, e.g., an argument ``foo=True`` will be converted to a flag
+``-f``/``--foo`` in qutebrowser’s commandline.
+
+The type can be overridden using Python’s `function
+annotations <http://legacy.python.org/dev/peps/pep-3107/>`__:
+
+.. code:: python
+
+   @cmdutils.register(...)
+   def foo(bar: int, baz=True):
+       ...
+
+Possible values:
+
+-  A callable (``int``, ``float``, etc.): Gets called to
+   validate/convert the value.
+
+-  A python enum type: All members of the enum are possible values.
+
+-  A ``typing.Union`` of multiple types above: Any of these types are
+   valid values, e.g., ``typing.Union[str, int]``.
+
+You can customize how an argument is handled using the
+``@cmdutils.argument`` decorator **after** ``@cmdutils.register``. This
+can, for example, be used to customize the flag an argument should get:
+
+.. code:: python
+
+   @cmdutils.register(...)
+   @cmdutils.argument('bar', flag='c')
+   def foo(bar):
+       ...
+
+For a ``str`` argument, you can restrict the allowed strings using
+``choices``:
+
+.. code:: python
+
+   @cmdutils.register(...)
+   @cmdutils.argument('bar', choices=['val1', 'val2'])
+   def foo(bar: str):
+       ...
+
+For ``typing.Union`` types, the given ``choices`` are only checked if
+other types (like ``int``) don’t match.
+
+The following arguments are supported for ``@cmdutils.argument``:
+
+-  ``flag``: Customize the short flag (``-x``) the argument will get.
+
+-  ``win_id=True``: Mark the argument as special window ID argument.
+
+-  ``count=True``: Mark the argument as special count argument.
+
+-  ``completion``: A completion function (see
+   ``qutebrowser.completions.models.*``) to use when completing
+   arguments for the given command.
+
+-  ``choices``: The allowed string choices for the argument.
+
+The name of an argument will always be the parameter name, with any
+trailing underscores stripped and underscores replaced by dashes.
+
+Handling URLs
+-------------
+
+qutebrowser handles two different types of URLs: URLs as a string, and
+URLs as the Qt ``QUrl`` type. As this can get confusing quickly, please
+follow the following guidelines:
+
+-  Convert a string to a QUrl object as early as possible, i.e.,
+   directly after the user did enter it.
+
+   -  Use ``utils.urlutils.fuzzy_url`` if the URL is entered by the user
+      somewhere.
+
+   -  Be sure you handle ``utils.urlutils.FuzzyError`` and display an
+      error message to the user.
+
+-  Convert a ``QUrl`` object to a string as late as possible, i.e.,
+   before displaying it to the user.
+
+   -  If you want to display the URL to the user, use
+      ``url.toDisplayString()`` so password information is removed.
+
+   -  If you want to get the URL as string for some other reason, you
+      most likely want to add the ``QUrl.EncodeFully`` and
+      ``QUrl.RemovePassword`` flags.
+
+-  Name a string URL something like ``urlstr``, and a ``QUrl`` something
+   like ``url``.
+
+-  Mention in the docstring whether your function needs a URL string or
+   a ``QUrl``.
+
+-  Call ``ensure_valid`` from ``utils.qtutils`` whenever getting or
+   creating a ``QUrl`` and take appropriate action if not. Note the URL
+   of the current page always could be an invalid QUrl (if nothing is
+   loaded yet).
+
+.. __running_valgrind_on_qtwebkit:
+
+Running valgrind on QtWebKit
+----------------------------
+
+If you want to run qutebrowser (and thus QtWebKit) with
+`valgrind <http://valgrind.org/>`__, you’ll need to pass
+``--smc-check=all`` to it or recompile QtWebKit with the Javascript JIT
+disabled.
+
+This is needed so valgrind handles self-modifying code correctly:
+
+   This option controls Valgrind’s detection of self-modifying code. If
+   no checking is done and a program executes some code, overwrites it
+   with new code, and then executes the new code, Valgrind will continue
+   to execute the translations it made for the old code. This will
+   likely lead to incorrect behavior and/or crashes.
+
+   …​
+
+   Note that the default option will catch the vast majority of cases.
+   The main case it will not catch is programs such as JIT compilers
+   that dynamically generate code and subsequently overwrite part or all
+   of it. Running with all will slow Valgrind down noticeably.
+
+.. __setting_up_a_windows_development_environment:
+
+Setting up a Windows Development Environment
+--------------------------------------------
+
+-  Install `Python
+   3.6 <https://www.python.org/downloads/release/python-362/>`__.
+
+-  Install PyQt via ``pip install PyQt5``.
+
+-  Create a file at ``C:\Windows\system32\python3.bat`` with the
+   following content (adjust the path as necessary):
+   ``@C:\Python36\python %*``. This will make the Python 3.6 interpreter
+   available as ``python3``, which is used by various development
+   scripts.
+
+-  Install git from the `git-scm downloads
+   page <https://git-scm.com/download/win>`__. Try not to enable
+   ``core.autocrlf``, since that will cause ``flake8`` to complain a
+   lot. Use an editor that can deal with plain line feeds instead.
+
+-  Clone your favourite qutebrowser repository.
+
+-  To install tox, open an elevated cmd, enter your working directory
+   and run ``pip install -rmisc/requirements/requirements-tox.txt``.
+
+Note that the ``flake8`` tox env might not run due to encoding errors
+despite having LANG/LC_\* set correctly.
+
+.. __rebuilding_the_website:
+
+Rebuilding the website
+----------------------
+
+If you want to rebuild the website, run
+``./scripts/asciidoc2html.py --website <outputdir>``.
+
+.. __chrome_urls:
+
+Chrome URLs
+-----------
+
+With the QtWebEngine backend, qutebrowser supports several chrome://
+urls which can be useful for debugging:
+
+-  chrome://appcache-internals/
+
+-  chrome://blob-internals/
+
+-  chrome://gpu/
+
+-  chrome://histograms/
+
+-  chrome://indexeddb-internals/
+
+-  chrome://media-internals/
+
+-  chrome://network-errors/
+
+-  chrome://serviceworker-internals/
+
+-  chrome://webrtc-internals/
+
+-  chrome://crash/ (crashes the current renderer process!)
+
+-  chrome://kill/ (kills the current renderer process!)
+
+-  chrome://gpucrash/ (crashes qutebrowser!)
+
+-  chrome://gpuhang/ (hangs qutebrowser!)
+
+-  chrome://gpuclean/ (crashes the current renderer process!)
+
+-  chrome://ppapiflashcrash/
+
+-  chrome://ppapiflashhang/
+
+-  chrome://quota-internals/ (Qt 5.11)
+
+-  chrome://taskscheduler-internals/ (Qt 5.11)
+
+-  chrome://sandbox/ (Qt 5.11, Linux only)
+
+.. __qtwebengine_internals:
+
+QtWebEngine internals
+---------------------
+
+This is mostly useful for qutebrowser maintainers to work around issues
+in Qt - if you don’t understand it, don’t worry, just ignore it.
+
+The hierarchy of widgets when QtWebEngine is involved looks like this:
+
+-  qutebrowser has a ``WebEngineTab`` object, which is its abstraction
+   over QtWebKit/QtWebEngine.
+
+-  The ``WebEngineTab`` has a ``_widget`` attribute, which is the
+   `QWebEngineView <https://doc.qt.io/qt-5/qwebengineview.html>`__
+
+-  That view has a
+   `QWebEnginePage <https://doc.qt.io/qt-5/qwebenginepage.html>`__ for
+   everything which doesn’t require rendering.
+
+-  The view also has a layout with exactly one element (which also is
+   its ``focusProxy()``)
+
+-  That element is the
+   `RenderWidgetHostViewQtDelegateWidget <http://code.qt.io/cgit/qt/qtwebengine.git/tree/src/webenginewidgets/render_widget_host_view_qt_delegate_widget.cpp>`__
+   (it inherits
+   `QQuickWidget <https://doc.qt.io/qt-5/qquickwidget.html>`__) - also
+   often referred to as RWHV or RWHVQDW. It can be obtained via
+   ``sip.cast(tab._widget.focusProxy(), QQuickWidget)``.
+
+-  Calling ``rootObject()`` on that gives us the
+   `QQuickItem <https://doc.qt.io/qt-5/qquickitem.html>`__ where
+   Chromium renders into (?). With it, we can do things like
+   ``.setRotation(20)``.
+
+.. __style_conventions:
+
+Style conventions
+=================
+
+qutebrowser’s coding conventions are based on
+`PEP8 <http://legacy.python.org/dev/peps/pep-0008/>`__ and the `Google
+Python style
+guidelines <https://google-styleguide.googlecode.com/svn/trunk/pyguide.html>`__
+with some additions:
+
+-  The *Raise:* section is not added to the docstring.
+
+-  Methods overriding Qt methods (obviously!) don’t follow the naming
+   schemes.
+
+-  Everything else does though, even slots.
+
+-  Docstrings should look like described in
+   `PEP257 <http://legacy.python.org/dev/peps/pep-0257/>`__ and the
+   google guidelines.
+
+-  Class docstrings have additional *Attributes:*, *Class attributes:*
+   and *Signals:* sections.
+
+-  In docstrings of command handlers (registered via
+   ``@cmdutils.register``), the description should be split into two
+   parts by using ``//`` - the first part is the description of the
+   command like it will appear in the documentation, the second part is
+   "internal" documentation only relevant to people reading the
+   sourcecode.
+
+   Example for a class docstring:
+
+   .. code:: python
+
+      """Some object.
+
+      Attributes:
+          blub: The current thing to handle.
+
+      Signals:
+          valueChanged: Emitted when a value changed.
+                        arg: The new value
+      """
+
+   Example for a method/function docstring:
+
+   .. code:: python
+
+      """Do something special.
+
+      This will do something.
+
+      //
+
+      It is based on http://example.com/.
+
+      Args:
+          foo: ...
+
+      Return:
+          True if something, False if something else.
+      """
+
+-  The layout of a module should be roughly like this:
+
+   -  Shebang (``#!/usr/bin/python``, if needed)
+
+   -  vim-modeline
+      (``# vim: ft=python fileencoding=utf-8 sts=4 sw=4 et``)
+
+   -  Copyright
+
+   -  GPL boilerplate
+
+   -  Module docstring
+
+   -  Python standard library imports
+
+   -  PyQt imports
+
+   -  qutebrowser imports
+
+   -  functions
+
+   -  classes
+
+-  The layout of a class should be like this:
+
+   -  docstring
+
+   -  ``__magic__`` methods
+
+   -  other methods
+
+   -  overrides of Qt methods
+
+.. __checklists:
+
+Checklists
+==========
+
+These are mainly intended for myself, but they also fit in here well.
+
+.. __new_qt_release:
+
+New Qt release
+--------------
+
+-  Run all tests and check nothing is broken.
+
+-  Check the `Qt
+   bugtracker <https://bugreports.qt.io/issues/?jql=reporter%20%3D%20%22The%20Compiler%22%20ORDER%20BY%20fixVersion%20ASC>`__
+   and make sure all bugs marked as resolved are actually fixed.
+
+-  Update own PKGBUILDs based on upstream Archlinux updates and rebuild.
+
+-  Update recommended Qt version in ``README``.
+
+-  Grep for ``WORKAROUND`` in the code and test if fixed stuff works
+   without the workaround.
+
+-  Check relevant `qutebrowser
+   bugs <https://github.com/qutebrowser/qutebrowser/issues?q=is%3Aopen+is%3Aissue+label%3Aqt>`__
+   and check if they’re fixed.
+
+.. __new_pyqt_release:
+
+New PyQt release
+----------------
+
+-  See above.
+
+-  Update ``tox.ini``/``.travis.yml``/``.appveyor.yml`` to test new
+   versions.
+
+.. __qutebrowser_release:
+
+qutebrowser release
+-------------------
+
+-  Make sure there are no unstaged changes and the tests are green.
+
+-  Make sure all issues with the related milestone are closed.
+
+-  Run ``x=... y=...`` to set the respective shell variables.
+
+-  Update changelog (remove **(unreleased)**).
+
+-  Adjust ``__version_info__`` in ``qutebrowser/__init__.py``.
+
+-  Commit.
+
+-  Create annotated git tag
+   (``git tag -s "v1.$x.$y" -m "Release v1.$x.$y"``).
+
+-  ``git push origin``; ``git push origin v1.$x.$y``.
+
+-  If committing on minor branch, cherry-pick release commit to master.
+
+-  Create release on github.
+
+-  Mark the milestone at
+   https://github.com/qutebrowser/qutebrowser/milestones as closed.
+
+-  Linux: Run
+   ``git checkout v1.$x.$y && ./.venv/bin/python3 scripts/dev/build_release.py --upload v1.$x.$y``.
+
+-  Windows: Run
+   ``git checkout v1.X.Y; py -3.6 scripts\dev\build_release.py --asciidoc C:\Python27\python %userprofile%\bin\asciidoc-8.6.10\asciidoc.py --upload v1.X.Y``
+   (replace X/Y by hand).
+
+-  macOS: Run
+   ``pyenv shell 3.6.6 && git checkout v1.X.Y && python3 scripts/dev/build_release.py --upload v1.X.Y``
+   (replace X/Y by hand).
+
+-  On server:
+
+   -  Run ``python3 scripts/dev/download_release.py v1.X.Y`` (replace
+      X/Y by hand).
+
+   -  Run
+      ``git pull github master && sudo python3 scripts/asciidoc2html.py --website /srv/http/qutebrowser``
+
+-  Update ``qutebrowser-git`` PKGBUILD if dependencies/install changed.
+
+-  Announce to qutebrowser and qutebrowser-announce mailinglist.
+
+.. [1]
+   Of course, that says ``<3`` in HTML.
