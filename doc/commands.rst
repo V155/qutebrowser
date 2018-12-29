@@ -368,8 +368,7 @@ optional arguments
 
 config-cycle
 ------------
-Syntax: `:config-cycle [**--pattern** 'pattern'] [**--temp**] [**--print**]
-             'option' ['values' ['values' ...]]`
+Syntax: `:config-cycle [**--pattern** 'pattern'] [**--temp**] [**--print**] 'option' ['values' ['values' ...]]`
 
 Cycle an option between multiple values.
 
@@ -661,8 +660,7 @@ optional arguments
 
 edit-url
 --------
-Syntax: `:edit-url [**--bg**] [**--tab**] [**--window**] [**--private**] [**--related**]
-         ['url']`
+Syntax: `:edit-url [**--bg**] [**--tab**] [**--window**] [**--private**] [**--related**] ['url']`
 
 Navigate to a url formed in an external editor.
 
@@ -814,8 +812,7 @@ optional arguments
 
 hint
 ----
-Syntax: `:hint [**--mode** 'mode'] [**--add-history**] [**--rapid**] [**--first**]
-     ['group'] ['target'] ['args' ['args' ...]]`
+Syntax: `:hint [**--mode** 'mode'] [**--add-history**] [**--rapid**] [**--first**] ['group'] ['target'] ['args' ['args' ...]]`
 
 Start hinting.
 
@@ -1216,9 +1213,7 @@ Do nothing.
 
 open
 ----
-Syntax: `:open [**--related**] [**--bg**] [**--tab**] [**--window**] [**--secure**]
-     [**--private**]
-     ['url']`
+Syntax: `:open [**--related**] [**--bg**] [**--tab**] [**--window**] [**--secure**] [**--private**] ['url']`
 
 Open a URL in the current/[count]th tab.
 
@@ -1530,8 +1525,7 @@ multiplier
 
 scroll-page
 -----------
-Syntax: `:scroll-page [**--top-navigate** 'ACTION'] [**--bottom-navigate** 'ACTION']
-            'x' 'y'`
+Syntax: `:scroll-page [**--top-navigate** 'ACTION'] [**--bottom-navigate** 'ACTION'] 'x' 'y'`
 
 Scroll the frame page-wise.
 
@@ -1698,9 +1692,7 @@ optional arguments
 
 session-save
 ------------
-Syntax: `:session-save [**--current**] [**--quiet**] [**--force**]
-             [**--only-active-window**] [**--with-private**]
-             ['name']`
+Syntax: `:session-save [**--current**] [**--quiet**] [**--force**] [**--only-active-window**] [**--with-private**] ['name']`
 
 Save a session.
 
@@ -1792,8 +1784,7 @@ positional arguments
 
 spawn
 -----
-Syntax: `:spawn [**--userscript**] [**--verbose**] [**--output**] [**--detach**]
-      'cmdline'`
+Syntax: `:spawn [**--userscript**] [**--verbose**] [**--output**] [**--detach**] 'cmdline'`
 
 Spawn a command in a shell.
 

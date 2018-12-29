@@ -62,6 +62,7 @@ class UsageFormatter(argparse.HelpFormatter):
 
     def _format_usage(self, usage, actions, groups, _prefix):
         """Override _format_usage to not add the 'usage:' prefix."""
+        self._width = 1000
         return super()._format_usage(usage, actions, groups, '')
 
     def _get_default_metavar_for_optional(self, action):
