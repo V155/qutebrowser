@@ -135,7 +135,9 @@ Quick reference
    :ref:`zoom`, "Set the zoom level for the current tab."
    :ref:`zoom-in`, "Increase the zoom level for the current tab."
    :ref:`zoom-out`, "Decrease the zoom level for the current tab."
-.. _adblock-update
+
+.. _adblock-update:
+
 adblock-update
 --------------
 Update the adblock block lists.
@@ -143,7 +145,9 @@ Update the adblock block lists.
 This updates `~/.local/share/qutebrowser/blocked-hosts` with downloaded
 host lists and re-reads `~/.config/qutebrowser/blocked-hosts`.
 
-.. _back
+
+.. _back:
+
 back
 ----
 Syntax: `:back [**--tab**] [**--bg**] [**--window**]`
@@ -160,7 +164,9 @@ count
 ^^^^^
 How many pages to go back.
 
-.. _bind
+
+.. _bind:
+
 bind
 ----
 Syntax: `:bind [**--mode** 'mode'] [**--default**] ['key'] ['command']`
@@ -190,7 +196,9 @@ note
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 * This command does not replace variables like `{url}`.
 
-.. _bookmark-add
+
+.. _bookmark-add:
+
 bookmark-add
 ------------
 Syntax: `:bookmark-add [**--toggle**] ['url'] ['title']`
@@ -217,7 +225,9 @@ optional arguments
 * `-t`, `--toggle`: remove the bookmark instead of raising an error if it already exists.
 
 
-.. _bookmark-del
+
+.. _bookmark-del:
+
 bookmark-del
 ------------
 Syntax: `:bookmark-del ['url']`
@@ -233,7 +243,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _bookmark-load
+
+.. _bookmark-load:
+
 bookmark-load
 -------------
 Syntax: `:bookmark-load [**--tab**] [**--bg**] [**--window**] [**--delete**] 'url'`
@@ -255,7 +267,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _buffer
+
+.. _buffer:
+
 buffer
 ------
 Syntax: `:buffer ['index']`
@@ -281,17 +295,23 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _clear-keychain
+
+.. _clear-keychain:
+
 clear-keychain
 --------------
 Clear the currently entered key chain.
 
-.. _clear-messages
+
+.. _clear-messages:
+
 clear-messages
 --------------
 Clear all message notifications.
 
-.. _click-element
+
+.. _click-element:
+
 click-element
 -------------
 Syntax: `:click-element [**--target** 'target'] [**--force-event**] 'filter' 'value'`
@@ -313,12 +333,16 @@ optional arguments
 * `-t`, `--target`: How to open the clicked element (normal/tab/tab-bg/window).
 * `-f`, `--force-event`: Force generating a fake click event.
 
-.. _close
+
+.. _close:
+
 close
 -----
 Close the current window.
 
-.. _config-clear
+
+.. _config-clear:
+
 config-clear
 ------------
 Syntax: `:config-clear [**--save**]`
@@ -330,7 +354,9 @@ optional arguments
 * `-s`, `--save`: If given, all configuration in autoconfig.yml is also removed.
 
 
-.. _config-cycle
+
+.. _config-cycle:
+
 config-cycle
 ------------
 Syntax: `:config-cycle [**--pattern** 'pattern'] [**--temp**] [**--print**]
@@ -349,7 +375,9 @@ optional arguments
 * `-t`, `--temp`: Set value temporarily until qutebrowser is closed.
 * `-p`, `--print`: Print the value after setting.
 
-.. _config-dict-add
+
+.. _config-dict-add:
+
 config-dict-add
 ---------------
 Syntax: `:config-dict-add [**--temp**] [**--replace**] 'option' 'key' 'value'`
@@ -368,7 +396,9 @@ optional arguments
 * `-r`, `--replace`: Replace existing values. By default, existing values are not overwritten.
 
 
-.. _config-dict-remove
+
+.. _config-dict-remove:
+
 config-dict-remove
 ------------------
 Syntax: `:config-dict-remove [**--temp**] 'option' 'key'`
@@ -384,7 +414,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-t`, `--temp`: Remove value temporarily until qutebrowser is closed.
 
-.. _config-edit
+
+.. _config-edit:
+
 config-edit
 -----------
 Syntax: `:config-edit [**--no-source**]`
@@ -395,7 +427,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-n`, `--no-source`: Don't re-source the config file after editing.
 
-.. _config-list-add
+
+.. _config-list-add:
+
 config-list-add
 ---------------
 Syntax: `:config-list-add [**--temp**] 'option' 'value'`
@@ -411,7 +445,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-t`, `--temp`: Add value temporarily until qutebrowser is closed.
 
-.. _config-list-remove
+
+.. _config-list-remove:
+
 config-list-remove
 ------------------
 Syntax: `:config-list-remove [**--temp**] 'option' 'value'`
@@ -427,7 +463,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-t`, `--temp`: Remove value temporarily until qutebrowser is closed.
 
-.. _config-source
+
+.. _config-source:
+
 config-source
 -------------
 Syntax: `:config-source [**--clear**] ['filename']`
@@ -443,7 +481,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-c`, `--clear`: Clear current settings first.
 
-.. _config-unset
+
+.. _config-unset:
+
 config-unset
 ------------
 Syntax: `:config-unset [**--temp**] 'option'`
@@ -462,7 +502,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-t`, `--temp`: Set value temporarily until qutebrowser is closed.
 
-.. _config-write-py
+
+.. _config-write-py:
+
 config-write-py
 ---------------
 Syntax: `:config-write-py [**--force**] [**--defaults**] ['filename']`
@@ -478,7 +520,9 @@ optional arguments
 * `-f`, `--force`: Force overwriting existing files.
 * `-d`, `--defaults`: Write the defaults instead of values configured via :set.
 
-.. _download
+
+.. _download:
+
 download
 --------
 Syntax: `:download [**--mhtml**] [**--dest** 'dest'] ['url']`
@@ -494,7 +538,9 @@ optional arguments
 * `-m`, `--mhtml`: Download the current page and all assets as mhtml file.
 * `-d`, `--dest`: The file path to write the download to, or not given to ask.
 
-.. _download-cancel
+
+.. _download-cancel:
+
 download-cancel
 ---------------
 Syntax: `:download-cancel [**--all**]`
@@ -509,12 +555,16 @@ count
 ^^^^^
 The index of the download to cancel.
 
-.. _download-clear
+
+.. _download-clear:
+
 download-clear
 --------------
 Remove all finished downloads from the list.
 
-.. _download-delete
+
+.. _download-delete:
+
 download-delete
 ---------------
 Delete the last/[count]th download from disk.
@@ -523,7 +573,9 @@ count
 ^^^^^
 The index of the download to delete.
 
-.. _download-open
+
+.. _download-open:
+
 download-open
 -------------
 Syntax: `:download-open ['cmdline']`
@@ -549,7 +601,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _download-remove
+
+.. _download-remove:
+
 download-remove
 ---------------
 Syntax: `:download-remove [**--all**]`
@@ -564,7 +618,9 @@ count
 ^^^^^
 The index of the download to remove.
 
-.. _download-retry
+
+.. _download-retry:
+
 download-retry
 --------------
 Retry the first failed/[count]th download.
@@ -573,7 +629,9 @@ count
 ^^^^^
 The index of the download to retry.
 
-.. _edit-command
+
+.. _edit-command:
+
 edit-command
 ------------
 Syntax: `:edit-command [**--run**]`
@@ -584,7 +642,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-r`, `--run`: Run the command if the editor exits successfully.
 
-.. _edit-url
+
+.. _edit-url:
+
 edit-url
 --------
 Syntax: `:edit-url [**--bg**] [**--tab**] [**--window**] [**--private**] [**--related**]
@@ -609,7 +669,9 @@ optional arguments
 * `-r`, `--related`: If opening a new tab, position the tab as related to the current one (like clicking on a link).
 
 
-.. _enter-mode
+
+.. _enter-mode:
+
 enter-mode
 ----------
 Syntax: `:enter-mode 'mode'`
@@ -620,7 +682,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `mode`: The mode to enter.
 
-.. _fake-key
+
+.. _fake-key:
+
 fake-key
 --------
 Syntax: `:fake-key [**--global**] 'keystring'`
@@ -640,7 +704,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-g`, `--global`: If given, the keys are sent to the qutebrowser UI.
 
-.. _follow-selected
+
+.. _follow-selected:
+
 follow-selected
 ---------------
 Syntax: `:follow-selected [**--tab**]`
@@ -651,7 +717,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-t`, `--tab`: Load the selected link in a new tab.
 
-.. _forward
+
+.. _forward:
+
 forward
 -------
 Syntax: `:forward [**--tab**] [**--bg**] [**--window**]`
@@ -668,7 +736,9 @@ count
 ^^^^^
 How many pages to go forward.
 
-.. _fullscreen
+
+.. _fullscreen:
+
 fullscreen
 ----------
 Syntax: `:fullscreen [**--leave**]`
@@ -679,7 +749,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-l`, `--leave`: Only leave fullscreen if it was entered by the page.
 
-.. _greasemonkey-reload
+
+.. _greasemonkey-reload:
+
 greasemonkey-reload
 -------------------
 Syntax: `:greasemonkey-reload [**--force**]`
@@ -695,7 +767,9 @@ optional arguments
 * `-f`, `--force`: For any scripts that have required dependencies, re-download them.
 
 
-.. _help
+
+.. _help:
+
 help
 ----
 Syntax: `:help [**--tab**] [**--bg**] [**--window**] ['topic']`
@@ -716,7 +790,9 @@ optional arguments
 * `-b`, `--bg`: Open in a background tab.
 * `-w`, `--window`: Open in a new window.
 
-.. _hint
+
+.. _hint:
+
 hint
 ----
 Syntax: `:hint [**--mode** 'mode'] [**--add-history**] [**--rapid**] [**--first**]
@@ -801,7 +877,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _history
+
+.. _history:
+
 history
 -------
 Syntax: `:history [**--tab**] [**--bg**] [**--window**]`
@@ -814,7 +892,9 @@ optional arguments
 * `-b`, `--bg`: Open in a background tab.
 * `-w`, `--window`: Open in a new window.
 
-.. _history-clear
+
+.. _history-clear:
+
 history-clear
 -------------
 Syntax: `:history-clear [**--force**]`
@@ -830,12 +910,16 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-f`, `--force`: Don't ask for confirmation.
 
-.. _home
+
+.. _home:
+
 home
 ----
 Open main startpage in current tab.
 
-.. _insert-text
+
+.. _insert-text:
+
 insert-text
 -----------
 Syntax: `:insert-text 'text'`
@@ -850,7 +934,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _inspector
+
+.. _inspector:
+
 inspector
 ---------
 Toggle the web inspector.
@@ -858,7 +944,9 @@ Toggle the web inspector.
 Note: Due a bug in Qt, the inspector will show incorrect request
 headers in the network tab.
 
-.. _jseval
+
+.. _jseval:
+
 jseval
 ------
 Syntax: `:jseval [**--file**] [**--quiet**] [**--world** 'world'] 'js-code'`
@@ -884,7 +972,9 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 
-.. _jump-mark
+
+.. _jump-mark:
+
 jump-mark
 ---------
 Syntax: `:jump-mark 'key'`
@@ -895,7 +985,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `key`: mark identifier; capital indicates a global mark
 
-.. _later
+
+.. _later:
+
 later
 -----
 Syntax: `:later 'ms' 'command'`
@@ -913,7 +1005,9 @@ note
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 * This command does not replace variables like `{url}`.
 
-.. _message-error
+
+.. _message-error:
+
 message-error
 -------------
 Syntax: `:message-error 'text'`
@@ -924,7 +1018,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `text`: The text to show.
 
-.. _message-info
+
+.. _message-info:
+
 message-info
 ------------
 Syntax: `:message-info 'text'`
@@ -939,7 +1035,9 @@ count
 ^^^^^
 How many times to show the message
 
-.. _message-warning
+
+.. _message-warning:
+
 message-warning
 ---------------
 Syntax: `:message-warning 'text'`
@@ -950,7 +1048,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `text`: The text to show.
 
-.. _messages
+
+.. _messages:
+
 messages
 --------
 Syntax: `:messages [**--plain**] [**--tab**] [**--bg**] [**--window**] ['level']`
@@ -969,7 +1069,9 @@ optional arguments
 * `-b`, `--bg`: Open in a background tab.
 * `-w`, `--window`: Open in a new window.
 
-.. _navigate
+
+.. _navigate:
+
 navigate
 --------
 Syntax: `:navigate [**--tab**] [**--bg**] [**--window**] 'where'`
@@ -1012,12 +1114,16 @@ count
 For `increment` and `decrement`, the number to change the URL by. For `up`, the number of levels to go up in the URL.
 
 
-.. _nop
+
+.. _nop:
+
 nop
 ---
 Do nothing.
 
-.. _open
+
+.. _open:
+
 open
 ----
 Syntax: `:open [**--related**] [**--bg**] [**--tab**] [**--window**] [**--secure**]
@@ -1051,7 +1157,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _open-editor
+
+.. _open-editor:
+
 open-editor
 -----------
 Open an external editor with the currently selected form field.
@@ -1059,7 +1167,9 @@ Open an external editor with the currently selected form field.
 The editor which should be launched can be configured via the
 `editor.command` config option.
 
-.. _print
+
+.. _print:
+
 print
 -----
 Syntax: `:print [**--preview**] [**--pdf** 'file']`
@@ -1075,7 +1185,9 @@ count
 ^^^^^
 The tab index to print.
 
-.. _quickmark-add
+
+.. _quickmark-add:
+
 quickmark-add
 -------------
 Syntax: `:quickmark-add 'url' 'name'`
@@ -1091,7 +1203,9 @@ positional arguments
 * `url`: The url to add as quickmark.
 * `name`: The name for the new quickmark.
 
-.. _quickmark-del
+
+.. _quickmark-del:
+
 quickmark-del
 -------------
 Syntax: `:quickmark-del ['name']`
@@ -1108,7 +1222,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _quickmark-load
+
+.. _quickmark-load:
+
 quickmark-load
 --------------
 Syntax: `:quickmark-load [**--tab**] [**--bg**] [**--window**] 'name'`
@@ -1129,12 +1245,16 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _quickmark-save
+
+.. _quickmark-save:
+
 quickmark-save
 --------------
 Save the current page as a quickmark.
 
-.. _quit
+
+.. _quit:
+
 quit
 ----
 Syntax: `:quit [**--save**] ['session']`
@@ -1150,7 +1270,9 @@ optional arguments
 * `-s`, `--save`: When given, save the open windows even if auto_save.session is turned off.
 
 
-.. _record-macro
+
+.. _record-macro:
+
 record-macro
 ------------
 Syntax: `:record-macro ['register']`
@@ -1161,7 +1283,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `register`: Which register to store the macro in.
 
-.. _reload
+
+.. _reload:
+
 reload
 ------
 Syntax: `:reload [**--force**]`
@@ -1176,7 +1300,9 @@ count
 ^^^^^
 The tab index to reload.
 
-.. _repeat
+
+.. _repeat:
+
 repeat
 ------
 Syntax: `:repeat 'times' 'command'`
@@ -1198,7 +1324,9 @@ note
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 * This command does not replace variables like `{url}`.
 
-.. _repeat-command
+
+.. _repeat-command:
+
 repeat-command
 --------------
 Repeat the last executed command.
@@ -1207,17 +1335,23 @@ count
 ^^^^^
 Which count to pass the command.
 
-.. _report
+
+.. _report:
+
 report
 ------
 Report a bug in qutebrowser.
 
-.. _restart
+
+.. _restart:
+
 restart
 -------
 Restart qutebrowser while keeping existing tabs open.
 
-.. _run-macro
+
+.. _run-macro:
+
 run-macro
 ---------
 Syntax: `:run-macro ['register']`
@@ -1232,7 +1366,9 @@ count
 ^^^^^
 How many times to run the macro.
 
-.. _run-with-count
+
+.. _run-with-count:
+
 run-with-count
 --------------
 Syntax: `:run-with-count 'count-arg' 'command'`
@@ -1257,7 +1393,9 @@ note
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 * This command does not replace variables like `{url}`.
 
-.. _save
+
+.. _save:
+
 save
 ----
 Syntax: `:save ['what' ['what' ...]]`
@@ -1269,7 +1407,9 @@ positional arguments
 * `what`: What to save (`config`/`key-config`/`cookies`/...). If not given, everything is saved.
 
 
-.. _scroll
+
+.. _scroll:
+
 scroll
 ------
 Syntax: `:scroll 'direction'`
@@ -1289,7 +1429,9 @@ count
 ^^^^^
 multiplier
 
-.. _scroll-page
+
+.. _scroll-page:
+
 scroll-page
 -----------
 Syntax: `:scroll-page [**--top-navigate** 'ACTION'] [**--bottom-navigate** 'ACTION']
@@ -1313,7 +1455,9 @@ count
 ^^^^^
 multiplier
 
-.. _scroll-px
+
+.. _scroll-px:
+
 scroll-px
 ---------
 Syntax: `:scroll-px 'dx' 'dy'`
@@ -1329,7 +1473,9 @@ count
 ^^^^^
 multiplier
 
-.. _scroll-to-anchor
+
+.. _scroll-to-anchor:
+
 scroll-to-anchor
 ----------------
 Syntax: `:scroll-to-anchor 'name'`
@@ -1340,7 +1486,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `name`: The anchor to scroll to.
 
-.. _scroll-to-perc
+
+.. _scroll-to-perc:
+
 scroll-to-perc
 --------------
 Syntax: `:scroll-to-perc [**--horizontal**] ['perc']`
@@ -1363,7 +1511,9 @@ count
 ^^^^^
 Percentage to scroll.
 
-.. _search
+
+.. _search:
+
 search
 ------
 Syntax: `:search [**--reverse**] ['text']`
@@ -1382,7 +1532,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _search-next
+
+.. _search-next:
+
 search-next
 -----------
 Continue the search to the ([count]th) next term.
@@ -1391,7 +1543,9 @@ count
 ^^^^^
 How many elements to ignore.
 
-.. _search-prev
+
+.. _search-prev:
+
 search-prev
 -----------
 Continue the search to the ([count]th) previous term.
@@ -1400,7 +1554,9 @@ count
 ^^^^^
 How many elements to ignore.
 
-.. _session-delete
+
+.. _session-delete:
+
 session-delete
 --------------
 Syntax: `:session-delete [**--force**] 'name'`
@@ -1416,7 +1572,9 @@ optional arguments
 * `-f`, `--force`: Force deleting internal sessions (starting with an underline).
 
 
-.. _session-load
+
+.. _session-load:
+
 session-load
 ------------
 Syntax: `:session-load [**--clear**] [**--temp**] [**--force**] [**--delete**] 'name'`
@@ -1435,7 +1593,9 @@ optional arguments
 
 * `-d`, `--delete`: Delete the saved session once it has loaded.
 
-.. _session-save
+
+.. _session-save:
+
 session-save
 ------------
 Syntax: `:session-save [**--current**] [**--quiet**] [**--force**]
@@ -1457,7 +1617,9 @@ optional arguments
 * `-o`, `--only-active-window`: Saves only tabs of the currently active window.
 * `-p`, `--with-private`: Include private windows.
 
-.. _set
+
+.. _set:
+
 set
 ---
 Syntax: `:set [**--temp**] [**--print**] [**--pattern** 'pattern'] ['option'] ['value']`
@@ -1482,7 +1644,9 @@ optional arguments
 * `-p`, `--print`: Print the value after setting.
 * `-u`, `--pattern`: The URL pattern to use.
 
-.. _set-cmd-text
+
+.. _set-cmd-text:
+
 set-cmd-text
 ------------
 Syntax: `:set-cmd-text [**--space**] [**--append**] [**--run-on-count**] 'text'`
@@ -1508,7 +1672,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _set-mark
+
+.. _set-mark:
+
 set-mark
 --------
 Syntax: `:set-mark 'key'`
@@ -1519,7 +1685,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `key`: mark identifier; capital indicates a global mark
 
-.. _spawn
+
+.. _spawn:
+
 spawn
 -----
 Syntax: `:spawn [**--userscript**] [**--verbose**] [**--output**] [**--detach**]
@@ -1551,7 +1719,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _stop
+
+.. _stop:
+
 stop
 ----
 Stop loading in the current/[count]th tab.
@@ -1560,7 +1730,9 @@ count
 ^^^^^
 The tab index to stop.
 
-.. _tab-clone
+
+.. _tab-clone:
+
 tab-clone
 ---------
 Syntax: `:tab-clone [**--bg**] [**--window**]`
@@ -1572,7 +1744,9 @@ optional arguments
 * `-b`, `--bg`: Open in a background tab.
 * `-w`, `--window`: Open in a new window.
 
-.. _tab-close
+
+.. _tab-close:
+
 tab-close
 ---------
 Syntax: `:tab-close [**--prev**] [**--next**] [**--opposite**] [**--force**]`
@@ -1591,7 +1765,9 @@ count
 ^^^^^
 The tab index to close
 
-.. _tab-focus
+
+.. _tab-focus:
+
 tab-focus
 ---------
 Syntax: `:tab-focus [**--no-last**] ['index']`
@@ -1617,7 +1793,9 @@ count
 ^^^^^
 The tab index to focus, starting with 1.
 
-.. _tab-give
+
+.. _tab-give:
+
 tab-give
 --------
 Syntax: `:tab-give [**--keep**] ['win-id']`
@@ -1639,7 +1817,9 @@ count
 ^^^^^
 Overrides win_id (index starts at 1 for win_id=0).
 
-.. _tab-move
+
+.. _tab-move:
+
 tab-move
 --------
 Syntax: `:tab-move ['index']`
@@ -1661,7 +1841,9 @@ If moving relatively: Offset. If moving absolutely: New position (default: 0). T
  overrides the index argument, if given.
 
 
-.. _tab-mute
+
+.. _tab-mute:
+
 tab-mute
 --------
 Mute/Unmute the current/[count]th tab.
@@ -1670,7 +1852,9 @@ count
 ^^^^^
 The tab index to mute or unmute
 
-.. _tab-next
+
+.. _tab-next:
+
 tab-next
 --------
 Switch to the next tab, or switch [count] tabs forward.
@@ -1679,7 +1863,9 @@ count
 ^^^^^
 How many tabs to switch forward.
 
-.. _tab-only
+
+.. _tab-only:
+
 tab-only
 --------
 Syntax: `:tab-only [**--prev**] [**--next**] [**--force**]`
@@ -1692,7 +1878,9 @@ optional arguments
 * `-n`, `--next`: Keep tabs after the current.
 * `-f`, `--force`: Avoid confirmation for pinned tabs.
 
-.. _tab-pin
+
+.. _tab-pin:
+
 tab-pin
 -------
 Pin/Unpin the current/[count]th tab.
@@ -1706,7 +1894,9 @@ count
 ^^^^^
 The tab index to pin or unpin
 
-.. _tab-prev
+
+.. _tab-prev:
+
 tab-prev
 --------
 Switch to the previous tab, or switch [count] tabs back.
@@ -1715,7 +1905,9 @@ count
 ^^^^^
 How many tabs to switch back.
 
-.. _tab-take
+
+.. _tab-take:
+
 tab-take
 --------
 Syntax: `:tab-take [**--keep**] 'index'`
@@ -1735,7 +1927,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _unbind
+
+.. _unbind:
+
 unbind
 ------
 Syntax: `:unbind [**--mode** 'mode'] 'key'`
@@ -1752,12 +1946,16 @@ optional arguments
 * `-m`, `--mode`: A mode to unbind the key in (default: `normal`). See `:help bindings.commands` for the available modes.
 
 
-.. _undo
+
+.. _undo:
+
 undo
 ----
 Re-open the last closed tab or tabs.
 
-.. _version
+
+.. _version:
+
 version
 -------
 Syntax: `:version [**--paste**]`
@@ -1768,7 +1966,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-p`, `--paste`: Paste to pastebin.
 
-.. _view-source
+
+.. _view-source:
+
 view-source
 -----------
 Syntax: `:view-source [**--edit**] [**--pygments**]`
@@ -1783,12 +1983,16 @@ optional arguments
  Some JavaScript processing may be applied.
 
 
-.. _window-only
+
+.. _window-only:
+
 window-only
 -----------
 Close all windows except for the current one.
 
-.. _yank
+
+.. _yank:
+
 yank
 ----
 Syntax: `:yank [**--sel**] [**--keep**] [**--quiet**] ['what']`
@@ -1815,7 +2019,9 @@ optional arguments
 * `-k`, `--keep`: Stay in visual mode after yanking the selection.
 * `-q`, `--quiet`: Don't show an information message.
 
-.. _zoom
+
+.. _zoom:
+
 zoom
 ----
 Syntax: `:zoom [**--quiet**] ['level']`
@@ -1839,7 +2045,9 @@ count
 ^^^^^
 The zoom percentage to set.
 
-.. _zoom-in
+
+.. _zoom-in:
+
 zoom-in
 -------
 Syntax: `:zoom-in [**--quiet**]`
@@ -1854,7 +2062,9 @@ count
 ^^^^^
 How many steps to zoom in.
 
-.. _zoom-out
+
+.. _zoom-out:
+
 zoom-out
 --------
 Syntax: `:zoom-out [**--quiet**]`
@@ -1922,7 +2132,9 @@ Quick reference
    :ref:`rl-unix-word-rubout`, "Remove chars from the cursor to the beginning of the word."
    :ref:`rl-yank`, "Paste the most recently deleted text."
    :ref:`toggle-selection`, "Toggle caret selection mode."
-.. _command-accept
+
+.. _command-accept:
+
 command-accept
 --------------
 Syntax: `:command-accept [**--rapid**]`
@@ -1933,22 +2145,30 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-r`, `--rapid`: Run the command without closing or clearing the command bar.
 
-.. _command-history-next
+
+.. _command-history-next:
+
 command-history-next
 --------------------
 Go forward in the commandline history.
 
-.. _command-history-prev
+
+.. _command-history-prev:
+
 command-history-prev
 --------------------
 Go back in the commandline history.
 
-.. _completion-item-del
+
+.. _completion-item-del:
+
 completion-item-del
 -------------------
 Delete the current completion item.
 
-.. _completion-item-focus
+
+.. _completion-item-focus:
+
 completion-item-focus
 ---------------------
 Syntax: `:completion-item-focus [**--history**] 'which'`
@@ -1963,7 +2183,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-H`, `--history`: Navigate through command history if no text was typed.
 
-.. _completion-item-yank
+
+.. _completion-item-yank:
+
 completion-item-yank
 --------------------
 Syntax: `:completion-item-yank [**--sel**]`
@@ -1974,12 +2196,16 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-s`, `--sel`: Use the primary selection instead of the clipboard.
 
-.. _drop-selection
+
+.. _drop-selection:
+
 drop-selection
 --------------
 Drop selection and keep selection mode enabled.
 
-.. _follow-hint
+
+.. _follow-hint:
+
 follow-hint
 -----------
 Syntax: `:follow-hint [**--select**] ['keystring']`
@@ -1994,22 +2220,30 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-s`, `--select`: Only select the given hint, don't necessarily follow it.
 
-.. _leave-mode
+
+.. _leave-mode:
+
 leave-mode
 ----------
 Leave the mode we're currently in.
 
-.. _move-to-end-of-document
+
+.. _move-to-end-of-document:
+
 move-to-end-of-document
 -----------------------
 Move the cursor or selection to the end of the document.
 
-.. _move-to-end-of-line
+
+.. _move-to-end-of-line:
+
 move-to-end-of-line
 -------------------
 Move the cursor or selection to the end of line.
 
-.. _move-to-end-of-next-block
+
+.. _move-to-end-of-next-block:
+
 move-to-end-of-next-block
 -------------------------
 Move the cursor or selection to the end of next block.
@@ -2018,7 +2252,9 @@ count
 ^^^^^
 How many blocks to move.
 
-.. _move-to-end-of-prev-block
+
+.. _move-to-end-of-prev-block:
+
 move-to-end-of-prev-block
 -------------------------
 Move the cursor or selection to the end of previous block.
@@ -2027,7 +2263,9 @@ count
 ^^^^^
 How many blocks to move.
 
-.. _move-to-end-of-word
+
+.. _move-to-end-of-word:
+
 move-to-end-of-word
 -------------------
 Move the cursor or selection to the end of the word.
@@ -2036,7 +2274,9 @@ count
 ^^^^^
 How many words to move.
 
-.. _move-to-next-char
+
+.. _move-to-next-char:
+
 move-to-next-char
 -----------------
 Move the cursor or selection to the next char.
@@ -2045,7 +2285,9 @@ count
 ^^^^^
 How many lines to move.
 
-.. _move-to-next-line
+
+.. _move-to-next-line:
+
 move-to-next-line
 -----------------
 Move the cursor or selection to the next line.
@@ -2054,7 +2296,9 @@ count
 ^^^^^
 How many lines to move.
 
-.. _move-to-next-word
+
+.. _move-to-next-word:
+
 move-to-next-word
 -----------------
 Move the cursor or selection to the next word.
@@ -2063,7 +2307,9 @@ count
 ^^^^^
 How many words to move.
 
-.. _move-to-prev-char
+
+.. _move-to-prev-char:
+
 move-to-prev-char
 -----------------
 Move the cursor or selection to the previous char.
@@ -2072,7 +2318,9 @@ count
 ^^^^^
 How many chars to move.
 
-.. _move-to-prev-line
+
+.. _move-to-prev-line:
+
 move-to-prev-line
 -----------------
 Move the cursor or selection to the prev line.
@@ -2081,7 +2329,9 @@ count
 ^^^^^
 How many lines to move.
 
-.. _move-to-prev-word
+
+.. _move-to-prev-word:
+
 move-to-prev-word
 -----------------
 Move the cursor or selection to the previous word.
@@ -2090,17 +2340,23 @@ count
 ^^^^^
 How many words to move.
 
-.. _move-to-start-of-document
+
+.. _move-to-start-of-document:
+
 move-to-start-of-document
 -------------------------
 Move the cursor or selection to the start of the document.
 
-.. _move-to-start-of-line
+
+.. _move-to-start-of-line:
+
 move-to-start-of-line
 ---------------------
 Move the cursor or selection to the start of the line.
 
-.. _move-to-start-of-next-block
+
+.. _move-to-start-of-next-block:
+
 move-to-start-of-next-block
 ---------------------------
 Move the cursor or selection to the start of next block.
@@ -2109,7 +2365,9 @@ count
 ^^^^^
 How many blocks to move.
 
-.. _move-to-start-of-prev-block
+
+.. _move-to-start-of-prev-block:
+
 move-to-start-of-prev-block
 ---------------------------
 Move the cursor or selection to the start of previous block.
@@ -2118,7 +2376,9 @@ count
 ^^^^^
 How many blocks to move.
 
-.. _prompt-accept
+
+.. _prompt-accept:
+
 prompt-accept
 -------------
 Syntax: `:prompt-accept ['value']`
@@ -2130,7 +2390,9 @@ positional arguments
 * `value`: If given, uses this value instead of the entered one. For boolean prompts, "yes"/"no" are accepted as value.
 
 
-.. _prompt-item-focus
+
+.. _prompt-item-focus:
+
 prompt-item-focus
 -----------------
 Syntax: `:prompt-item-focus 'which'`
@@ -2141,7 +2403,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `which`: 'next', 'prev'
 
-.. _prompt-open-download
+
+.. _prompt-open-download:
+
 prompt-open-download
 --------------------
 Syntax: `:prompt-open-download [**--pdfjs**] ['cmdline']`
@@ -2167,7 +2431,9 @@ note
 ^^^^
 * This command does not split arguments after the last argument and handles quotes literally.
 
-.. _prompt-yank
+
+.. _prompt-yank:
+
 prompt-yank
 -----------
 Syntax: `:prompt-yank [**--sel**]`
@@ -2178,21 +2444,27 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-s`, `--sel`: Use the primary selection instead of the clipboard.
 
-.. _rl-backward-char
+
+.. _rl-backward-char:
+
 rl-backward-char
 ----------------
 Move back a character.
 
 This acts like readline's backward-char.
 
-.. _rl-backward-delete-char
+
+.. _rl-backward-delete-char:
+
 rl-backward-delete-char
 -----------------------
 Delete the character before the cursor.
 
 This acts like readline's backward-delete-char.
 
-.. _rl-backward-kill-word
+
+.. _rl-backward-kill-word:
+
 rl-backward-kill-word
 ---------------------
 Remove chars from the cursor to the beginning of the word.
@@ -2200,77 +2472,99 @@ Remove chars from the cursor to the beginning of the word.
 This acts like readline's backward-kill-word. Any non-alphanumeric
 character is considered a word delimiter.
 
-.. _rl-backward-word
+
+.. _rl-backward-word:
+
 rl-backward-word
 ----------------
 Move back to the start of the current or previous word.
 
 This acts like readline's backward-word.
 
-.. _rl-beginning-of-line
+
+.. _rl-beginning-of-line:
+
 rl-beginning-of-line
 --------------------
 Move to the start of the line.
 
 This acts like readline's beginning-of-line.
 
-.. _rl-delete-char
+
+.. _rl-delete-char:
+
 rl-delete-char
 --------------
 Delete the character after the cursor.
 
 This acts like readline's delete-char.
 
-.. _rl-end-of-line
+
+.. _rl-end-of-line:
+
 rl-end-of-line
 --------------
 Move to the end of the line.
 
 This acts like readline's end-of-line.
 
-.. _rl-forward-char
+
+.. _rl-forward-char:
+
 rl-forward-char
 ---------------
 Move forward a character.
 
 This acts like readline's forward-char.
 
-.. _rl-forward-word
+
+.. _rl-forward-word:
+
 rl-forward-word
 ---------------
 Move forward to the end of the next word.
 
 This acts like readline's forward-word.
 
-.. _rl-kill-line
+
+.. _rl-kill-line:
+
 rl-kill-line
 ------------
 Remove chars from the cursor to the end of the line.
 
 This acts like readline's kill-line.
 
-.. _rl-kill-word
+
+.. _rl-kill-word:
+
 rl-kill-word
 ------------
 Remove chars from the cursor to the end of the current word.
 
 This acts like readline's kill-word.
 
-.. _rl-unix-filename-rubout
+
+.. _rl-unix-filename-rubout:
+
 rl-unix-filename-rubout
 -----------------------
 Remove chars from the cursor to the previous path separator.
 
 This acts like readline's unix-filename-rubout.
 
-.. _rl-unix-line-discard
+
+.. _rl-unix-line-discard:
+
 rl-unix-line-discard
 --------------------
 Remove chars backward from the cursor to the beginning of the line.
 
 This acts like readline's unix-line-discard.
 
-.. _rl-unix-word-rubout
+
+.. _rl-unix-word-rubout:
+
 rl-unix-word-rubout
 -------------------
 Remove chars from the cursor to the beginning of the word.
@@ -2278,14 +2572,18 @@ Remove chars from the cursor to the beginning of the word.
 This acts like readline's unix-word-rubout. Whitespace is used as a
 word delimiter.
 
-.. _rl-yank
+
+.. _rl-yank:
+
 rl-yank
 -------
 Paste the most recently deleted text.
 
 This acts like readline's yank.
 
-.. _toggle-selection
+
+.. _toggle-selection:
+
 toggle-selection
 ----------------
 Toggle caret selection mode.
@@ -2315,27 +2613,37 @@ Quick reference
    :ref:`debug-set-fake-clipboard`, "Put data into the fake clipboard and enable logging, used for tests."
    :ref:`debug-trace`, "Trace executed code via hunter."
    :ref:`debug-webaction`, "Execute a webaction."
-.. _debug-all-objects
+
+.. _debug-all-objects:
+
 debug-all-objects
 -----------------
 Print a list of  all objects to the debug log.
 
-.. _debug-cache-stats
+
+.. _debug-cache-stats:
+
 debug-cache-stats
 -----------------
 Print LRU cache stats.
 
-.. _debug-clear-ssl-errors
+
+.. _debug-clear-ssl-errors:
+
 debug-clear-ssl-errors
 ----------------------
 Clear remembered SSL error answers.
 
-.. _debug-console
+
+.. _debug-console:
+
 debug-console
 -------------
 Show the debugging console.
 
-.. _debug-crash
+
+.. _debug-crash:
+
 debug-crash
 -----------
 Syntax: `:debug-crash ['typ']`
@@ -2346,7 +2654,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `typ`: either 'exception' or 'segfault'.
 
-.. _debug-dump-history
+
+.. _debug-dump-history:
+
 debug-dump-history
 ------------------
 Syntax: `:debug-dump-history 'dest'`
@@ -2357,7 +2667,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `dest`: Where to write the file to.
 
-.. _debug-dump-page
+
+.. _debug-dump-page:
+
 debug-dump-page
 ---------------
 Syntax: `:debug-dump-page [**--plain**] 'dest'`
@@ -2372,7 +2684,9 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-p`, `--plain`: Write plain text instead of HTML.
 
-.. _debug-log-capacity
+
+.. _debug-log-capacity:
+
 debug-log-capacity
 ------------------
 Syntax: `:debug-log-capacity 'capacity'`
@@ -2383,7 +2697,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `capacity`: Number of lines for the log.
 
-.. _debug-log-filter
+
+.. _debug-log-filter:
+
 debug-log-filter
 ----------------
 Syntax: `:debug-log-filter 'filters'`
@@ -2395,7 +2711,9 @@ positional arguments
 * `filters`: A comma separated list of logger names. Can also be "none" to clear any existing filters.
 
 
-.. _debug-log-level
+
+.. _debug-log-level:
+
 debug-log-level
 ---------------
 Syntax: `:debug-log-level 'level'`
@@ -2406,7 +2724,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `level`: The log level to set.
 
-.. _debug-pyeval
+
+.. _debug-pyeval:
+
 debug-pyeval
 ------------
 Syntax: `:debug-pyeval [**--file**] [**--quiet**] 's'`
@@ -2427,7 +2747,9 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 
-.. _debug-set-fake-clipboard
+
+.. _debug-set-fake-clipboard:
+
 debug-set-fake-clipboard
 ------------------------
 Syntax: `:debug-set-fake-clipboard ['s']`
@@ -2438,7 +2760,9 @@ positional arguments
 ^^^^^^^^^^^^^^^^^^^^
 * `s`: The text to put into the fake clipboard, or unset to enable logging.
 
-.. _debug-trace
+
+.. _debug-trace:
+
 debug-trace
 -----------
 Syntax: `:debug-trace ['expr']`
@@ -2454,7 +2778,9 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 
-.. _debug-webaction
+
+.. _debug-webaction:
+
 debug-webaction
 ---------------
 Syntax: `:debug-webaction 'action'`
