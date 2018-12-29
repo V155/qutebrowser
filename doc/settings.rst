@@ -13,283 +13,283 @@ All settings
    :header: "Setting", "Description"
    :widths: 25, 75
    
-   :ref:`aliases`, "Aliases for commands."
-   :ref:`auto_save.interval`, "Time interval (in milliseconds) between auto-saves of config/cookies/etc."
-   :ref:`auto_save.session`, "Always restore open sites when qutebrowser is reopened."
-   :ref:`backend`, "Backend to use to display websites."
-   :ref:`bindings.commands`, "Keybindings mapping keys to commands in different modes."
-   :ref:`bindings.default`, "Default keybindings. If you want to add bindings, modify `bindings.commands` instead."
-   :ref:`bindings.key_mappings`, "This setting can be used to map keys to other keys."
-   :ref:`colors.completion.category.bg`, "Background color of the completion widget category headers."
-   :ref:`colors.completion.category.border.bottom`, "Bottom border color of the completion widget category headers."
-   :ref:`colors.completion.category.border.top`, "Top border color of the completion widget category headers."
-   :ref:`colors.completion.category.fg`, "Foreground color of completion widget category headers."
-   :ref:`colors.completion.even.bg`, "Background color of the completion widget for even rows."
-   :ref:`colors.completion.fg`, "Text color of the completion widget."
-   :ref:`colors.completion.item.selected.bg`, "Background color of the selected completion item."
-   :ref:`colors.completion.item.selected.border.bottom`, "Bottom border color of the selected completion item."
-   :ref:`colors.completion.item.selected.border.top`, "Top border color of the completion widget category headers."
-   :ref:`colors.completion.item.selected.fg`, "Foreground color of the selected completion item."
-   :ref:`colors.completion.match.fg`, "Foreground color of the matched text in the completion."
-   :ref:`colors.completion.odd.bg`, "Background color of the completion widget for odd rows."
-   :ref:`colors.completion.scrollbar.bg`, "Color of the scrollbar in the completion view."
-   :ref:`colors.completion.scrollbar.fg`, "Color of the scrollbar handle in the completion view."
-   :ref:`colors.downloads.bar.bg`, "Background color for the download bar."
-   :ref:`colors.downloads.error.bg`, "Background color for downloads with errors."
-   :ref:`colors.downloads.error.fg`, "Foreground color for downloads with errors."
-   :ref:`colors.downloads.start.bg`, "Color gradient start for download backgrounds."
-   :ref:`colors.downloads.start.fg`, "Color gradient start for download text."
-   :ref:`colors.downloads.stop.bg`, "Color gradient stop for download backgrounds."
-   :ref:`colors.downloads.stop.fg`, "Color gradient end for download text."
-   :ref:`colors.downloads.system.bg`, "Color gradient interpolation system for download backgrounds."
-   :ref:`colors.downloads.system.fg`, "Color gradient interpolation system for download text."
-   :ref:`colors.hints.bg`, "Background color for hints."
-   :ref:`colors.hints.fg`, "Font color for hints."
-   :ref:`colors.hints.match.fg`, "Font color for the matched part of hints."
-   :ref:`colors.keyhint.bg`, "Background color of the keyhint widget."
-   :ref:`colors.keyhint.fg`, "Text color for the keyhint widget."
-   :ref:`colors.keyhint.suffix.fg`, "Highlight color for keys to complete the current keychain."
-   :ref:`colors.messages.error.bg`, "Background color of an error message."
-   :ref:`colors.messages.error.border`, "Border color of an error message."
-   :ref:`colors.messages.error.fg`, "Foreground color of an error message."
-   :ref:`colors.messages.info.bg`, "Background color of an info message."
-   :ref:`colors.messages.info.border`, "Border color of an info message."
-   :ref:`colors.messages.info.fg`, "Foreground color of an info message."
-   :ref:`colors.messages.warning.bg`, "Background color of a warning message."
-   :ref:`colors.messages.warning.border`, "Border color of a warning message."
-   :ref:`colors.messages.warning.fg`, "Foreground color of a warning message."
-   :ref:`colors.prompts.bg`, "Background color for prompts."
-   :ref:`colors.prompts.border`, "Border used around UI elements in prompts."
-   :ref:`colors.prompts.fg`, "Foreground color for prompts."
-   :ref:`colors.prompts.selected.bg`, "Background color for the selected item in filename prompts."
-   :ref:`colors.statusbar.caret.bg`, "Background color of the statusbar in caret mode."
-   :ref:`colors.statusbar.caret.fg`, "Foreground color of the statusbar in caret mode."
-   :ref:`colors.statusbar.caret.selection.bg`, "Background color of the statusbar in caret mode with a selection."
-   :ref:`colors.statusbar.caret.selection.fg`, "Foreground color of the statusbar in caret mode with a selection."
-   :ref:`colors.statusbar.command.bg`, "Background color of the statusbar in command mode."
-   :ref:`colors.statusbar.command.fg`, "Foreground color of the statusbar in command mode."
-   :ref:`colors.statusbar.command.private.bg`, "Background color of the statusbar in private browsing + command mode."
-   :ref:`colors.statusbar.command.private.fg`, "Foreground color of the statusbar in private browsing + command mode."
-   :ref:`colors.statusbar.insert.bg`, "Background color of the statusbar in insert mode."
-   :ref:`colors.statusbar.insert.fg`, "Foreground color of the statusbar in insert mode."
-   :ref:`colors.statusbar.normal.bg`, "Background color of the statusbar."
-   :ref:`colors.statusbar.normal.fg`, "Foreground color of the statusbar."
-   :ref:`colors.statusbar.passthrough.bg`, "Background color of the statusbar in passthrough mode."
-   :ref:`colors.statusbar.passthrough.fg`, "Foreground color of the statusbar in passthrough mode."
-   :ref:`colors.statusbar.private.bg`, "Background color of the statusbar in private browsing mode."
-   :ref:`colors.statusbar.private.fg`, "Foreground color of the statusbar in private browsing mode."
-   :ref:`colors.statusbar.progress.bg`, "Background color of the progress bar."
-   :ref:`colors.statusbar.url.error.fg`, "Foreground color of the URL in the statusbar on error."
-   :ref:`colors.statusbar.url.fg`, "Default foreground color of the URL in the statusbar."
-   :ref:`colors.statusbar.url.hover.fg`, "Foreground color of the URL in the statusbar for hovered links."
-   :ref:`colors.statusbar.url.success.http.fg`, "Foreground color of the URL in the statusbar on successful load (http)."
-   :ref:`colors.statusbar.url.success.https.fg`, "Foreground color of the URL in the statusbar on successful load (https)."
-   :ref:`colors.statusbar.url.warn.fg`, "Foreground color of the URL in the statusbar when there's a warning."
-   :ref:`colors.tabs.bar.bg`, "Background color of the tab bar."
-   :ref:`colors.tabs.even.bg`, "Background color of unselected even tabs."
-   :ref:`colors.tabs.even.fg`, "Foreground color of unselected even tabs."
-   :ref:`colors.tabs.indicator.error`, "Color for the tab indicator on errors."
-   :ref:`colors.tabs.indicator.start`, "Color gradient start for the tab indicator."
-   :ref:`colors.tabs.indicator.stop`, "Color gradient end for the tab indicator."
-   :ref:`colors.tabs.indicator.system`, "Color gradient interpolation system for the tab indicator."
-   :ref:`colors.tabs.odd.bg`, "Background color of unselected odd tabs."
-   :ref:`colors.tabs.odd.fg`, "Foreground color of unselected odd tabs."
-   :ref:`colors.tabs.selected.even.bg`, "Background color of selected even tabs."
-   :ref:`colors.tabs.selected.even.fg`, "Foreground color of selected even tabs."
-   :ref:`colors.tabs.selected.odd.bg`, "Background color of selected odd tabs."
-   :ref:`colors.tabs.selected.odd.fg`, "Foreground color of selected odd tabs."
-   :ref:`colors.webpage.bg`, "Background color for webpages if unset (or empty to use the theme's color)."
-   :ref:`completion.cmd_history_max_items`, "Number of commands to save in the command history."
-   :ref:`completion.delay`, "Delay (in milliseconds) before updating completions after typing a character."
-   :ref:`completion.height`, "Height (in pixels or as percentage of the window) of the completion."
-   :ref:`completion.min_chars`, "Minimum amount of characters needed to update completions."
-   :ref:`completion.open_categories`, "Which categories to show (in which order) in the :open completion."
-   :ref:`completion.quick`, "Move on to the next part when there's only one possible completion left."
-   :ref:`completion.scrollbar.padding`, "Padding (in pixels) of the scrollbar handle in the completion window."
-   :ref:`completion.scrollbar.width`, "Width (in pixels) of the scrollbar in the completion window."
-   :ref:`completion.show`, "When to show the autocompletion window."
-   :ref:`completion.shrink`, "Shrink the completion to be smaller than the configured size if there are no scrollbars."
-   :ref:`completion.timestamp_format`, "Format of timestamps (e.g. for the history completion)."
-   :ref:`completion.use_best_match`, "Execute the best-matching command on a partial match."
-   :ref:`completion.web_history.exclude`, "A list of patterns which should not be shown in the history."
-   :ref:`completion.web_history.max_items`, "Number of URLs to show in the web history."
-   :ref:`confirm_quit`, "Require a confirmation before quitting the application."
-   :ref:`content.autoplay`, "Automatically start playing `<video>` elements."
-   :ref:`content.cache.appcache`, "Enable support for the HTML 5 web application cache feature."
-   :ref:`content.cache.maximum_pages`, "Maximum number of pages to hold in the global memory page cache."
-   :ref:`content.cache.size`, "Size (in bytes) of the HTTP network cache. Null to use the default value."
-   :ref:`content.canvas_reading`, "Allow websites to read canvas elements."
-   :ref:`content.cookies.accept`, "Which cookies to accept."
-   :ref:`content.cookies.store`, "Store cookies."
-   :ref:`content.default_encoding`, "Default encoding to use for websites."
-   :ref:`content.desktop_capture`, "Allow websites to share screen content."
-   :ref:`content.dns_prefetch`, "Try to pre-fetch DNS entries to speed up browsing."
-   :ref:`content.frame_flattening`, "Expand each subframe to its contents."
-   :ref:`content.geolocation`, "Allow websites to request geolocations."
-   :ref:`content.headers.accept_language`, "Value to send in the `Accept-Language` header."
-   :ref:`content.headers.custom`, "Custom headers for qutebrowser HTTP requests."
-   :ref:`content.headers.do_not_track`, "Value to send in the `DNT` header."
-   :ref:`content.headers.referer`, "When to send the Referer header."
-   :ref:`content.headers.user_agent`, "User agent to send. Unset to send the default."
-   :ref:`content.host_blocking.enabled`, "Enable host blocking."
-   :ref:`content.host_blocking.lists`, "List of URLs of lists which contain hosts to block."
-   :ref:`content.host_blocking.whitelist`, "A list of patterns that should always be loaded, despite being ad-blocked."
-   :ref:`content.hyperlink_auditing`, "Enable hyperlink auditing (`<a ping>`)."
-   :ref:`content.images`, "Load images automatically in web pages."
-   :ref:`content.javascript.alert`, "Show javascript alerts."
-   :ref:`content.javascript.can_access_clipboard`, "Allow JavaScript to read from or write to the clipboard."
-   :ref:`content.javascript.can_close_tabs`, "Allow JavaScript to close tabs."
-   :ref:`content.javascript.can_open_tabs_automatically`, "Allow JavaScript to open new tabs without user interaction."
-   :ref:`content.javascript.enabled`, "Enable JavaScript."
-   :ref:`content.javascript.log`, "Log levels to use for JavaScript console logging messages."
-   :ref:`content.javascript.modal_dialog`, "Use the standard JavaScript modal dialog for `alert()` and `confirm()`."
-   :ref:`content.javascript.prompt`, "Show javascript prompts."
-   :ref:`content.local_content_can_access_file_urls`, "Allow locally loaded documents to access other local URLs."
-   :ref:`content.local_content_can_access_remote_urls`, "Allow locally loaded documents to access remote URLs."
-   :ref:`content.local_storage`, "Enable support for HTML 5 local storage and Web SQL."
-   :ref:`content.media_capture`, "Allow websites to record audio/video."
-   :ref:`content.mouse_lock`, "Allow websites to lock your mouse pointer."
-   :ref:`content.mute`, "Automatically mute tabs."
-   :ref:`content.netrc_file`, "Netrc-file for HTTP authentication."
-   :ref:`content.notifications`, "Allow websites to show notifications."
-   :ref:`content.pdfjs`, "Allow pdf.js to view PDF files in the browser."
-   :ref:`content.persistent_storage`, "Allow websites to request persistent storage quota via `navigator.webkitPersistentStorage.requestQuota`."
-   :ref:`content.plugins`, "Enable plugins in Web pages."
-   :ref:`content.print_element_backgrounds`, "Draw the background color and images also when the page is printed."
-   :ref:`content.private_browsing`, "Open new windows in private browsing mode which does not record visited pages."
-   :ref:`content.proxy`, "Proxy to use."
-   :ref:`content.proxy_dns_requests`, "Send DNS requests over the configured proxy."
-   :ref:`content.register_protocol_handler`, "Allow websites to register protocol handlers via `navigator.registerProtocolHandler`."
-   :ref:`content.ssl_strict`, "Validate SSL handshakes."
-   :ref:`content.user_stylesheets`, "List of user stylesheet filenames to use."
-   :ref:`content.webgl`, "Enable WebGL."
-   :ref:`content.webrtc_ip_handling_policy`, "Which interfaces to expose via WebRTC."
-   :ref:`content.windowed_fullscreen`, "Limit fullscreen to the browser window (does not expand to fill the screen)."
-   :ref:`content.xss_auditing`, "Monitor load requests for cross-site scripting attempts."
-   :ref:`downloads.location.directory`, "Directory to save downloads to."
-   :ref:`downloads.location.prompt`, "Prompt the user for the download location."
-   :ref:`downloads.location.remember`, "Remember the last used download directory."
-   :ref:`downloads.location.suggestion`, "What to display in the download filename input."
-   :ref:`downloads.open_dispatcher`, "Default program used to open downloads."
-   :ref:`downloads.position`, "Where to show the downloaded files."
-   :ref:`downloads.remove_finished`, "Duration (in milliseconds) to wait before removing finished downloads."
-   :ref:`editor.command`, "Editor (and arguments) to use for the `open-editor` command. The following placeholders are defined:"
-   :ref:`editor.encoding`, "Encoding to use for the editor."
-   :ref:`fonts.completion.category`, "Font used in the completion categories."
-   :ref:`fonts.completion.entry`, "Font used in the completion widget."
-   :ref:`fonts.debug_console`, "Font used for the debugging console."
-   :ref:`fonts.downloads`, "Font used for the downloadbar."
-   :ref:`fonts.hints`, "Font used for the hints."
-   :ref:`fonts.keyhint`, "Font used in the keyhint widget."
-   :ref:`fonts.messages.error`, "Font used for error messages."
-   :ref:`fonts.messages.info`, "Font used for info messages."
-   :ref:`fonts.messages.warning`, "Font used for warning messages."
-   :ref:`fonts.monospace`, "Default monospace fonts."
-   :ref:`fonts.prompts`, "Font used for prompts."
-   :ref:`fonts.statusbar`, "Font used in the statusbar."
-   :ref:`fonts.tabs`, "Font used in the tab bar."
-   :ref:`fonts.web.family.cursive`, "Font family for cursive fonts."
-   :ref:`fonts.web.family.fantasy`, "Font family for fantasy fonts."
-   :ref:`fonts.web.family.fixed`, "Font family for fixed fonts."
-   :ref:`fonts.web.family.sans_serif`, "Font family for sans-serif fonts."
-   :ref:`fonts.web.family.serif`, "Font family for serif fonts."
-   :ref:`fonts.web.family.standard`, "Font family for standard fonts."
-   :ref:`fonts.web.size.default`, "Default font size (in pixels) for regular text."
-   :ref:`fonts.web.size.default_fixed`, "Default font size (in pixels) for fixed-pitch text."
-   :ref:`fonts.web.size.minimum`, "Hard minimum font size (in pixels)."
-   :ref:`fonts.web.size.minimum_logical`, "Minimum logical font size (in pixels) that is applied when zooming out."
-   :ref:`hints.auto_follow`, "When a hint can be automatically followed without pressing Enter."
-   :ref:`hints.auto_follow_timeout`, "Duration (in milliseconds) to ignore normal-mode key bindings after a successful auto-follow."
-   :ref:`hints.border`, "CSS border value for hints."
-   :ref:`hints.chars`, "Characters used for hint strings."
-   :ref:`hints.dictionary`, "Dictionary file to be used by the word hints."
-   :ref:`hints.find_implementation`, "Which implementation to use to find elements to hint."
-   :ref:`hints.hide_unmatched_rapid_hints`, "Hide unmatched hints in rapid mode."
-   :ref:`hints.min_chars`, "Minimum number of characters used for hint strings."
-   :ref:`hints.mode`, "Mode to use for hints."
-   :ref:`hints.next_regexes`, "Comma-separated list of regular expressions to use for 'next' links."
-   :ref:`hints.prev_regexes`, "Comma-separated list of regular expressions to use for 'prev' links."
-   :ref:`hints.scatter`, "Scatter hint key chains (like Vimium) or not (like dwb)."
-   :ref:`hints.selectors`, "CSS selectors used to determine which elements on a page should have hints."
-   :ref:`hints.uppercase`, "Make characters in hint strings uppercase."
-   :ref:`history_gap_interval`, "Maximum time (in minutes) between two history items for them to be considered being from the same browsing session."
-   :ref:`input.escape_quits_reporter`, "Allow Escape to quit the crash reporter."
-   :ref:`input.forward_unbound_keys`, "Which unbound keys to forward to the webview in normal mode."
-   :ref:`input.insert_mode.auto_enter`, "Enter insert mode if an editable element is clicked."
-   :ref:`input.insert_mode.auto_leave`, "Leave insert mode if a non-editable element is clicked."
-   :ref:`input.insert_mode.auto_load`, "Automatically enter insert mode if an editable element is focused after loading the page."
-   :ref:`input.insert_mode.plugins`, "Switch to insert mode when clicking flash and other plugins."
-   :ref:`input.links_included_in_focus_chain`, "Include hyperlinks in the keyboard focus chain when tabbing."
-   :ref:`input.partial_timeout`, "Timeout (in milliseconds) for partially typed key bindings."
-   :ref:`input.rocker_gestures`, "Enable Opera-like mouse rocker gestures."
-   :ref:`input.spatial_navigation`, "Enable spatial navigation."
-   :ref:`keyhint.blacklist`, "Keychains that shouldn't be shown in the keyhint dialog."
-   :ref:`keyhint.delay`, "Time (in milliseconds) from pressing a key to seeing the keyhint dialog."
-   :ref:`keyhint.radius`, "Rounding radius (in pixels) for the edges of the keyhint dialog."
-   :ref:`messages.timeout`, "Duration (in milliseconds) to show messages in the statusbar for."
-   :ref:`new_instance_open_target`, "How to open links in an existing instance if a new one is launched."
-   :ref:`new_instance_open_target_window`, "Which window to choose when opening links as new tabs."
-   :ref:`prompt.filebrowser`, "Show a filebrowser in upload/download prompts."
-   :ref:`prompt.radius`, "Rounding radius (in pixels) for the edges of prompts."
-   :ref:`qt.args`, "Additional arguments to pass to Qt, without leading `--`."
-   :ref:`qt.force_platform`, "Force a Qt platform to use."
-   :ref:`qt.force_software_rendering`, "Force software rendering for QtWebEngine."
-   :ref:`qt.highdpi`, "Turn on Qt HighDPI scaling."
-   :ref:`qt.low_end_device_mode`, "When to use Chromium's low-end device mode."
-   :ref:`qt.process_model`, "Which Chromium process model to use."
-   :ref:`scrolling.bar`, "When to show the scrollbar."
-   :ref:`scrolling.smooth`, "Enable smooth scrolling for web pages."
-   :ref:`search.ignore_case`, "When to find text on a page case-insensitively."
-   :ref:`search.incremental`, "Find text on a page incrementally, renewing the search for each typed character."
-   :ref:`session.default_name`, "Name of the session to save by default."
-   :ref:`session.lazy_restore`, "Load a restored tab as soon as it takes focus."
-   :ref:`spellcheck.languages`, "Languages to use for spell checking."
-   :ref:`statusbar.hide`, "Hide the statusbar unless a message is shown."
-   :ref:`statusbar.padding`, "Padding (in pixels) for the statusbar."
-   :ref:`statusbar.position`, "Position of the status bar."
-   :ref:`statusbar.widgets`, "List of widgets displayed in the statusbar."
-   :ref:`tabs.background`, "Open new tabs (middleclick/ctrl+click) in the background."
-   :ref:`tabs.close_mouse_button`, "Mouse button with which to close tabs."
-   :ref:`tabs.close_mouse_button_on_bar`, "How to behave when the close mouse button is pressed on the tab bar."
-   :ref:`tabs.favicons.scale`, "Scaling factor for favicons in the tab bar."
-   :ref:`tabs.favicons.show`, "When to show favicons in the tab bar."
-   :ref:`tabs.indicator.padding`, "Padding (in pixels) for tab indicators."
-   :ref:`tabs.indicator.width`, "Width (in pixels) of the progress indicator (0 to disable)."
-   :ref:`tabs.last_close`, "How to behave when the last tab is closed."
-   :ref:`tabs.max_width`, "Maximum width (in pixels) of tabs (-1 for no maximum)."
-   :ref:`tabs.min_width`, "Minimum width (in pixels) of tabs (-1 for the default minimum size behavior)."
-   :ref:`tabs.mode_on_change`, "When switching tabs, what input mode is applied."
-   :ref:`tabs.mousewheel_switching`, "Switch between tabs using the mouse wheel."
-   :ref:`tabs.new_position.related`, "Position of new tabs opened from another tab."
-   :ref:`tabs.new_position.stacking`, "Stack related tabs on top of each other when opened consecutively."
-   :ref:`tabs.new_position.unrelated`, "Position of new tabs which are not opened from another tab."
-   :ref:`tabs.padding`, "Padding (in pixels) around text for tabs."
-   :ref:`tabs.pinned.shrink`, "Shrink pinned tabs down to their contents."
-   :ref:`tabs.position`, "Position of the tab bar."
-   :ref:`tabs.select_on_remove`, "Which tab to select when the focused tab is removed."
-   :ref:`tabs.show`, "When to show the tab bar."
-   :ref:`tabs.show_switching_delay`, "Duration (in milliseconds) to show the tab bar before hiding it when tabs.show is set to 'switching'."
-   :ref:`tabs.tabs_are_windows`, "Open a new window for every tab."
-   :ref:`tabs.title.alignment`, "Alignment of the text inside of tabs."
-   :ref:`tabs.title.format`, "Format to use for the tab title."
-   :ref:`tabs.title.format_pinned`, "Format to use for the tab title for pinned tabs. The same placeholders like for `tabs.title.format` are defined."
-   :ref:`tabs.width`, "Width (in pixels or as percentage of the window) of the tab bar if it's vertical."
-   :ref:`tabs.wrap`, "Wrap when changing tabs."
-   :ref:`url.auto_search`, "What search to start when something else than a URL is entered."
-   :ref:`url.default_page`, "Page to open if :open -t/-b/-w is used without URL."
-   :ref:`url.incdec_segments`, "URL segments where `:navigate increment/decrement` will search for a number."
-   :ref:`url.open_base_url`, "Open base URL of the searchengine if a searchengine shortcut is invoked without parameters."
-   :ref:`url.searchengines`, "Search engines which can be used via the address bar."
-   :ref:`url.start_pages`, "Page(s) to open at the start."
-   :ref:`url.yank_ignored_parameters`, "URL parameters to strip with `:yank url`."
-   :ref:`window.hide_decoration`, "Hide the window decoration."
-   :ref:`window.title_format`, "Format to use for the window title. The same placeholders like for"
-   :ref:`zoom.default`, "Default zoom level."
-   :ref:`zoom.levels`, "Available zoom levels."
-   :ref:`zoom.mouse_divider`, "Number of zoom increments to divide the mouse wheel movements to."
-   :ref:`zoom.text_only`, "Apply the zoom factor on a frame only to the text or to all content."
+   :ref:`aliases <setting-aliases>`, "Aliases for commands."
+   :ref:`auto_save.interval <setting-auto_save-interval>`, "Time interval (in milliseconds) between auto-saves of config/cookies/etc."
+   :ref:`auto_save.session <setting-auto_save-session>`, "Always restore open sites when qutebrowser is reopened."
+   :ref:`backend <setting-backend>`, "Backend to use to display websites."
+   :ref:`bindings.commands <setting-bindings-commands>`, "Keybindings mapping keys to commands in different modes."
+   :ref:`bindings.default <setting-bindings-default>`, "Default keybindings. If you want to add bindings, modify `bindings.commands` instead."
+   :ref:`bindings.key_mappings <setting-bindings-key_mappings>`, "This setting can be used to map keys to other keys."
+   :ref:`colors.completion.category.bg <setting-colors-completion-category-bg>`, "Background color of the completion widget category headers."
+   :ref:`colors.completion.category.border.bottom <setting-colors-completion-category-border-bottom>`, "Bottom border color of the completion widget category headers."
+   :ref:`colors.completion.category.border.top <setting-colors-completion-category-border-top>`, "Top border color of the completion widget category headers."
+   :ref:`colors.completion.category.fg <setting-colors-completion-category-fg>`, "Foreground color of completion widget category headers."
+   :ref:`colors.completion.even.bg <setting-colors-completion-even-bg>`, "Background color of the completion widget for even rows."
+   :ref:`colors.completion.fg <setting-colors-completion-fg>`, "Text color of the completion widget."
+   :ref:`colors.completion.item.selected.bg <setting-colors-completion-item-selected-bg>`, "Background color of the selected completion item."
+   :ref:`colors.completion.item.selected.border.bottom <setting-colors-completion-item-selected-border-bottom>`, "Bottom border color of the selected completion item."
+   :ref:`colors.completion.item.selected.border.top <setting-colors-completion-item-selected-border-top>`, "Top border color of the completion widget category headers."
+   :ref:`colors.completion.item.selected.fg <setting-colors-completion-item-selected-fg>`, "Foreground color of the selected completion item."
+   :ref:`colors.completion.match.fg <setting-colors-completion-match-fg>`, "Foreground color of the matched text in the completion."
+   :ref:`colors.completion.odd.bg <setting-colors-completion-odd-bg>`, "Background color of the completion widget for odd rows."
+   :ref:`colors.completion.scrollbar.bg <setting-colors-completion-scrollbar-bg>`, "Color of the scrollbar in the completion view."
+   :ref:`colors.completion.scrollbar.fg <setting-colors-completion-scrollbar-fg>`, "Color of the scrollbar handle in the completion view."
+   :ref:`colors.downloads.bar.bg <setting-colors-downloads-bar-bg>`, "Background color for the download bar."
+   :ref:`colors.downloads.error.bg <setting-colors-downloads-error-bg>`, "Background color for downloads with errors."
+   :ref:`colors.downloads.error.fg <setting-colors-downloads-error-fg>`, "Foreground color for downloads with errors."
+   :ref:`colors.downloads.start.bg <setting-colors-downloads-start-bg>`, "Color gradient start for download backgrounds."
+   :ref:`colors.downloads.start.fg <setting-colors-downloads-start-fg>`, "Color gradient start for download text."
+   :ref:`colors.downloads.stop.bg <setting-colors-downloads-stop-bg>`, "Color gradient stop for download backgrounds."
+   :ref:`colors.downloads.stop.fg <setting-colors-downloads-stop-fg>`, "Color gradient end for download text."
+   :ref:`colors.downloads.system.bg <setting-colors-downloads-system-bg>`, "Color gradient interpolation system for download backgrounds."
+   :ref:`colors.downloads.system.fg <setting-colors-downloads-system-fg>`, "Color gradient interpolation system for download text."
+   :ref:`colors.hints.bg <setting-colors-hints-bg>`, "Background color for hints."
+   :ref:`colors.hints.fg <setting-colors-hints-fg>`, "Font color for hints."
+   :ref:`colors.hints.match.fg <setting-colors-hints-match-fg>`, "Font color for the matched part of hints."
+   :ref:`colors.keyhint.bg <setting-colors-keyhint-bg>`, "Background color of the keyhint widget."
+   :ref:`colors.keyhint.fg <setting-colors-keyhint-fg>`, "Text color for the keyhint widget."
+   :ref:`colors.keyhint.suffix.fg <setting-colors-keyhint-suffix-fg>`, "Highlight color for keys to complete the current keychain."
+   :ref:`colors.messages.error.bg <setting-colors-messages-error-bg>`, "Background color of an error message."
+   :ref:`colors.messages.error.border <setting-colors-messages-error-border>`, "Border color of an error message."
+   :ref:`colors.messages.error.fg <setting-colors-messages-error-fg>`, "Foreground color of an error message."
+   :ref:`colors.messages.info.bg <setting-colors-messages-info-bg>`, "Background color of an info message."
+   :ref:`colors.messages.info.border <setting-colors-messages-info-border>`, "Border color of an info message."
+   :ref:`colors.messages.info.fg <setting-colors-messages-info-fg>`, "Foreground color of an info message."
+   :ref:`colors.messages.warning.bg <setting-colors-messages-warning-bg>`, "Background color of a warning message."
+   :ref:`colors.messages.warning.border <setting-colors-messages-warning-border>`, "Border color of a warning message."
+   :ref:`colors.messages.warning.fg <setting-colors-messages-warning-fg>`, "Foreground color of a warning message."
+   :ref:`colors.prompts.bg <setting-colors-prompts-bg>`, "Background color for prompts."
+   :ref:`colors.prompts.border <setting-colors-prompts-border>`, "Border used around UI elements in prompts."
+   :ref:`colors.prompts.fg <setting-colors-prompts-fg>`, "Foreground color for prompts."
+   :ref:`colors.prompts.selected.bg <setting-colors-prompts-selected-bg>`, "Background color for the selected item in filename prompts."
+   :ref:`colors.statusbar.caret.bg <setting-colors-statusbar-caret-bg>`, "Background color of the statusbar in caret mode."
+   :ref:`colors.statusbar.caret.fg <setting-colors-statusbar-caret-fg>`, "Foreground color of the statusbar in caret mode."
+   :ref:`colors.statusbar.caret.selection.bg <setting-colors-statusbar-caret-selection-bg>`, "Background color of the statusbar in caret mode with a selection."
+   :ref:`colors.statusbar.caret.selection.fg <setting-colors-statusbar-caret-selection-fg>`, "Foreground color of the statusbar in caret mode with a selection."
+   :ref:`colors.statusbar.command.bg <setting-colors-statusbar-command-bg>`, "Background color of the statusbar in command mode."
+   :ref:`colors.statusbar.command.fg <setting-colors-statusbar-command-fg>`, "Foreground color of the statusbar in command mode."
+   :ref:`colors.statusbar.command.private.bg <setting-colors-statusbar-command-private-bg>`, "Background color of the statusbar in private browsing + command mode."
+   :ref:`colors.statusbar.command.private.fg <setting-colors-statusbar-command-private-fg>`, "Foreground color of the statusbar in private browsing + command mode."
+   :ref:`colors.statusbar.insert.bg <setting-colors-statusbar-insert-bg>`, "Background color of the statusbar in insert mode."
+   :ref:`colors.statusbar.insert.fg <setting-colors-statusbar-insert-fg>`, "Foreground color of the statusbar in insert mode."
+   :ref:`colors.statusbar.normal.bg <setting-colors-statusbar-normal-bg>`, "Background color of the statusbar."
+   :ref:`colors.statusbar.normal.fg <setting-colors-statusbar-normal-fg>`, "Foreground color of the statusbar."
+   :ref:`colors.statusbar.passthrough.bg <setting-colors-statusbar-passthrough-bg>`, "Background color of the statusbar in passthrough mode."
+   :ref:`colors.statusbar.passthrough.fg <setting-colors-statusbar-passthrough-fg>`, "Foreground color of the statusbar in passthrough mode."
+   :ref:`colors.statusbar.private.bg <setting-colors-statusbar-private-bg>`, "Background color of the statusbar in private browsing mode."
+   :ref:`colors.statusbar.private.fg <setting-colors-statusbar-private-fg>`, "Foreground color of the statusbar in private browsing mode."
+   :ref:`colors.statusbar.progress.bg <setting-colors-statusbar-progress-bg>`, "Background color of the progress bar."
+   :ref:`colors.statusbar.url.error.fg <setting-colors-statusbar-url-error-fg>`, "Foreground color of the URL in the statusbar on error."
+   :ref:`colors.statusbar.url.fg <setting-colors-statusbar-url-fg>`, "Default foreground color of the URL in the statusbar."
+   :ref:`colors.statusbar.url.hover.fg <setting-colors-statusbar-url-hover-fg>`, "Foreground color of the URL in the statusbar for hovered links."
+   :ref:`colors.statusbar.url.success.http.fg <setting-colors-statusbar-url-success-http-fg>`, "Foreground color of the URL in the statusbar on successful load (http)."
+   :ref:`colors.statusbar.url.success.https.fg <setting-colors-statusbar-url-success-https-fg>`, "Foreground color of the URL in the statusbar on successful load (https)."
+   :ref:`colors.statusbar.url.warn.fg <setting-colors-statusbar-url-warn-fg>`, "Foreground color of the URL in the statusbar when there's a warning."
+   :ref:`colors.tabs.bar.bg <setting-colors-tabs-bar-bg>`, "Background color of the tab bar."
+   :ref:`colors.tabs.even.bg <setting-colors-tabs-even-bg>`, "Background color of unselected even tabs."
+   :ref:`colors.tabs.even.fg <setting-colors-tabs-even-fg>`, "Foreground color of unselected even tabs."
+   :ref:`colors.tabs.indicator.error <setting-colors-tabs-indicator-error>`, "Color for the tab indicator on errors."
+   :ref:`colors.tabs.indicator.start <setting-colors-tabs-indicator-start>`, "Color gradient start for the tab indicator."
+   :ref:`colors.tabs.indicator.stop <setting-colors-tabs-indicator-stop>`, "Color gradient end for the tab indicator."
+   :ref:`colors.tabs.indicator.system <setting-colors-tabs-indicator-system>`, "Color gradient interpolation system for the tab indicator."
+   :ref:`colors.tabs.odd.bg <setting-colors-tabs-odd-bg>`, "Background color of unselected odd tabs."
+   :ref:`colors.tabs.odd.fg <setting-colors-tabs-odd-fg>`, "Foreground color of unselected odd tabs."
+   :ref:`colors.tabs.selected.even.bg <setting-colors-tabs-selected-even-bg>`, "Background color of selected even tabs."
+   :ref:`colors.tabs.selected.even.fg <setting-colors-tabs-selected-even-fg>`, "Foreground color of selected even tabs."
+   :ref:`colors.tabs.selected.odd.bg <setting-colors-tabs-selected-odd-bg>`, "Background color of selected odd tabs."
+   :ref:`colors.tabs.selected.odd.fg <setting-colors-tabs-selected-odd-fg>`, "Foreground color of selected odd tabs."
+   :ref:`colors.webpage.bg <setting-colors-webpage-bg>`, "Background color for webpages if unset (or empty to use the theme's color)."
+   :ref:`completion.cmd_history_max_items <setting-completion-cmd_history_max_items>`, "Number of commands to save in the command history."
+   :ref:`completion.delay <setting-completion-delay>`, "Delay (in milliseconds) before updating completions after typing a character."
+   :ref:`completion.height <setting-completion-height>`, "Height (in pixels or as percentage of the window) of the completion."
+   :ref:`completion.min_chars <setting-completion-min_chars>`, "Minimum amount of characters needed to update completions."
+   :ref:`completion.open_categories <setting-completion-open_categories>`, "Which categories to show (in which order) in the :open completion."
+   :ref:`completion.quick <setting-completion-quick>`, "Move on to the next part when there's only one possible completion left."
+   :ref:`completion.scrollbar.padding <setting-completion-scrollbar-padding>`, "Padding (in pixels) of the scrollbar handle in the completion window."
+   :ref:`completion.scrollbar.width <setting-completion-scrollbar-width>`, "Width (in pixels) of the scrollbar in the completion window."
+   :ref:`completion.show <setting-completion-show>`, "When to show the autocompletion window."
+   :ref:`completion.shrink <setting-completion-shrink>`, "Shrink the completion to be smaller than the configured size if there are no scrollbars."
+   :ref:`completion.timestamp_format <setting-completion-timestamp_format>`, "Format of timestamps (e.g. for the history completion)."
+   :ref:`completion.use_best_match <setting-completion-use_best_match>`, "Execute the best-matching command on a partial match."
+   :ref:`completion.web_history.exclude <setting-completion-web_history-exclude>`, "A list of patterns which should not be shown in the history."
+   :ref:`completion.web_history.max_items <setting-completion-web_history-max_items>`, "Number of URLs to show in the web history."
+   :ref:`confirm_quit <setting-confirm_quit>`, "Require a confirmation before quitting the application."
+   :ref:`content.autoplay <setting-content-autoplay>`, "Automatically start playing `<video>` elements."
+   :ref:`content.cache.appcache <setting-content-cache-appcache>`, "Enable support for the HTML 5 web application cache feature."
+   :ref:`content.cache.maximum_pages <setting-content-cache-maximum_pages>`, "Maximum number of pages to hold in the global memory page cache."
+   :ref:`content.cache.size <setting-content-cache-size>`, "Size (in bytes) of the HTTP network cache. Null to use the default value."
+   :ref:`content.canvas_reading <setting-content-canvas_reading>`, "Allow websites to read canvas elements."
+   :ref:`content.cookies.accept <setting-content-cookies-accept>`, "Which cookies to accept."
+   :ref:`content.cookies.store <setting-content-cookies-store>`, "Store cookies."
+   :ref:`content.default_encoding <setting-content-default_encoding>`, "Default encoding to use for websites."
+   :ref:`content.desktop_capture <setting-content-desktop_capture>`, "Allow websites to share screen content."
+   :ref:`content.dns_prefetch <setting-content-dns_prefetch>`, "Try to pre-fetch DNS entries to speed up browsing."
+   :ref:`content.frame_flattening <setting-content-frame_flattening>`, "Expand each subframe to its contents."
+   :ref:`content.geolocation <setting-content-geolocation>`, "Allow websites to request geolocations."
+   :ref:`content.headers.accept_language <setting-content-headers-accept_language>`, "Value to send in the `Accept-Language` header."
+   :ref:`content.headers.custom <setting-content-headers-custom>`, "Custom headers for qutebrowser HTTP requests."
+   :ref:`content.headers.do_not_track <setting-content-headers-do_not_track>`, "Value to send in the `DNT` header."
+   :ref:`content.headers.referer <setting-content-headers-referer>`, "When to send the Referer header."
+   :ref:`content.headers.user_agent <setting-content-headers-user_agent>`, "User agent to send. Unset to send the default."
+   :ref:`content.host_blocking.enabled <setting-content-host_blocking-enabled>`, "Enable host blocking."
+   :ref:`content.host_blocking.lists <setting-content-host_blocking-lists>`, "List of URLs of lists which contain hosts to block."
+   :ref:`content.host_blocking.whitelist <setting-content-host_blocking-whitelist>`, "A list of patterns that should always be loaded, despite being ad-blocked."
+   :ref:`content.hyperlink_auditing <setting-content-hyperlink_auditing>`, "Enable hyperlink auditing (`<a ping>`)."
+   :ref:`content.images <setting-content-images>`, "Load images automatically in web pages."
+   :ref:`content.javascript.alert <setting-content-javascript-alert>`, "Show javascript alerts."
+   :ref:`content.javascript.can_access_clipboard <setting-content-javascript-can_access_clipboard>`, "Allow JavaScript to read from or write to the clipboard."
+   :ref:`content.javascript.can_close_tabs <setting-content-javascript-can_close_tabs>`, "Allow JavaScript to close tabs."
+   :ref:`content.javascript.can_open_tabs_automatically <setting-content-javascript-can_open_tabs_automatically>`, "Allow JavaScript to open new tabs without user interaction."
+   :ref:`content.javascript.enabled <setting-content-javascript-enabled>`, "Enable JavaScript."
+   :ref:`content.javascript.log <setting-content-javascript-log>`, "Log levels to use for JavaScript console logging messages."
+   :ref:`content.javascript.modal_dialog <setting-content-javascript-modal_dialog>`, "Use the standard JavaScript modal dialog for `alert()` and `confirm()`."
+   :ref:`content.javascript.prompt <setting-content-javascript-prompt>`, "Show javascript prompts."
+   :ref:`content.local_content_can_access_file_urls <setting-content-local_content_can_access_file_urls>`, "Allow locally loaded documents to access other local URLs."
+   :ref:`content.local_content_can_access_remote_urls <setting-content-local_content_can_access_remote_urls>`, "Allow locally loaded documents to access remote URLs."
+   :ref:`content.local_storage <setting-content-local_storage>`, "Enable support for HTML 5 local storage and Web SQL."
+   :ref:`content.media_capture <setting-content-media_capture>`, "Allow websites to record audio/video."
+   :ref:`content.mouse_lock <setting-content-mouse_lock>`, "Allow websites to lock your mouse pointer."
+   :ref:`content.mute <setting-content-mute>`, "Automatically mute tabs."
+   :ref:`content.netrc_file <setting-content-netrc_file>`, "Netrc-file for HTTP authentication."
+   :ref:`content.notifications <setting-content-notifications>`, "Allow websites to show notifications."
+   :ref:`content.pdfjs <setting-content-pdfjs>`, "Allow pdf.js to view PDF files in the browser."
+   :ref:`content.persistent_storage <setting-content-persistent_storage>`, "Allow websites to request persistent storage quota via `navigator.webkitPersistentStorage.requestQuota`."
+   :ref:`content.plugins <setting-content-plugins>`, "Enable plugins in Web pages."
+   :ref:`content.print_element_backgrounds <setting-content-print_element_backgrounds>`, "Draw the background color and images also when the page is printed."
+   :ref:`content.private_browsing <setting-content-private_browsing>`, "Open new windows in private browsing mode which does not record visited pages."
+   :ref:`content.proxy <setting-content-proxy>`, "Proxy to use."
+   :ref:`content.proxy_dns_requests <setting-content-proxy_dns_requests>`, "Send DNS requests over the configured proxy."
+   :ref:`content.register_protocol_handler <setting-content-register_protocol_handler>`, "Allow websites to register protocol handlers via `navigator.registerProtocolHandler`."
+   :ref:`content.ssl_strict <setting-content-ssl_strict>`, "Validate SSL handshakes."
+   :ref:`content.user_stylesheets <setting-content-user_stylesheets>`, "List of user stylesheet filenames to use."
+   :ref:`content.webgl <setting-content-webgl>`, "Enable WebGL."
+   :ref:`content.webrtc_ip_handling_policy <setting-content-webrtc_ip_handling_policy>`, "Which interfaces to expose via WebRTC."
+   :ref:`content.windowed_fullscreen <setting-content-windowed_fullscreen>`, "Limit fullscreen to the browser window (does not expand to fill the screen)."
+   :ref:`content.xss_auditing <setting-content-xss_auditing>`, "Monitor load requests for cross-site scripting attempts."
+   :ref:`downloads.location.directory <setting-downloads-location-directory>`, "Directory to save downloads to."
+   :ref:`downloads.location.prompt <setting-downloads-location-prompt>`, "Prompt the user for the download location."
+   :ref:`downloads.location.remember <setting-downloads-location-remember>`, "Remember the last used download directory."
+   :ref:`downloads.location.suggestion <setting-downloads-location-suggestion>`, "What to display in the download filename input."
+   :ref:`downloads.open_dispatcher <setting-downloads-open_dispatcher>`, "Default program used to open downloads."
+   :ref:`downloads.position <setting-downloads-position>`, "Where to show the downloaded files."
+   :ref:`downloads.remove_finished <setting-downloads-remove_finished>`, "Duration (in milliseconds) to wait before removing finished downloads."
+   :ref:`editor.command <setting-editor-command>`, "Editor (and arguments) to use for the `open-editor` command. The following placeholders are defined:"
+   :ref:`editor.encoding <setting-editor-encoding>`, "Encoding to use for the editor."
+   :ref:`fonts.completion.category <setting-fonts-completion-category>`, "Font used in the completion categories."
+   :ref:`fonts.completion.entry <setting-fonts-completion-entry>`, "Font used in the completion widget."
+   :ref:`fonts.debug_console <setting-fonts-debug_console>`, "Font used for the debugging console."
+   :ref:`fonts.downloads <setting-fonts-downloads>`, "Font used for the downloadbar."
+   :ref:`fonts.hints <setting-fonts-hints>`, "Font used for the hints."
+   :ref:`fonts.keyhint <setting-fonts-keyhint>`, "Font used in the keyhint widget."
+   :ref:`fonts.messages.error <setting-fonts-messages-error>`, "Font used for error messages."
+   :ref:`fonts.messages.info <setting-fonts-messages-info>`, "Font used for info messages."
+   :ref:`fonts.messages.warning <setting-fonts-messages-warning>`, "Font used for warning messages."
+   :ref:`fonts.monospace <setting-fonts-monospace>`, "Default monospace fonts."
+   :ref:`fonts.prompts <setting-fonts-prompts>`, "Font used for prompts."
+   :ref:`fonts.statusbar <setting-fonts-statusbar>`, "Font used in the statusbar."
+   :ref:`fonts.tabs <setting-fonts-tabs>`, "Font used in the tab bar."
+   :ref:`fonts.web.family.cursive <setting-fonts-web-family-cursive>`, "Font family for cursive fonts."
+   :ref:`fonts.web.family.fantasy <setting-fonts-web-family-fantasy>`, "Font family for fantasy fonts."
+   :ref:`fonts.web.family.fixed <setting-fonts-web-family-fixed>`, "Font family for fixed fonts."
+   :ref:`fonts.web.family.sans_serif <setting-fonts-web-family-sans_serif>`, "Font family for sans-serif fonts."
+   :ref:`fonts.web.family.serif <setting-fonts-web-family-serif>`, "Font family for serif fonts."
+   :ref:`fonts.web.family.standard <setting-fonts-web-family-standard>`, "Font family for standard fonts."
+   :ref:`fonts.web.size.default <setting-fonts-web-size-default>`, "Default font size (in pixels) for regular text."
+   :ref:`fonts.web.size.default_fixed <setting-fonts-web-size-default_fixed>`, "Default font size (in pixels) for fixed-pitch text."
+   :ref:`fonts.web.size.minimum <setting-fonts-web-size-minimum>`, "Hard minimum font size (in pixels)."
+   :ref:`fonts.web.size.minimum_logical <setting-fonts-web-size-minimum_logical>`, "Minimum logical font size (in pixels) that is applied when zooming out."
+   :ref:`hints.auto_follow <setting-hints-auto_follow>`, "When a hint can be automatically followed without pressing Enter."
+   :ref:`hints.auto_follow_timeout <setting-hints-auto_follow_timeout>`, "Duration (in milliseconds) to ignore normal-mode key bindings after a successful auto-follow."
+   :ref:`hints.border <setting-hints-border>`, "CSS border value for hints."
+   :ref:`hints.chars <setting-hints-chars>`, "Characters used for hint strings."
+   :ref:`hints.dictionary <setting-hints-dictionary>`, "Dictionary file to be used by the word hints."
+   :ref:`hints.find_implementation <setting-hints-find_implementation>`, "Which implementation to use to find elements to hint."
+   :ref:`hints.hide_unmatched_rapid_hints <setting-hints-hide_unmatched_rapid_hints>`, "Hide unmatched hints in rapid mode."
+   :ref:`hints.min_chars <setting-hints-min_chars>`, "Minimum number of characters used for hint strings."
+   :ref:`hints.mode <setting-hints-mode>`, "Mode to use for hints."
+   :ref:`hints.next_regexes <setting-hints-next_regexes>`, "Comma-separated list of regular expressions to use for 'next' links."
+   :ref:`hints.prev_regexes <setting-hints-prev_regexes>`, "Comma-separated list of regular expressions to use for 'prev' links."
+   :ref:`hints.scatter <setting-hints-scatter>`, "Scatter hint key chains (like Vimium) or not (like dwb)."
+   :ref:`hints.selectors <setting-hints-selectors>`, "CSS selectors used to determine which elements on a page should have hints."
+   :ref:`hints.uppercase <setting-hints-uppercase>`, "Make characters in hint strings uppercase."
+   :ref:`history_gap_interval <setting-history_gap_interval>`, "Maximum time (in minutes) between two history items for them to be considered being from the same browsing session."
+   :ref:`input.escape_quits_reporter <setting-input-escape_quits_reporter>`, "Allow Escape to quit the crash reporter."
+   :ref:`input.forward_unbound_keys <setting-input-forward_unbound_keys>`, "Which unbound keys to forward to the webview in normal mode."
+   :ref:`input.insert_mode.auto_enter <setting-input-insert_mode-auto_enter>`, "Enter insert mode if an editable element is clicked."
+   :ref:`input.insert_mode.auto_leave <setting-input-insert_mode-auto_leave>`, "Leave insert mode if a non-editable element is clicked."
+   :ref:`input.insert_mode.auto_load <setting-input-insert_mode-auto_load>`, "Automatically enter insert mode if an editable element is focused after loading the page."
+   :ref:`input.insert_mode.plugins <setting-input-insert_mode-plugins>`, "Switch to insert mode when clicking flash and other plugins."
+   :ref:`input.links_included_in_focus_chain <setting-input-links_included_in_focus_chain>`, "Include hyperlinks in the keyboard focus chain when tabbing."
+   :ref:`input.partial_timeout <setting-input-partial_timeout>`, "Timeout (in milliseconds) for partially typed key bindings."
+   :ref:`input.rocker_gestures <setting-input-rocker_gestures>`, "Enable Opera-like mouse rocker gestures."
+   :ref:`input.spatial_navigation <setting-input-spatial_navigation>`, "Enable spatial navigation."
+   :ref:`keyhint.blacklist <setting-keyhint-blacklist>`, "Keychains that shouldn't be shown in the keyhint dialog."
+   :ref:`keyhint.delay <setting-keyhint-delay>`, "Time (in milliseconds) from pressing a key to seeing the keyhint dialog."
+   :ref:`keyhint.radius <setting-keyhint-radius>`, "Rounding radius (in pixels) for the edges of the keyhint dialog."
+   :ref:`messages.timeout <setting-messages-timeout>`, "Duration (in milliseconds) to show messages in the statusbar for."
+   :ref:`new_instance_open_target <setting-new_instance_open_target>`, "How to open links in an existing instance if a new one is launched."
+   :ref:`new_instance_open_target_window <setting-new_instance_open_target_window>`, "Which window to choose when opening links as new tabs."
+   :ref:`prompt.filebrowser <setting-prompt-filebrowser>`, "Show a filebrowser in upload/download prompts."
+   :ref:`prompt.radius <setting-prompt-radius>`, "Rounding radius (in pixels) for the edges of prompts."
+   :ref:`qt.args <setting-qt-args>`, "Additional arguments to pass to Qt, without leading `--`."
+   :ref:`qt.force_platform <setting-qt-force_platform>`, "Force a Qt platform to use."
+   :ref:`qt.force_software_rendering <setting-qt-force_software_rendering>`, "Force software rendering for QtWebEngine."
+   :ref:`qt.highdpi <setting-qt-highdpi>`, "Turn on Qt HighDPI scaling."
+   :ref:`qt.low_end_device_mode <setting-qt-low_end_device_mode>`, "When to use Chromium's low-end device mode."
+   :ref:`qt.process_model <setting-qt-process_model>`, "Which Chromium process model to use."
+   :ref:`scrolling.bar <setting-scrolling-bar>`, "When to show the scrollbar."
+   :ref:`scrolling.smooth <setting-scrolling-smooth>`, "Enable smooth scrolling for web pages."
+   :ref:`search.ignore_case <setting-search-ignore_case>`, "When to find text on a page case-insensitively."
+   :ref:`search.incremental <setting-search-incremental>`, "Find text on a page incrementally, renewing the search for each typed character."
+   :ref:`session.default_name <setting-session-default_name>`, "Name of the session to save by default."
+   :ref:`session.lazy_restore <setting-session-lazy_restore>`, "Load a restored tab as soon as it takes focus."
+   :ref:`spellcheck.languages <setting-spellcheck-languages>`, "Languages to use for spell checking."
+   :ref:`statusbar.hide <setting-statusbar-hide>`, "Hide the statusbar unless a message is shown."
+   :ref:`statusbar.padding <setting-statusbar-padding>`, "Padding (in pixels) for the statusbar."
+   :ref:`statusbar.position <setting-statusbar-position>`, "Position of the status bar."
+   :ref:`statusbar.widgets <setting-statusbar-widgets>`, "List of widgets displayed in the statusbar."
+   :ref:`tabs.background <setting-tabs-background>`, "Open new tabs (middleclick/ctrl+click) in the background."
+   :ref:`tabs.close_mouse_button <setting-tabs-close_mouse_button>`, "Mouse button with which to close tabs."
+   :ref:`tabs.close_mouse_button_on_bar <setting-tabs-close_mouse_button_on_bar>`, "How to behave when the close mouse button is pressed on the tab bar."
+   :ref:`tabs.favicons.scale <setting-tabs-favicons-scale>`, "Scaling factor for favicons in the tab bar."
+   :ref:`tabs.favicons.show <setting-tabs-favicons-show>`, "When to show favicons in the tab bar."
+   :ref:`tabs.indicator.padding <setting-tabs-indicator-padding>`, "Padding (in pixels) for tab indicators."
+   :ref:`tabs.indicator.width <setting-tabs-indicator-width>`, "Width (in pixels) of the progress indicator (0 to disable)."
+   :ref:`tabs.last_close <setting-tabs-last_close>`, "How to behave when the last tab is closed."
+   :ref:`tabs.max_width <setting-tabs-max_width>`, "Maximum width (in pixels) of tabs (-1 for no maximum)."
+   :ref:`tabs.min_width <setting-tabs-min_width>`, "Minimum width (in pixels) of tabs (-1 for the default minimum size behavior)."
+   :ref:`tabs.mode_on_change <setting-tabs-mode_on_change>`, "When switching tabs, what input mode is applied."
+   :ref:`tabs.mousewheel_switching <setting-tabs-mousewheel_switching>`, "Switch between tabs using the mouse wheel."
+   :ref:`tabs.new_position.related <setting-tabs-new_position-related>`, "Position of new tabs opened from another tab."
+   :ref:`tabs.new_position.stacking <setting-tabs-new_position-stacking>`, "Stack related tabs on top of each other when opened consecutively."
+   :ref:`tabs.new_position.unrelated <setting-tabs-new_position-unrelated>`, "Position of new tabs which are not opened from another tab."
+   :ref:`tabs.padding <setting-tabs-padding>`, "Padding (in pixels) around text for tabs."
+   :ref:`tabs.pinned.shrink <setting-tabs-pinned-shrink>`, "Shrink pinned tabs down to their contents."
+   :ref:`tabs.position <setting-tabs-position>`, "Position of the tab bar."
+   :ref:`tabs.select_on_remove <setting-tabs-select_on_remove>`, "Which tab to select when the focused tab is removed."
+   :ref:`tabs.show <setting-tabs-show>`, "When to show the tab bar."
+   :ref:`tabs.show_switching_delay <setting-tabs-show_switching_delay>`, "Duration (in milliseconds) to show the tab bar before hiding it when tabs.show is set to 'switching'."
+   :ref:`tabs.tabs_are_windows <setting-tabs-tabs_are_windows>`, "Open a new window for every tab."
+   :ref:`tabs.title.alignment <setting-tabs-title-alignment>`, "Alignment of the text inside of tabs."
+   :ref:`tabs.title.format <setting-tabs-title-format>`, "Format to use for the tab title."
+   :ref:`tabs.title.format_pinned <setting-tabs-title-format_pinned>`, "Format to use for the tab title for pinned tabs. The same placeholders like for `tabs.title.format` are defined."
+   :ref:`tabs.width <setting-tabs-width>`, "Width (in pixels or as percentage of the window) of the tab bar if it's vertical."
+   :ref:`tabs.wrap <setting-tabs-wrap>`, "Wrap when changing tabs."
+   :ref:`url.auto_search <setting-url-auto_search>`, "What search to start when something else than a URL is entered."
+   :ref:`url.default_page <setting-url-default_page>`, "Page to open if :open -t/-b/-w is used without URL."
+   :ref:`url.incdec_segments <setting-url-incdec_segments>`, "URL segments where `:navigate increment/decrement` will search for a number."
+   :ref:`url.open_base_url <setting-url-open_base_url>`, "Open base URL of the searchengine if a searchengine shortcut is invoked without parameters."
+   :ref:`url.searchengines <setting-url-searchengines>`, "Search engines which can be used via the address bar."
+   :ref:`url.start_pages <setting-url-start_pages>`, "Page(s) to open at the start."
+   :ref:`url.yank_ignored_parameters <setting-url-yank_ignored_parameters>`, "URL parameters to strip with `:yank url`."
+   :ref:`window.hide_decoration <setting-window-hide_decoration>`, "Hide the window decoration."
+   :ref:`window.title_format <setting-window-title_format>`, "Format to use for the window title. The same placeholders like for"
+   :ref:`zoom.default <setting-zoom-default>`, "Default zoom level."
+   :ref:`zoom.levels <setting-zoom-levels>`, "Available zoom levels."
+   :ref:`zoom.mouse_divider <setting-zoom-mouse_divider>`, "Number of zoom increments to divide the mouse wheel movements to."
+   :ref:`zoom.text_only <setting-zoom-text_only>`, "Apply the zoom factor on a frame only to the text or to all content."
 
-.. _aliases:
+.. _setting-aliases:
 
 aliases
 ^^^^^^^
@@ -306,7 +306,7 @@ Default:
 * ``wq``: ``quit --save``
 * ``wqa``: ``quit --save``
 
-.. _auto_save.interval:
+.. _setting-auto_save-interval:
 
 auto_save.interval
 ^^^^^^^^^^^^^^^^^^
@@ -316,7 +316,7 @@ Type: <<types,Int>>
 
 Default: ``15000``
 
-.. _auto_save.session:
+.. _setting-auto_save-session:
 
 auto_save.session
 ^^^^^^^^^^^^^^^^^
@@ -326,7 +326,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _backend:
+.. _setting-backend:
 
 backend
 ^^^^^^^
@@ -345,7 +345,7 @@ Valid values:
 
 Default: ``webengine``
 
-.. _bindings.commands:
+.. _setting-bindings-commands:
 
 bindings.commands
 ^^^^^^^^^^^^^^^^^
@@ -402,7 +402,7 @@ Type: <<types,Dict>>
 
 Default: empty
 
-.. _bindings.default:
+.. _setting-bindings-default:
 
 bindings.default
 ^^^^^^^^^^^^^^^^
@@ -706,7 +706,7 @@ Default:
   * ``n``: ``prompt-accept no``
   * ``y``: ``prompt-accept yes``
 
-.. _bindings.key_mappings:
+.. _setting-bindings-key_mappings:
 
 bindings.key_mappings
 ^^^^^^^^^^^^^^^^^^^^^
@@ -728,7 +728,7 @@ Default:
 * ``&lt;Shift-Enter&gt;``: ``&lt;Return&gt;``
 * ``&lt;Shift-Return&gt;``: ``&lt;Return&gt;``
 
-.. _colors.completion.category.bg:
+.. _setting-colors-completion-category-bg:
 
 colors.completion.category.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -738,7 +738,7 @@ Type: <<types,QssColor>>
 
 Default: ``qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)``
 
-.. _colors.completion.category.border.bottom:
+.. _setting-colors-completion-category-border-bottom:
 
 colors.completion.category.border.bottom
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -748,7 +748,7 @@ Type: <<types,QssColor>>
 
 Default: ``black``
 
-.. _colors.completion.category.border.top:
+.. _setting-colors-completion-category-border-top:
 
 colors.completion.category.border.top
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -758,7 +758,7 @@ Type: <<types,QssColor>>
 
 Default: ``black``
 
-.. _colors.completion.category.fg:
+.. _setting-colors-completion-category-fg:
 
 colors.completion.category.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -768,7 +768,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.completion.even.bg:
+.. _setting-colors-completion-even-bg:
 
 colors.completion.even.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -778,7 +778,7 @@ Type: <<types,QssColor>>
 
 Default: ``#333333``
 
-.. _colors.completion.fg:
+.. _setting-colors-completion-fg:
 
 colors.completion.fg
 ^^^^^^^^^^^^^^^^^^^^
@@ -795,7 +795,7 @@ Default:
 
 
 
-.. _colors.completion.item.selected.bg:
+.. _setting-colors-completion-item-selected-bg:
 
 colors.completion.item.selected.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -805,7 +805,7 @@ Type: <<types,QssColor>>
 
 Default: ``#e8c000``
 
-.. _colors.completion.item.selected.border.bottom:
+.. _setting-colors-completion-item-selected-border-bottom:
 
 colors.completion.item.selected.border.bottom
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -815,7 +815,7 @@ Type: <<types,QssColor>>
 
 Default: ``#bbbb00``
 
-.. _colors.completion.item.selected.border.top:
+.. _setting-colors-completion-item-selected-border-top:
 
 colors.completion.item.selected.border.top
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -825,7 +825,7 @@ Type: <<types,QssColor>>
 
 Default: ``#bbbb00``
 
-.. _colors.completion.item.selected.fg:
+.. _setting-colors-completion-item-selected-fg:
 
 colors.completion.item.selected.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -835,7 +835,7 @@ Type: <<types,QtColor>>
 
 Default: ``black``
 
-.. _colors.completion.match.fg:
+.. _setting-colors-completion-match-fg:
 
 colors.completion.match.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -845,7 +845,7 @@ Type: <<types,QtColor>>
 
 Default: ``#ff4444``
 
-.. _colors.completion.odd.bg:
+.. _setting-colors-completion-odd-bg:
 
 colors.completion.odd.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -855,7 +855,7 @@ Type: <<types,QssColor>>
 
 Default: ``#444444``
 
-.. _colors.completion.scrollbar.bg:
+.. _setting-colors-completion-scrollbar-bg:
 
 colors.completion.scrollbar.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -865,7 +865,7 @@ Type: <<types,QssColor>>
 
 Default: ``#333333``
 
-.. _colors.completion.scrollbar.fg:
+.. _setting-colors-completion-scrollbar-fg:
 
 colors.completion.scrollbar.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -875,7 +875,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.downloads.bar.bg:
+.. _setting-colors-downloads-bar-bg:
 
 colors.downloads.bar.bg
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -885,7 +885,7 @@ Type: <<types,QssColor>>
 
 Default: ``black``
 
-.. _colors.downloads.error.bg:
+.. _setting-colors-downloads-error-bg:
 
 colors.downloads.error.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -895,7 +895,7 @@ Type: <<types,QtColor>>
 
 Default: ``red``
 
-.. _colors.downloads.error.fg:
+.. _setting-colors-downloads-error-fg:
 
 colors.downloads.error.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -905,7 +905,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.downloads.start.bg:
+.. _setting-colors-downloads-start-bg:
 
 colors.downloads.start.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -915,7 +915,7 @@ Type: <<types,QtColor>>
 
 Default: ``#0000aa``
 
-.. _colors.downloads.start.fg:
+.. _setting-colors-downloads-start-fg:
 
 colors.downloads.start.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -925,7 +925,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.downloads.stop.bg:
+.. _setting-colors-downloads-stop-bg:
 
 colors.downloads.stop.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -935,7 +935,7 @@ Type: <<types,QtColor>>
 
 Default: ``#00aa00``
 
-.. _colors.downloads.stop.fg:
+.. _setting-colors-downloads-stop-fg:
 
 colors.downloads.stop.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -945,7 +945,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.downloads.system.bg:
+.. _setting-colors-downloads-system-bg:
 
 colors.downloads.system.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -962,7 +962,7 @@ Valid values:
 
 Default: ``rgb``
 
-.. _colors.downloads.system.fg:
+.. _setting-colors-downloads-system-fg:
 
 colors.downloads.system.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -979,7 +979,7 @@ Valid values:
 
 Default: ``rgb``
 
-.. _colors.hints.bg:
+.. _setting-colors-hints-bg:
 
 colors.hints.bg
 ^^^^^^^^^^^^^^^
@@ -990,7 +990,7 @@ Type: <<types,QssColor>>
 
 Default: ``qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))``
 
-.. _colors.hints.fg:
+.. _setting-colors-hints-fg:
 
 colors.hints.fg
 ^^^^^^^^^^^^^^^
@@ -1000,7 +1000,7 @@ Type: <<types,QssColor>>
 
 Default: ``black``
 
-.. _colors.hints.match.fg:
+.. _setting-colors-hints-match-fg:
 
 colors.hints.match.fg
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1010,7 +1010,7 @@ Type: <<types,QssColor>>
 
 Default: ``green``
 
-.. _colors.keyhint.bg:
+.. _setting-colors-keyhint-bg:
 
 colors.keyhint.bg
 ^^^^^^^^^^^^^^^^^
@@ -1020,7 +1020,7 @@ Type: <<types,QssColor>>
 
 Default: ``rgba(0, 0, 0, 80%)``
 
-.. _colors.keyhint.fg:
+.. _setting-colors-keyhint-fg:
 
 colors.keyhint.fg
 ^^^^^^^^^^^^^^^^^
@@ -1030,7 +1030,7 @@ Type: <<types,QssColor>>
 
 Default: ``#FFFFFF``
 
-.. _colors.keyhint.suffix.fg:
+.. _setting-colors-keyhint-suffix-fg:
 
 colors.keyhint.suffix.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1040,7 +1040,7 @@ Type: <<types,QssColor>>
 
 Default: ``#FFFF00``
 
-.. _colors.messages.error.bg:
+.. _setting-colors-messages-error-bg:
 
 colors.messages.error.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1050,7 +1050,7 @@ Type: <<types,QssColor>>
 
 Default: ``red``
 
-.. _colors.messages.error.border:
+.. _setting-colors-messages-error-border:
 
 colors.messages.error.border
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1060,7 +1060,7 @@ Type: <<types,QssColor>>
 
 Default: ``#bb0000``
 
-.. _colors.messages.error.fg:
+.. _setting-colors-messages-error-fg:
 
 colors.messages.error.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1070,7 +1070,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.messages.info.bg:
+.. _setting-colors-messages-info-bg:
 
 colors.messages.info.bg
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -1080,7 +1080,7 @@ Type: <<types,QssColor>>
 
 Default: ``black``
 
-.. _colors.messages.info.border:
+.. _setting-colors-messages-info-border:
 
 colors.messages.info.border
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1090,7 +1090,7 @@ Type: <<types,QssColor>>
 
 Default: ``#333333``
 
-.. _colors.messages.info.fg:
+.. _setting-colors-messages-info-fg:
 
 colors.messages.info.fg
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -1100,7 +1100,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.messages.warning.bg:
+.. _setting-colors-messages-warning-bg:
 
 colors.messages.warning.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1110,7 +1110,7 @@ Type: <<types,QssColor>>
 
 Default: ``darkorange``
 
-.. _colors.messages.warning.border:
+.. _setting-colors-messages-warning-border:
 
 colors.messages.warning.border
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1120,7 +1120,7 @@ Type: <<types,QssColor>>
 
 Default: ``#d47300``
 
-.. _colors.messages.warning.fg:
+.. _setting-colors-messages-warning-fg:
 
 colors.messages.warning.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1130,7 +1130,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.prompts.bg:
+.. _setting-colors-prompts-bg:
 
 colors.prompts.bg
 ^^^^^^^^^^^^^^^^^
@@ -1140,7 +1140,7 @@ Type: <<types,QssColor>>
 
 Default: ``#444444``
 
-.. _colors.prompts.border:
+.. _setting-colors-prompts-border:
 
 colors.prompts.border
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1150,7 +1150,7 @@ Type: <<types,String>>
 
 Default: ``1px solid gray``
 
-.. _colors.prompts.fg:
+.. _setting-colors-prompts-fg:
 
 colors.prompts.fg
 ^^^^^^^^^^^^^^^^^
@@ -1160,7 +1160,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.prompts.selected.bg:
+.. _setting-colors-prompts-selected-bg:
 
 colors.prompts.selected.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1170,7 +1170,7 @@ Type: <<types,QssColor>>
 
 Default: ``grey``
 
-.. _colors.statusbar.caret.bg:
+.. _setting-colors-statusbar-caret-bg:
 
 colors.statusbar.caret.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1180,7 +1180,7 @@ Type: <<types,QssColor>>
 
 Default: ``purple``
 
-.. _colors.statusbar.caret.fg:
+.. _setting-colors-statusbar-caret-fg:
 
 colors.statusbar.caret.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1190,7 +1190,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.caret.selection.bg:
+.. _setting-colors-statusbar-caret-selection-bg:
 
 colors.statusbar.caret.selection.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1200,7 +1200,7 @@ Type: <<types,QssColor>>
 
 Default: ``#a12dff``
 
-.. _colors.statusbar.caret.selection.fg:
+.. _setting-colors-statusbar-caret-selection-fg:
 
 colors.statusbar.caret.selection.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1210,7 +1210,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.command.bg:
+.. _setting-colors-statusbar-command-bg:
 
 colors.statusbar.command.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1220,7 +1220,7 @@ Type: <<types,QssColor>>
 
 Default: ``black``
 
-.. _colors.statusbar.command.fg:
+.. _setting-colors-statusbar-command-fg:
 
 colors.statusbar.command.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1230,7 +1230,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.command.private.bg:
+.. _setting-colors-statusbar-command-private-bg:
 
 colors.statusbar.command.private.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1240,7 +1240,7 @@ Type: <<types,QssColor>>
 
 Default: ``grey``
 
-.. _colors.statusbar.command.private.fg:
+.. _setting-colors-statusbar-command-private-fg:
 
 colors.statusbar.command.private.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1250,7 +1250,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.insert.bg:
+.. _setting-colors-statusbar-insert-bg:
 
 colors.statusbar.insert.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1260,7 +1260,7 @@ Type: <<types,QssColor>>
 
 Default: ``darkgreen``
 
-.. _colors.statusbar.insert.fg:
+.. _setting-colors-statusbar-insert-fg:
 
 colors.statusbar.insert.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1270,7 +1270,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.normal.bg:
+.. _setting-colors-statusbar-normal-bg:
 
 colors.statusbar.normal.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1280,7 +1280,7 @@ Type: <<types,QssColor>>
 
 Default: ``black``
 
-.. _colors.statusbar.normal.fg:
+.. _setting-colors-statusbar-normal-fg:
 
 colors.statusbar.normal.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1290,7 +1290,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.passthrough.bg:
+.. _setting-colors-statusbar-passthrough-bg:
 
 colors.statusbar.passthrough.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1300,7 +1300,7 @@ Type: <<types,QssColor>>
 
 Default: ``darkblue``
 
-.. _colors.statusbar.passthrough.fg:
+.. _setting-colors-statusbar-passthrough-fg:
 
 colors.statusbar.passthrough.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1310,7 +1310,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.private.bg:
+.. _setting-colors-statusbar-private-bg:
 
 colors.statusbar.private.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1320,7 +1320,7 @@ Type: <<types,QssColor>>
 
 Default: ``#666666``
 
-.. _colors.statusbar.private.fg:
+.. _setting-colors-statusbar-private-fg:
 
 colors.statusbar.private.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1330,7 +1330,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.progress.bg:
+.. _setting-colors-statusbar-progress-bg:
 
 colors.statusbar.progress.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1340,7 +1340,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.url.error.fg:
+.. _setting-colors-statusbar-url-error-fg:
 
 colors.statusbar.url.error.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1350,7 +1350,7 @@ Type: <<types,QssColor>>
 
 Default: ``orange``
 
-.. _colors.statusbar.url.fg:
+.. _setting-colors-statusbar-url-fg:
 
 colors.statusbar.url.fg
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -1360,7 +1360,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.url.hover.fg:
+.. _setting-colors-statusbar-url-hover-fg:
 
 colors.statusbar.url.hover.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1370,7 +1370,7 @@ Type: <<types,QssColor>>
 
 Default: ``aqua``
 
-.. _colors.statusbar.url.success.http.fg:
+.. _setting-colors-statusbar-url-success-http-fg:
 
 colors.statusbar.url.success.http.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1380,7 +1380,7 @@ Type: <<types,QssColor>>
 
 Default: ``white``
 
-.. _colors.statusbar.url.success.https.fg:
+.. _setting-colors-statusbar-url-success-https-fg:
 
 colors.statusbar.url.success.https.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1390,7 +1390,7 @@ Type: <<types,QssColor>>
 
 Default: ``lime``
 
-.. _colors.statusbar.url.warn.fg:
+.. _setting-colors-statusbar-url-warn-fg:
 
 colors.statusbar.url.warn.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1400,7 +1400,7 @@ Type: <<types,QssColor>>
 
 Default: ``yellow``
 
-.. _colors.tabs.bar.bg:
+.. _setting-colors-tabs-bar-bg:
 
 colors.tabs.bar.bg
 ^^^^^^^^^^^^^^^^^^
@@ -1410,7 +1410,7 @@ Type: <<types,QtColor>>
 
 Default: ``#555555``
 
-.. _colors.tabs.even.bg:
+.. _setting-colors-tabs-even-bg:
 
 colors.tabs.even.bg
 ^^^^^^^^^^^^^^^^^^^
@@ -1420,7 +1420,7 @@ Type: <<types,QtColor>>
 
 Default: ``darkgrey``
 
-.. _colors.tabs.even.fg:
+.. _setting-colors-tabs-even-fg:
 
 colors.tabs.even.fg
 ^^^^^^^^^^^^^^^^^^^
@@ -1430,7 +1430,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.tabs.indicator.error:
+.. _setting-colors-tabs-indicator-error:
 
 colors.tabs.indicator.error
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1440,7 +1440,7 @@ Type: <<types,QtColor>>
 
 Default: ``#ff0000``
 
-.. _colors.tabs.indicator.start:
+.. _setting-colors-tabs-indicator-start:
 
 colors.tabs.indicator.start
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1450,7 +1450,7 @@ Type: <<types,QtColor>>
 
 Default: ``#0000aa``
 
-.. _colors.tabs.indicator.stop:
+.. _setting-colors-tabs-indicator-stop:
 
 colors.tabs.indicator.stop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1460,7 +1460,7 @@ Type: <<types,QtColor>>
 
 Default: ``#00aa00``
 
-.. _colors.tabs.indicator.system:
+.. _setting-colors-tabs-indicator-system:
 
 colors.tabs.indicator.system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1477,7 +1477,7 @@ Valid values:
 
 Default: ``rgb``
 
-.. _colors.tabs.odd.bg:
+.. _setting-colors-tabs-odd-bg:
 
 colors.tabs.odd.bg
 ^^^^^^^^^^^^^^^^^^
@@ -1487,7 +1487,7 @@ Type: <<types,QtColor>>
 
 Default: ``grey``
 
-.. _colors.tabs.odd.fg:
+.. _setting-colors-tabs-odd-fg:
 
 colors.tabs.odd.fg
 ^^^^^^^^^^^^^^^^^^
@@ -1497,7 +1497,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.tabs.selected.even.bg:
+.. _setting-colors-tabs-selected-even-bg:
 
 colors.tabs.selected.even.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1507,7 +1507,7 @@ Type: <<types,QtColor>>
 
 Default: ``black``
 
-.. _colors.tabs.selected.even.fg:
+.. _setting-colors-tabs-selected-even-fg:
 
 colors.tabs.selected.even.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1517,7 +1517,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.tabs.selected.odd.bg:
+.. _setting-colors-tabs-selected-odd-bg:
 
 colors.tabs.selected.odd.bg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1527,7 +1527,7 @@ Type: <<types,QtColor>>
 
 Default: ``black``
 
-.. _colors.tabs.selected.odd.fg:
+.. _setting-colors-tabs-selected-odd-fg:
 
 colors.tabs.selected.odd.fg
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1537,7 +1537,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _colors.webpage.bg:
+.. _setting-colors-webpage-bg:
 
 colors.webpage.bg
 ^^^^^^^^^^^^^^^^^
@@ -1547,7 +1547,7 @@ Type: <<types,QtColor>>
 
 Default: ``white``
 
-.. _completion.cmd_history_max_items:
+.. _setting-completion-cmd_history_max_items:
 
 completion.cmd_history_max_items
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1558,7 +1558,7 @@ Type: <<types,Int>>
 
 Default: ``100``
 
-.. _completion.delay:
+.. _setting-completion-delay:
 
 completion.delay
 ^^^^^^^^^^^^^^^^
@@ -1568,7 +1568,7 @@ Type: <<types,Int>>
 
 Default: ``0``
 
-.. _completion.height:
+.. _setting-completion-height:
 
 completion.height
 ^^^^^^^^^^^^^^^^^
@@ -1578,7 +1578,7 @@ Type: <<types,PercOrInt>>
 
 Default: ``50%``
 
-.. _completion.min_chars:
+.. _setting-completion-min_chars:
 
 completion.min_chars
 ^^^^^^^^^^^^^^^^^^^^
@@ -1588,7 +1588,7 @@ Type: <<types,Int>>
 
 Default: ``1``
 
-.. _completion.open_categories:
+.. _setting-completion-open_categories:
 
 completion.open_categories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1612,7 +1612,7 @@ Default:
 
 
 
-.. _completion.quick:
+.. _setting-completion-quick:
 
 completion.quick
 ^^^^^^^^^^^^^^^^
@@ -1622,7 +1622,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _completion.scrollbar.padding:
+.. _setting-completion-scrollbar-padding:
 
 completion.scrollbar.padding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1632,7 +1632,7 @@ Type: <<types,Int>>
 
 Default: ``2``
 
-.. _completion.scrollbar.width:
+.. _setting-completion-scrollbar-width:
 
 completion.scrollbar.width
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1642,7 +1642,7 @@ Type: <<types,Int>>
 
 Default: ``12``
 
-.. _completion.show:
+.. _setting-completion-show:
 
 completion.show
 ^^^^^^^^^^^^^^^
@@ -1658,7 +1658,7 @@ Valid values:
 
 Default: ``always``
 
-.. _completion.shrink:
+.. _setting-completion-shrink:
 
 completion.shrink
 ^^^^^^^^^^^^^^^^^
@@ -1668,7 +1668,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _completion.timestamp_format:
+.. _setting-completion-timestamp_format:
 
 completion.timestamp_format
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1678,7 +1678,7 @@ Type: <<types,TimestampTemplate>>
 
 Default: ``%Y-%m-%d``
 
-.. _completion.use_best_match:
+.. _setting-completion-use_best_match:
 
 completion.use_best_match
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1688,7 +1688,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _completion.web_history.exclude:
+.. _setting-completion-web_history-exclude:
 
 completion.web_history.exclude
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1701,7 +1701,7 @@ Type: <<types,List of UrlPattern>>
 
 Default: empty
 
-.. _completion.web_history.max_items:
+.. _setting-completion-web_history-max_items:
 
 completion.web_history.max_items
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1712,7 +1712,7 @@ Type: <<types,Int>>
 
 Default: ``-1``
 
-.. _confirm_quit:
+.. _setting-confirm_quit:
 
 confirm_quit
 ^^^^^^^^^^^^
@@ -1733,7 +1733,7 @@ Default:
 
 
 
-.. _content.autoplay:
+.. _setting-content-autoplay:
 
 content.autoplay
 ^^^^^^^^^^^^^^^^
@@ -1750,7 +1750,7 @@ On QtWebEngine, this setting requires Qt 5.10 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-.. _content.cache.appcache:
+.. _setting-content-cache-appcache:
 
 content.cache.appcache
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1765,7 +1765,7 @@ Default: ``true``
 
 This setting is only available with the QtWebKit backend.
 
-.. _content.cache.maximum_pages:
+.. _setting-content-cache-maximum_pages:
 
 content.cache.maximum_pages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1779,7 +1779,7 @@ Default: ``0``
 
 This setting is only available with the QtWebKit backend.
 
-.. _content.cache.size:
+.. _setting-content-cache-size:
 
 content.cache.size
 ^^^^^^^^^^^^^^^^^^
@@ -1790,7 +1790,7 @@ Type: <<types,Int>>
 
 Default: empty
 
-.. _content.canvas_reading:
+.. _setting-content-canvas_reading:
 
 content.canvas_reading
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1804,7 +1804,7 @@ Default: ``true``
 
 This setting is only available with the QtWebEngine backend.
 
-.. _content.cookies.accept:
+.. _setting-content-cookies-accept:
 
 content.cookies.accept
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1823,7 +1823,7 @@ Default: ``all``
 
 On QtWebEngine, this setting requires Qt 5.11 or newer.
 
-.. _content.cookies.store:
+.. _setting-content-cookies-store:
 
 content.cookies.store
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1834,7 +1834,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.default_encoding:
+.. _setting-content-default_encoding:
 
 content.default_encoding
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1845,7 +1845,7 @@ Type: <<types,String>>
 
 Default: ``iso-8859-1``
 
-.. _content.desktop_capture:
+.. _setting-content-desktop_capture:
 
 content.desktop_capture
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -1864,7 +1864,7 @@ Valid values:
 
 Default: ``ask``
 
-.. _content.dns_prefetch:
+.. _setting-content-dns_prefetch:
 
 content.dns_prefetch
 ^^^^^^^^^^^^^^^^^^^^
@@ -1878,7 +1878,7 @@ Default: ``true``
 
 This setting is only available with the QtWebKit backend.
 
-.. _content.frame_flattening:
+.. _setting-content-frame_flattening:
 
 content.frame_flattening
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1893,7 +1893,7 @@ Default: ``false``
 
 This setting is only available with the QtWebKit backend.
 
-.. _content.geolocation:
+.. _setting-content-geolocation:
 
 content.geolocation
 ^^^^^^^^^^^^^^^^^^^
@@ -1911,7 +1911,7 @@ Valid values:
 
 Default: ``ask``
 
-.. _content.headers.accept_language:
+.. _setting-content-headers-accept_language:
 
 content.headers.accept_language
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1924,7 +1924,7 @@ Type: <<types,String>>
 
 Default: ``en-US,en``
 
-.. _content.headers.custom:
+.. _setting-content-headers-custom:
 
 content.headers.custom
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1936,7 +1936,7 @@ Type: <<types,Dict>>
 
 Default: empty
 
-.. _content.headers.do_not_track:
+.. _setting-content-headers-do_not_track:
 
 content.headers.do_not_track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1949,7 +1949,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.headers.referer:
+.. _setting-content-headers-referer:
 
 content.headers.referer
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -1968,7 +1968,7 @@ Valid values:
 
 Default: ``same-domain``
 
-.. _content.headers.user_agent:
+.. _setting-content-headers-user_agent:
 
 content.headers.user_agent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1981,7 +1981,7 @@ Type: <<types,String>>
 
 Default: empty
 
-.. _content.host_blocking.enabled:
+.. _setting-content-host_blocking-enabled:
 
 content.host_blocking.enabled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1993,7 +1993,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.host_blocking.lists:
+.. _setting-content-host_blocking-lists:
 
 content.host_blocking.lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2020,7 +2020,7 @@ Default:
 
 
 
-.. _content.host_blocking.whitelist:
+.. _setting-content-host_blocking-whitelist:
 
 content.host_blocking.whitelist
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2036,7 +2036,7 @@ Default:
 
 
 
-.. _content.hyperlink_auditing:
+.. _setting-content-hyperlink_auditing:
 
 content.hyperlink_auditing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2048,7 +2048,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.images:
+.. _setting-content-images:
 
 content.images
 ^^^^^^^^^^^^^^
@@ -2060,7 +2060,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.javascript.alert:
+.. _setting-content-javascript-alert:
 
 content.javascript.alert
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2070,7 +2070,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.javascript.can_access_clipboard:
+.. _setting-content-javascript-can_access_clipboard:
 
 content.javascript.can_access_clipboard
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2083,7 +2083,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.javascript.can_close_tabs:
+.. _setting-content-javascript-can_close_tabs:
 
 content.javascript.can_close_tabs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2097,7 +2097,7 @@ Default: ``false``
 
 This setting is only available with the QtWebKit backend.
 
-.. _content.javascript.can_open_tabs_automatically:
+.. _setting-content-javascript-can_open_tabs_automatically:
 
 content.javascript.can_open_tabs_automatically
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2109,7 +2109,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.javascript.enabled:
+.. _setting-content-javascript-enabled:
 
 content.javascript.enabled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2121,7 +2121,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.javascript.log:
+.. _setting-content-javascript-log:
 
 content.javascript.log
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2138,7 +2138,7 @@ Default:
 * ``unknown``: ``debug``
 * ``warning``: ``debug``
 
-.. _content.javascript.modal_dialog:
+.. _setting-content-javascript-modal_dialog:
 
 content.javascript.modal_dialog
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2148,7 +2148,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.javascript.prompt:
+.. _setting-content-javascript-prompt:
 
 content.javascript.prompt
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2158,7 +2158,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.local_content_can_access_file_urls:
+.. _setting-content-local_content_can_access_file_urls:
 
 content.local_content_can_access_file_urls
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2170,7 +2170,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.local_content_can_access_remote_urls:
+.. _setting-content-local_content_can_access_remote_urls:
 
 content.local_content_can_access_remote_urls
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2182,7 +2182,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.local_storage:
+.. _setting-content-local_storage:
 
 content.local_storage
 ^^^^^^^^^^^^^^^^^^^^^
@@ -2194,7 +2194,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.media_capture:
+.. _setting-content-media_capture:
 
 content.media_capture
 ^^^^^^^^^^^^^^^^^^^^^
@@ -2214,7 +2214,7 @@ Default: ``ask``
 
 This setting is only available with the QtWebEngine backend.
 
-.. _content.mouse_lock:
+.. _setting-content-mouse_lock:
 
 content.mouse_lock
 ^^^^^^^^^^^^^^^^^^
@@ -2236,7 +2236,7 @@ On QtWebEngine, this setting requires Qt 5.8 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-.. _content.mute:
+.. _setting-content-mute:
 
 content.mute
 ^^^^^^^^^^^^
@@ -2249,7 +2249,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.netrc_file:
+.. _setting-content-netrc_file:
 
 content.netrc_file
 ^^^^^^^^^^^^^^^^^^
@@ -2260,7 +2260,7 @@ Type: <<types,File>>
 
 Default: empty
 
-.. _content.notifications:
+.. _setting-content-notifications:
 
 content.notifications
 ^^^^^^^^^^^^^^^^^^^^^
@@ -2280,7 +2280,7 @@ Default: ``ask``
 
 This setting is only available with the QtWebKit backend.
 
-.. _content.pdfjs:
+.. _setting-content-pdfjs:
 
 content.pdfjs
 ^^^^^^^^^^^^^
@@ -2291,7 +2291,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.persistent_storage:
+.. _setting-content-persistent_storage:
 
 content.persistent_storage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2313,7 +2313,7 @@ On QtWebEngine, this setting requires Qt 5.11 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-.. _content.plugins:
+.. _setting-content-plugins:
 
 content.plugins
 ^^^^^^^^^^^^^^^
@@ -2325,7 +2325,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.print_element_backgrounds:
+.. _setting-content-print_element_backgrounds:
 
 content.print_element_backgrounds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2339,7 +2339,7 @@ Default: ``true``
 
 On QtWebEngine, this setting requires Qt 5.8 or newer.
 
-.. _content.private_browsing:
+.. _setting-content-private_browsing:
 
 content.private_browsing
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2349,7 +2349,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.proxy:
+.. _setting-content-proxy:
 
 content.proxy
 ^^^^^^^^^^^^^
@@ -2365,7 +2365,7 @@ Valid values:
 
 Default: ``system``
 
-.. _content.proxy_dns_requests:
+.. _setting-content-proxy_dns_requests:
 
 content.proxy_dns_requests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2377,7 +2377,7 @@ Default: ``true``
 
 This setting is only available with the QtWebKit backend.
 
-.. _content.register_protocol_handler:
+.. _setting-content-register_protocol_handler:
 
 content.register_protocol_handler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2399,7 +2399,7 @@ On QtWebEngine, this setting requires Qt 5.11 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-.. _content.ssl_strict:
+.. _setting-content-ssl_strict:
 
 content.ssl_strict
 ^^^^^^^^^^^^^^^^^^
@@ -2417,7 +2417,7 @@ Valid values:
 
 Default: ``ask``
 
-.. _content.user_stylesheets:
+.. _setting-content-user_stylesheets:
 
 content.user_stylesheets
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2427,7 +2427,7 @@ Type: <<types,List of File&#44; or File>>
 
 Default: empty
 
-.. _content.webgl:
+.. _setting-content-webgl:
 
 content.webgl
 ^^^^^^^^^^^^^
@@ -2439,7 +2439,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _content.webrtc_ip_handling_policy:
+.. _setting-content-webrtc_ip_handling_policy:
 
 content.webrtc_ip_handling_policy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2462,7 +2462,7 @@ On QtWebEngine, this setting requires Qt 5.9.2 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-.. _content.windowed_fullscreen:
+.. _setting-content-windowed_fullscreen:
 
 content.windowed_fullscreen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2472,7 +2472,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _content.xss_auditing:
+.. _setting-content-xss_auditing:
 
 content.xss_auditing
 ^^^^^^^^^^^^^^^^^^^^
@@ -2485,7 +2485,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _downloads.location.directory:
+.. _setting-downloads-location-directory:
 
 downloads.location.directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2496,7 +2496,7 @@ Type: <<types,Directory>>
 
 Default: empty
 
-.. _downloads.location.prompt:
+.. _setting-downloads-location-prompt:
 
 downloads.location.prompt
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2507,7 +2507,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _downloads.location.remember:
+.. _setting-downloads-location-remember:
 
 downloads.location.remember
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2517,7 +2517,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _downloads.location.suggestion:
+.. _setting-downloads-location-suggestion:
 
 downloads.location.suggestion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2533,7 +2533,7 @@ Valid values:
 
 Default: ``path``
 
-.. _downloads.open_dispatcher:
+.. _setting-downloads-open_dispatcher:
 
 downloads.open_dispatcher
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2545,7 +2545,7 @@ Type: <<types,String>>
 
 Default: empty
 
-.. _downloads.position:
+.. _setting-downloads-position:
 
 downloads.position
 ^^^^^^^^^^^^^^^^^^
@@ -2560,7 +2560,7 @@ Valid values:
 
 Default: ``top``
 
-.. _downloads.remove_finished:
+.. _setting-downloads-remove_finished:
 
 downloads.remove_finished
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2571,7 +2571,7 @@ Type: <<types,Int>>
 
 Default: ``-1``
 
-.. _editor.command:
+.. _setting-editor-command:
 
 editor.command
 ^^^^^^^^^^^^^^
@@ -2590,7 +2590,7 @@ Default:
 
 
 
-.. _editor.encoding:
+.. _setting-editor-encoding:
 
 editor.encoding
 ^^^^^^^^^^^^^^^
@@ -2600,7 +2600,7 @@ Type: <<types,Encoding>>
 
 Default: ``utf-8``
 
-.. _fonts.completion.category:
+.. _setting-fonts-completion-category:
 
 fonts.completion.category
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2610,7 +2610,7 @@ Type: <<types,Font>>
 
 Default: ``bold 10pt monospace``
 
-.. _fonts.completion.entry:
+.. _setting-fonts-completion-entry:
 
 fonts.completion.entry
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2620,7 +2620,7 @@ Type: <<types,Font>>
 
 Default: ``10pt monospace``
 
-.. _fonts.debug_console:
+.. _setting-fonts-debug_console:
 
 fonts.debug_console
 ^^^^^^^^^^^^^^^^^^^
@@ -2630,7 +2630,7 @@ Type: <<types,QtFont>>
 
 Default: ``10pt monospace``
 
-.. _fonts.downloads:
+.. _setting-fonts-downloads:
 
 fonts.downloads
 ^^^^^^^^^^^^^^^
@@ -2640,7 +2640,7 @@ Type: <<types,Font>>
 
 Default: ``10pt monospace``
 
-.. _fonts.hints:
+.. _setting-fonts-hints:
 
 fonts.hints
 ^^^^^^^^^^^
@@ -2650,7 +2650,7 @@ Type: <<types,Font>>
 
 Default: ``bold 10pt monospace``
 
-.. _fonts.keyhint:
+.. _setting-fonts-keyhint:
 
 fonts.keyhint
 ^^^^^^^^^^^^^
@@ -2660,7 +2660,7 @@ Type: <<types,Font>>
 
 Default: ``10pt monospace``
 
-.. _fonts.messages.error:
+.. _setting-fonts-messages-error:
 
 fonts.messages.error
 ^^^^^^^^^^^^^^^^^^^^
@@ -2670,7 +2670,7 @@ Type: <<types,Font>>
 
 Default: ``10pt monospace``
 
-.. _fonts.messages.info:
+.. _setting-fonts-messages-info:
 
 fonts.messages.info
 ^^^^^^^^^^^^^^^^^^^
@@ -2680,7 +2680,7 @@ Type: <<types,Font>>
 
 Default: ``10pt monospace``
 
-.. _fonts.messages.warning:
+.. _setting-fonts-messages-warning:
 
 fonts.messages.warning
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2690,7 +2690,7 @@ Type: <<types,Font>>
 
 Default: ``10pt monospace``
 
-.. _fonts.monospace:
+.. _setting-fonts-monospace:
 
 fonts.monospace
 ^^^^^^^^^^^^^^^
@@ -2701,7 +2701,7 @@ Type: <<types,Font>>
 
 Default: ``&quot;xos4 Terminus&quot;, Terminus, Monospace, &quot;DejaVu Sans Mono&quot;, Monaco, &quot;Bitstream Vera Sans Mono&quot;, &quot;Andale Mono&quot;, &quot;Courier New&quot;, Courier, &quot;Liberation Mono&quot;, monospace, Fixed, Consolas, Terminal``
 
-.. _fonts.prompts:
+.. _setting-fonts-prompts:
 
 fonts.prompts
 ^^^^^^^^^^^^^
@@ -2711,7 +2711,7 @@ Type: <<types,Font>>
 
 Default: ``10pt sans-serif``
 
-.. _fonts.statusbar:
+.. _setting-fonts-statusbar:
 
 fonts.statusbar
 ^^^^^^^^^^^^^^^
@@ -2721,7 +2721,7 @@ Type: <<types,Font>>
 
 Default: ``10pt monospace``
 
-.. _fonts.tabs:
+.. _setting-fonts-tabs:
 
 fonts.tabs
 ^^^^^^^^^^
@@ -2731,7 +2731,7 @@ Type: <<types,QtFont>>
 
 Default: ``10pt monospace``
 
-.. _fonts.web.family.cursive:
+.. _setting-fonts-web-family-cursive:
 
 fonts.web.family.cursive
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2741,7 +2741,7 @@ Type: <<types,FontFamily>>
 
 Default: empty
 
-.. _fonts.web.family.fantasy:
+.. _setting-fonts-web-family-fantasy:
 
 fonts.web.family.fantasy
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2751,7 +2751,7 @@ Type: <<types,FontFamily>>
 
 Default: empty
 
-.. _fonts.web.family.fixed:
+.. _setting-fonts-web-family-fixed:
 
 fonts.web.family.fixed
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2761,7 +2761,7 @@ Type: <<types,FontFamily>>
 
 Default: empty
 
-.. _fonts.web.family.sans_serif:
+.. _setting-fonts-web-family-sans_serif:
 
 fonts.web.family.sans_serif
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2771,7 +2771,7 @@ Type: <<types,FontFamily>>
 
 Default: empty
 
-.. _fonts.web.family.serif:
+.. _setting-fonts-web-family-serif:
 
 fonts.web.family.serif
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2781,7 +2781,7 @@ Type: <<types,FontFamily>>
 
 Default: empty
 
-.. _fonts.web.family.standard:
+.. _setting-fonts-web-family-standard:
 
 fonts.web.family.standard
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2791,7 +2791,7 @@ Type: <<types,FontFamily>>
 
 Default: empty
 
-.. _fonts.web.size.default:
+.. _setting-fonts-web-size-default:
 
 fonts.web.size.default
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2801,7 +2801,7 @@ Type: <<types,Int>>
 
 Default: ``16``
 
-.. _fonts.web.size.default_fixed:
+.. _setting-fonts-web-size-default_fixed:
 
 fonts.web.size.default_fixed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2811,7 +2811,7 @@ Type: <<types,Int>>
 
 Default: ``13``
 
-.. _fonts.web.size.minimum:
+.. _setting-fonts-web-size-minimum:
 
 fonts.web.size.minimum
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -2821,7 +2821,7 @@ Type: <<types,Int>>
 
 Default: ``0``
 
-.. _fonts.web.size.minimum_logical:
+.. _setting-fonts-web-size-minimum_logical:
 
 fonts.web.size.minimum_logical
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2831,7 +2831,7 @@ Type: <<types,Int>>
 
 Default: ``6``
 
-.. _hints.auto_follow:
+.. _setting-hints-auto_follow:
 
 hints.auto_follow
 ^^^^^^^^^^^^^^^^^
@@ -2848,7 +2848,7 @@ Valid values:
 
 Default: ``unique-match``
 
-.. _hints.auto_follow_timeout:
+.. _setting-hints-auto_follow_timeout:
 
 hints.auto_follow_timeout
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2858,7 +2858,7 @@ Type: <<types,Int>>
 
 Default: ``0``
 
-.. _hints.border:
+.. _setting-hints-border:
 
 hints.border
 ^^^^^^^^^^^^
@@ -2868,7 +2868,7 @@ Type: <<types,String>>
 
 Default: ``1px solid #E3BE23``
 
-.. _hints.chars:
+.. _setting-hints-chars:
 
 hints.chars
 ^^^^^^^^^^^
@@ -2878,7 +2878,7 @@ Type: <<types,UniqueCharString>>
 
 Default: ``asdfghjkl``
 
-.. _hints.dictionary:
+.. _setting-hints-dictionary:
 
 hints.dictionary
 ^^^^^^^^^^^^^^^^
@@ -2888,7 +2888,7 @@ Type: <<types,File>>
 
 Default: ``/usr/share/dict/words``
 
-.. _hints.find_implementation:
+.. _setting-hints-find_implementation:
 
 hints.find_implementation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2905,7 +2905,7 @@ Default: ``python``
 
 This setting is only available with the QtWebKit backend.
 
-.. _hints.hide_unmatched_rapid_hints:
+.. _setting-hints-hide_unmatched_rapid_hints:
 
 hints.hide_unmatched_rapid_hints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2915,7 +2915,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _hints.min_chars:
+.. _setting-hints-min_chars:
 
 hints.min_chars
 ^^^^^^^^^^^^^^^
@@ -2925,7 +2925,7 @@ Type: <<types,Int>>
 
 Default: ``1``
 
-.. _hints.mode:
+.. _setting-hints-mode:
 
 hints.mode
 ^^^^^^^^^^
@@ -2941,7 +2941,7 @@ Valid values:
 
 Default: ``letter``
 
-.. _hints.next_regexes:
+.. _setting-hints-next_regexes:
 
 hints.next_regexes
 ^^^^^^^^^^^^^^^^^^
@@ -2960,7 +2960,7 @@ Default:
 
 
 
-.. _hints.prev_regexes:
+.. _setting-hints-prev_regexes:
 
 hints.prev_regexes
 ^^^^^^^^^^^^^^^^^^
@@ -2978,7 +2978,7 @@ Default:
 
 
 
-.. _hints.scatter:
+.. _setting-hints-scatter:
 
 hints.scatter
 ^^^^^^^^^^^^^
@@ -2989,7 +2989,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _hints.selectors:
+.. _setting-hints-selectors:
 
 hints.selectors
 ^^^^^^^^^^^^^^^
@@ -3067,7 +3067,7 @@ Default:
   * ``[href]``
 
 
-.. _hints.uppercase:
+.. _setting-hints-uppercase:
 
 hints.uppercase
 ^^^^^^^^^^^^^^^
@@ -3077,7 +3077,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _history_gap_interval:
+.. _setting-history_gap_interval:
 
 history_gap_interval
 ^^^^^^^^^^^^^^^^^^^^
@@ -3088,7 +3088,7 @@ Type: <<types,Int>>
 
 Default: ``30``
 
-.. _input.escape_quits_reporter:
+.. _setting-input-escape_quits_reporter:
 
 input.escape_quits_reporter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3098,7 +3098,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _input.forward_unbound_keys:
+.. _setting-input-forward_unbound_keys:
 
 input.forward_unbound_keys
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3114,7 +3114,7 @@ Valid values:
 
 Default: ``auto``
 
-.. _input.insert_mode.auto_enter:
+.. _setting-input-insert_mode-auto_enter:
 
 input.insert_mode.auto_enter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3124,7 +3124,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _input.insert_mode.auto_leave:
+.. _setting-input-insert_mode-auto_leave:
 
 input.insert_mode.auto_leave
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3134,7 +3134,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _input.insert_mode.auto_load:
+.. _setting-input-insert_mode-auto_load:
 
 input.insert_mode.auto_load
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3144,7 +3144,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _input.insert_mode.plugins:
+.. _setting-input-insert_mode-plugins:
 
 input.insert_mode.plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3154,7 +3154,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _input.links_included_in_focus_chain:
+.. _setting-input-links_included_in_focus_chain:
 
 input.links_included_in_focus_chain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3166,7 +3166,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _input.partial_timeout:
+.. _setting-input-partial_timeout:
 
 input.partial_timeout
 ^^^^^^^^^^^^^^^^^^^^^
@@ -3177,7 +3177,7 @@ Type: <<types,Int>>
 
 Default: ``5000``
 
-.. _input.rocker_gestures:
+.. _setting-input-rocker_gestures:
 
 input.rocker_gestures
 ^^^^^^^^^^^^^^^^^^^^^
@@ -3188,7 +3188,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _input.spatial_navigation:
+.. _setting-input-spatial_navigation:
 
 input.spatial_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3201,7 +3201,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _keyhint.blacklist:
+.. _setting-keyhint-blacklist:
 
 keyhint.blacklist
 ^^^^^^^^^^^^^^^^^
@@ -3212,7 +3212,7 @@ Type: <<types,List of String>>
 
 Default: empty
 
-.. _keyhint.delay:
+.. _setting-keyhint-delay:
 
 keyhint.delay
 ^^^^^^^^^^^^^
@@ -3222,7 +3222,7 @@ Type: <<types,Int>>
 
 Default: ``500``
 
-.. _keyhint.radius:
+.. _setting-keyhint-radius:
 
 keyhint.radius
 ^^^^^^^^^^^^^^
@@ -3232,7 +3232,7 @@ Type: <<types,Int>>
 
 Default: ``6``
 
-.. _messages.timeout:
+.. _setting-messages-timeout:
 
 messages.timeout
 ^^^^^^^^^^^^^^^^
@@ -3243,7 +3243,7 @@ Type: <<types,Int>>
 
 Default: ``2000``
 
-.. _new_instance_open_target:
+.. _setting-new_instance_open_target:
 
 new_instance_open_target
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3263,7 +3263,7 @@ Valid values:
 
 Default: ``tab``
 
-.. _new_instance_open_target_window:
+.. _setting-new_instance_open_target_window:
 
 new_instance_open_target_window
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3281,7 +3281,7 @@ Valid values:
 
 Default: ``last-focused``
 
-.. _prompt.filebrowser:
+.. _setting-prompt-filebrowser:
 
 prompt.filebrowser
 ^^^^^^^^^^^^^^^^^^
@@ -3291,7 +3291,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _prompt.radius:
+.. _setting-prompt-radius:
 
 prompt.radius
 ^^^^^^^^^^^^^
@@ -3301,7 +3301,7 @@ Type: <<types,Int>>
 
 Default: ``8``
 
-.. _qt.args:
+.. _setting-qt-args:
 
 qt.args
 ^^^^^^^
@@ -3313,7 +3313,7 @@ Type: <<types,List of String>>
 
 Default: empty
 
-.. _qt.force_platform:
+.. _setting-qt-force_platform:
 
 qt.force_platform
 ^^^^^^^^^^^^^^^^^
@@ -3325,7 +3325,7 @@ Type: <<types,String>>
 
 Default: empty
 
-.. _qt.force_software_rendering:
+.. _setting-qt-force_software_rendering:
 
 qt.force_software_rendering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3346,7 +3346,7 @@ Default: ``none``
 
 This setting is only available with the QtWebEngine backend.
 
-.. _qt.highdpi:
+.. _setting-qt-highdpi:
 
 qt.highdpi
 ^^^^^^^^^^
@@ -3359,7 +3359,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _qt.low_end_device_mode:
+.. _setting-qt-low_end_device_mode:
 
 qt.low_end_device_mode
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -3379,7 +3379,7 @@ Default: ``auto``
 
 This setting is only available with the QtWebEngine backend.
 
-.. _qt.process_model:
+.. _setting-qt-process_model:
 
 qt.process_model
 ^^^^^^^^^^^^^^^^
@@ -3405,7 +3405,7 @@ Default: ``process-per-site-instance``
 
 This setting is only available with the QtWebEngine backend.
 
-.. _scrolling.bar:
+.. _setting-scrolling-bar:
 
 scrolling.bar
 ^^^^^^^^^^^^^
@@ -3421,7 +3421,7 @@ Valid values:
 
 Default: ``when-searching``
 
-.. _scrolling.smooth:
+.. _setting-scrolling-smooth:
 
 scrolling.smooth
 ^^^^^^^^^^^^^^^^
@@ -3434,7 +3434,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _search.ignore_case:
+.. _setting-search-ignore_case:
 
 search.ignore_case
 ^^^^^^^^^^^^^^^^^^
@@ -3450,7 +3450,7 @@ Valid values:
 
 Default: ``smart``
 
-.. _search.incremental:
+.. _setting-search-incremental:
 
 search.incremental
 ^^^^^^^^^^^^^^^^^^
@@ -3460,7 +3460,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _session.default_name:
+.. _setting-session-default_name:
 
 session.default_name
 ^^^^^^^^^^^^^^^^^^^^
@@ -3471,7 +3471,7 @@ Type: <<types,SessionName>>
 
 Default: empty
 
-.. _session.lazy_restore:
+.. _setting-session-lazy_restore:
 
 session.lazy_restore
 ^^^^^^^^^^^^^^^^^^^^
@@ -3481,7 +3481,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _spellcheck.languages:
+.. _setting-spellcheck-languages:
 
 spellcheck.languages
 ^^^^^^^^^^^^^^^^^^^^
@@ -3542,7 +3542,7 @@ On QtWebEngine, this setting requires Qt 5.8 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-.. _statusbar.hide:
+.. _setting-statusbar-hide:
 
 statusbar.hide
 ^^^^^^^^^^^^^^
@@ -3552,7 +3552,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _statusbar.padding:
+.. _setting-statusbar-padding:
 
 statusbar.padding
 ^^^^^^^^^^^^^^^^^
@@ -3567,7 +3567,7 @@ Default:
 * ``right``: ``0``
 * ``top``: ``1``
 
-.. _statusbar.position:
+.. _setting-statusbar-position:
 
 statusbar.position
 ^^^^^^^^^^^^^^^^^^
@@ -3582,7 +3582,7 @@ Valid values:
 
 Default: ``bottom``
 
-.. _statusbar.widgets:
+.. _setting-statusbar-widgets:
 
 statusbar.widgets
 ^^^^^^^^^^^^^^^^^
@@ -3611,7 +3611,7 @@ Default:
 
 
 
-.. _tabs.background:
+.. _setting-tabs-background:
 
 tabs.background
 ^^^^^^^^^^^^^^^
@@ -3621,7 +3621,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _tabs.close_mouse_button:
+.. _setting-tabs-close_mouse_button:
 
 tabs.close_mouse_button
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -3637,7 +3637,7 @@ Valid values:
 
 Default: ``middle``
 
-.. _tabs.close_mouse_button_on_bar:
+.. _setting-tabs-close_mouse_button_on_bar:
 
 tabs.close_mouse_button_on_bar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3654,7 +3654,7 @@ Valid values:
 
 Default: ``new-tab``
 
-.. _tabs.favicons.scale:
+.. _setting-tabs-favicons-scale:
 
 tabs.favicons.scale
 ^^^^^^^^^^^^^^^^^^^
@@ -3665,7 +3665,7 @@ Type: <<types,Float>>
 
 Default: ``1.0``
 
-.. _tabs.favicons.show:
+.. _setting-tabs-favicons-show:
 
 tabs.favicons.show
 ^^^^^^^^^^^^^^^^^^
@@ -3681,7 +3681,7 @@ Valid values:
 
 Default: ``always``
 
-.. _tabs.indicator.padding:
+.. _setting-tabs-indicator-padding:
 
 tabs.indicator.padding
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -3696,7 +3696,7 @@ Default:
 * ``right``: ``4``
 * ``top``: ``2``
 
-.. _tabs.indicator.width:
+.. _setting-tabs-indicator-width:
 
 tabs.indicator.width
 ^^^^^^^^^^^^^^^^^^^^
@@ -3706,7 +3706,7 @@ Type: <<types,Int>>
 
 Default: ``3``
 
-.. _tabs.last_close:
+.. _setting-tabs-last_close:
 
 tabs.last_close
 ^^^^^^^^^^^^^^^
@@ -3724,7 +3724,7 @@ Valid values:
 
 Default: ``ignore``
 
-.. _tabs.max_width:
+.. _setting-tabs-max_width:
 
 tabs.max_width
 ^^^^^^^^^^^^^^
@@ -3737,7 +3737,7 @@ Type: <<types,Int>>
 
 Default: ``-1``
 
-.. _tabs.min_width:
+.. _setting-tabs-min_width:
 
 tabs.min_width
 ^^^^^^^^^^^^^^
@@ -3749,7 +3749,7 @@ Type: <<types,Int>>
 
 Default: ``-1``
 
-.. _tabs.mode_on_change:
+.. _setting-tabs-mode_on_change:
 
 tabs.mode_on_change
 ^^^^^^^^^^^^^^^^^^^
@@ -3765,7 +3765,7 @@ Valid values:
 
 Default: ``normal``
 
-.. _tabs.mousewheel_switching:
+.. _setting-tabs-mousewheel_switching:
 
 tabs.mousewheel_switching
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3775,7 +3775,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _tabs.new_position.related:
+.. _setting-tabs-new_position-related:
 
 tabs.new_position.related
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3793,7 +3793,7 @@ Valid values:
 
 Default: ``next``
 
-.. _tabs.new_position.stacking:
+.. _setting-tabs-new_position-stacking:
 
 tabs.new_position.stacking
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3804,7 +3804,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _tabs.new_position.unrelated:
+.. _setting-tabs-new_position-unrelated:
 
 tabs.new_position.unrelated
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3822,7 +3822,7 @@ Valid values:
 
 Default: ``last``
 
-.. _tabs.padding:
+.. _setting-tabs-padding:
 
 tabs.padding
 ^^^^^^^^^^^^
@@ -3837,7 +3837,7 @@ Default:
 * ``right``: ``5``
 * ``top``: ``0``
 
-.. _tabs.pinned.shrink:
+.. _setting-tabs-pinned-shrink:
 
 tabs.pinned.shrink
 ^^^^^^^^^^^^^^^^^^
@@ -3847,7 +3847,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _tabs.position:
+.. _setting-tabs-position:
 
 tabs.position
 ^^^^^^^^^^^^^
@@ -3864,7 +3864,7 @@ Valid values:
 
 Default: ``top``
 
-.. _tabs.select_on_remove:
+.. _setting-tabs-select_on_remove:
 
 tabs.select_on_remove
 ^^^^^^^^^^^^^^^^^^^^^
@@ -3880,7 +3880,7 @@ Valid values:
 
 Default: ``next``
 
-.. _tabs.show:
+.. _setting-tabs-show:
 
 tabs.show
 ^^^^^^^^^
@@ -3897,7 +3897,7 @@ Valid values:
 
 Default: ``always``
 
-.. _tabs.show_switching_delay:
+.. _setting-tabs-show_switching_delay:
 
 tabs.show_switching_delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3907,7 +3907,7 @@ Type: <<types,Int>>
 
 Default: ``800``
 
-.. _tabs.tabs_are_windows:
+.. _setting-tabs-tabs_are_windows:
 
 tabs.tabs_are_windows
 ^^^^^^^^^^^^^^^^^^^^^
@@ -3917,7 +3917,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _tabs.title.alignment:
+.. _setting-tabs-title-alignment:
 
 tabs.title.alignment
 ^^^^^^^^^^^^^^^^^^^^
@@ -3933,7 +3933,7 @@ Valid values:
 
 Default: ``left``
 
-.. _tabs.title.format:
+.. _setting-tabs-title-format:
 
 tabs.title.format
 ^^^^^^^^^^^^^^^^^
@@ -3959,7 +3959,7 @@ Type: <<types,FormatString>>
 
 Default: ``{audio}{index}: {title}``
 
-.. _tabs.title.format_pinned:
+.. _setting-tabs-title-format_pinned:
 
 tabs.title.format_pinned
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3969,7 +3969,7 @@ Type: <<types,FormatString>>
 
 Default: ``{index}``
 
-.. _tabs.width:
+.. _setting-tabs-width:
 
 tabs.width
 ^^^^^^^^^^
@@ -3979,7 +3979,7 @@ Type: <<types,PercOrInt>>
 
 Default: ``20%``
 
-.. _tabs.wrap:
+.. _setting-tabs-wrap:
 
 tabs.wrap
 ^^^^^^^^^
@@ -3989,7 +3989,7 @@ Type: <<types,Bool>>
 
 Default: ``true``
 
-.. _url.auto_search:
+.. _setting-url-auto_search:
 
 url.auto_search
 ^^^^^^^^^^^^^^^
@@ -4005,7 +4005,7 @@ Valid values:
 
 Default: ``naive``
 
-.. _url.default_page:
+.. _setting-url-default_page:
 
 url.default_page
 ^^^^^^^^^^^^^^^^
@@ -4016,7 +4016,7 @@ Type: <<types,FuzzyUrl>>
 
 Default: ``https://start.duckduckgo.com/``
 
-.. _url.incdec_segments:
+.. _setting-url-incdec_segments:
 
 url.incdec_segments
 ^^^^^^^^^^^^^^^^^^^
@@ -4039,7 +4039,7 @@ Default:
 
 
 
-.. _url.open_base_url:
+.. _setting-url-open_base_url:
 
 url.open_base_url
 ^^^^^^^^^^^^^^^^^
@@ -4049,7 +4049,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _url.searchengines:
+.. _setting-url-searchengines:
 
 url.searchengines
 ^^^^^^^^^^^^^^^^^
@@ -4063,7 +4063,7 @@ Default:
 
 * ``DEFAULT``: ``https://duckduckgo.com/?q={}``
 
-.. _url.start_pages:
+.. _setting-url-start_pages:
 
 url.start_pages
 ^^^^^^^^^^^^^^^
@@ -4073,7 +4073,7 @@ Type: <<types,List of FuzzyUrl&#44; or FuzzyUrl>>
 
 Default: ``https://start.duckduckgo.com``
 
-.. _url.yank_ignored_parameters:
+.. _setting-url-yank_ignored_parameters:
 
 url.yank_ignored_parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -4092,7 +4092,7 @@ Default:
 
 
 
-.. _window.hide_decoration:
+.. _setting-window-hide_decoration:
 
 window.hide_decoration
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -4105,7 +4105,7 @@ Type: <<types,Bool>>
 
 Default: ``false``
 
-.. _window.title_format:
+.. _setting-window-title_format:
 
 window.title_format
 ^^^^^^^^^^^^^^^^^^^
@@ -4117,7 +4117,7 @@ Type: <<types,FormatString>>
 
 Default: ``{perc}{title}{title_sep}qutebrowser``
 
-.. _zoom.default:
+.. _setting-zoom-default:
 
 zoom.default
 ^^^^^^^^^^^^
@@ -4127,7 +4127,7 @@ Type: <<types,Perc>>
 
 Default: ``100%``
 
-.. _zoom.levels:
+.. _setting-zoom-levels:
 
 zoom.levels
 ^^^^^^^^^^^
@@ -4156,7 +4156,7 @@ Default:
 
 
 
-.. _zoom.mouse_divider:
+.. _setting-zoom-mouse_divider:
 
 zoom.mouse_divider
 ^^^^^^^^^^^^^^^^^^
@@ -4166,7 +4166,7 @@ Type: <<types,Int>>
 
 Default: ``512``
 
-.. _zoom.text_only:
+.. _setting-zoom-text_only:
 
 zoom.text_only
 ^^^^^^^^^^^^^^

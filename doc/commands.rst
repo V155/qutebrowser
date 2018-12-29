@@ -30,113 +30,113 @@ Quick reference
    :header: "Command", "Description"
    :widths: 25, 75
    
-   :ref:`adblock-update`, "Update the adblock block lists."
-   :ref:`back`, "Go back in the history of the current tab."
-   :ref:`bind`, "Bind a key to a command."
-   :ref:`bookmark-add`, "Save the current page as a bookmark, or a specific url."
-   :ref:`bookmark-del`, "Delete a bookmark."
-   :ref:`bookmark-load`, "Load a bookmark."
-   :ref:`buffer`, "Select tab by index or url/title best match."
-   :ref:`clear-keychain`, "Clear the currently entered key chain."
-   :ref:`clear-messages`, "Clear all message notifications."
-   :ref:`click-element`, "Click the element matching the given filter."
-   :ref:`close`, "Close the current window."
-   :ref:`config-clear`, "Set all settings back to their default."
-   :ref:`config-cycle`, "Cycle an option between multiple values."
-   :ref:`config-dict-add`, "Add a key/value pair to a dictionary option."
-   :ref:`config-dict-remove`, "Remove a key from a dict."
-   :ref:`config-edit`, "Open the config.py file in the editor."
-   :ref:`config-list-add`, "Append a value to a config option that is a list."
-   :ref:`config-list-remove`, "Remove a value from a list."
-   :ref:`config-source`, "Read a config.py file."
-   :ref:`config-unset`, "Unset an option."
-   :ref:`config-write-py`, "Write the current configuration to a config.py file."
-   :ref:`download`, "Download a given URL, or current page if no URL given."
-   :ref:`download-cancel`, "Cancel the last/[count]th download."
-   :ref:`download-clear`, "Remove all finished downloads from the list."
-   :ref:`download-delete`, "Delete the last/[count]th download from disk."
-   :ref:`download-open`, "Open the last/[count]th download."
-   :ref:`download-remove`, "Remove the last/[count]th download from the list."
-   :ref:`download-retry`, "Retry the first failed/[count]th download."
-   :ref:`edit-command`, "Open an editor to modify the current command."
-   :ref:`edit-url`, "Navigate to a url formed in an external editor."
-   :ref:`enter-mode`, "Enter a key mode."
-   :ref:`fake-key`, "Send a fake keypress or key string to the website or qutebrowser."
-   :ref:`follow-selected`, "Follow the selected text."
-   :ref:`forward`, "Go forward in the history of the current tab."
-   :ref:`fullscreen`, "Toggle fullscreen mode."
-   :ref:`greasemonkey-reload`, "Re-read Greasemonkey scripts from disk."
-   :ref:`help`, "Show help about a command or setting."
-   :ref:`hint`, "Start hinting."
-   :ref:`history`, "Show browsing history."
-   :ref:`history-clear`, "Clear all browsing history."
-   :ref:`home`, "Open main startpage in current tab."
-   :ref:`insert-text`, "Insert text at cursor position."
-   :ref:`inspector`, "Toggle the web inspector."
-   :ref:`jseval`, "Evaluate a JavaScript string."
-   :ref:`jump-mark`, "Jump to the mark named by `key`."
-   :ref:`later`, "Execute a command after some time."
-   :ref:`message-error`, "Show an error message in the statusbar."
-   :ref:`message-info`, "Show an info message in the statusbar."
-   :ref:`message-warning`, "Show a warning message in the statusbar."
-   :ref:`messages`, "Show a log of past messages."
-   :ref:`navigate`, "Open typical prev/next links or navigate using the URL path."
-   :ref:`nop`, "Do nothing."
-   :ref:`open`, "Open a URL in the current/[count]th tab."
-   :ref:`open-editor`, "Open an external editor with the currently selected form field."
-   :ref:`print`, "Print the current/[count]th tab."
-   :ref:`quickmark-add`, "Add a new quickmark."
-   :ref:`quickmark-del`, "Delete a quickmark."
-   :ref:`quickmark-load`, "Load a quickmark."
-   :ref:`quickmark-save`, "Save the current page as a quickmark."
-   :ref:`quit`, "Quit qutebrowser."
-   :ref:`record-macro`, "Start or stop recording a macro."
-   :ref:`reload`, "Reload the current/[count]th tab."
-   :ref:`repeat`, "Repeat a given command."
-   :ref:`repeat-command`, "Repeat the last executed command."
-   :ref:`report`, "Report a bug in qutebrowser."
-   :ref:`restart`, "Restart qutebrowser while keeping existing tabs open."
-   :ref:`run-macro`, "Run a recorded macro."
-   :ref:`run-with-count`, "Run a command with the given count."
-   :ref:`save`, "Save configs and state."
-   :ref:`scroll`, "Scroll the current tab in the given direction."
-   :ref:`scroll-page`, "Scroll the frame page-wise."
-   :ref:`scroll-px`, "Scroll the current tab by 'count * dx/dy' pixels."
-   :ref:`scroll-to-anchor`, "Scroll to the given anchor in the document."
-   :ref:`scroll-to-perc`, "Scroll to a specific percentage of the page."
-   :ref:`search`, "Search for a text on the current page. With no text, clear results."
-   :ref:`search-next`, "Continue the search to the ([count]th) next term."
-   :ref:`search-prev`, "Continue the search to the ([count]th) previous term."
-   :ref:`session-delete`, "Delete a session."
-   :ref:`session-load`, "Load a session."
-   :ref:`session-save`, "Save a session."
-   :ref:`set`, "Set an option."
-   :ref:`set-cmd-text`, "Preset the statusbar to some text."
-   :ref:`set-mark`, "Set a mark at the current scroll position in the current tab."
-   :ref:`spawn`, "Spawn a command in a shell."
-   :ref:`stop`, "Stop loading in the current/[count]th tab."
-   :ref:`tab-clone`, "Duplicate the current tab."
-   :ref:`tab-close`, "Close the current/[count]th tab."
-   :ref:`tab-focus`, "Select the tab given as argument/[count]."
-   :ref:`tab-give`, "Give the current tab to a new or existing window if win_id given."
-   :ref:`tab-move`, "Move the current tab according to the argument and [count]."
-   :ref:`tab-mute`, "Mute/Unmute the current/[count]th tab."
-   :ref:`tab-next`, "Switch to the next tab, or switch [count] tabs forward."
-   :ref:`tab-only`, "Close all tabs except for the current one."
-   :ref:`tab-pin`, "Pin/Unpin the current/[count]th tab."
-   :ref:`tab-prev`, "Switch to the previous tab, or switch [count] tabs back."
-   :ref:`tab-take`, "Take a tab from another window."
-   :ref:`unbind`, "Unbind a keychain."
-   :ref:`undo`, "Re-open the last closed tab or tabs."
-   :ref:`version`, "Show version information."
-   :ref:`view-source`, "Show the source of the current page in a new tab."
-   :ref:`window-only`, "Close all windows except for the current one."
-   :ref:`yank`, "Yank something to the clipboard or primary selection."
-   :ref:`zoom`, "Set the zoom level for the current tab."
-   :ref:`zoom-in`, "Increase the zoom level for the current tab."
-   :ref:`zoom-out`, "Decrease the zoom level for the current tab."
+   :ref:`adblock-update <cmd-adblock-update>`, "Update the adblock block lists."
+   :ref:`back <cmd-back>`, "Go back in the history of the current tab."
+   :ref:`bind <cmd-bind>`, "Bind a key to a command."
+   :ref:`bookmark-add <cmd-bookmark-add>`, "Save the current page as a bookmark, or a specific url."
+   :ref:`bookmark-del <cmd-bookmark-del>`, "Delete a bookmark."
+   :ref:`bookmark-load <cmd-bookmark-load>`, "Load a bookmark."
+   :ref:`buffer <cmd-buffer>`, "Select tab by index or url/title best match."
+   :ref:`clear-keychain <cmd-clear-keychain>`, "Clear the currently entered key chain."
+   :ref:`clear-messages <cmd-clear-messages>`, "Clear all message notifications."
+   :ref:`click-element <cmd-click-element>`, "Click the element matching the given filter."
+   :ref:`close <cmd-close>`, "Close the current window."
+   :ref:`config-clear <cmd-config-clear>`, "Set all settings back to their default."
+   :ref:`config-cycle <cmd-config-cycle>`, "Cycle an option between multiple values."
+   :ref:`config-dict-add <cmd-config-dict-add>`, "Add a key/value pair to a dictionary option."
+   :ref:`config-dict-remove <cmd-config-dict-remove>`, "Remove a key from a dict."
+   :ref:`config-edit <cmd-config-edit>`, "Open the config.py file in the editor."
+   :ref:`config-list-add <cmd-config-list-add>`, "Append a value to a config option that is a list."
+   :ref:`config-list-remove <cmd-config-list-remove>`, "Remove a value from a list."
+   :ref:`config-source <cmd-config-source>`, "Read a config.py file."
+   :ref:`config-unset <cmd-config-unset>`, "Unset an option."
+   :ref:`config-write-py <cmd-config-write-py>`, "Write the current configuration to a config.py file."
+   :ref:`download <cmd-download>`, "Download a given URL, or current page if no URL given."
+   :ref:`download-cancel <cmd-download-cancel>`, "Cancel the last/[count]th download."
+   :ref:`download-clear <cmd-download-clear>`, "Remove all finished downloads from the list."
+   :ref:`download-delete <cmd-download-delete>`, "Delete the last/[count]th download from disk."
+   :ref:`download-open <cmd-download-open>`, "Open the last/[count]th download."
+   :ref:`download-remove <cmd-download-remove>`, "Remove the last/[count]th download from the list."
+   :ref:`download-retry <cmd-download-retry>`, "Retry the first failed/[count]th download."
+   :ref:`edit-command <cmd-edit-command>`, "Open an editor to modify the current command."
+   :ref:`edit-url <cmd-edit-url>`, "Navigate to a url formed in an external editor."
+   :ref:`enter-mode <cmd-enter-mode>`, "Enter a key mode."
+   :ref:`fake-key <cmd-fake-key>`, "Send a fake keypress or key string to the website or qutebrowser."
+   :ref:`follow-selected <cmd-follow-selected>`, "Follow the selected text."
+   :ref:`forward <cmd-forward>`, "Go forward in the history of the current tab."
+   :ref:`fullscreen <cmd-fullscreen>`, "Toggle fullscreen mode."
+   :ref:`greasemonkey-reload <cmd-greasemonkey-reload>`, "Re-read Greasemonkey scripts from disk."
+   :ref:`help <cmd-help>`, "Show help about a command or setting."
+   :ref:`hint <cmd-hint>`, "Start hinting."
+   :ref:`history <cmd-history>`, "Show browsing history."
+   :ref:`history-clear <cmd-history-clear>`, "Clear all browsing history."
+   :ref:`home <cmd-home>`, "Open main startpage in current tab."
+   :ref:`insert-text <cmd-insert-text>`, "Insert text at cursor position."
+   :ref:`inspector <cmd-inspector>`, "Toggle the web inspector."
+   :ref:`jseval <cmd-jseval>`, "Evaluate a JavaScript string."
+   :ref:`jump-mark <cmd-jump-mark>`, "Jump to the mark named by `key`."
+   :ref:`later <cmd-later>`, "Execute a command after some time."
+   :ref:`message-error <cmd-message-error>`, "Show an error message in the statusbar."
+   :ref:`message-info <cmd-message-info>`, "Show an info message in the statusbar."
+   :ref:`message-warning <cmd-message-warning>`, "Show a warning message in the statusbar."
+   :ref:`messages <cmd-messages>`, "Show a log of past messages."
+   :ref:`navigate <cmd-navigate>`, "Open typical prev/next links or navigate using the URL path."
+   :ref:`nop <cmd-nop>`, "Do nothing."
+   :ref:`open <cmd-open>`, "Open a URL in the current/[count]th tab."
+   :ref:`open-editor <cmd-open-editor>`, "Open an external editor with the currently selected form field."
+   :ref:`print <cmd-print>`, "Print the current/[count]th tab."
+   :ref:`quickmark-add <cmd-quickmark-add>`, "Add a new quickmark."
+   :ref:`quickmark-del <cmd-quickmark-del>`, "Delete a quickmark."
+   :ref:`quickmark-load <cmd-quickmark-load>`, "Load a quickmark."
+   :ref:`quickmark-save <cmd-quickmark-save>`, "Save the current page as a quickmark."
+   :ref:`quit <cmd-quit>`, "Quit qutebrowser."
+   :ref:`record-macro <cmd-record-macro>`, "Start or stop recording a macro."
+   :ref:`reload <cmd-reload>`, "Reload the current/[count]th tab."
+   :ref:`repeat <cmd-repeat>`, "Repeat a given command."
+   :ref:`repeat-command <cmd-repeat-command>`, "Repeat the last executed command."
+   :ref:`report <cmd-report>`, "Report a bug in qutebrowser."
+   :ref:`restart <cmd-restart>`, "Restart qutebrowser while keeping existing tabs open."
+   :ref:`run-macro <cmd-run-macro>`, "Run a recorded macro."
+   :ref:`run-with-count <cmd-run-with-count>`, "Run a command with the given count."
+   :ref:`save <cmd-save>`, "Save configs and state."
+   :ref:`scroll <cmd-scroll>`, "Scroll the current tab in the given direction."
+   :ref:`scroll-page <cmd-scroll-page>`, "Scroll the frame page-wise."
+   :ref:`scroll-px <cmd-scroll-px>`, "Scroll the current tab by 'count * dx/dy' pixels."
+   :ref:`scroll-to-anchor <cmd-scroll-to-anchor>`, "Scroll to the given anchor in the document."
+   :ref:`scroll-to-perc <cmd-scroll-to-perc>`, "Scroll to a specific percentage of the page."
+   :ref:`search <cmd-search>`, "Search for a text on the current page. With no text, clear results."
+   :ref:`search-next <cmd-search-next>`, "Continue the search to the ([count]th) next term."
+   :ref:`search-prev <cmd-search-prev>`, "Continue the search to the ([count]th) previous term."
+   :ref:`session-delete <cmd-session-delete>`, "Delete a session."
+   :ref:`session-load <cmd-session-load>`, "Load a session."
+   :ref:`session-save <cmd-session-save>`, "Save a session."
+   :ref:`set <cmd-set>`, "Set an option."
+   :ref:`set-cmd-text <cmd-set-cmd-text>`, "Preset the statusbar to some text."
+   :ref:`set-mark <cmd-set-mark>`, "Set a mark at the current scroll position in the current tab."
+   :ref:`spawn <cmd-spawn>`, "Spawn a command in a shell."
+   :ref:`stop <cmd-stop>`, "Stop loading in the current/[count]th tab."
+   :ref:`tab-clone <cmd-tab-clone>`, "Duplicate the current tab."
+   :ref:`tab-close <cmd-tab-close>`, "Close the current/[count]th tab."
+   :ref:`tab-focus <cmd-tab-focus>`, "Select the tab given as argument/[count]."
+   :ref:`tab-give <cmd-tab-give>`, "Give the current tab to a new or existing window if win_id given."
+   :ref:`tab-move <cmd-tab-move>`, "Move the current tab according to the argument and [count]."
+   :ref:`tab-mute <cmd-tab-mute>`, "Mute/Unmute the current/[count]th tab."
+   :ref:`tab-next <cmd-tab-next>`, "Switch to the next tab, or switch [count] tabs forward."
+   :ref:`tab-only <cmd-tab-only>`, "Close all tabs except for the current one."
+   :ref:`tab-pin <cmd-tab-pin>`, "Pin/Unpin the current/[count]th tab."
+   :ref:`tab-prev <cmd-tab-prev>`, "Switch to the previous tab, or switch [count] tabs back."
+   :ref:`tab-take <cmd-tab-take>`, "Take a tab from another window."
+   :ref:`unbind <cmd-unbind>`, "Unbind a keychain."
+   :ref:`undo <cmd-undo>`, "Re-open the last closed tab or tabs."
+   :ref:`version <cmd-version>`, "Show version information."
+   :ref:`view-source <cmd-view-source>`, "Show the source of the current page in a new tab."
+   :ref:`window-only <cmd-window-only>`, "Close all windows except for the current one."
+   :ref:`yank <cmd-yank>`, "Yank something to the clipboard or primary selection."
+   :ref:`zoom <cmd-zoom>`, "Set the zoom level for the current tab."
+   :ref:`zoom-in <cmd-zoom-in>`, "Increase the zoom level for the current tab."
+   :ref:`zoom-out <cmd-zoom-out>`, "Decrease the zoom level for the current tab."
 
-.. _adblock-update:
+.. _cmd-adblock-update:
 
 adblock-update
 --------------
@@ -146,7 +146,7 @@ This updates `~/.local/share/qutebrowser/blocked-hosts` with downloaded
 host lists and re-reads `~/.config/qutebrowser/blocked-hosts`.
 
 
-.. _back:
+.. _cmd-back:
 
 back
 ----
@@ -165,7 +165,7 @@ count
 How many pages to go back.
 
 
-.. _bind:
+.. _cmd-bind:
 
 bind
 ----
@@ -200,7 +200,7 @@ note
 * This command does not replace variables like `{url}`.
 
 
-.. _bookmark-add:
+.. _cmd-bookmark-add:
 
 bookmark-add
 ------------
@@ -231,7 +231,7 @@ optional arguments
 
 
 
-.. _bookmark-del:
+.. _cmd-bookmark-del:
 
 bookmark-del
 ------------
@@ -250,7 +250,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _bookmark-load:
+.. _cmd-bookmark-load:
 
 bookmark-load
 -------------
@@ -274,7 +274,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _buffer:
+.. _cmd-buffer:
 
 buffer
 ------
@@ -303,21 +303,21 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _clear-keychain:
+.. _cmd-clear-keychain:
 
 clear-keychain
 --------------
 Clear the currently entered key chain.
 
 
-.. _clear-messages:
+.. _cmd-clear-messages:
 
 clear-messages
 --------------
 Clear all message notifications.
 
 
-.. _click-element:
+.. _cmd-click-element:
 
 click-element
 -------------
@@ -342,14 +342,14 @@ optional arguments
 * `-f`, `--force-event`: Force generating a fake click event.
 
 
-.. _close:
+.. _cmd-close:
 
 close
 -----
 Close the current window.
 
 
-.. _config-clear:
+.. _cmd-config-clear:
 
 config-clear
 ------------
@@ -364,7 +364,7 @@ optional arguments
 
 
 
-.. _config-cycle:
+.. _cmd-config-cycle:
 
 config-cycle
 ------------
@@ -384,7 +384,7 @@ optional arguments
 * `-p`, `--print`: Print the value after setting.
 
 
-.. _config-dict-add:
+.. _cmd-config-dict-add:
 
 config-dict-add
 ---------------
@@ -406,7 +406,7 @@ optional arguments
 
 
 
-.. _config-dict-remove:
+.. _cmd-config-dict-remove:
 
 config-dict-remove
 ------------------
@@ -424,7 +424,7 @@ optional arguments
 * `-t`, `--temp`: Remove value temporarily until qutebrowser is closed.
 
 
-.. _config-edit:
+.. _cmd-config-edit:
 
 config-edit
 -----------
@@ -437,7 +437,7 @@ optional arguments
 * `-n`, `--no-source`: Don't re-source the config file after editing.
 
 
-.. _config-list-add:
+.. _cmd-config-list-add:
 
 config-list-add
 ---------------
@@ -455,7 +455,7 @@ optional arguments
 * `-t`, `--temp`: Add value temporarily until qutebrowser is closed.
 
 
-.. _config-list-remove:
+.. _cmd-config-list-remove:
 
 config-list-remove
 ------------------
@@ -473,7 +473,7 @@ optional arguments
 * `-t`, `--temp`: Remove value temporarily until qutebrowser is closed.
 
 
-.. _config-source:
+.. _cmd-config-source:
 
 config-source
 -------------
@@ -492,7 +492,7 @@ optional arguments
 * `-c`, `--clear`: Clear current settings first.
 
 
-.. _config-unset:
+.. _cmd-config-unset:
 
 config-unset
 ------------
@@ -513,7 +513,7 @@ optional arguments
 * `-t`, `--temp`: Set value temporarily until qutebrowser is closed.
 
 
-.. _config-write-py:
+.. _cmd-config-write-py:
 
 config-write-py
 ---------------
@@ -531,7 +531,7 @@ optional arguments
 * `-d`, `--defaults`: Write the defaults instead of values configured via :set.
 
 
-.. _download:
+.. _cmd-download:
 
 download
 --------
@@ -549,7 +549,7 @@ optional arguments
 * `-d`, `--dest`: The file path to write the download to, or not given to ask.
 
 
-.. _download-cancel:
+.. _cmd-download-cancel:
 
 download-cancel
 ---------------
@@ -566,14 +566,14 @@ count
 The index of the download to cancel.
 
 
-.. _download-clear:
+.. _cmd-download-clear:
 
 download-clear
 --------------
 Remove all finished downloads from the list.
 
 
-.. _download-delete:
+.. _cmd-download-delete:
 
 download-delete
 ---------------
@@ -584,7 +584,7 @@ count
 The index of the download to delete.
 
 
-.. _download-open:
+.. _cmd-download-open:
 
 download-open
 -------------
@@ -615,7 +615,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _download-remove:
+.. _cmd-download-remove:
 
 download-remove
 ---------------
@@ -632,7 +632,7 @@ count
 The index of the download to remove.
 
 
-.. _download-retry:
+.. _cmd-download-retry:
 
 download-retry
 --------------
@@ -643,7 +643,7 @@ count
 The index of the download to retry.
 
 
-.. _edit-command:
+.. _cmd-edit-command:
 
 edit-command
 ------------
@@ -656,7 +656,7 @@ optional arguments
 * `-r`, `--run`: Run the command if the editor exits successfully.
 
 
-.. _edit-url:
+.. _cmd-edit-url:
 
 edit-url
 --------
@@ -683,7 +683,7 @@ optional arguments
 
 
 
-.. _enter-mode:
+.. _cmd-enter-mode:
 
 enter-mode
 ----------
@@ -696,7 +696,7 @@ positional arguments
 * `mode`: The mode to enter.
 
 
-.. _fake-key:
+.. _cmd-fake-key:
 
 fake-key
 --------
@@ -718,7 +718,7 @@ optional arguments
 * `-g`, `--global`: If given, the keys are sent to the qutebrowser UI.
 
 
-.. _follow-selected:
+.. _cmd-follow-selected:
 
 follow-selected
 ---------------
@@ -731,7 +731,7 @@ optional arguments
 * `-t`, `--tab`: Load the selected link in a new tab.
 
 
-.. _forward:
+.. _cmd-forward:
 
 forward
 -------
@@ -750,7 +750,7 @@ count
 How many pages to go forward.
 
 
-.. _fullscreen:
+.. _cmd-fullscreen:
 
 fullscreen
 ----------
@@ -763,7 +763,7 @@ optional arguments
 * `-l`, `--leave`: Only leave fullscreen if it was entered by the page.
 
 
-.. _greasemonkey-reload:
+.. _cmd-greasemonkey-reload:
 
 greasemonkey-reload
 -------------------
@@ -782,7 +782,7 @@ optional arguments
 
 
 
-.. _help:
+.. _cmd-help:
 
 help
 ----
@@ -808,7 +808,7 @@ optional arguments
 * `-w`, `--window`: Open in a new window.
 
 
-.. _hint:
+.. _cmd-hint:
 
 hint
 ----
@@ -946,7 +946,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _history:
+.. _cmd-history:
 
 history
 -------
@@ -961,7 +961,7 @@ optional arguments
 * `-w`, `--window`: Open in a new window.
 
 
-.. _history-clear:
+.. _cmd-history-clear:
 
 history-clear
 -------------
@@ -979,14 +979,14 @@ optional arguments
 * `-f`, `--force`: Don't ask for confirmation.
 
 
-.. _home:
+.. _cmd-home:
 
 home
 ----
 Open main startpage in current tab.
 
 
-.. _insert-text:
+.. _cmd-insert-text:
 
 insert-text
 -----------
@@ -1003,7 +1003,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _inspector:
+.. _cmd-inspector:
 
 inspector
 ---------
@@ -1013,7 +1013,7 @@ Note: Due a bug in Qt, the inspector will show incorrect request
 headers in the network tab.
 
 
-.. _jseval:
+.. _cmd-jseval:
 
 jseval
 ------
@@ -1045,7 +1045,7 @@ note
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 
 
-.. _jump-mark:
+.. _cmd-jump-mark:
 
 jump-mark
 ---------
@@ -1058,7 +1058,7 @@ positional arguments
 * `key`: mark identifier; capital indicates a global mark
 
 
-.. _later:
+.. _cmd-later:
 
 later
 -----
@@ -1078,7 +1078,7 @@ note
 * This command does not replace variables like `{url}`.
 
 
-.. _message-error:
+.. _cmd-message-error:
 
 message-error
 -------------
@@ -1091,7 +1091,7 @@ positional arguments
 * `text`: The text to show.
 
 
-.. _message-info:
+.. _cmd-message-info:
 
 message-info
 ------------
@@ -1108,7 +1108,7 @@ count
 How many times to show the message
 
 
-.. _message-warning:
+.. _cmd-message-warning:
 
 message-warning
 ---------------
@@ -1121,7 +1121,7 @@ positional arguments
 * `text`: The text to show.
 
 
-.. _messages:
+.. _cmd-messages:
 
 messages
 --------
@@ -1143,7 +1143,7 @@ optional arguments
 * `-w`, `--window`: Open in a new window.
 
 
-.. _navigate:
+.. _cmd-navigate:
 
 navigate
 --------
@@ -1202,14 +1202,14 @@ For `increment` and `decrement`, the number to change the
 
 
 
-.. _nop:
+.. _cmd-nop:
 
 nop
 ---
 Do nothing.
 
 
-.. _open:
+.. _cmd-open:
 
 open
 ----
@@ -1244,7 +1244,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _open-editor:
+.. _cmd-open-editor:
 
 open-editor
 -----------
@@ -1254,7 +1254,7 @@ The editor which should be launched can be configured via the
 `editor.command` config option.
 
 
-.. _print:
+.. _cmd-print:
 
 print
 -----
@@ -1272,7 +1272,7 @@ count
 The tab index to print.
 
 
-.. _quickmark-add:
+.. _cmd-quickmark-add:
 
 quickmark-add
 -------------
@@ -1290,7 +1290,7 @@ positional arguments
 * `name`: The name for the new quickmark.
 
 
-.. _quickmark-del:
+.. _cmd-quickmark-del:
 
 quickmark-del
 -------------
@@ -1311,7 +1311,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _quickmark-load:
+.. _cmd-quickmark-load:
 
 quickmark-load
 --------------
@@ -1334,14 +1334,14 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _quickmark-save:
+.. _cmd-quickmark-save:
 
 quickmark-save
 --------------
 Save the current page as a quickmark.
 
 
-.. _quit:
+.. _cmd-quit:
 
 quit
 ----
@@ -1360,7 +1360,7 @@ optional arguments
 
 
 
-.. _record-macro:
+.. _cmd-record-macro:
 
 record-macro
 ------------
@@ -1373,7 +1373,7 @@ positional arguments
 * `register`: Which register to store the macro in.
 
 
-.. _reload:
+.. _cmd-reload:
 
 reload
 ------
@@ -1390,7 +1390,7 @@ count
 The tab index to reload.
 
 
-.. _repeat:
+.. _cmd-repeat:
 
 repeat
 ------
@@ -1414,7 +1414,7 @@ note
 * This command does not replace variables like `{url}`.
 
 
-.. _repeat-command:
+.. _cmd-repeat-command:
 
 repeat-command
 --------------
@@ -1425,21 +1425,21 @@ count
 Which count to pass the command.
 
 
-.. _report:
+.. _cmd-report:
 
 report
 ------
 Report a bug in qutebrowser.
 
 
-.. _restart:
+.. _cmd-restart:
 
 restart
 -------
 Restart qutebrowser while keeping existing tabs open.
 
 
-.. _run-macro:
+.. _cmd-run-macro:
 
 run-macro
 ---------
@@ -1456,7 +1456,7 @@ count
 How many times to run the macro.
 
 
-.. _run-with-count:
+.. _cmd-run-with-count:
 
 run-with-count
 --------------
@@ -1483,7 +1483,7 @@ note
 * This command does not replace variables like `{url}`.
 
 
-.. _save:
+.. _cmd-save:
 
 save
 ----
@@ -1498,7 +1498,7 @@ positional arguments
 
 
 
-.. _scroll:
+.. _cmd-scroll:
 
 scroll
 ------
@@ -1521,7 +1521,7 @@ count
 multiplier
 
 
-.. _scroll-page:
+.. _cmd-scroll-page:
 
 scroll-page
 -----------
@@ -1548,7 +1548,7 @@ count
 multiplier
 
 
-.. _scroll-px:
+.. _cmd-scroll-px:
 
 scroll-px
 ---------
@@ -1566,7 +1566,7 @@ count
 multiplier
 
 
-.. _scroll-to-anchor:
+.. _cmd-scroll-to-anchor:
 
 scroll-to-anchor
 ----------------
@@ -1579,7 +1579,7 @@ positional arguments
 * `name`: The anchor to scroll to.
 
 
-.. _scroll-to-perc:
+.. _cmd-scroll-to-perc:
 
 scroll-to-perc
 --------------
@@ -1604,7 +1604,7 @@ count
 Percentage to scroll.
 
 
-.. _search:
+.. _cmd-search:
 
 search
 ------
@@ -1625,7 +1625,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _search-next:
+.. _cmd-search-next:
 
 search-next
 -----------
@@ -1636,7 +1636,7 @@ count
 How many elements to ignore.
 
 
-.. _search-prev:
+.. _cmd-search-prev:
 
 search-prev
 -----------
@@ -1647,7 +1647,7 @@ count
 How many elements to ignore.
 
 
-.. _session-delete:
+.. _cmd-session-delete:
 
 session-delete
 --------------
@@ -1666,7 +1666,7 @@ optional arguments
 
 
 
-.. _session-load:
+.. _cmd-session-load:
 
 session-load
 ------------
@@ -1688,7 +1688,7 @@ optional arguments
 * `-d`, `--delete`: Delete the saved session once it has loaded.
 
 
-.. _session-save:
+.. _cmd-session-save:
 
 session-save
 ------------
@@ -1711,7 +1711,7 @@ optional arguments
 * `-p`, `--with-private`: Include private windows.
 
 
-.. _set:
+.. _cmd-set:
 
 set
 ---
@@ -1738,7 +1738,7 @@ optional arguments
 * `-u`, `--pattern`: The URL pattern to use.
 
 
-.. _set-cmd-text:
+.. _cmd-set-cmd-text:
 
 set-cmd-text
 ------------
@@ -1767,7 +1767,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _set-mark:
+.. _cmd-set-mark:
 
 set-mark
 --------
@@ -1780,7 +1780,7 @@ positional arguments
 * `key`: mark identifier; capital indicates a global mark
 
 
-.. _spawn:
+.. _cmd-spawn:
 
 spawn
 -----
@@ -1818,7 +1818,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _stop:
+.. _cmd-stop:
 
 stop
 ----
@@ -1829,7 +1829,7 @@ count
 The tab index to stop.
 
 
-.. _tab-clone:
+.. _cmd-tab-clone:
 
 tab-clone
 ---------
@@ -1843,7 +1843,7 @@ optional arguments
 * `-w`, `--window`: Open in a new window.
 
 
-.. _tab-close:
+.. _cmd-tab-close:
 
 tab-close
 ---------
@@ -1865,7 +1865,7 @@ count
 The tab index to close
 
 
-.. _tab-focus:
+.. _cmd-tab-focus:
 
 tab-focus
 ---------
@@ -1896,7 +1896,7 @@ count
 The tab index to focus, starting with 1.
 
 
-.. _tab-give:
+.. _cmd-tab-give:
 
 tab-give
 --------
@@ -1920,7 +1920,7 @@ count
 Overrides win_id (index starts at 1 for win_id=0).
 
 
-.. _tab-move:
+.. _cmd-tab-move:
 
 tab-move
 --------
@@ -1948,7 +1948,7 @@ If moving relatively: Offset.
 
 
 
-.. _tab-mute:
+.. _cmd-tab-mute:
 
 tab-mute
 --------
@@ -1959,7 +1959,7 @@ count
 The tab index to mute or unmute
 
 
-.. _tab-next:
+.. _cmd-tab-next:
 
 tab-next
 --------
@@ -1970,7 +1970,7 @@ count
 How many tabs to switch forward.
 
 
-.. _tab-only:
+.. _cmd-tab-only:
 
 tab-only
 --------
@@ -1985,7 +1985,7 @@ optional arguments
 * `-f`, `--force`: Avoid confirmation for pinned tabs.
 
 
-.. _tab-pin:
+.. _cmd-tab-pin:
 
 tab-pin
 -------
@@ -2001,7 +2001,7 @@ count
 The tab index to pin or unpin
 
 
-.. _tab-prev:
+.. _cmd-tab-prev:
 
 tab-prev
 --------
@@ -2012,7 +2012,7 @@ count
 How many tabs to switch back.
 
 
-.. _tab-take:
+.. _cmd-tab-take:
 
 tab-take
 --------
@@ -2035,7 +2035,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _unbind:
+.. _cmd-unbind:
 
 unbind
 ------
@@ -2056,14 +2056,14 @@ optional arguments
 
 
 
-.. _undo:
+.. _cmd-undo:
 
 undo
 ----
 Re-open the last closed tab or tabs.
 
 
-.. _version:
+.. _cmd-version:
 
 version
 -------
@@ -2076,7 +2076,7 @@ optional arguments
 * `-p`, `--paste`: Paste to pastebin.
 
 
-.. _view-source:
+.. _cmd-view-source:
 
 view-source
 -----------
@@ -2096,14 +2096,14 @@ optional arguments
 
 
 
-.. _window-only:
+.. _cmd-window-only:
 
 window-only
 -----------
 Close all windows except for the current one.
 
 
-.. _yank:
+.. _cmd-yank:
 
 yank
 ----
@@ -2140,7 +2140,7 @@ optional arguments
 * `-q`, `--quiet`: Don't show an information message.
 
 
-.. _zoom:
+.. _cmd-zoom:
 
 zoom
 ----
@@ -2166,7 +2166,7 @@ count
 The zoom percentage to set.
 
 
-.. _zoom-in:
+.. _cmd-zoom-in:
 
 zoom-in
 -------
@@ -2183,7 +2183,7 @@ count
 How many steps to zoom in.
 
 
-.. _zoom-out:
+.. _cmd-zoom-out:
 
 zoom-out
 --------
@@ -2208,52 +2208,52 @@ Quick reference
    :header: "Command", "Description"
    :widths: 25, 75
    
-   :ref:`command-accept`, "Execute the command currently in the commandline."
-   :ref:`command-history-next`, "Go forward in the commandline history."
-   :ref:`command-history-prev`, "Go back in the commandline history."
-   :ref:`completion-item-del`, "Delete the current completion item."
-   :ref:`completion-item-focus`, "Shift the focus of the completion menu to another item."
-   :ref:`completion-item-yank`, "Yank the current completion item into the clipboard."
-   :ref:`drop-selection`, "Drop selection and keep selection mode enabled."
-   :ref:`follow-hint`, "Follow a hint."
-   :ref:`leave-mode`, "Leave the mode we're currently in."
-   :ref:`move-to-end-of-document`, "Move the cursor or selection to the end of the document."
-   :ref:`move-to-end-of-line`, "Move the cursor or selection to the end of line."
-   :ref:`move-to-end-of-next-block`, "Move the cursor or selection to the end of next block."
-   :ref:`move-to-end-of-prev-block`, "Move the cursor or selection to the end of previous block."
-   :ref:`move-to-end-of-word`, "Move the cursor or selection to the end of the word."
-   :ref:`move-to-next-char`, "Move the cursor or selection to the next char."
-   :ref:`move-to-next-line`, "Move the cursor or selection to the next line."
-   :ref:`move-to-next-word`, "Move the cursor or selection to the next word."
-   :ref:`move-to-prev-char`, "Move the cursor or selection to the previous char."
-   :ref:`move-to-prev-line`, "Move the cursor or selection to the prev line."
-   :ref:`move-to-prev-word`, "Move the cursor or selection to the previous word."
-   :ref:`move-to-start-of-document`, "Move the cursor or selection to the start of the document."
-   :ref:`move-to-start-of-line`, "Move the cursor or selection to the start of the line."
-   :ref:`move-to-start-of-next-block`, "Move the cursor or selection to the start of next block."
-   :ref:`move-to-start-of-prev-block`, "Move the cursor or selection to the start of previous block."
-   :ref:`prompt-accept`, "Accept the current prompt."
-   :ref:`prompt-item-focus`, "Shift the focus of the prompt file completion menu to another item."
-   :ref:`prompt-open-download`, "Immediately open a download."
-   :ref:`prompt-yank`, "Yank URL to clipboard or primary selection."
-   :ref:`rl-backward-char`, "Move back a character."
-   :ref:`rl-backward-delete-char`, "Delete the character before the cursor."
-   :ref:`rl-backward-kill-word`, "Remove chars from the cursor to the beginning of the word."
-   :ref:`rl-backward-word`, "Move back to the start of the current or previous word."
-   :ref:`rl-beginning-of-line`, "Move to the start of the line."
-   :ref:`rl-delete-char`, "Delete the character after the cursor."
-   :ref:`rl-end-of-line`, "Move to the end of the line."
-   :ref:`rl-forward-char`, "Move forward a character."
-   :ref:`rl-forward-word`, "Move forward to the end of the next word."
-   :ref:`rl-kill-line`, "Remove chars from the cursor to the end of the line."
-   :ref:`rl-kill-word`, "Remove chars from the cursor to the end of the current word."
-   :ref:`rl-unix-filename-rubout`, "Remove chars from the cursor to the previous path separator."
-   :ref:`rl-unix-line-discard`, "Remove chars backward from the cursor to the beginning of the line."
-   :ref:`rl-unix-word-rubout`, "Remove chars from the cursor to the beginning of the word."
-   :ref:`rl-yank`, "Paste the most recently deleted text."
-   :ref:`toggle-selection`, "Toggle caret selection mode."
+   :ref:`command-accept <cmd-command-accept>`, "Execute the command currently in the commandline."
+   :ref:`command-history-next <cmd-command-history-next>`, "Go forward in the commandline history."
+   :ref:`command-history-prev <cmd-command-history-prev>`, "Go back in the commandline history."
+   :ref:`completion-item-del <cmd-completion-item-del>`, "Delete the current completion item."
+   :ref:`completion-item-focus <cmd-completion-item-focus>`, "Shift the focus of the completion menu to another item."
+   :ref:`completion-item-yank <cmd-completion-item-yank>`, "Yank the current completion item into the clipboard."
+   :ref:`drop-selection <cmd-drop-selection>`, "Drop selection and keep selection mode enabled."
+   :ref:`follow-hint <cmd-follow-hint>`, "Follow a hint."
+   :ref:`leave-mode <cmd-leave-mode>`, "Leave the mode we're currently in."
+   :ref:`move-to-end-of-document <cmd-move-to-end-of-document>`, "Move the cursor or selection to the end of the document."
+   :ref:`move-to-end-of-line <cmd-move-to-end-of-line>`, "Move the cursor or selection to the end of line."
+   :ref:`move-to-end-of-next-block <cmd-move-to-end-of-next-block>`, "Move the cursor or selection to the end of next block."
+   :ref:`move-to-end-of-prev-block <cmd-move-to-end-of-prev-block>`, "Move the cursor or selection to the end of previous block."
+   :ref:`move-to-end-of-word <cmd-move-to-end-of-word>`, "Move the cursor or selection to the end of the word."
+   :ref:`move-to-next-char <cmd-move-to-next-char>`, "Move the cursor or selection to the next char."
+   :ref:`move-to-next-line <cmd-move-to-next-line>`, "Move the cursor or selection to the next line."
+   :ref:`move-to-next-word <cmd-move-to-next-word>`, "Move the cursor or selection to the next word."
+   :ref:`move-to-prev-char <cmd-move-to-prev-char>`, "Move the cursor or selection to the previous char."
+   :ref:`move-to-prev-line <cmd-move-to-prev-line>`, "Move the cursor or selection to the prev line."
+   :ref:`move-to-prev-word <cmd-move-to-prev-word>`, "Move the cursor or selection to the previous word."
+   :ref:`move-to-start-of-document <cmd-move-to-start-of-document>`, "Move the cursor or selection to the start of the document."
+   :ref:`move-to-start-of-line <cmd-move-to-start-of-line>`, "Move the cursor or selection to the start of the line."
+   :ref:`move-to-start-of-next-block <cmd-move-to-start-of-next-block>`, "Move the cursor or selection to the start of next block."
+   :ref:`move-to-start-of-prev-block <cmd-move-to-start-of-prev-block>`, "Move the cursor or selection to the start of previous block."
+   :ref:`prompt-accept <cmd-prompt-accept>`, "Accept the current prompt."
+   :ref:`prompt-item-focus <cmd-prompt-item-focus>`, "Shift the focus of the prompt file completion menu to another item."
+   :ref:`prompt-open-download <cmd-prompt-open-download>`, "Immediately open a download."
+   :ref:`prompt-yank <cmd-prompt-yank>`, "Yank URL to clipboard or primary selection."
+   :ref:`rl-backward-char <cmd-rl-backward-char>`, "Move back a character."
+   :ref:`rl-backward-delete-char <cmd-rl-backward-delete-char>`, "Delete the character before the cursor."
+   :ref:`rl-backward-kill-word <cmd-rl-backward-kill-word>`, "Remove chars from the cursor to the beginning of the word."
+   :ref:`rl-backward-word <cmd-rl-backward-word>`, "Move back to the start of the current or previous word."
+   :ref:`rl-beginning-of-line <cmd-rl-beginning-of-line>`, "Move to the start of the line."
+   :ref:`rl-delete-char <cmd-rl-delete-char>`, "Delete the character after the cursor."
+   :ref:`rl-end-of-line <cmd-rl-end-of-line>`, "Move to the end of the line."
+   :ref:`rl-forward-char <cmd-rl-forward-char>`, "Move forward a character."
+   :ref:`rl-forward-word <cmd-rl-forward-word>`, "Move forward to the end of the next word."
+   :ref:`rl-kill-line <cmd-rl-kill-line>`, "Remove chars from the cursor to the end of the line."
+   :ref:`rl-kill-word <cmd-rl-kill-word>`, "Remove chars from the cursor to the end of the current word."
+   :ref:`rl-unix-filename-rubout <cmd-rl-unix-filename-rubout>`, "Remove chars from the cursor to the previous path separator."
+   :ref:`rl-unix-line-discard <cmd-rl-unix-line-discard>`, "Remove chars backward from the cursor to the beginning of the line."
+   :ref:`rl-unix-word-rubout <cmd-rl-unix-word-rubout>`, "Remove chars from the cursor to the beginning of the word."
+   :ref:`rl-yank <cmd-rl-yank>`, "Paste the most recently deleted text."
+   :ref:`toggle-selection <cmd-toggle-selection>`, "Toggle caret selection mode."
 
-.. _command-accept:
+.. _cmd-command-accept:
 
 command-accept
 --------------
@@ -2266,28 +2266,28 @@ optional arguments
 * `-r`, `--rapid`: Run the command without closing or clearing the command bar.
 
 
-.. _command-history-next:
+.. _cmd-command-history-next:
 
 command-history-next
 --------------------
 Go forward in the commandline history.
 
 
-.. _command-history-prev:
+.. _cmd-command-history-prev:
 
 command-history-prev
 --------------------
 Go back in the commandline history.
 
 
-.. _completion-item-del:
+.. _cmd-completion-item-del:
 
 completion-item-del
 -------------------
 Delete the current completion item.
 
 
-.. _completion-item-focus:
+.. _cmd-completion-item-focus:
 
 completion-item-focus
 ---------------------
@@ -2304,7 +2304,7 @@ optional arguments
 * `-H`, `--history`: Navigate through command history if no text was typed.
 
 
-.. _completion-item-yank:
+.. _cmd-completion-item-yank:
 
 completion-item-yank
 --------------------
@@ -2317,14 +2317,14 @@ optional arguments
 * `-s`, `--sel`: Use the primary selection instead of the clipboard.
 
 
-.. _drop-selection:
+.. _cmd-drop-selection:
 
 drop-selection
 --------------
 Drop selection and keep selection mode enabled.
 
 
-.. _follow-hint:
+.. _cmd-follow-hint:
 
 follow-hint
 -----------
@@ -2341,28 +2341,28 @@ optional arguments
 * `-s`, `--select`: Only select the given hint, don't necessarily follow it.
 
 
-.. _leave-mode:
+.. _cmd-leave-mode:
 
 leave-mode
 ----------
 Leave the mode we're currently in.
 
 
-.. _move-to-end-of-document:
+.. _cmd-move-to-end-of-document:
 
 move-to-end-of-document
 -----------------------
 Move the cursor or selection to the end of the document.
 
 
-.. _move-to-end-of-line:
+.. _cmd-move-to-end-of-line:
 
 move-to-end-of-line
 -------------------
 Move the cursor or selection to the end of line.
 
 
-.. _move-to-end-of-next-block:
+.. _cmd-move-to-end-of-next-block:
 
 move-to-end-of-next-block
 -------------------------
@@ -2373,7 +2373,7 @@ count
 How many blocks to move.
 
 
-.. _move-to-end-of-prev-block:
+.. _cmd-move-to-end-of-prev-block:
 
 move-to-end-of-prev-block
 -------------------------
@@ -2384,7 +2384,7 @@ count
 How many blocks to move.
 
 
-.. _move-to-end-of-word:
+.. _cmd-move-to-end-of-word:
 
 move-to-end-of-word
 -------------------
@@ -2395,7 +2395,7 @@ count
 How many words to move.
 
 
-.. _move-to-next-char:
+.. _cmd-move-to-next-char:
 
 move-to-next-char
 -----------------
@@ -2406,7 +2406,7 @@ count
 How many lines to move.
 
 
-.. _move-to-next-line:
+.. _cmd-move-to-next-line:
 
 move-to-next-line
 -----------------
@@ -2417,7 +2417,7 @@ count
 How many lines to move.
 
 
-.. _move-to-next-word:
+.. _cmd-move-to-next-word:
 
 move-to-next-word
 -----------------
@@ -2428,7 +2428,7 @@ count
 How many words to move.
 
 
-.. _move-to-prev-char:
+.. _cmd-move-to-prev-char:
 
 move-to-prev-char
 -----------------
@@ -2439,7 +2439,7 @@ count
 How many chars to move.
 
 
-.. _move-to-prev-line:
+.. _cmd-move-to-prev-line:
 
 move-to-prev-line
 -----------------
@@ -2450,7 +2450,7 @@ count
 How many lines to move.
 
 
-.. _move-to-prev-word:
+.. _cmd-move-to-prev-word:
 
 move-to-prev-word
 -----------------
@@ -2461,21 +2461,21 @@ count
 How many words to move.
 
 
-.. _move-to-start-of-document:
+.. _cmd-move-to-start-of-document:
 
 move-to-start-of-document
 -------------------------
 Move the cursor or selection to the start of the document.
 
 
-.. _move-to-start-of-line:
+.. _cmd-move-to-start-of-line:
 
 move-to-start-of-line
 ---------------------
 Move the cursor or selection to the start of the line.
 
 
-.. _move-to-start-of-next-block:
+.. _cmd-move-to-start-of-next-block:
 
 move-to-start-of-next-block
 ---------------------------
@@ -2486,7 +2486,7 @@ count
 How many blocks to move.
 
 
-.. _move-to-start-of-prev-block:
+.. _cmd-move-to-start-of-prev-block:
 
 move-to-start-of-prev-block
 ---------------------------
@@ -2497,7 +2497,7 @@ count
 How many blocks to move.
 
 
-.. _prompt-accept:
+.. _cmd-prompt-accept:
 
 prompt-accept
 -------------
@@ -2512,7 +2512,7 @@ positional arguments
 
 
 
-.. _prompt-item-focus:
+.. _cmd-prompt-item-focus:
 
 prompt-item-focus
 -----------------
@@ -2525,7 +2525,7 @@ positional arguments
 * `which`: 'next', 'prev'
 
 
-.. _prompt-open-download:
+.. _cmd-prompt-open-download:
 
 prompt-open-download
 --------------------
@@ -2556,7 +2556,7 @@ note
 * This command does not split arguments after the last argument and handles quotes literally.
 
 
-.. _prompt-yank:
+.. _cmd-prompt-yank:
 
 prompt-yank
 -----------
@@ -2569,7 +2569,7 @@ optional arguments
 * `-s`, `--sel`: Use the primary selection instead of the clipboard.
 
 
-.. _rl-backward-char:
+.. _cmd-rl-backward-char:
 
 rl-backward-char
 ----------------
@@ -2578,7 +2578,7 @@ Move back a character.
 This acts like readline's backward-char.
 
 
-.. _rl-backward-delete-char:
+.. _cmd-rl-backward-delete-char:
 
 rl-backward-delete-char
 -----------------------
@@ -2587,7 +2587,7 @@ Delete the character before the cursor.
 This acts like readline's backward-delete-char.
 
 
-.. _rl-backward-kill-word:
+.. _cmd-rl-backward-kill-word:
 
 rl-backward-kill-word
 ---------------------
@@ -2597,7 +2597,7 @@ This acts like readline's backward-kill-word. Any non-alphanumeric
 character is considered a word delimiter.
 
 
-.. _rl-backward-word:
+.. _cmd-rl-backward-word:
 
 rl-backward-word
 ----------------
@@ -2606,7 +2606,7 @@ Move back to the start of the current or previous word.
 This acts like readline's backward-word.
 
 
-.. _rl-beginning-of-line:
+.. _cmd-rl-beginning-of-line:
 
 rl-beginning-of-line
 --------------------
@@ -2615,7 +2615,7 @@ Move to the start of the line.
 This acts like readline's beginning-of-line.
 
 
-.. _rl-delete-char:
+.. _cmd-rl-delete-char:
 
 rl-delete-char
 --------------
@@ -2624,7 +2624,7 @@ Delete the character after the cursor.
 This acts like readline's delete-char.
 
 
-.. _rl-end-of-line:
+.. _cmd-rl-end-of-line:
 
 rl-end-of-line
 --------------
@@ -2633,7 +2633,7 @@ Move to the end of the line.
 This acts like readline's end-of-line.
 
 
-.. _rl-forward-char:
+.. _cmd-rl-forward-char:
 
 rl-forward-char
 ---------------
@@ -2642,7 +2642,7 @@ Move forward a character.
 This acts like readline's forward-char.
 
 
-.. _rl-forward-word:
+.. _cmd-rl-forward-word:
 
 rl-forward-word
 ---------------
@@ -2651,7 +2651,7 @@ Move forward to the end of the next word.
 This acts like readline's forward-word.
 
 
-.. _rl-kill-line:
+.. _cmd-rl-kill-line:
 
 rl-kill-line
 ------------
@@ -2660,7 +2660,7 @@ Remove chars from the cursor to the end of the line.
 This acts like readline's kill-line.
 
 
-.. _rl-kill-word:
+.. _cmd-rl-kill-word:
 
 rl-kill-word
 ------------
@@ -2669,7 +2669,7 @@ Remove chars from the cursor to the end of the current word.
 This acts like readline's kill-word.
 
 
-.. _rl-unix-filename-rubout:
+.. _cmd-rl-unix-filename-rubout:
 
 rl-unix-filename-rubout
 -----------------------
@@ -2678,7 +2678,7 @@ Remove chars from the cursor to the previous path separator.
 This acts like readline's unix-filename-rubout.
 
 
-.. _rl-unix-line-discard:
+.. _cmd-rl-unix-line-discard:
 
 rl-unix-line-discard
 --------------------
@@ -2687,7 +2687,7 @@ Remove chars backward from the cursor to the beginning of the line.
 This acts like readline's unix-line-discard.
 
 
-.. _rl-unix-word-rubout:
+.. _cmd-rl-unix-word-rubout:
 
 rl-unix-word-rubout
 -------------------
@@ -2697,7 +2697,7 @@ This acts like readline's unix-word-rubout. Whitespace is used as a
 word delimiter.
 
 
-.. _rl-yank:
+.. _cmd-rl-yank:
 
 rl-yank
 -------
@@ -2706,7 +2706,7 @@ Paste the most recently deleted text.
 This acts like readline's yank.
 
 
-.. _toggle-selection:
+.. _cmd-toggle-selection:
 
 toggle-selection
 ----------------
@@ -2723,50 +2723,50 @@ Quick reference
    :header: "Command", "Description"
    :widths: 25, 75
    
-   :ref:`debug-all-objects`, "Print a list of  all objects to the debug log."
-   :ref:`debug-cache-stats`, "Print LRU cache stats."
-   :ref:`debug-clear-ssl-errors`, "Clear remembered SSL error answers."
-   :ref:`debug-console`, "Show the debugging console."
-   :ref:`debug-crash`, "Crash for debugging purposes."
-   :ref:`debug-dump-history`, "Dump the history to a file in the old pre-SQL format."
-   :ref:`debug-dump-page`, "Dump the current page's content to a file."
-   :ref:`debug-log-capacity`, "Change the number of log lines to be stored in RAM."
-   :ref:`debug-log-filter`, "Change the log filter for console logging."
-   :ref:`debug-log-level`, "Change the log level for console logging."
-   :ref:`debug-pyeval`, "Evaluate a python string and display the results as a web page."
-   :ref:`debug-set-fake-clipboard`, "Put data into the fake clipboard and enable logging, used for tests."
-   :ref:`debug-trace`, "Trace executed code via hunter."
-   :ref:`debug-webaction`, "Execute a webaction."
+   :ref:`debug-all-objects <cmd-debug-all-objects>`, "Print a list of  all objects to the debug log."
+   :ref:`debug-cache-stats <cmd-debug-cache-stats>`, "Print LRU cache stats."
+   :ref:`debug-clear-ssl-errors <cmd-debug-clear-ssl-errors>`, "Clear remembered SSL error answers."
+   :ref:`debug-console <cmd-debug-console>`, "Show the debugging console."
+   :ref:`debug-crash <cmd-debug-crash>`, "Crash for debugging purposes."
+   :ref:`debug-dump-history <cmd-debug-dump-history>`, "Dump the history to a file in the old pre-SQL format."
+   :ref:`debug-dump-page <cmd-debug-dump-page>`, "Dump the current page's content to a file."
+   :ref:`debug-log-capacity <cmd-debug-log-capacity>`, "Change the number of log lines to be stored in RAM."
+   :ref:`debug-log-filter <cmd-debug-log-filter>`, "Change the log filter for console logging."
+   :ref:`debug-log-level <cmd-debug-log-level>`, "Change the log level for console logging."
+   :ref:`debug-pyeval <cmd-debug-pyeval>`, "Evaluate a python string and display the results as a web page."
+   :ref:`debug-set-fake-clipboard <cmd-debug-set-fake-clipboard>`, "Put data into the fake clipboard and enable logging, used for tests."
+   :ref:`debug-trace <cmd-debug-trace>`, "Trace executed code via hunter."
+   :ref:`debug-webaction <cmd-debug-webaction>`, "Execute a webaction."
 
-.. _debug-all-objects:
+.. _cmd-debug-all-objects:
 
 debug-all-objects
 -----------------
 Print a list of  all objects to the debug log.
 
 
-.. _debug-cache-stats:
+.. _cmd-debug-cache-stats:
 
 debug-cache-stats
 -----------------
 Print LRU cache stats.
 
 
-.. _debug-clear-ssl-errors:
+.. _cmd-debug-clear-ssl-errors:
 
 debug-clear-ssl-errors
 ----------------------
 Clear remembered SSL error answers.
 
 
-.. _debug-console:
+.. _cmd-debug-console:
 
 debug-console
 -------------
 Show the debugging console.
 
 
-.. _debug-crash:
+.. _cmd-debug-crash:
 
 debug-crash
 -----------
@@ -2779,7 +2779,7 @@ positional arguments
 * `typ`: either 'exception' or 'segfault'.
 
 
-.. _debug-dump-history:
+.. _cmd-debug-dump-history:
 
 debug-dump-history
 ------------------
@@ -2792,7 +2792,7 @@ positional arguments
 * `dest`: Where to write the file to.
 
 
-.. _debug-dump-page:
+.. _cmd-debug-dump-page:
 
 debug-dump-page
 ---------------
@@ -2809,7 +2809,7 @@ optional arguments
 * `-p`, `--plain`: Write plain text instead of HTML.
 
 
-.. _debug-log-capacity:
+.. _cmd-debug-log-capacity:
 
 debug-log-capacity
 ------------------
@@ -2822,7 +2822,7 @@ positional arguments
 * `capacity`: Number of lines for the log.
 
 
-.. _debug-log-filter:
+.. _cmd-debug-log-filter:
 
 debug-log-filter
 ----------------
@@ -2837,7 +2837,7 @@ positional arguments
 
 
 
-.. _debug-log-level:
+.. _cmd-debug-log-level:
 
 debug-log-level
 ---------------
@@ -2850,7 +2850,7 @@ positional arguments
 * `level`: The log level to set.
 
 
-.. _debug-pyeval:
+.. _cmd-debug-pyeval:
 
 debug-pyeval
 ------------
@@ -2873,7 +2873,7 @@ note
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 
 
-.. _debug-set-fake-clipboard:
+.. _cmd-debug-set-fake-clipboard:
 
 debug-set-fake-clipboard
 ------------------------
@@ -2886,7 +2886,7 @@ positional arguments
 * `s`: The text to put into the fake clipboard, or unset to enable logging.
 
 
-.. _debug-trace:
+.. _cmd-debug-trace:
 
 debug-trace
 -----------
@@ -2904,7 +2904,7 @@ note
 * With this command, `;;` is interpreted literally instead of splitting off a second command.
 
 
-.. _debug-webaction:
+.. _cmd-debug-webaction:
 
 debug-webaction
 ---------------
