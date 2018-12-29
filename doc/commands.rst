@@ -1151,8 +1151,8 @@ Syntax: `:navigate [**--tab**] [**--bg**] [**--window**] 'where'`
 
 Open typical prev/next links or navigate using the URL path.
 
-This tries to automatically click on typical _Previous Page_ or
-_Next Page_ links using some heuristics.
+This tries to automatically click on typical *Previous Page* or
+*Next Page* links using some heuristics.
 
 Alternatively it can navigate by changing the current URL.
 
