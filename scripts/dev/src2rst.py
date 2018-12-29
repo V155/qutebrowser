@@ -52,6 +52,10 @@ FILE_HEADER = """
 """.lstrip()
 
 
+def _label(name):
+    return name.replace('.', '-')
+
+
 class UsageFormatter(argparse.HelpFormatter):
 
     """Patched HelpFormatter to include some ReST markup in the usage.
@@ -139,7 +143,7 @@ def _get_command_quickref(cmds):
     out.append('   ')
     for name, cmd in cmds:
         desc = inspect.getdoc(cmd.handler).splitlines()[0]
-        out.append('   :ref:`{}`, "{}"'.format(name, desc))
+        out.append('   :ref:`{} <{}>`, "{}"'.format(name, _label(name), desc))
     return '\n'.join(out)
 
 
@@ -152,7 +156,8 @@ def _get_setting_quickref():
     out.append('   ')
     for opt in sorted(configdata.DATA.values()):
         desc = opt.description.splitlines()[0]
-        out.append('   :ref:`{}`, "{}"'.format(opt.name, desc))
+        out.append('   :ref:`{} <{}>`, "{}"'
+                   .format(opt.name, _label(opt.name), desc))
     return '\n'.join(out)
 
 
@@ -189,7 +194,7 @@ def _get_setting_types_quickref():
 
 def _get_command_doc(name, cmd):
     """Generate the documentation for a command."""
-    output = ['.. _{}'.format(name)]
+    output = ['.. _{}'.format(_label(name))]
     output += [name, '-' * len(name)]
     syntax = _get_cmd_syntax(name, cmd)
     if syntax != name:
@@ -432,7 +437,7 @@ def _generate_setting_backend_info(f, opt):
 def _generate_setting_option(f, opt):
     """Generate documentation for a single section."""
     f.write("\n")
-    f.write('_{}:'.format(opt.name) + "\n")
+    f.write('_{}:'.format(_label(opt.name)) + "\n")
     f.write("{}".format(opt.name) + "\n")
     f.write('^' * len(opt.name) + "\n")
     f.write(opt.description + "\n")
