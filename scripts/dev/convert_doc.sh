@@ -18,7 +18,7 @@ tmpdir=$(mktemp -d)
 
 asciidoctor -b docbook5 -D "$tmpdir" "$@"
 for f in "$tmpdir"/*.xml; do
-    pandoc -f docbook -t rst -o "${f/.xml/}".rst "$f"
+    pandoc -f docbook -t rst --standalone -o "${f/.xml/}".rst "$f"
 done
 
 cp "$tmpdir"/*.rst .
