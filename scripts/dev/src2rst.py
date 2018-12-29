@@ -190,7 +190,7 @@ def _get_setting_types_quickref():
 
 def _get_command_doc(name, cmd):
     """Generate the documentation for a command."""
-    output = ['', '.. _{}:'.format(name), '']
+    output = ['', '.. _{}:'.format(_label(name)), '']
     output += [name, '-' * len(name)]
     syntax = _get_cmd_syntax(name, cmd)
     if syntax != name:
