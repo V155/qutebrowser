@@ -204,8 +204,10 @@ qt.process_model:
 
     See the following pages for more details:
 
-      - https://www.chromium.org/developers/design-documents/process-models
-      - https://doc.qt.io/qt-5/qtwebengine-features.html#process-models
+      * https://www.chromium.org/developers/design-documents/process-models
+      * https://doc.qt.io/qt-5/qtwebengine-features.html#process-models
+
+    .
 
 qt.low_end_device_mode:
   type:
@@ -354,8 +356,8 @@ content.default_encoding:
   desc: >-
     Default encoding to use for websites.
 
-    The encoding must be a string describing an encoding such as _utf-8_,
-    _iso-8859-1_, etc.
+    The encoding must be a string describing an encoding such as *utf-8*,
+    *iso-8859-1*, etc.
 
 content.windowed_fullscreen:
   type: Bool

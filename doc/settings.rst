@@ -12,316 +12,320 @@ All settings
 .. csv-table:: Settings
    :header: "Setting", "Description"
    :widths: 25, 75
+   
+   :ref:`aliases`, "Aliases for commands."
+   :ref:`auto_save.interval`, "Time interval (in milliseconds) between auto-saves of config/cookies/etc."
+   :ref:`auto_save.session`, "Always restore open sites when qutebrowser is reopened."
+   :ref:`backend`, "Backend to use to display websites."
+   :ref:`bindings.commands`, "Keybindings mapping keys to commands in different modes."
+   :ref:`bindings.default`, "Default keybindings. If you want to add bindings, modify `bindings.commands` instead."
+   :ref:`bindings.key_mappings`, "This setting can be used to map keys to other keys."
+   :ref:`colors.completion.category.bg`, "Background color of the completion widget category headers."
+   :ref:`colors.completion.category.border.bottom`, "Bottom border color of the completion widget category headers."
+   :ref:`colors.completion.category.border.top`, "Top border color of the completion widget category headers."
+   :ref:`colors.completion.category.fg`, "Foreground color of completion widget category headers."
+   :ref:`colors.completion.even.bg`, "Background color of the completion widget for even rows."
+   :ref:`colors.completion.fg`, "Text color of the completion widget."
+   :ref:`colors.completion.item.selected.bg`, "Background color of the selected completion item."
+   :ref:`colors.completion.item.selected.border.bottom`, "Bottom border color of the selected completion item."
+   :ref:`colors.completion.item.selected.border.top`, "Top border color of the completion widget category headers."
+   :ref:`colors.completion.item.selected.fg`, "Foreground color of the selected completion item."
+   :ref:`colors.completion.match.fg`, "Foreground color of the matched text in the completion."
+   :ref:`colors.completion.odd.bg`, "Background color of the completion widget for odd rows."
+   :ref:`colors.completion.scrollbar.bg`, "Color of the scrollbar in the completion view."
+   :ref:`colors.completion.scrollbar.fg`, "Color of the scrollbar handle in the completion view."
+   :ref:`colors.downloads.bar.bg`, "Background color for the download bar."
+   :ref:`colors.downloads.error.bg`, "Background color for downloads with errors."
+   :ref:`colors.downloads.error.fg`, "Foreground color for downloads with errors."
+   :ref:`colors.downloads.start.bg`, "Color gradient start for download backgrounds."
+   :ref:`colors.downloads.start.fg`, "Color gradient start for download text."
+   :ref:`colors.downloads.stop.bg`, "Color gradient stop for download backgrounds."
+   :ref:`colors.downloads.stop.fg`, "Color gradient end for download text."
+   :ref:`colors.downloads.system.bg`, "Color gradient interpolation system for download backgrounds."
+   :ref:`colors.downloads.system.fg`, "Color gradient interpolation system for download text."
+   :ref:`colors.hints.bg`, "Background color for hints."
+   :ref:`colors.hints.fg`, "Font color for hints."
+   :ref:`colors.hints.match.fg`, "Font color for the matched part of hints."
+   :ref:`colors.keyhint.bg`, "Background color of the keyhint widget."
+   :ref:`colors.keyhint.fg`, "Text color for the keyhint widget."
+   :ref:`colors.keyhint.suffix.fg`, "Highlight color for keys to complete the current keychain."
+   :ref:`colors.messages.error.bg`, "Background color of an error message."
+   :ref:`colors.messages.error.border`, "Border color of an error message."
+   :ref:`colors.messages.error.fg`, "Foreground color of an error message."
+   :ref:`colors.messages.info.bg`, "Background color of an info message."
+   :ref:`colors.messages.info.border`, "Border color of an info message."
+   :ref:`colors.messages.info.fg`, "Foreground color of an info message."
+   :ref:`colors.messages.warning.bg`, "Background color of a warning message."
+   :ref:`colors.messages.warning.border`, "Border color of a warning message."
+   :ref:`colors.messages.warning.fg`, "Foreground color of a warning message."
+   :ref:`colors.prompts.bg`, "Background color for prompts."
+   :ref:`colors.prompts.border`, "Border used around UI elements in prompts."
+   :ref:`colors.prompts.fg`, "Foreground color for prompts."
+   :ref:`colors.prompts.selected.bg`, "Background color for the selected item in filename prompts."
+   :ref:`colors.statusbar.caret.bg`, "Background color of the statusbar in caret mode."
+   :ref:`colors.statusbar.caret.fg`, "Foreground color of the statusbar in caret mode."
+   :ref:`colors.statusbar.caret.selection.bg`, "Background color of the statusbar in caret mode with a selection."
+   :ref:`colors.statusbar.caret.selection.fg`, "Foreground color of the statusbar in caret mode with a selection."
+   :ref:`colors.statusbar.command.bg`, "Background color of the statusbar in command mode."
+   :ref:`colors.statusbar.command.fg`, "Foreground color of the statusbar in command mode."
+   :ref:`colors.statusbar.command.private.bg`, "Background color of the statusbar in private browsing + command mode."
+   :ref:`colors.statusbar.command.private.fg`, "Foreground color of the statusbar in private browsing + command mode."
+   :ref:`colors.statusbar.insert.bg`, "Background color of the statusbar in insert mode."
+   :ref:`colors.statusbar.insert.fg`, "Foreground color of the statusbar in insert mode."
+   :ref:`colors.statusbar.normal.bg`, "Background color of the statusbar."
+   :ref:`colors.statusbar.normal.fg`, "Foreground color of the statusbar."
+   :ref:`colors.statusbar.passthrough.bg`, "Background color of the statusbar in passthrough mode."
+   :ref:`colors.statusbar.passthrough.fg`, "Foreground color of the statusbar in passthrough mode."
+   :ref:`colors.statusbar.private.bg`, "Background color of the statusbar in private browsing mode."
+   :ref:`colors.statusbar.private.fg`, "Foreground color of the statusbar in private browsing mode."
+   :ref:`colors.statusbar.progress.bg`, "Background color of the progress bar."
+   :ref:`colors.statusbar.url.error.fg`, "Foreground color of the URL in the statusbar on error."
+   :ref:`colors.statusbar.url.fg`, "Default foreground color of the URL in the statusbar."
+   :ref:`colors.statusbar.url.hover.fg`, "Foreground color of the URL in the statusbar for hovered links."
+   :ref:`colors.statusbar.url.success.http.fg`, "Foreground color of the URL in the statusbar on successful load (http)."
+   :ref:`colors.statusbar.url.success.https.fg`, "Foreground color of the URL in the statusbar on successful load (https)."
+   :ref:`colors.statusbar.url.warn.fg`, "Foreground color of the URL in the statusbar when there's a warning."
+   :ref:`colors.tabs.bar.bg`, "Background color of the tab bar."
+   :ref:`colors.tabs.even.bg`, "Background color of unselected even tabs."
+   :ref:`colors.tabs.even.fg`, "Foreground color of unselected even tabs."
+   :ref:`colors.tabs.indicator.error`, "Color for the tab indicator on errors."
+   :ref:`colors.tabs.indicator.start`, "Color gradient start for the tab indicator."
+   :ref:`colors.tabs.indicator.stop`, "Color gradient end for the tab indicator."
+   :ref:`colors.tabs.indicator.system`, "Color gradient interpolation system for the tab indicator."
+   :ref:`colors.tabs.odd.bg`, "Background color of unselected odd tabs."
+   :ref:`colors.tabs.odd.fg`, "Foreground color of unselected odd tabs."
+   :ref:`colors.tabs.selected.even.bg`, "Background color of selected even tabs."
+   :ref:`colors.tabs.selected.even.fg`, "Foreground color of selected even tabs."
+   :ref:`colors.tabs.selected.odd.bg`, "Background color of selected odd tabs."
+   :ref:`colors.tabs.selected.odd.fg`, "Foreground color of selected odd tabs."
+   :ref:`colors.webpage.bg`, "Background color for webpages if unset (or empty to use the theme's color)."
+   :ref:`completion.cmd_history_max_items`, "Number of commands to save in the command history."
+   :ref:`completion.delay`, "Delay (in milliseconds) before updating completions after typing a character."
+   :ref:`completion.height`, "Height (in pixels or as percentage of the window) of the completion."
+   :ref:`completion.min_chars`, "Minimum amount of characters needed to update completions."
+   :ref:`completion.open_categories`, "Which categories to show (in which order) in the :open completion."
+   :ref:`completion.quick`, "Move on to the next part when there's only one possible completion left."
+   :ref:`completion.scrollbar.padding`, "Padding (in pixels) of the scrollbar handle in the completion window."
+   :ref:`completion.scrollbar.width`, "Width (in pixels) of the scrollbar in the completion window."
+   :ref:`completion.show`, "When to show the autocompletion window."
+   :ref:`completion.shrink`, "Shrink the completion to be smaller than the configured size if there are no scrollbars."
+   :ref:`completion.timestamp_format`, "Format of timestamps (e.g. for the history completion)."
+   :ref:`completion.use_best_match`, "Execute the best-matching command on a partial match."
+   :ref:`completion.web_history.exclude`, "A list of patterns which should not be shown in the history."
+   :ref:`completion.web_history.max_items`, "Number of URLs to show in the web history."
+   :ref:`confirm_quit`, "Require a confirmation before quitting the application."
+   :ref:`content.autoplay`, "Automatically start playing `<video>` elements."
+   :ref:`content.cache.appcache`, "Enable support for the HTML 5 web application cache feature."
+   :ref:`content.cache.maximum_pages`, "Maximum number of pages to hold in the global memory page cache."
+   :ref:`content.cache.size`, "Size (in bytes) of the HTTP network cache. Null to use the default value."
+   :ref:`content.canvas_reading`, "Allow websites to read canvas elements."
+   :ref:`content.cookies.accept`, "Which cookies to accept."
+   :ref:`content.cookies.store`, "Store cookies."
+   :ref:`content.default_encoding`, "Default encoding to use for websites."
+   :ref:`content.desktop_capture`, "Allow websites to share screen content."
+   :ref:`content.dns_prefetch`, "Try to pre-fetch DNS entries to speed up browsing."
+   :ref:`content.frame_flattening`, "Expand each subframe to its contents."
+   :ref:`content.geolocation`, "Allow websites to request geolocations."
+   :ref:`content.headers.accept_language`, "Value to send in the `Accept-Language` header."
+   :ref:`content.headers.custom`, "Custom headers for qutebrowser HTTP requests."
+   :ref:`content.headers.do_not_track`, "Value to send in the `DNT` header."
+   :ref:`content.headers.referer`, "When to send the Referer header."
+   :ref:`content.headers.user_agent`, "User agent to send. Unset to send the default."
+   :ref:`content.host_blocking.enabled`, "Enable host blocking."
+   :ref:`content.host_blocking.lists`, "List of URLs of lists which contain hosts to block."
+   :ref:`content.host_blocking.whitelist`, "A list of patterns that should always be loaded, despite being ad-blocked."
+   :ref:`content.hyperlink_auditing`, "Enable hyperlink auditing (`<a ping>`)."
+   :ref:`content.images`, "Load images automatically in web pages."
+   :ref:`content.javascript.alert`, "Show javascript alerts."
+   :ref:`content.javascript.can_access_clipboard`, "Allow JavaScript to read from or write to the clipboard."
+   :ref:`content.javascript.can_close_tabs`, "Allow JavaScript to close tabs."
+   :ref:`content.javascript.can_open_tabs_automatically`, "Allow JavaScript to open new tabs without user interaction."
+   :ref:`content.javascript.enabled`, "Enable JavaScript."
+   :ref:`content.javascript.log`, "Log levels to use for JavaScript console logging messages."
+   :ref:`content.javascript.modal_dialog`, "Use the standard JavaScript modal dialog for `alert()` and `confirm()`."
+   :ref:`content.javascript.prompt`, "Show javascript prompts."
+   :ref:`content.local_content_can_access_file_urls`, "Allow locally loaded documents to access other local URLs."
+   :ref:`content.local_content_can_access_remote_urls`, "Allow locally loaded documents to access remote URLs."
+   :ref:`content.local_storage`, "Enable support for HTML 5 local storage and Web SQL."
+   :ref:`content.media_capture`, "Allow websites to record audio/video."
+   :ref:`content.mouse_lock`, "Allow websites to lock your mouse pointer."
+   :ref:`content.mute`, "Automatically mute tabs."
+   :ref:`content.netrc_file`, "Netrc-file for HTTP authentication."
+   :ref:`content.notifications`, "Allow websites to show notifications."
+   :ref:`content.pdfjs`, "Allow pdf.js to view PDF files in the browser."
+   :ref:`content.persistent_storage`, "Allow websites to request persistent storage quota via `navigator.webkitPersistentStorage.requestQuota`."
+   :ref:`content.plugins`, "Enable plugins in Web pages."
+   :ref:`content.print_element_backgrounds`, "Draw the background color and images also when the page is printed."
+   :ref:`content.private_browsing`, "Open new windows in private browsing mode which does not record visited pages."
+   :ref:`content.proxy`, "Proxy to use."
+   :ref:`content.proxy_dns_requests`, "Send DNS requests over the configured proxy."
+   :ref:`content.register_protocol_handler`, "Allow websites to register protocol handlers via `navigator.registerProtocolHandler`."
+   :ref:`content.ssl_strict`, "Validate SSL handshakes."
+   :ref:`content.user_stylesheets`, "List of user stylesheet filenames to use."
+   :ref:`content.webgl`, "Enable WebGL."
+   :ref:`content.webrtc_ip_handling_policy`, "Which interfaces to expose via WebRTC."
+   :ref:`content.windowed_fullscreen`, "Limit fullscreen to the browser window (does not expand to fill the screen)."
+   :ref:`content.xss_auditing`, "Monitor load requests for cross-site scripting attempts."
+   :ref:`downloads.location.directory`, "Directory to save downloads to."
+   :ref:`downloads.location.prompt`, "Prompt the user for the download location."
+   :ref:`downloads.location.remember`, "Remember the last used download directory."
+   :ref:`downloads.location.suggestion`, "What to display in the download filename input."
+   :ref:`downloads.open_dispatcher`, "Default program used to open downloads."
+   :ref:`downloads.position`, "Where to show the downloaded files."
+   :ref:`downloads.remove_finished`, "Duration (in milliseconds) to wait before removing finished downloads."
+   :ref:`editor.command`, "Editor (and arguments) to use for the `open-editor` command. The following placeholders are defined:"
+   :ref:`editor.encoding`, "Encoding to use for the editor."
+   :ref:`fonts.completion.category`, "Font used in the completion categories."
+   :ref:`fonts.completion.entry`, "Font used in the completion widget."
+   :ref:`fonts.debug_console`, "Font used for the debugging console."
+   :ref:`fonts.downloads`, "Font used for the downloadbar."
+   :ref:`fonts.hints`, "Font used for the hints."
+   :ref:`fonts.keyhint`, "Font used in the keyhint widget."
+   :ref:`fonts.messages.error`, "Font used for error messages."
+   :ref:`fonts.messages.info`, "Font used for info messages."
+   :ref:`fonts.messages.warning`, "Font used for warning messages."
+   :ref:`fonts.monospace`, "Default monospace fonts."
+   :ref:`fonts.prompts`, "Font used for prompts."
+   :ref:`fonts.statusbar`, "Font used in the statusbar."
+   :ref:`fonts.tabs`, "Font used in the tab bar."
+   :ref:`fonts.web.family.cursive`, "Font family for cursive fonts."
+   :ref:`fonts.web.family.fantasy`, "Font family for fantasy fonts."
+   :ref:`fonts.web.family.fixed`, "Font family for fixed fonts."
+   :ref:`fonts.web.family.sans_serif`, "Font family for sans-serif fonts."
+   :ref:`fonts.web.family.serif`, "Font family for serif fonts."
+   :ref:`fonts.web.family.standard`, "Font family for standard fonts."
+   :ref:`fonts.web.size.default`, "Default font size (in pixels) for regular text."
+   :ref:`fonts.web.size.default_fixed`, "Default font size (in pixels) for fixed-pitch text."
+   :ref:`fonts.web.size.minimum`, "Hard minimum font size (in pixels)."
+   :ref:`fonts.web.size.minimum_logical`, "Minimum logical font size (in pixels) that is applied when zooming out."
+   :ref:`hints.auto_follow`, "When a hint can be automatically followed without pressing Enter."
+   :ref:`hints.auto_follow_timeout`, "Duration (in milliseconds) to ignore normal-mode key bindings after a successful auto-follow."
+   :ref:`hints.border`, "CSS border value for hints."
+   :ref:`hints.chars`, "Characters used for hint strings."
+   :ref:`hints.dictionary`, "Dictionary file to be used by the word hints."
+   :ref:`hints.find_implementation`, "Which implementation to use to find elements to hint."
+   :ref:`hints.hide_unmatched_rapid_hints`, "Hide unmatched hints in rapid mode."
+   :ref:`hints.min_chars`, "Minimum number of characters used for hint strings."
+   :ref:`hints.mode`, "Mode to use for hints."
+   :ref:`hints.next_regexes`, "Comma-separated list of regular expressions to use for 'next' links."
+   :ref:`hints.prev_regexes`, "Comma-separated list of regular expressions to use for 'prev' links."
+   :ref:`hints.scatter`, "Scatter hint key chains (like Vimium) or not (like dwb)."
+   :ref:`hints.selectors`, "CSS selectors used to determine which elements on a page should have hints."
+   :ref:`hints.uppercase`, "Make characters in hint strings uppercase."
+   :ref:`history_gap_interval`, "Maximum time (in minutes) between two history items for them to be considered being from the same browsing session."
+   :ref:`input.escape_quits_reporter`, "Allow Escape to quit the crash reporter."
+   :ref:`input.forward_unbound_keys`, "Which unbound keys to forward to the webview in normal mode."
+   :ref:`input.insert_mode.auto_enter`, "Enter insert mode if an editable element is clicked."
+   :ref:`input.insert_mode.auto_leave`, "Leave insert mode if a non-editable element is clicked."
+   :ref:`input.insert_mode.auto_load`, "Automatically enter insert mode if an editable element is focused after loading the page."
+   :ref:`input.insert_mode.plugins`, "Switch to insert mode when clicking flash and other plugins."
+   :ref:`input.links_included_in_focus_chain`, "Include hyperlinks in the keyboard focus chain when tabbing."
+   :ref:`input.partial_timeout`, "Timeout (in milliseconds) for partially typed key bindings."
+   :ref:`input.rocker_gestures`, "Enable Opera-like mouse rocker gestures."
+   :ref:`input.spatial_navigation`, "Enable spatial navigation."
+   :ref:`keyhint.blacklist`, "Keychains that shouldn't be shown in the keyhint dialog."
+   :ref:`keyhint.delay`, "Time (in milliseconds) from pressing a key to seeing the keyhint dialog."
+   :ref:`keyhint.radius`, "Rounding radius (in pixels) for the edges of the keyhint dialog."
+   :ref:`messages.timeout`, "Duration (in milliseconds) to show messages in the statusbar for."
+   :ref:`new_instance_open_target`, "How to open links in an existing instance if a new one is launched."
+   :ref:`new_instance_open_target_window`, "Which window to choose when opening links as new tabs."
+   :ref:`prompt.filebrowser`, "Show a filebrowser in upload/download prompts."
+   :ref:`prompt.radius`, "Rounding radius (in pixels) for the edges of prompts."
+   :ref:`qt.args`, "Additional arguments to pass to Qt, without leading `--`."
+   :ref:`qt.force_platform`, "Force a Qt platform to use."
+   :ref:`qt.force_software_rendering`, "Force software rendering for QtWebEngine."
+   :ref:`qt.highdpi`, "Turn on Qt HighDPI scaling."
+   :ref:`qt.low_end_device_mode`, "When to use Chromium's low-end device mode."
+   :ref:`qt.process_model`, "Which Chromium process model to use."
+   :ref:`scrolling.bar`, "When to show the scrollbar."
+   :ref:`scrolling.smooth`, "Enable smooth scrolling for web pages."
+   :ref:`search.ignore_case`, "When to find text on a page case-insensitively."
+   :ref:`search.incremental`, "Find text on a page incrementally, renewing the search for each typed character."
+   :ref:`session.default_name`, "Name of the session to save by default."
+   :ref:`session.lazy_restore`, "Load a restored tab as soon as it takes focus."
+   :ref:`spellcheck.languages`, "Languages to use for spell checking."
+   :ref:`statusbar.hide`, "Hide the statusbar unless a message is shown."
+   :ref:`statusbar.padding`, "Padding (in pixels) for the statusbar."
+   :ref:`statusbar.position`, "Position of the status bar."
+   :ref:`statusbar.widgets`, "List of widgets displayed in the statusbar."
+   :ref:`tabs.background`, "Open new tabs (middleclick/ctrl+click) in the background."
+   :ref:`tabs.close_mouse_button`, "Mouse button with which to close tabs."
+   :ref:`tabs.close_mouse_button_on_bar`, "How to behave when the close mouse button is pressed on the tab bar."
+   :ref:`tabs.favicons.scale`, "Scaling factor for favicons in the tab bar."
+   :ref:`tabs.favicons.show`, "When to show favicons in the tab bar."
+   :ref:`tabs.indicator.padding`, "Padding (in pixels) for tab indicators."
+   :ref:`tabs.indicator.width`, "Width (in pixels) of the progress indicator (0 to disable)."
+   :ref:`tabs.last_close`, "How to behave when the last tab is closed."
+   :ref:`tabs.max_width`, "Maximum width (in pixels) of tabs (-1 for no maximum)."
+   :ref:`tabs.min_width`, "Minimum width (in pixels) of tabs (-1 for the default minimum size behavior)."
+   :ref:`tabs.mode_on_change`, "When switching tabs, what input mode is applied."
+   :ref:`tabs.mousewheel_switching`, "Switch between tabs using the mouse wheel."
+   :ref:`tabs.new_position.related`, "Position of new tabs opened from another tab."
+   :ref:`tabs.new_position.stacking`, "Stack related tabs on top of each other when opened consecutively."
+   :ref:`tabs.new_position.unrelated`, "Position of new tabs which are not opened from another tab."
+   :ref:`tabs.padding`, "Padding (in pixels) around text for tabs."
+   :ref:`tabs.pinned.shrink`, "Shrink pinned tabs down to their contents."
+   :ref:`tabs.position`, "Position of the tab bar."
+   :ref:`tabs.select_on_remove`, "Which tab to select when the focused tab is removed."
+   :ref:`tabs.show`, "When to show the tab bar."
+   :ref:`tabs.show_switching_delay`, "Duration (in milliseconds) to show the tab bar before hiding it when tabs.show is set to 'switching'."
+   :ref:`tabs.tabs_are_windows`, "Open a new window for every tab."
+   :ref:`tabs.title.alignment`, "Alignment of the text inside of tabs."
+   :ref:`tabs.title.format`, "Format to use for the tab title."
+   :ref:`tabs.title.format_pinned`, "Format to use for the tab title for pinned tabs. The same placeholders like for `tabs.title.format` are defined."
+   :ref:`tabs.width`, "Width (in pixels or as percentage of the window) of the tab bar if it's vertical."
+   :ref:`tabs.wrap`, "Wrap when changing tabs."
+   :ref:`url.auto_search`, "What search to start when something else than a URL is entered."
+   :ref:`url.default_page`, "Page to open if :open -t/-b/-w is used without URL."
+   :ref:`url.incdec_segments`, "URL segments where `:navigate increment/decrement` will search for a number."
+   :ref:`url.open_base_url`, "Open base URL of the searchengine if a searchengine shortcut is invoked without parameters."
+   :ref:`url.searchengines`, "Search engines which can be used via the address bar."
+   :ref:`url.start_pages`, "Page(s) to open at the start."
+   :ref:`url.yank_ignored_parameters`, "URL parameters to strip with `:yank url`."
+   :ref:`window.hide_decoration`, "Hide the window decoration."
+   :ref:`window.title_format`, "Format to use for the window title. The same placeholders like for"
+   :ref:`zoom.default`, "Default zoom level."
+   :ref:`zoom.levels`, "Available zoom levels."
+   :ref:`zoom.mouse_divider`, "Number of zoom increments to divide the mouse wheel movements to."
+   :ref:`zoom.text_only`, "Apply the zoom factor on a frame only to the text or to all content."
 
-   :ref:`aliases`, Aliases for commands.
-   :ref:`auto_save.interval`, Time interval (in milliseconds) between auto-saves of config/cookies/etc.
-   :ref:`auto_save.session`, Always restore open sites when qutebrowser is reopened.
-   :ref:`backend`, Backend to use to display websites.
-   :ref:`bindings.commands`, Keybindings mapping keys to commands in different modes.
-   :ref:`bindings.default`, Default keybindings. If you want to add bindings, modify `bindings.commands` instead.
-   :ref:`bindings.key_mappings`, This setting can be used to map keys to other keys.
-   :ref:`colors.completion.category.bg`, Background color of the completion widget category headers.
-   :ref:`colors.completion.category.border.bottom`, Bottom border color of the completion widget category headers.
-   :ref:`colors.completion.category.border.top`, Top border color of the completion widget category headers.
-   :ref:`colors.completion.category.fg`, Foreground color of completion widget category headers.
-   :ref:`colors.completion.even.bg`, Background color of the completion widget for even rows.
-   :ref:`colors.completion.fg`, Text color of the completion widget.
-   :ref:`colors.completion.item.selected.bg`, Background color of the selected completion item.
-   :ref:`colors.completion.item.selected.border.bottom`, Bottom border color of the selected completion item.
-   :ref:`colors.completion.item.selected.border.top`, Top border color of the completion widget category headers.
-   :ref:`colors.completion.item.selected.fg`, Foreground color of the selected completion item.
-   :ref:`colors.completion.match.fg`, Foreground color of the matched text in the completion.
-   :ref:`colors.completion.odd.bg`, Background color of the completion widget for odd rows.
-   :ref:`colors.completion.scrollbar.bg`, Color of the scrollbar in the completion view.
-   :ref:`colors.completion.scrollbar.fg`, Color of the scrollbar handle in the completion view.
-   :ref:`colors.downloads.bar.bg`, Background color for the download bar.
-   :ref:`colors.downloads.error.bg`, Background color for downloads with errors.
-   :ref:`colors.downloads.error.fg`, Foreground color for downloads with errors.
-   :ref:`colors.downloads.start.bg`, Color gradient start for download backgrounds.
-   :ref:`colors.downloads.start.fg`, Color gradient start for download text.
-   :ref:`colors.downloads.stop.bg`, Color gradient stop for download backgrounds.
-   :ref:`colors.downloads.stop.fg`, Color gradient end for download text.
-   :ref:`colors.downloads.system.bg`, Color gradient interpolation system for download backgrounds.
-   :ref:`colors.downloads.system.fg`, Color gradient interpolation system for download text.
-   :ref:`colors.hints.bg`, Background color for hints.
-   :ref:`colors.hints.fg`, Font color for hints.
-   :ref:`colors.hints.match.fg`, Font color for the matched part of hints.
-   :ref:`colors.keyhint.bg`, Background color of the keyhint widget.
-   :ref:`colors.keyhint.fg`, Text color for the keyhint widget.
-   :ref:`colors.keyhint.suffix.fg`, Highlight color for keys to complete the current keychain.
-   :ref:`colors.messages.error.bg`, Background color of an error message.
-   :ref:`colors.messages.error.border`, Border color of an error message.
-   :ref:`colors.messages.error.fg`, Foreground color of an error message.
-   :ref:`colors.messages.info.bg`, Background color of an info message.
-   :ref:`colors.messages.info.border`, Border color of an info message.
-   :ref:`colors.messages.info.fg`, Foreground color of an info message.
-   :ref:`colors.messages.warning.bg`, Background color of a warning message.
-   :ref:`colors.messages.warning.border`, Border color of a warning message.
-   :ref:`colors.messages.warning.fg`, Foreground color of a warning message.
-   :ref:`colors.prompts.bg`, Background color for prompts.
-   :ref:`colors.prompts.border`, Border used around UI elements in prompts.
-   :ref:`colors.prompts.fg`, Foreground color for prompts.
-   :ref:`colors.prompts.selected.bg`, Background color for the selected item in filename prompts.
-   :ref:`colors.statusbar.caret.bg`, Background color of the statusbar in caret mode.
-   :ref:`colors.statusbar.caret.fg`, Foreground color of the statusbar in caret mode.
-   :ref:`colors.statusbar.caret.selection.bg`, Background color of the statusbar in caret mode with a selection.
-   :ref:`colors.statusbar.caret.selection.fg`, Foreground color of the statusbar in caret mode with a selection.
-   :ref:`colors.statusbar.command.bg`, Background color of the statusbar in command mode.
-   :ref:`colors.statusbar.command.fg`, Foreground color of the statusbar in command mode.
-   :ref:`colors.statusbar.command.private.bg`, Background color of the statusbar in private browsing + command mode.
-   :ref:`colors.statusbar.command.private.fg`, Foreground color of the statusbar in private browsing + command mode.
-   :ref:`colors.statusbar.insert.bg`, Background color of the statusbar in insert mode.
-   :ref:`colors.statusbar.insert.fg`, Foreground color of the statusbar in insert mode.
-   :ref:`colors.statusbar.normal.bg`, Background color of the statusbar.
-   :ref:`colors.statusbar.normal.fg`, Foreground color of the statusbar.
-   :ref:`colors.statusbar.passthrough.bg`, Background color of the statusbar in passthrough mode.
-   :ref:`colors.statusbar.passthrough.fg`, Foreground color of the statusbar in passthrough mode.
-   :ref:`colors.statusbar.private.bg`, Background color of the statusbar in private browsing mode.
-   :ref:`colors.statusbar.private.fg`, Foreground color of the statusbar in private browsing mode.
-   :ref:`colors.statusbar.progress.bg`, Background color of the progress bar.
-   :ref:`colors.statusbar.url.error.fg`, Foreground color of the URL in the statusbar on error.
-   :ref:`colors.statusbar.url.fg`, Default foreground color of the URL in the statusbar.
-   :ref:`colors.statusbar.url.hover.fg`, Foreground color of the URL in the statusbar for hovered links.
-   :ref:`colors.statusbar.url.success.http.fg`, Foreground color of the URL in the statusbar on successful load (http).
-   :ref:`colors.statusbar.url.success.https.fg`, Foreground color of the URL in the statusbar on successful load (https).
-   :ref:`colors.statusbar.url.warn.fg`, Foreground color of the URL in the statusbar when there's a warning.
-   :ref:`colors.tabs.bar.bg`, Background color of the tab bar.
-   :ref:`colors.tabs.even.bg`, Background color of unselected even tabs.
-   :ref:`colors.tabs.even.fg`, Foreground color of unselected even tabs.
-   :ref:`colors.tabs.indicator.error`, Color for the tab indicator on errors.
-   :ref:`colors.tabs.indicator.start`, Color gradient start for the tab indicator.
-   :ref:`colors.tabs.indicator.stop`, Color gradient end for the tab indicator.
-   :ref:`colors.tabs.indicator.system`, Color gradient interpolation system for the tab indicator.
-   :ref:`colors.tabs.odd.bg`, Background color of unselected odd tabs.
-   :ref:`colors.tabs.odd.fg`, Foreground color of unselected odd tabs.
-   :ref:`colors.tabs.selected.even.bg`, Background color of selected even tabs.
-   :ref:`colors.tabs.selected.even.fg`, Foreground color of selected even tabs.
-   :ref:`colors.tabs.selected.odd.bg`, Background color of selected odd tabs.
-   :ref:`colors.tabs.selected.odd.fg`, Foreground color of selected odd tabs.
-   :ref:`colors.webpage.bg`, Background color for webpages if unset (or empty to use the theme's color).
-   :ref:`completion.cmd_history_max_items`, Number of commands to save in the command history.
-   :ref:`completion.delay`, Delay (in milliseconds) before updating completions after typing a character.
-   :ref:`completion.height`, Height (in pixels or as percentage of the window) of the completion.
-   :ref:`completion.min_chars`, Minimum amount of characters needed to update completions.
-   :ref:`completion.open_categories`, Which categories to show (in which order) in the :open completion.
-   :ref:`completion.quick`, Move on to the next part when there's only one possible completion left.
-   :ref:`completion.scrollbar.padding`, Padding (in pixels) of the scrollbar handle in the completion window.
-   :ref:`completion.scrollbar.width`, Width (in pixels) of the scrollbar in the completion window.
-   :ref:`completion.show`, When to show the autocompletion window.
-   :ref:`completion.shrink`, Shrink the completion to be smaller than the configured size if there are no scrollbars.
-   :ref:`completion.timestamp_format`, Format of timestamps (e.g. for the history completion).
-   :ref:`completion.use_best_match`, Execute the best-matching command on a partial match.
-   :ref:`completion.web_history.exclude`, A list of patterns which should not be shown in the history.
-   :ref:`completion.web_history.max_items`, Number of URLs to show in the web history.
-   :ref:`confirm_quit`, Require a confirmation before quitting the application.
-   :ref:`content.autoplay`, Automatically start playing `<video>` elements.
-   :ref:`content.cache.appcache`, Enable support for the HTML 5 web application cache feature.
-   :ref:`content.cache.maximum_pages`, Maximum number of pages to hold in the global memory page cache.
-   :ref:`content.cache.size`, Size (in bytes) of the HTTP network cache. Null to use the default value.
-   :ref:`content.canvas_reading`, Allow websites to read canvas elements.
-   :ref:`content.cookies.accept`, Which cookies to accept.
-   :ref:`content.cookies.store`, Store cookies.
-   :ref:`content.default_encoding`, Default encoding to use for websites.
-   :ref:`content.desktop_capture`, Allow websites to share screen content.
-   :ref:`content.dns_prefetch`, Try to pre-fetch DNS entries to speed up browsing.
-   :ref:`content.frame_flattening`, Expand each subframe to its contents.
-   :ref:`content.geolocation`, Allow websites to request geolocations.
-   :ref:`content.headers.accept_language`, Value to send in the `Accept-Language` header.
-   :ref:`content.headers.custom`, Custom headers for qutebrowser HTTP requests.
-   :ref:`content.headers.do_not_track`, Value to send in the `DNT` header.
-   :ref:`content.headers.referer`, When to send the Referer header.
-   :ref:`content.headers.user_agent`, User agent to send. Unset to send the default.
-   :ref:`content.host_blocking.enabled`, Enable host blocking.
-   :ref:`content.host_blocking.lists`, List of URLs of lists which contain hosts to block.
-   :ref:`content.host_blocking.whitelist`, A list of patterns that should always be loaded, despite being ad-blocked.
-   :ref:`content.hyperlink_auditing`, Enable hyperlink auditing (`<a ping>`).
-   :ref:`content.images`, Load images automatically in web pages.
-   :ref:`content.javascript.alert`, Show javascript alerts.
-   :ref:`content.javascript.can_access_clipboard`, Allow JavaScript to read from or write to the clipboard.
-   :ref:`content.javascript.can_close_tabs`, Allow JavaScript to close tabs.
-   :ref:`content.javascript.can_open_tabs_automatically`, Allow JavaScript to open new tabs without user interaction.
-   :ref:`content.javascript.enabled`, Enable JavaScript.
-   :ref:`content.javascript.log`, Log levels to use for JavaScript console logging messages.
-   :ref:`content.javascript.modal_dialog`, Use the standard JavaScript modal dialog for `alert()` and `confirm()`.
-   :ref:`content.javascript.prompt`, Show javascript prompts.
-   :ref:`content.local_content_can_access_file_urls`, Allow locally loaded documents to access other local URLs.
-   :ref:`content.local_content_can_access_remote_urls`, Allow locally loaded documents to access remote URLs.
-   :ref:`content.local_storage`, Enable support for HTML 5 local storage and Web SQL.
-   :ref:`content.media_capture`, Allow websites to record audio/video.
-   :ref:`content.mouse_lock`, Allow websites to lock your mouse pointer.
-   :ref:`content.mute`, Automatically mute tabs.
-   :ref:`content.netrc_file`, Netrc-file for HTTP authentication.
-   :ref:`content.notifications`, Allow websites to show notifications.
-   :ref:`content.pdfjs`, Allow pdf.js to view PDF files in the browser.
-   :ref:`content.persistent_storage`, Allow websites to request persistent storage quota via `navigator.webkitPersistentStorage.requestQuota`.
-   :ref:`content.plugins`, Enable plugins in Web pages.
-   :ref:`content.print_element_backgrounds`, Draw the background color and images also when the page is printed.
-   :ref:`content.private_browsing`, Open new windows in private browsing mode which does not record visited pages.
-   :ref:`content.proxy`, Proxy to use.
-   :ref:`content.proxy_dns_requests`, Send DNS requests over the configured proxy.
-   :ref:`content.register_protocol_handler`, Allow websites to register protocol handlers via `navigator.registerProtocolHandler`.
-   :ref:`content.ssl_strict`, Validate SSL handshakes.
-   :ref:`content.user_stylesheets`, List of user stylesheet filenames to use.
-   :ref:`content.webgl`, Enable WebGL.
-   :ref:`content.webrtc_ip_handling_policy`, Which interfaces to expose via WebRTC.
-   :ref:`content.windowed_fullscreen`, Limit fullscreen to the browser window (does not expand to fill the screen).
-   :ref:`content.xss_auditing`, Monitor load requests for cross-site scripting attempts.
-   :ref:`downloads.location.directory`, Directory to save downloads to.
-   :ref:`downloads.location.prompt`, Prompt the user for the download location.
-   :ref:`downloads.location.remember`, Remember the last used download directory.
-   :ref:`downloads.location.suggestion`, What to display in the download filename input.
-   :ref:`downloads.open_dispatcher`, Default program used to open downloads.
-   :ref:`downloads.position`, Where to show the downloaded files.
-   :ref:`downloads.remove_finished`, Duration (in milliseconds) to wait before removing finished downloads.
-   :ref:`editor.command`, Editor (and arguments) to use for the `open-editor` command. The following placeholders are defined:
-   :ref:`editor.encoding`, Encoding to use for the editor.
-   :ref:`fonts.completion.category`, Font used in the completion categories.
-   :ref:`fonts.completion.entry`, Font used in the completion widget.
-   :ref:`fonts.debug_console`, Font used for the debugging console.
-   :ref:`fonts.downloads`, Font used for the downloadbar.
-   :ref:`fonts.hints`, Font used for the hints.
-   :ref:`fonts.keyhint`, Font used in the keyhint widget.
-   :ref:`fonts.messages.error`, Font used for error messages.
-   :ref:`fonts.messages.info`, Font used for info messages.
-   :ref:`fonts.messages.warning`, Font used for warning messages.
-   :ref:`fonts.monospace`, Default monospace fonts.
-   :ref:`fonts.prompts`, Font used for prompts.
-   :ref:`fonts.statusbar`, Font used in the statusbar.
-   :ref:`fonts.tabs`, Font used in the tab bar.
-   :ref:`fonts.web.family.cursive`, Font family for cursive fonts.
-   :ref:`fonts.web.family.fantasy`, Font family for fantasy fonts.
-   :ref:`fonts.web.family.fixed`, Font family for fixed fonts.
-   :ref:`fonts.web.family.sans_serif`, Font family for sans-serif fonts.
-   :ref:`fonts.web.family.serif`, Font family for serif fonts.
-   :ref:`fonts.web.family.standard`, Font family for standard fonts.
-   :ref:`fonts.web.size.default`, Default font size (in pixels) for regular text.
-   :ref:`fonts.web.size.default_fixed`, Default font size (in pixels) for fixed-pitch text.
-   :ref:`fonts.web.size.minimum`, Hard minimum font size (in pixels).
-   :ref:`fonts.web.size.minimum_logical`, Minimum logical font size (in pixels) that is applied when zooming out.
-   :ref:`hints.auto_follow`, When a hint can be automatically followed without pressing Enter.
-   :ref:`hints.auto_follow_timeout`, Duration (in milliseconds) to ignore normal-mode key bindings after a successful auto-follow.
-   :ref:`hints.border`, CSS border value for hints.
-   :ref:`hints.chars`, Characters used for hint strings.
-   :ref:`hints.dictionary`, Dictionary file to be used by the word hints.
-   :ref:`hints.find_implementation`, Which implementation to use to find elements to hint.
-   :ref:`hints.hide_unmatched_rapid_hints`, Hide unmatched hints in rapid mode.
-   :ref:`hints.min_chars`, Minimum number of characters used for hint strings.
-   :ref:`hints.mode`, Mode to use for hints.
-   :ref:`hints.next_regexes`, Comma-separated list of regular expressions to use for 'next' links.
-   :ref:`hints.prev_regexes`, Comma-separated list of regular expressions to use for 'prev' links.
-   :ref:`hints.scatter`, Scatter hint key chains (like Vimium) or not (like dwb).
-   :ref:`hints.selectors`, CSS selectors used to determine which elements on a page should have hints.
-   :ref:`hints.uppercase`, Make characters in hint strings uppercase.
-   :ref:`history_gap_interval`, Maximum time (in minutes) between two history items for them to be considered being from the same browsing session.
-   :ref:`input.escape_quits_reporter`, Allow Escape to quit the crash reporter.
-   :ref:`input.forward_unbound_keys`, Which unbound keys to forward to the webview in normal mode.
-   :ref:`input.insert_mode.auto_enter`, Enter insert mode if an editable element is clicked.
-   :ref:`input.insert_mode.auto_leave`, Leave insert mode if a non-editable element is clicked.
-   :ref:`input.insert_mode.auto_load`, Automatically enter insert mode if an editable element is focused after loading the page.
-   :ref:`input.insert_mode.plugins`, Switch to insert mode when clicking flash and other plugins.
-   :ref:`input.links_included_in_focus_chain`, Include hyperlinks in the keyboard focus chain when tabbing.
-   :ref:`input.partial_timeout`, Timeout (in milliseconds) for partially typed key bindings.
-   :ref:`input.rocker_gestures`, Enable Opera-like mouse rocker gestures.
-   :ref:`input.spatial_navigation`, Enable spatial navigation.
-   :ref:`keyhint.blacklist`, Keychains that shouldn't be shown in the keyhint dialog.
-   :ref:`keyhint.delay`, Time (in milliseconds) from pressing a key to seeing the keyhint dialog.
-   :ref:`keyhint.radius`, Rounding radius (in pixels) for the edges of the keyhint dialog.
-   :ref:`messages.timeout`, Duration (in milliseconds) to show messages in the statusbar for.
-   :ref:`new_instance_open_target`, How to open links in an existing instance if a new one is launched.
-   :ref:`new_instance_open_target_window`, Which window to choose when opening links as new tabs.
-   :ref:`prompt.filebrowser`, Show a filebrowser in upload/download prompts.
-   :ref:`prompt.radius`, Rounding radius (in pixels) for the edges of prompts.
-   :ref:`qt.args`, Additional arguments to pass to Qt, without leading `--`.
-   :ref:`qt.force_platform`, Force a Qt platform to use.
-   :ref:`qt.force_software_rendering`, Force software rendering for QtWebEngine.
-   :ref:`qt.highdpi`, Turn on Qt HighDPI scaling.
-   :ref:`qt.low_end_device_mode`, When to use Chromium's low-end device mode.
-   :ref:`qt.process_model`, Which Chromium process model to use.
-   :ref:`scrolling.bar`, When to show the scrollbar.
-   :ref:`scrolling.smooth`, Enable smooth scrolling for web pages.
-   :ref:`search.ignore_case`, When to find text on a page case-insensitively.
-   :ref:`search.incremental`, Find text on a page incrementally, renewing the search for each typed character.
-   :ref:`session.default_name`, Name of the session to save by default.
-   :ref:`session.lazy_restore`, Load a restored tab as soon as it takes focus.
-   :ref:`spellcheck.languages`, Languages to use for spell checking.
-   :ref:`statusbar.hide`, Hide the statusbar unless a message is shown.
-   :ref:`statusbar.padding`, Padding (in pixels) for the statusbar.
-   :ref:`statusbar.position`, Position of the status bar.
-   :ref:`statusbar.widgets`, List of widgets displayed in the statusbar.
-   :ref:`tabs.background`, Open new tabs (middleclick/ctrl+click) in the background.
-   :ref:`tabs.close_mouse_button`, Mouse button with which to close tabs.
-   :ref:`tabs.close_mouse_button_on_bar`, How to behave when the close mouse button is pressed on the tab bar.
-   :ref:`tabs.favicons.scale`, Scaling factor for favicons in the tab bar.
-   :ref:`tabs.favicons.show`, When to show favicons in the tab bar.
-   :ref:`tabs.indicator.padding`, Padding (in pixels) for tab indicators.
-   :ref:`tabs.indicator.width`, Width (in pixels) of the progress indicator (0 to disable).
-   :ref:`tabs.last_close`, How to behave when the last tab is closed.
-   :ref:`tabs.max_width`, Maximum width (in pixels) of tabs (-1 for no maximum).
-   :ref:`tabs.min_width`, Minimum width (in pixels) of tabs (-1 for the default minimum size behavior).
-   :ref:`tabs.mode_on_change`, When switching tabs, what input mode is applied.
-   :ref:`tabs.mousewheel_switching`, Switch between tabs using the mouse wheel.
-   :ref:`tabs.new_position.related`, Position of new tabs opened from another tab.
-   :ref:`tabs.new_position.stacking`, Stack related tabs on top of each other when opened consecutively.
-   :ref:`tabs.new_position.unrelated`, Position of new tabs which are not opened from another tab.
-   :ref:`tabs.padding`, Padding (in pixels) around text for tabs.
-   :ref:`tabs.pinned.shrink`, Shrink pinned tabs down to their contents.
-   :ref:`tabs.position`, Position of the tab bar.
-   :ref:`tabs.select_on_remove`, Which tab to select when the focused tab is removed.
-   :ref:`tabs.show`, When to show the tab bar.
-   :ref:`tabs.show_switching_delay`, Duration (in milliseconds) to show the tab bar before hiding it when tabs.show is set to 'switching'.
-   :ref:`tabs.tabs_are_windows`, Open a new window for every tab.
-   :ref:`tabs.title.alignment`, Alignment of the text inside of tabs.
-   :ref:`tabs.title.format`, Format to use for the tab title.
-   :ref:`tabs.title.format_pinned`, Format to use for the tab title for pinned tabs. The same placeholders like for `tabs.title.format` are defined.
-   :ref:`tabs.width`, Width (in pixels or as percentage of the window) of the tab bar if it's vertical.
-   :ref:`tabs.wrap`, Wrap when changing tabs.
-   :ref:`url.auto_search`, What search to start when something else than a URL is entered.
-   :ref:`url.default_page`, Page to open if :open -t/-b/-w is used without URL.
-   :ref:`url.incdec_segments`, URL segments where `:navigate increment/decrement` will search for a number.
-   :ref:`url.open_base_url`, Open base URL of the searchengine if a searchengine shortcut is invoked without parameters.
-   :ref:`url.searchengines`, Search engines which can be used via the address bar.
-   :ref:`url.start_pages`, Page(s) to open at the start.
-   :ref:`url.yank_ignored_parameters`, URL parameters to strip with `:yank url`.
-   :ref:`window.hide_decoration`, Hide the window decoration.
-   :ref:`window.title_format`, Format to use for the window title. The same placeholders like for
-   :ref:`zoom.default`, Default zoom level.
-   :ref:`zoom.levels`, Available zoom levels.
-   :ref:`zoom.mouse_divider`, Number of zoom increments to divide the mouse wheel movements to.
-   :ref:`zoom.text_only`, Apply the zoom factor on a frame only to the text or to all content.
-
-[[aliases]]
-=== aliases
+_aliases:
+aliases
+^^^^^^^
 Aliases for commands.
 The keys of the given dictionary are the aliases, while the values are the commands they map to.
 
 Type: <<types,Dict>>
 
-Default:
+Default: 
 
-- +pass:[q]+: +pass:[close]+
-- +pass:[qa]+: +pass:[quit]+
-- +pass:[w]+: +pass:[session-save]+
-- +pass:[wq]+: +pass:[quit --save]+
-- +pass:[wqa]+: +pass:[quit --save]+
+* ``q``: ``close``
+* ``qa``: ``quit``
+* ``w``: ``session-save``
+* ``wq``: ``quit --save``
+* ``wqa``: ``quit --save``
 
-[[auto_save.interval]]
-=== auto_save.interval
+_auto_save.interval:
+auto_save.interval
+^^^^^^^^^^^^^^^^^^
 Time interval (in milliseconds) between auto-saves of config/cookies/etc.
 
 Type: <<types,Int>>
 
-Default: +pass:[15000]+
+Default: ``15000``
 
-[[auto_save.session]]
-=== auto_save.session
+_auto_save.session:
+auto_save.session
+^^^^^^^^^^^^^^^^^
 Always restore open sites when qutebrowser is reopened.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[backend]]
-=== backend
+_backend:
+backend
+^^^^^^^
 Backend to use to display websites.
 qutebrowser supports two different web rendering engines / backends, QtWebKit and QtWebEngine.
 QtWebKit was discontinued by the Qt project with Qt 5.6, but picked up as a well maintained fork: https://github.com/annulen/webkit/wiki - qutebrowser only supports the fork.
@@ -335,10 +339,11 @@ Valid values:
  * +webengine+: Use QtWebEngine (based on Chromium).
  * +webkit+: Use QtWebKit (based on WebKit, similar to Safari).
 
-Default: +pass:[webengine]+
+Default: ``webengine``
 
-[[bindings.commands]]
-=== bindings.commands
+_bindings.commands:
+bindings.commands
+^^^^^^^^^^^^^^^^^
 Keybindings mapping keys to commands in different modes.
 While it's possible to add bindings with this setting, it's recommended to use `config.bind()` in `config.py` or the `:bind` command, and leave this setting alone.
 This setting is a dictionary containing mode names and dictionaries mapping keys to commands:
@@ -392,8 +397,9 @@ Type: <<types,Dict>>
 
 Default: empty
 
-[[bindings.default]]
-=== bindings.default
+_bindings.default:
+bindings.default
+^^^^^^^^^^^^^^^^
 Default keybindings. If you want to add bindings, modify `bindings.commands` instead.
 The main purpose of this setting is that you can set it to an empty dictionary if you want to load no default keybindings at all.
 If you want to preserve default bindings (and get new bindings when there is an update), use `config.bind()` in `config.py` or the `:bind` command, and leave this setting alone.
@@ -402,300 +408,301 @@ This setting can only be set in config.py.
 
 Type: <<types,Dict>>
 
-Default:
+Default: 
 
-- +pass:[caret]+:
+* ``caret``:
 
-* +pass:[$]+: +pass:[move-to-end-of-line]+
-* +pass:[0]+: +pass:[move-to-start-of-line]+
-* +pass:[&lt;Ctrl-Space&gt;]+: +pass:[drop-selection]+
-* +pass:[&lt;Escape&gt;]+: +pass:[leave-mode]+
-* +pass:[&lt;Return&gt;]+: +pass:[yank selection]+
-* +pass:[&lt;Space&gt;]+: +pass:[toggle-selection]+
-* +pass:[G]+: +pass:[move-to-end-of-document]+
-* +pass:[H]+: +pass:[scroll left]+
-* +pass:[J]+: +pass:[scroll down]+
-* +pass:[K]+: +pass:[scroll up]+
-* +pass:[L]+: +pass:[scroll right]+
-* +pass:[Y]+: +pass:[yank selection -s]+
-* +pass:[[]+: +pass:[move-to-start-of-prev-block]+
-* +pass:[]]+: +pass:[move-to-start-of-next-block]+
-* +pass:[b]+: +pass:[move-to-prev-word]+
-* +pass:[c]+: +pass:[enter-mode normal]+
-* +pass:[e]+: +pass:[move-to-end-of-word]+
-* +pass:[gg]+: +pass:[move-to-start-of-document]+
-* +pass:[h]+: +pass:[move-to-prev-char]+
-* +pass:[j]+: +pass:[move-to-next-line]+
-* +pass:[k]+: +pass:[move-to-prev-line]+
-* +pass:[l]+: +pass:[move-to-next-char]+
-* +pass:[v]+: +pass:[toggle-selection]+
-* +pass:[w]+: +pass:[move-to-next-word]+
-* +pass:[y]+: +pass:[yank selection]+
-* +pass:[{]+: +pass:[move-to-end-of-prev-block]+
-* +pass:[}]+: +pass:[move-to-end-of-next-block]+
-- +pass:[command]+:
+  * ``$``: ``move-to-end-of-line``
+  * ``0``: ``move-to-start-of-line``
+  * ``&lt;Ctrl-Space&gt;``: ``drop-selection``
+  * ``&lt;Escape&gt;``: ``leave-mode``
+  * ``&lt;Return&gt;``: ``yank selection``
+  * ``&lt;Space&gt;``: ``toggle-selection``
+  * ``G``: ``move-to-end-of-document``
+  * ``H``: ``scroll left``
+  * ``J``: ``scroll down``
+  * ``K``: ``scroll up``
+  * ``L``: ``scroll right``
+  * ``Y``: ``yank selection -s``
+  * ``[``: ``move-to-start-of-prev-block``
+  * ``]``: ``move-to-start-of-next-block``
+  * ``b``: ``move-to-prev-word``
+  * ``c``: ``enter-mode normal``
+  * ``e``: ``move-to-end-of-word``
+  * ``gg``: ``move-to-start-of-document``
+  * ``h``: ``move-to-prev-char``
+  * ``j``: ``move-to-next-line``
+  * ``k``: ``move-to-prev-line``
+  * ``l``: ``move-to-next-char``
+  * ``v``: ``toggle-selection``
+  * ``w``: ``move-to-next-word``
+  * ``y``: ``yank selection``
+  * ``{``: ``move-to-end-of-prev-block``
+  * ``}``: ``move-to-end-of-next-block``
+* ``command``:
 
-* +pass:[&lt;Alt-B&gt;]+: +pass:[rl-backward-word]+
-* +pass:[&lt;Alt-Backspace&gt;]+: +pass:[rl-backward-kill-word]+
-* +pass:[&lt;Alt-D&gt;]+: +pass:[rl-kill-word]+
-* +pass:[&lt;Alt-F&gt;]+: +pass:[rl-forward-word]+
-* +pass:[&lt;Ctrl-?&gt;]+: +pass:[rl-delete-char]+
-* +pass:[&lt;Ctrl-A&gt;]+: +pass:[rl-beginning-of-line]+
-* +pass:[&lt;Ctrl-B&gt;]+: +pass:[rl-backward-char]+
-* +pass:[&lt;Ctrl-C&gt;]+: +pass:[completion-item-yank]+
-* +pass:[&lt;Ctrl-D&gt;]+: +pass:[completion-item-del]+
-* +pass:[&lt;Ctrl-E&gt;]+: +pass:[rl-end-of-line]+
-* +pass:[&lt;Ctrl-F&gt;]+: +pass:[rl-forward-char]+
-* +pass:[&lt;Ctrl-H&gt;]+: +pass:[rl-backward-delete-char]+
-* +pass:[&lt;Ctrl-K&gt;]+: +pass:[rl-kill-line]+
-* +pass:[&lt;Ctrl-N&gt;]+: +pass:[command-history-next]+
-* +pass:[&lt;Ctrl-P&gt;]+: +pass:[command-history-prev]+
-* +pass:[&lt;Ctrl-Return&gt;]+: +pass:[command-accept --rapid]+
-* +pass:[&lt;Ctrl-Shift-C&gt;]+: +pass:[completion-item-yank --sel]+
-* +pass:[&lt;Ctrl-Shift-Tab&gt;]+: +pass:[completion-item-focus prev-category]+
-* +pass:[&lt;Ctrl-Tab&gt;]+: +pass:[completion-item-focus next-category]+
-* +pass:[&lt;Ctrl-U&gt;]+: +pass:[rl-unix-line-discard]+
-* +pass:[&lt;Ctrl-W&gt;]+: +pass:[rl-unix-word-rubout]+
-* +pass:[&lt;Ctrl-Y&gt;]+: +pass:[rl-yank]+
-* +pass:[&lt;Down&gt;]+: +pass:[completion-item-focus --history next]+
-* +pass:[&lt;Escape&gt;]+: +pass:[leave-mode]+
-* +pass:[&lt;Return&gt;]+: +pass:[command-accept]+
-* +pass:[&lt;Shift-Delete&gt;]+: +pass:[completion-item-del]+
-* +pass:[&lt;Shift-Tab&gt;]+: +pass:[completion-item-focus prev]+
-* +pass:[&lt;Tab&gt;]+: +pass:[completion-item-focus next]+
-* +pass:[&lt;Up&gt;]+: +pass:[completion-item-focus --history prev]+
-- +pass:[hint]+:
+  * ``&lt;Alt-B&gt;``: ``rl-backward-word``
+  * ``&lt;Alt-Backspace&gt;``: ``rl-backward-kill-word``
+  * ``&lt;Alt-D&gt;``: ``rl-kill-word``
+  * ``&lt;Alt-F&gt;``: ``rl-forward-word``
+  * ``&lt;Ctrl-?&gt;``: ``rl-delete-char``
+  * ``&lt;Ctrl-A&gt;``: ``rl-beginning-of-line``
+  * ``&lt;Ctrl-B&gt;``: ``rl-backward-char``
+  * ``&lt;Ctrl-C&gt;``: ``completion-item-yank``
+  * ``&lt;Ctrl-D&gt;``: ``completion-item-del``
+  * ``&lt;Ctrl-E&gt;``: ``rl-end-of-line``
+  * ``&lt;Ctrl-F&gt;``: ``rl-forward-char``
+  * ``&lt;Ctrl-H&gt;``: ``rl-backward-delete-char``
+  * ``&lt;Ctrl-K&gt;``: ``rl-kill-line``
+  * ``&lt;Ctrl-N&gt;``: ``command-history-next``
+  * ``&lt;Ctrl-P&gt;``: ``command-history-prev``
+  * ``&lt;Ctrl-Return&gt;``: ``command-accept --rapid``
+  * ``&lt;Ctrl-Shift-C&gt;``: ``completion-item-yank --sel``
+  * ``&lt;Ctrl-Shift-Tab&gt;``: ``completion-item-focus prev-category``
+  * ``&lt;Ctrl-Tab&gt;``: ``completion-item-focus next-category``
+  * ``&lt;Ctrl-U&gt;``: ``rl-unix-line-discard``
+  * ``&lt;Ctrl-W&gt;``: ``rl-unix-word-rubout``
+  * ``&lt;Ctrl-Y&gt;``: ``rl-yank``
+  * ``&lt;Down&gt;``: ``completion-item-focus --history next``
+  * ``&lt;Escape&gt;``: ``leave-mode``
+  * ``&lt;Return&gt;``: ``command-accept``
+  * ``&lt;Shift-Delete&gt;``: ``completion-item-del``
+  * ``&lt;Shift-Tab&gt;``: ``completion-item-focus prev``
+  * ``&lt;Tab&gt;``: ``completion-item-focus next``
+  * ``&lt;Up&gt;``: ``completion-item-focus --history prev``
+* ``hint``:
 
-* +pass:[&lt;Ctrl-B&gt;]+: +pass:[hint all tab-bg]+
-* +pass:[&lt;Ctrl-F&gt;]+: +pass:[hint links]+
-* +pass:[&lt;Ctrl-R&gt;]+: +pass:[hint --rapid links tab-bg]+
-* +pass:[&lt;Escape&gt;]+: +pass:[leave-mode]+
-* +pass:[&lt;Return&gt;]+: +pass:[follow-hint]+
-- +pass:[insert]+:
+  * ``&lt;Ctrl-B&gt;``: ``hint all tab-bg``
+  * ``&lt;Ctrl-F&gt;``: ``hint links``
+  * ``&lt;Ctrl-R&gt;``: ``hint --rapid links tab-bg``
+  * ``&lt;Escape&gt;``: ``leave-mode``
+  * ``&lt;Return&gt;``: ``follow-hint``
+* ``insert``:
 
-* +pass:[&lt;Ctrl-E&gt;]+: +pass:[open-editor]+
-* +pass:[&lt;Escape&gt;]+: +pass:[leave-mode]+
-* +pass:[&lt;Shift-Ins&gt;]+: +pass:[insert-text {primary}]+
-- +pass:[normal]+:
+  * ``&lt;Ctrl-E&gt;``: ``open-editor``
+  * ``&lt;Escape&gt;``: ``leave-mode``
+  * ``&lt;Shift-Ins&gt;``: ``insert-text {primary}``
+* ``normal``:
 
-* +pass:[&#x27;]+: +pass:[enter-mode jump_mark]+
-* +pass:[+]+: +pass:[zoom-in]+
-* +pass:[-]+: +pass:[zoom-out]+
-* +pass:[.]+: +pass:[repeat-command]+
-* +pass:[/]+: +pass:[set-cmd-text /]+
-* +pass:[:]+: +pass:[set-cmd-text :]+
-* +pass:[;I]+: +pass:[hint images tab]+
-* +pass:[;O]+: +pass:[hint links fill :open -t -r {hint-url}]+
-* +pass:[;R]+: +pass:[hint --rapid links window]+
-* +pass:[;Y]+: +pass:[hint links yank-primary]+
-* +pass:[;b]+: +pass:[hint all tab-bg]+
-* +pass:[;d]+: +pass:[hint links download]+
-* +pass:[;f]+: +pass:[hint all tab-fg]+
-* +pass:[;h]+: +pass:[hint all hover]+
-* +pass:[;i]+: +pass:[hint images]+
-* +pass:[;o]+: +pass:[hint links fill :open {hint-url}]+
-* +pass:[;r]+: +pass:[hint --rapid links tab-bg]+
-* +pass:[;t]+: +pass:[hint inputs]+
-* +pass:[;y]+: +pass:[hint links yank]+
-* +pass:[&lt;Alt-1&gt;]+: +pass:[tab-focus 1]+
-* +pass:[&lt;Alt-2&gt;]+: +pass:[tab-focus 2]+
-* +pass:[&lt;Alt-3&gt;]+: +pass:[tab-focus 3]+
-* +pass:[&lt;Alt-4&gt;]+: +pass:[tab-focus 4]+
-* +pass:[&lt;Alt-5&gt;]+: +pass:[tab-focus 5]+
-* +pass:[&lt;Alt-6&gt;]+: +pass:[tab-focus 6]+
-* +pass:[&lt;Alt-7&gt;]+: +pass:[tab-focus 7]+
-* +pass:[&lt;Alt-8&gt;]+: +pass:[tab-focus 8]+
-* +pass:[&lt;Alt-9&gt;]+: +pass:[tab-focus -1]+
-* +pass:[&lt;Alt-m&gt;]+: +pass:[tab-mute]+
-* +pass:[&lt;Ctrl-A&gt;]+: +pass:[navigate increment]+
-* +pass:[&lt;Ctrl-Alt-p&gt;]+: +pass:[print]+
-* +pass:[&lt;Ctrl-B&gt;]+: +pass:[scroll-page 0 -1]+
-* +pass:[&lt;Ctrl-D&gt;]+: +pass:[scroll-page 0 0.5]+
-* +pass:[&lt;Ctrl-F5&gt;]+: +pass:[reload -f]+
-* +pass:[&lt;Ctrl-F&gt;]+: +pass:[scroll-page 0 1]+
-* +pass:[&lt;Ctrl-N&gt;]+: +pass:[open -w]+
-* +pass:[&lt;Ctrl-PgDown&gt;]+: +pass:[tab-next]+
-* +pass:[&lt;Ctrl-PgUp&gt;]+: +pass:[tab-prev]+
-* +pass:[&lt;Ctrl-Q&gt;]+: +pass:[quit]+
-* +pass:[&lt;Ctrl-Return&gt;]+: +pass:[follow-selected -t]+
-* +pass:[&lt;Ctrl-Shift-N&gt;]+: +pass:[open -p]+
-* +pass:[&lt;Ctrl-Shift-T&gt;]+: +pass:[undo]+
-* +pass:[&lt;Ctrl-Shift-Tab&gt;]+: +pass:[nop]+
-* +pass:[&lt;Ctrl-Shift-W&gt;]+: +pass:[close]+
-* +pass:[&lt;Ctrl-T&gt;]+: +pass:[open -t]+
-* +pass:[&lt;Ctrl-Tab&gt;]+: +pass:[tab-focus last]+
-* +pass:[&lt;Ctrl-U&gt;]+: +pass:[scroll-page 0 -0.5]+
-* +pass:[&lt;Ctrl-V&gt;]+: +pass:[enter-mode passthrough]+
-* +pass:[&lt;Ctrl-W&gt;]+: +pass:[tab-close]+
-* +pass:[&lt;Ctrl-X&gt;]+: +pass:[navigate decrement]+
-* +pass:[&lt;Ctrl-^&gt;]+: +pass:[tab-focus last]+
-* +pass:[&lt;Ctrl-h&gt;]+: +pass:[home]+
-* +pass:[&lt;Ctrl-p&gt;]+: +pass:[tab-pin]+
-* +pass:[&lt;Ctrl-s&gt;]+: +pass:[stop]+
-* +pass:[&lt;Escape&gt;]+: +pass:[clear-keychain ;; search ;; fullscreen --leave]+
-* +pass:[&lt;F11&gt;]+: +pass:[fullscreen]+
-* +pass:[&lt;F5&gt;]+: +pass:[reload]+
-* +pass:[&lt;Return&gt;]+: +pass:[follow-selected]+
-* +pass:[&lt;back&gt;]+: +pass:[back]+
-* +pass:[&lt;forward&gt;]+: +pass:[forward]+
-* +pass:[=]+: +pass:[zoom]+
-* +pass:[?]+: +pass:[set-cmd-text ?]+
-* +pass:[@]+: +pass:[run-macro]+
-* +pass:[B]+: +pass:[set-cmd-text -s :quickmark-load -t]+
-* +pass:[D]+: +pass:[tab-close -o]+
-* +pass:[F]+: +pass:[hint all tab]+
-* +pass:[G]+: +pass:[scroll-to-perc]+
-* +pass:[H]+: +pass:[back]+
-* +pass:[J]+: +pass:[tab-next]+
-* +pass:[K]+: +pass:[tab-prev]+
-* +pass:[L]+: +pass:[forward]+
-* +pass:[M]+: +pass:[bookmark-add]+
-* +pass:[N]+: +pass:[search-prev]+
-* +pass:[O]+: +pass:[set-cmd-text -s :open -t]+
-* +pass:[PP]+: +pass:[open -t -- {primary}]+
-* +pass:[Pp]+: +pass:[open -t -- {clipboard}]+
-* +pass:[R]+: +pass:[reload -f]+
-* +pass:[Sb]+: +pass:[open qute://bookmarks#bookmarks]+
-* +pass:[Sh]+: +pass:[open qute://history]+
-* +pass:[Sq]+: +pass:[open qute://bookmarks]+
-* +pass:[Ss]+: +pass:[open qute://settings]+
-* +pass:[T]+: +pass:[tab-focus]+
-* +pass:[ZQ]+: +pass:[quit]+
-* +pass:[ZZ]+: +pass:[quit --save]+
-* +pass:[[[]+: +pass:[navigate prev]+
-* +pass:[]]]+: +pass:[navigate next]+
-* +pass:[`]+: +pass:[enter-mode set_mark]+
-* +pass:[ad]+: +pass:[download-cancel]+
-* +pass:[b]+: +pass:[set-cmd-text -s :quickmark-load]+
-* +pass:[cd]+: +pass:[download-clear]+
-* +pass:[co]+: +pass:[tab-only]+
-* +pass:[d]+: +pass:[tab-close]+
-* +pass:[f]+: +pass:[hint]+
-* +pass:[g$]+: +pass:[tab-focus -1]+
-* +pass:[g0]+: +pass:[tab-focus 1]+
-* +pass:[gB]+: +pass:[set-cmd-text -s :bookmark-load -t]+
-* +pass:[gC]+: +pass:[tab-clone]+
-* +pass:[gD]+: +pass:[tab-give]+
-* +pass:[gO]+: +pass:[set-cmd-text :open -t -r {url:pretty}]+
-* +pass:[gU]+: +pass:[navigate up -t]+
-* +pass:[g^]+: +pass:[tab-focus 1]+
-* +pass:[ga]+: +pass:[open -t]+
-* +pass:[gb]+: +pass:[set-cmd-text -s :bookmark-load]+
-* +pass:[gd]+: +pass:[download]+
-* +pass:[gf]+: +pass:[view-source]+
-* +pass:[gg]+: +pass:[scroll-to-perc 0]+
-* +pass:[gi]+: +pass:[hint inputs --first]+
-* +pass:[gl]+: +pass:[tab-move -]+
-* +pass:[gm]+: +pass:[tab-move]+
-* +pass:[go]+: +pass:[set-cmd-text :open {url:pretty}]+
-* +pass:[gr]+: +pass:[tab-move +]+
-* +pass:[gt]+: +pass:[set-cmd-text -s :buffer]+
-* +pass:[gu]+: +pass:[navigate up]+
-* +pass:[h]+: +pass:[scroll left]+
-* +pass:[i]+: +pass:[enter-mode insert]+
-* +pass:[j]+: +pass:[scroll down]+
-* +pass:[k]+: +pass:[scroll up]+
-* +pass:[l]+: +pass:[scroll right]+
-* +pass:[m]+: +pass:[quickmark-save]+
-* +pass:[n]+: +pass:[search-next]+
-* +pass:[o]+: +pass:[set-cmd-text -s :open]+
-* +pass:[pP]+: +pass:[open -- {primary}]+
-* +pass:[pp]+: +pass:[open -- {clipboard}]+
-* +pass:[q]+: +pass:[record-macro]+
-* +pass:[r]+: +pass:[reload]+
-* +pass:[sf]+: +pass:[save]+
-* +pass:[sk]+: +pass:[set-cmd-text -s :bind]+
-* +pass:[sl]+: +pass:[set-cmd-text -s :set -t]+
-* +pass:[ss]+: +pass:[set-cmd-text -s :set]+
-* +pass:[tIH]+: +pass:[config-cycle -p -u *://*.{url:host}/* content.images ;; reload]+
-* +pass:[tIh]+: +pass:[config-cycle -p -u *://{url:host}/* content.images ;; reload]+
-* +pass:[tIu]+: +pass:[config-cycle -p -u {url} content.images ;; reload]+
-* +pass:[tPH]+: +pass:[config-cycle -p -u *://*.{url:host}/* content.plugins ;; reload]+
-* +pass:[tPh]+: +pass:[config-cycle -p -u *://{url:host}/* content.plugins ;; reload]+
-* +pass:[tPu]+: +pass:[config-cycle -p -u {url} content.plugins ;; reload]+
-* +pass:[tSH]+: +pass:[config-cycle -p -u *://*.{url:host}/* content.javascript.enabled ;; reload]+
-* +pass:[tSh]+: +pass:[config-cycle -p -u *://{url:host}/* content.javascript.enabled ;; reload]+
-* +pass:[tSu]+: +pass:[config-cycle -p -u {url} content.javascript.enabled ;; reload]+
-* +pass:[th]+: +pass:[back -t]+
-* +pass:[tiH]+: +pass:[config-cycle -p -t -u *://*.{url:host}/* content.images ;; reload]+
-* +pass:[tih]+: +pass:[config-cycle -p -t -u *://{url:host}/* content.images ;; reload]+
-* +pass:[tiu]+: +pass:[config-cycle -p -t -u {url} content.images ;; reload]+
-* +pass:[tl]+: +pass:[forward -t]+
-* +pass:[tpH]+: +pass:[config-cycle -p -t -u *://*.{url:host}/* content.plugins ;; reload]+
-* +pass:[tph]+: +pass:[config-cycle -p -t -u *://{url:host}/* content.plugins ;; reload]+
-* +pass:[tpu]+: +pass:[config-cycle -p -t -u {url} content.plugins ;; reload]+
-* +pass:[tsH]+: +pass:[config-cycle -p -t -u *://*.{url:host}/* content.javascript.enabled ;; reload]+
-* +pass:[tsh]+: +pass:[config-cycle -p -t -u *://{url:host}/* content.javascript.enabled ;; reload]+
-* +pass:[tsu]+: +pass:[config-cycle -p -t -u {url} content.javascript.enabled ;; reload]+
-* +pass:[u]+: +pass:[undo]+
-* +pass:[v]+: +pass:[enter-mode caret]+
-* +pass:[wB]+: +pass:[set-cmd-text -s :bookmark-load -w]+
-* +pass:[wO]+: +pass:[set-cmd-text :open -w {url:pretty}]+
-* +pass:[wP]+: +pass:[open -w -- {primary}]+
-* +pass:[wb]+: +pass:[set-cmd-text -s :quickmark-load -w]+
-* +pass:[wf]+: +pass:[hint all window]+
-* +pass:[wh]+: +pass:[back -w]+
-* +pass:[wi]+: +pass:[inspector]+
-* +pass:[wl]+: +pass:[forward -w]+
-* +pass:[wo]+: +pass:[set-cmd-text -s :open -w]+
-* +pass:[wp]+: +pass:[open -w -- {clipboard}]+
-* +pass:[xO]+: +pass:[set-cmd-text :open -b -r {url:pretty}]+
-* +pass:[xo]+: +pass:[set-cmd-text -s :open -b]+
-* +pass:[yD]+: +pass:[yank domain -s]+
-* +pass:[yM]+: +pass:[yank markdown -s]+
-* +pass:[yP]+: +pass:[yank pretty-url -s]+
-* +pass:[yT]+: +pass:[yank title -s]+
-* +pass:[yY]+: +pass:[yank -s]+
-* +pass:[yd]+: +pass:[yank domain]+
-* +pass:[ym]+: +pass:[yank markdown]+
-* +pass:[yp]+: +pass:[yank pretty-url]+
-* +pass:[yt]+: +pass:[yank title]+
-* +pass:[yy]+: +pass:[yank]+
-* +pass:[{{]+: +pass:[navigate prev -t]+
-* +pass:[}}]+: +pass:[navigate next -t]+
-- +pass:[passthrough]+:
+  * ``&#x27;``: ``enter-mode jump_mark``
+  * ``+``: ``zoom-in``
+  * ``-``: ``zoom-out``
+  * ``.``: ``repeat-command``
+  * ``/``: ``set-cmd-text /``
+  * ``:``: ``set-cmd-text :``
+  * ``;I``: ``hint images tab``
+  * ``;O``: ``hint links fill :open -t -r {hint-url}``
+  * ``;R``: ``hint --rapid links window``
+  * ``;Y``: ``hint links yank-primary``
+  * ``;b``: ``hint all tab-bg``
+  * ``;d``: ``hint links download``
+  * ``;f``: ``hint all tab-fg``
+  * ``;h``: ``hint all hover``
+  * ``;i``: ``hint images``
+  * ``;o``: ``hint links fill :open {hint-url}``
+  * ``;r``: ``hint --rapid links tab-bg``
+  * ``;t``: ``hint inputs``
+  * ``;y``: ``hint links yank``
+  * ``&lt;Alt-1&gt;``: ``tab-focus 1``
+  * ``&lt;Alt-2&gt;``: ``tab-focus 2``
+  * ``&lt;Alt-3&gt;``: ``tab-focus 3``
+  * ``&lt;Alt-4&gt;``: ``tab-focus 4``
+  * ``&lt;Alt-5&gt;``: ``tab-focus 5``
+  * ``&lt;Alt-6&gt;``: ``tab-focus 6``
+  * ``&lt;Alt-7&gt;``: ``tab-focus 7``
+  * ``&lt;Alt-8&gt;``: ``tab-focus 8``
+  * ``&lt;Alt-9&gt;``: ``tab-focus -1``
+  * ``&lt;Alt-m&gt;``: ``tab-mute``
+  * ``&lt;Ctrl-A&gt;``: ``navigate increment``
+  * ``&lt;Ctrl-Alt-p&gt;``: ``print``
+  * ``&lt;Ctrl-B&gt;``: ``scroll-page 0 -1``
+  * ``&lt;Ctrl-D&gt;``: ``scroll-page 0 0.5``
+  * ``&lt;Ctrl-F5&gt;``: ``reload -f``
+  * ``&lt;Ctrl-F&gt;``: ``scroll-page 0 1``
+  * ``&lt;Ctrl-N&gt;``: ``open -w``
+  * ``&lt;Ctrl-PgDown&gt;``: ``tab-next``
+  * ``&lt;Ctrl-PgUp&gt;``: ``tab-prev``
+  * ``&lt;Ctrl-Q&gt;``: ``quit``
+  * ``&lt;Ctrl-Return&gt;``: ``follow-selected -t``
+  * ``&lt;Ctrl-Shift-N&gt;``: ``open -p``
+  * ``&lt;Ctrl-Shift-T&gt;``: ``undo``
+  * ``&lt;Ctrl-Shift-Tab&gt;``: ``nop``
+  * ``&lt;Ctrl-Shift-W&gt;``: ``close``
+  * ``&lt;Ctrl-T&gt;``: ``open -t``
+  * ``&lt;Ctrl-Tab&gt;``: ``tab-focus last``
+  * ``&lt;Ctrl-U&gt;``: ``scroll-page 0 -0.5``
+  * ``&lt;Ctrl-V&gt;``: ``enter-mode passthrough``
+  * ``&lt;Ctrl-W&gt;``: ``tab-close``
+  * ``&lt;Ctrl-X&gt;``: ``navigate decrement``
+  * ``&lt;Ctrl-^&gt;``: ``tab-focus last``
+  * ``&lt;Ctrl-h&gt;``: ``home``
+  * ``&lt;Ctrl-p&gt;``: ``tab-pin``
+  * ``&lt;Ctrl-s&gt;``: ``stop``
+  * ``&lt;Escape&gt;``: ``clear-keychain ;; search ;; fullscreen --leave``
+  * ``&lt;F11&gt;``: ``fullscreen``
+  * ``&lt;F5&gt;``: ``reload``
+  * ``&lt;Return&gt;``: ``follow-selected``
+  * ``&lt;back&gt;``: ``back``
+  * ``&lt;forward&gt;``: ``forward``
+  * ``=``: ``zoom``
+  * ``?``: ``set-cmd-text ?``
+  * ``@``: ``run-macro``
+  * ``B``: ``set-cmd-text -s :quickmark-load -t``
+  * ``D``: ``tab-close -o``
+  * ``F``: ``hint all tab``
+  * ``G``: ``scroll-to-perc``
+  * ``H``: ``back``
+  * ``J``: ``tab-next``
+  * ``K``: ``tab-prev``
+  * ``L``: ``forward``
+  * ``M``: ``bookmark-add``
+  * ``N``: ``search-prev``
+  * ``O``: ``set-cmd-text -s :open -t``
+  * ``PP``: ``open -t -- {primary}``
+  * ``Pp``: ``open -t -- {clipboard}``
+  * ``R``: ``reload -f``
+  * ``Sb``: ``open qute://bookmarks#bookmarks``
+  * ``Sh``: ``open qute://history``
+  * ``Sq``: ``open qute://bookmarks``
+  * ``Ss``: ``open qute://settings``
+  * ``T``: ``tab-focus``
+  * ``ZQ``: ``quit``
+  * ``ZZ``: ``quit --save``
+  * ``[[``: ``navigate prev``
+  * ``]]``: ``navigate next``
+  * `````: ``enter-mode set_mark``
+  * ``ad``: ``download-cancel``
+  * ``b``: ``set-cmd-text -s :quickmark-load``
+  * ``cd``: ``download-clear``
+  * ``co``: ``tab-only``
+  * ``d``: ``tab-close``
+  * ``f``: ``hint``
+  * ``g$``: ``tab-focus -1``
+  * ``g0``: ``tab-focus 1``
+  * ``gB``: ``set-cmd-text -s :bookmark-load -t``
+  * ``gC``: ``tab-clone``
+  * ``gD``: ``tab-give``
+  * ``gO``: ``set-cmd-text :open -t -r {url:pretty}``
+  * ``gU``: ``navigate up -t``
+  * ``g^``: ``tab-focus 1``
+  * ``ga``: ``open -t``
+  * ``gb``: ``set-cmd-text -s :bookmark-load``
+  * ``gd``: ``download``
+  * ``gf``: ``view-source``
+  * ``gg``: ``scroll-to-perc 0``
+  * ``gi``: ``hint inputs --first``
+  * ``gl``: ``tab-move -``
+  * ``gm``: ``tab-move``
+  * ``go``: ``set-cmd-text :open {url:pretty}``
+  * ``gr``: ``tab-move +``
+  * ``gt``: ``set-cmd-text -s :buffer``
+  * ``gu``: ``navigate up``
+  * ``h``: ``scroll left``
+  * ``i``: ``enter-mode insert``
+  * ``j``: ``scroll down``
+  * ``k``: ``scroll up``
+  * ``l``: ``scroll right``
+  * ``m``: ``quickmark-save``
+  * ``n``: ``search-next``
+  * ``o``: ``set-cmd-text -s :open``
+  * ``pP``: ``open -- {primary}``
+  * ``pp``: ``open -- {clipboard}``
+  * ``q``: ``record-macro``
+  * ``r``: ``reload``
+  * ``sf``: ``save``
+  * ``sk``: ``set-cmd-text -s :bind``
+  * ``sl``: ``set-cmd-text -s :set -t``
+  * ``ss``: ``set-cmd-text -s :set``
+  * ``tIH``: ``config-cycle -p -u *://*.{url:host}/* content.images ;; reload``
+  * ``tIh``: ``config-cycle -p -u *://{url:host}/* content.images ;; reload``
+  * ``tIu``: ``config-cycle -p -u {url} content.images ;; reload``
+  * ``tPH``: ``config-cycle -p -u *://*.{url:host}/* content.plugins ;; reload``
+  * ``tPh``: ``config-cycle -p -u *://{url:host}/* content.plugins ;; reload``
+  * ``tPu``: ``config-cycle -p -u {url} content.plugins ;; reload``
+  * ``tSH``: ``config-cycle -p -u *://*.{url:host}/* content.javascript.enabled ;; reload``
+  * ``tSh``: ``config-cycle -p -u *://{url:host}/* content.javascript.enabled ;; reload``
+  * ``tSu``: ``config-cycle -p -u {url} content.javascript.enabled ;; reload``
+  * ``th``: ``back -t``
+  * ``tiH``: ``config-cycle -p -t -u *://*.{url:host}/* content.images ;; reload``
+  * ``tih``: ``config-cycle -p -t -u *://{url:host}/* content.images ;; reload``
+  * ``tiu``: ``config-cycle -p -t -u {url} content.images ;; reload``
+  * ``tl``: ``forward -t``
+  * ``tpH``: ``config-cycle -p -t -u *://*.{url:host}/* content.plugins ;; reload``
+  * ``tph``: ``config-cycle -p -t -u *://{url:host}/* content.plugins ;; reload``
+  * ``tpu``: ``config-cycle -p -t -u {url} content.plugins ;; reload``
+  * ``tsH``: ``config-cycle -p -t -u *://*.{url:host}/* content.javascript.enabled ;; reload``
+  * ``tsh``: ``config-cycle -p -t -u *://{url:host}/* content.javascript.enabled ;; reload``
+  * ``tsu``: ``config-cycle -p -t -u {url} content.javascript.enabled ;; reload``
+  * ``u``: ``undo``
+  * ``v``: ``enter-mode caret``
+  * ``wB``: ``set-cmd-text -s :bookmark-load -w``
+  * ``wO``: ``set-cmd-text :open -w {url:pretty}``
+  * ``wP``: ``open -w -- {primary}``
+  * ``wb``: ``set-cmd-text -s :quickmark-load -w``
+  * ``wf``: ``hint all window``
+  * ``wh``: ``back -w``
+  * ``wi``: ``inspector``
+  * ``wl``: ``forward -w``
+  * ``wo``: ``set-cmd-text -s :open -w``
+  * ``wp``: ``open -w -- {clipboard}``
+  * ``xO``: ``set-cmd-text :open -b -r {url:pretty}``
+  * ``xo``: ``set-cmd-text -s :open -b``
+  * ``yD``: ``yank domain -s``
+  * ``yM``: ``yank markdown -s``
+  * ``yP``: ``yank pretty-url -s``
+  * ``yT``: ``yank title -s``
+  * ``yY``: ``yank -s``
+  * ``yd``: ``yank domain``
+  * ``ym``: ``yank markdown``
+  * ``yp``: ``yank pretty-url``
+  * ``yt``: ``yank title``
+  * ``yy``: ``yank``
+  * ``{{``: ``navigate prev -t``
+  * ``}}``: ``navigate next -t``
+* ``passthrough``:
 
-* +pass:[&lt;Shift-Escape&gt;]+: +pass:[leave-mode]+
-- +pass:[prompt]+:
+  * ``&lt;Shift-Escape&gt;``: ``leave-mode``
+* ``prompt``:
 
-* +pass:[&lt;Alt-B&gt;]+: +pass:[rl-backward-word]+
-* +pass:[&lt;Alt-Backspace&gt;]+: +pass:[rl-backward-kill-word]+
-* +pass:[&lt;Alt-D&gt;]+: +pass:[rl-kill-word]+
-* +pass:[&lt;Alt-F&gt;]+: +pass:[rl-forward-word]+
-* +pass:[&lt;Alt-Shift-Y&gt;]+: +pass:[prompt-yank --sel]+
-* +pass:[&lt;Alt-Y&gt;]+: +pass:[prompt-yank]+
-* +pass:[&lt;Ctrl-?&gt;]+: +pass:[rl-delete-char]+
-* +pass:[&lt;Ctrl-A&gt;]+: +pass:[rl-beginning-of-line]+
-* +pass:[&lt;Ctrl-B&gt;]+: +pass:[rl-backward-char]+
-* +pass:[&lt;Ctrl-E&gt;]+: +pass:[rl-end-of-line]+
-* +pass:[&lt;Ctrl-F&gt;]+: +pass:[rl-forward-char]+
-* +pass:[&lt;Ctrl-H&gt;]+: +pass:[rl-backward-delete-char]+
-* +pass:[&lt;Ctrl-K&gt;]+: +pass:[rl-kill-line]+
-* +pass:[&lt;Ctrl-P&gt;]+: +pass:[prompt-open-download --pdfjs]+
-* +pass:[&lt;Ctrl-U&gt;]+: +pass:[rl-unix-line-discard]+
-* +pass:[&lt;Ctrl-W&gt;]+: +pass:[rl-unix-word-rubout]+
-* +pass:[&lt;Ctrl-X&gt;]+: +pass:[prompt-open-download]+
-* +pass:[&lt;Ctrl-Y&gt;]+: +pass:[rl-yank]+
-* +pass:[&lt;Down&gt;]+: +pass:[prompt-item-focus next]+
-* +pass:[&lt;Escape&gt;]+: +pass:[leave-mode]+
-* +pass:[&lt;Return&gt;]+: +pass:[prompt-accept]+
-* +pass:[&lt;Shift-Tab&gt;]+: +pass:[prompt-item-focus prev]+
-* +pass:[&lt;Tab&gt;]+: +pass:[prompt-item-focus next]+
-* +pass:[&lt;Up&gt;]+: +pass:[prompt-item-focus prev]+
-- +pass:[register]+:
+  * ``&lt;Alt-B&gt;``: ``rl-backward-word``
+  * ``&lt;Alt-Backspace&gt;``: ``rl-backward-kill-word``
+  * ``&lt;Alt-D&gt;``: ``rl-kill-word``
+  * ``&lt;Alt-F&gt;``: ``rl-forward-word``
+  * ``&lt;Alt-Shift-Y&gt;``: ``prompt-yank --sel``
+  * ``&lt;Alt-Y&gt;``: ``prompt-yank``
+  * ``&lt;Ctrl-?&gt;``: ``rl-delete-char``
+  * ``&lt;Ctrl-A&gt;``: ``rl-beginning-of-line``
+  * ``&lt;Ctrl-B&gt;``: ``rl-backward-char``
+  * ``&lt;Ctrl-E&gt;``: ``rl-end-of-line``
+  * ``&lt;Ctrl-F&gt;``: ``rl-forward-char``
+  * ``&lt;Ctrl-H&gt;``: ``rl-backward-delete-char``
+  * ``&lt;Ctrl-K&gt;``: ``rl-kill-line``
+  * ``&lt;Ctrl-P&gt;``: ``prompt-open-download --pdfjs``
+  * ``&lt;Ctrl-U&gt;``: ``rl-unix-line-discard``
+  * ``&lt;Ctrl-W&gt;``: ``rl-unix-word-rubout``
+  * ``&lt;Ctrl-X&gt;``: ``prompt-open-download``
+  * ``&lt;Ctrl-Y&gt;``: ``rl-yank``
+  * ``&lt;Down&gt;``: ``prompt-item-focus next``
+  * ``&lt;Escape&gt;``: ``leave-mode``
+  * ``&lt;Return&gt;``: ``prompt-accept``
+  * ``&lt;Shift-Tab&gt;``: ``prompt-item-focus prev``
+  * ``&lt;Tab&gt;``: ``prompt-item-focus next``
+  * ``&lt;Up&gt;``: ``prompt-item-focus prev``
+* ``register``:
 
-* +pass:[&lt;Escape&gt;]+: +pass:[leave-mode]+
-- +pass:[yesno]+:
+  * ``&lt;Escape&gt;``: ``leave-mode``
+* ``yesno``:
 
-* +pass:[&lt;Alt-Shift-Y&gt;]+: +pass:[prompt-yank --sel]+
-* +pass:[&lt;Alt-Y&gt;]+: +pass:[prompt-yank]+
-* +pass:[&lt;Escape&gt;]+: +pass:[leave-mode]+
-* +pass:[&lt;Return&gt;]+: +pass:[prompt-accept]+
-* +pass:[n]+: +pass:[prompt-accept no]+
-* +pass:[y]+: +pass:[prompt-accept yes]+
+  * ``&lt;Alt-Shift-Y&gt;``: ``prompt-yank --sel``
+  * ``&lt;Alt-Y&gt;``: ``prompt-yank``
+  * ``&lt;Escape&gt;``: ``leave-mode``
+  * ``&lt;Return&gt;``: ``prompt-accept``
+  * ``n``: ``prompt-accept no``
+  * ``y``: ``prompt-accept yes``
 
-[[bindings.key_mappings]]
-=== bindings.key_mappings
+_bindings.key_mappings:
+bindings.key_mappings
+^^^^^^^^^^^^^^^^^^^^^
 This setting can be used to map keys to other keys.
 When the key used as dictionary-key is pressed, the binding for the key used as dictionary-value is invoked instead.
 This is useful for global remappings of keys, for example to map Ctrl-[ to Escape.
@@ -703,192 +710,216 @@ Note that when a key is bound (via `bindings.default` or `bindings.commands`), t
 
 Type: <<types,Dict>>
 
-Default:
+Default: 
 
-- +pass:[&lt;Ctrl-6&gt;]+: +pass:[&lt;Ctrl-^&gt;]+
-- +pass:[&lt;Ctrl-Enter&gt;]+: +pass:[&lt;Ctrl-Return&gt;]+
-- +pass:[&lt;Ctrl-J&gt;]+: +pass:[&lt;Return&gt;]+
-- +pass:[&lt;Ctrl-M&gt;]+: +pass:[&lt;Return&gt;]+
-- +pass:[&lt;Ctrl-[&gt;]+: +pass:[&lt;Escape&gt;]+
-- +pass:[&lt;Enter&gt;]+: +pass:[&lt;Return&gt;]+
-- +pass:[&lt;Shift-Enter&gt;]+: +pass:[&lt;Return&gt;]+
-- +pass:[&lt;Shift-Return&gt;]+: +pass:[&lt;Return&gt;]+
+* ``&lt;Ctrl-6&gt;``: ``&lt;Ctrl-^&gt;``
+* ``&lt;Ctrl-Enter&gt;``: ``&lt;Ctrl-Return&gt;``
+* ``&lt;Ctrl-J&gt;``: ``&lt;Return&gt;``
+* ``&lt;Ctrl-M&gt;``: ``&lt;Return&gt;``
+* ``&lt;Ctrl-[&gt;``: ``&lt;Escape&gt;``
+* ``&lt;Enter&gt;``: ``&lt;Return&gt;``
+* ``&lt;Shift-Enter&gt;``: ``&lt;Return&gt;``
+* ``&lt;Shift-Return&gt;``: ``&lt;Return&gt;``
 
-[[colors.completion.category.bg]]
-=== colors.completion.category.bg
+_colors.completion.category.bg:
+colors.completion.category.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the completion widget category headers.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)]+
+Default: ``qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)``
 
-[[colors.completion.category.border.bottom]]
-=== colors.completion.category.border.bottom
+_colors.completion.category.border.bottom:
+colors.completion.category.border.bottom
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Bottom border color of the completion widget category headers.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.completion.category.border.top]]
-=== colors.completion.category.border.top
+_colors.completion.category.border.top:
+colors.completion.category.border.top
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Top border color of the completion widget category headers.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.completion.category.fg]]
-=== colors.completion.category.fg
+_colors.completion.category.fg:
+colors.completion.category.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of completion widget category headers.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.completion.even.bg]]
-=== colors.completion.even.bg
+_colors.completion.even.bg:
+colors.completion.even.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the completion widget for even rows.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#333333]+
+Default: ``#333333``
 
-[[colors.completion.fg]]
-=== colors.completion.fg
+_colors.completion.fg:
+colors.completion.fg
+^^^^^^^^^^^^^^^^^^^^
 Text color of the completion widget.
 May be a single color to use for all columns or a list of three colors, one for each column.
 
 Type: <<types,List of QtColor&#44; or QtColor>>
 
-Default:
+Default: 
 
-- +pass:[white]+
-- +pass:[white]+
-- +pass:[white]+
+* ``white``
+* ``white``
+* ``white``
 
-[[colors.completion.item.selected.bg]]
-=== colors.completion.item.selected.bg
+
+
+_colors.completion.item.selected.bg:
+colors.completion.item.selected.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the selected completion item.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#e8c000]+
+Default: ``#e8c000``
 
-[[colors.completion.item.selected.border.bottom]]
-=== colors.completion.item.selected.border.bottom
+_colors.completion.item.selected.border.bottom:
+colors.completion.item.selected.border.bottom
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Bottom border color of the selected completion item.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#bbbb00]+
+Default: ``#bbbb00``
 
-[[colors.completion.item.selected.border.top]]
-=== colors.completion.item.selected.border.top
+_colors.completion.item.selected.border.top:
+colors.completion.item.selected.border.top
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Top border color of the completion widget category headers.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#bbbb00]+
+Default: ``#bbbb00``
 
-[[colors.completion.item.selected.fg]]
-=== colors.completion.item.selected.fg
+_colors.completion.item.selected.fg:
+colors.completion.item.selected.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the selected completion item.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.completion.match.fg]]
-=== colors.completion.match.fg
+_colors.completion.match.fg:
+colors.completion.match.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the matched text in the completion.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[#ff4444]+
+Default: ``#ff4444``
 
-[[colors.completion.odd.bg]]
-=== colors.completion.odd.bg
+_colors.completion.odd.bg:
+colors.completion.odd.bg
+^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the completion widget for odd rows.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#444444]+
+Default: ``#444444``
 
-[[colors.completion.scrollbar.bg]]
-=== colors.completion.scrollbar.bg
+_colors.completion.scrollbar.bg:
+colors.completion.scrollbar.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color of the scrollbar in the completion view.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#333333]+
+Default: ``#333333``
 
-[[colors.completion.scrollbar.fg]]
-=== colors.completion.scrollbar.fg
+_colors.completion.scrollbar.fg:
+colors.completion.scrollbar.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color of the scrollbar handle in the completion view.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.downloads.bar.bg]]
-=== colors.downloads.bar.bg
+_colors.downloads.bar.bg:
+colors.downloads.bar.bg
+^^^^^^^^^^^^^^^^^^^^^^^
 Background color for the download bar.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.downloads.error.bg]]
-=== colors.downloads.error.bg
+_colors.downloads.error.bg:
+colors.downloads.error.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color for downloads with errors.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[red]+
+Default: ``red``
 
-[[colors.downloads.error.fg]]
-=== colors.downloads.error.fg
+_colors.downloads.error.fg:
+colors.downloads.error.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color for downloads with errors.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.downloads.start.bg]]
-=== colors.downloads.start.bg
+_colors.downloads.start.bg:
+colors.downloads.start.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient start for download backgrounds.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[#0000aa]+
+Default: ``#0000aa``
 
-[[colors.downloads.start.fg]]
-=== colors.downloads.start.fg
+_colors.downloads.start.fg:
+colors.downloads.start.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient start for download text.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.downloads.stop.bg]]
-=== colors.downloads.stop.bg
+_colors.downloads.stop.bg:
+colors.downloads.stop.bg
+^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient stop for download backgrounds.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[#00aa00]+
+Default: ``#00aa00``
 
-[[colors.downloads.stop.fg]]
-=== colors.downloads.stop.fg
+_colors.downloads.stop.fg:
+colors.downloads.stop.fg
+^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient end for download text.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.downloads.system.bg]]
-=== colors.downloads.system.bg
+_colors.downloads.system.bg:
+colors.downloads.system.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient interpolation system for download backgrounds.
 
 Type: <<types,ColorSystem>>
@@ -900,10 +931,11 @@ Valid values:
  * +hsl+: Interpolate in the HSL color system.
  * +none+: Don't show a gradient.
 
-Default: +pass:[rgb]+
+Default: ``rgb``
 
-[[colors.downloads.system.fg]]
-=== colors.downloads.system.fg
+_colors.downloads.system.fg:
+colors.downloads.system.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient interpolation system for download text.
 
 Type: <<types,ColorSystem>>
@@ -915,395 +947,444 @@ Valid values:
  * +hsl+: Interpolate in the HSL color system.
  * +none+: Don't show a gradient.
 
-Default: +pass:[rgb]+
+Default: ``rgb``
 
-[[colors.hints.bg]]
-=== colors.hints.bg
+_colors.hints.bg:
+colors.hints.bg
+^^^^^^^^^^^^^^^
 Background color for hints.
 Note that you can use a `rgba(...)` value for transparency.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))]+
+Default: ``qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))``
 
-[[colors.hints.fg]]
-=== colors.hints.fg
+_colors.hints.fg:
+colors.hints.fg
+^^^^^^^^^^^^^^^
 Font color for hints.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.hints.match.fg]]
-=== colors.hints.match.fg
+_colors.hints.match.fg:
+colors.hints.match.fg
+^^^^^^^^^^^^^^^^^^^^^
 Font color for the matched part of hints.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[green]+
+Default: ``green``
 
-[[colors.keyhint.bg]]
-=== colors.keyhint.bg
+_colors.keyhint.bg:
+colors.keyhint.bg
+^^^^^^^^^^^^^^^^^
 Background color of the keyhint widget.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[rgba(0, 0, 0, 80%)]+
+Default: ``rgba(0, 0, 0, 80%)``
 
-[[colors.keyhint.fg]]
-=== colors.keyhint.fg
+_colors.keyhint.fg:
+colors.keyhint.fg
+^^^^^^^^^^^^^^^^^
 Text color for the keyhint widget.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#FFFFFF]+
+Default: ``#FFFFFF``
 
-[[colors.keyhint.suffix.fg]]
-=== colors.keyhint.suffix.fg
+_colors.keyhint.suffix.fg:
+colors.keyhint.suffix.fg
+^^^^^^^^^^^^^^^^^^^^^^^^
 Highlight color for keys to complete the current keychain.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#FFFF00]+
+Default: ``#FFFF00``
 
-[[colors.messages.error.bg]]
-=== colors.messages.error.bg
+_colors.messages.error.bg:
+colors.messages.error.bg
+^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of an error message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[red]+
+Default: ``red``
 
-[[colors.messages.error.border]]
-=== colors.messages.error.border
+_colors.messages.error.border:
+colors.messages.error.border
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Border color of an error message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#bb0000]+
+Default: ``#bb0000``
 
-[[colors.messages.error.fg]]
-=== colors.messages.error.fg
+_colors.messages.error.fg:
+colors.messages.error.fg
+^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of an error message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.messages.info.bg]]
-=== colors.messages.info.bg
+_colors.messages.info.bg:
+colors.messages.info.bg
+^^^^^^^^^^^^^^^^^^^^^^^
 Background color of an info message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.messages.info.border]]
-=== colors.messages.info.border
+_colors.messages.info.border:
+colors.messages.info.border
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Border color of an info message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#333333]+
+Default: ``#333333``
 
-[[colors.messages.info.fg]]
-=== colors.messages.info.fg
+_colors.messages.info.fg:
+colors.messages.info.fg
+^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of an info message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.messages.warning.bg]]
-=== colors.messages.warning.bg
+_colors.messages.warning.bg:
+colors.messages.warning.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of a warning message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[darkorange]+
+Default: ``darkorange``
 
-[[colors.messages.warning.border]]
-=== colors.messages.warning.border
+_colors.messages.warning.border:
+colors.messages.warning.border
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Border color of a warning message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#d47300]+
+Default: ``#d47300``
 
-[[colors.messages.warning.fg]]
-=== colors.messages.warning.fg
+_colors.messages.warning.fg:
+colors.messages.warning.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of a warning message.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.prompts.bg]]
-=== colors.prompts.bg
+_colors.prompts.bg:
+colors.prompts.bg
+^^^^^^^^^^^^^^^^^
 Background color for prompts.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#444444]+
+Default: ``#444444``
 
-[[colors.prompts.border]]
-=== colors.prompts.border
+_colors.prompts.border:
+colors.prompts.border
+^^^^^^^^^^^^^^^^^^^^^
 Border used around UI elements in prompts.
 
 Type: <<types,String>>
 
-Default: +pass:[1px solid gray]+
+Default: ``1px solid gray``
 
-[[colors.prompts.fg]]
-=== colors.prompts.fg
+_colors.prompts.fg:
+colors.prompts.fg
+^^^^^^^^^^^^^^^^^
 Foreground color for prompts.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.prompts.selected.bg]]
-=== colors.prompts.selected.bg
+_colors.prompts.selected.bg:
+colors.prompts.selected.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color for the selected item in filename prompts.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[grey]+
+Default: ``grey``
 
-[[colors.statusbar.caret.bg]]
-=== colors.statusbar.caret.bg
+_colors.statusbar.caret.bg:
+colors.statusbar.caret.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar in caret mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[purple]+
+Default: ``purple``
 
-[[colors.statusbar.caret.fg]]
-=== colors.statusbar.caret.fg
+_colors.statusbar.caret.fg:
+colors.statusbar.caret.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar in caret mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.caret.selection.bg]]
-=== colors.statusbar.caret.selection.bg
+_colors.statusbar.caret.selection.bg:
+colors.statusbar.caret.selection.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar in caret mode with a selection.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#a12dff]+
+Default: ``#a12dff``
 
-[[colors.statusbar.caret.selection.fg]]
-=== colors.statusbar.caret.selection.fg
+_colors.statusbar.caret.selection.fg:
+colors.statusbar.caret.selection.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar in caret mode with a selection.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.command.bg]]
-=== colors.statusbar.command.bg
+_colors.statusbar.command.bg:
+colors.statusbar.command.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar in command mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.statusbar.command.fg]]
-=== colors.statusbar.command.fg
+_colors.statusbar.command.fg:
+colors.statusbar.command.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar in command mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.command.private.bg]]
-=== colors.statusbar.command.private.bg
+_colors.statusbar.command.private.bg:
+colors.statusbar.command.private.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar in private browsing + command mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[grey]+
+Default: ``grey``
 
-[[colors.statusbar.command.private.fg]]
-=== colors.statusbar.command.private.fg
+_colors.statusbar.command.private.fg:
+colors.statusbar.command.private.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar in private browsing + command mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.insert.bg]]
-=== colors.statusbar.insert.bg
+_colors.statusbar.insert.bg:
+colors.statusbar.insert.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar in insert mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[darkgreen]+
+Default: ``darkgreen``
 
-[[colors.statusbar.insert.fg]]
-=== colors.statusbar.insert.fg
+_colors.statusbar.insert.fg:
+colors.statusbar.insert.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar in insert mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.normal.bg]]
-=== colors.statusbar.normal.bg
+_colors.statusbar.normal.bg:
+colors.statusbar.normal.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.statusbar.normal.fg]]
-=== colors.statusbar.normal.fg
+_colors.statusbar.normal.fg:
+colors.statusbar.normal.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.passthrough.bg]]
-=== colors.statusbar.passthrough.bg
+_colors.statusbar.passthrough.bg:
+colors.statusbar.passthrough.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar in passthrough mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[darkblue]+
+Default: ``darkblue``
 
-[[colors.statusbar.passthrough.fg]]
-=== colors.statusbar.passthrough.fg
+_colors.statusbar.passthrough.fg:
+colors.statusbar.passthrough.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar in passthrough mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.private.bg]]
-=== colors.statusbar.private.bg
+_colors.statusbar.private.bg:
+colors.statusbar.private.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the statusbar in private browsing mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[#666666]+
+Default: ``#666666``
 
-[[colors.statusbar.private.fg]]
-=== colors.statusbar.private.fg
+_colors.statusbar.private.fg:
+colors.statusbar.private.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the statusbar in private browsing mode.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.progress.bg]]
-=== colors.statusbar.progress.bg
+_colors.statusbar.progress.bg:
+colors.statusbar.progress.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of the progress bar.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.url.error.fg]]
-=== colors.statusbar.url.error.fg
+_colors.statusbar.url.error.fg:
+colors.statusbar.url.error.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the URL in the statusbar on error.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[orange]+
+Default: ``orange``
 
-[[colors.statusbar.url.fg]]
-=== colors.statusbar.url.fg
+_colors.statusbar.url.fg:
+colors.statusbar.url.fg
+^^^^^^^^^^^^^^^^^^^^^^^
 Default foreground color of the URL in the statusbar.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.url.hover.fg]]
-=== colors.statusbar.url.hover.fg
+_colors.statusbar.url.hover.fg:
+colors.statusbar.url.hover.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the URL in the statusbar for hovered links.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[aqua]+
+Default: ``aqua``
 
-[[colors.statusbar.url.success.http.fg]]
-=== colors.statusbar.url.success.http.fg
+_colors.statusbar.url.success.http.fg:
+colors.statusbar.url.success.http.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the URL in the statusbar on successful load (http).
 
 Type: <<types,QssColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.statusbar.url.success.https.fg]]
-=== colors.statusbar.url.success.https.fg
+_colors.statusbar.url.success.https.fg:
+colors.statusbar.url.success.https.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the URL in the statusbar on successful load (https).
 
 Type: <<types,QssColor>>
 
-Default: +pass:[lime]+
+Default: ``lime``
 
-[[colors.statusbar.url.warn.fg]]
-=== colors.statusbar.url.warn.fg
+_colors.statusbar.url.warn.fg:
+colors.statusbar.url.warn.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of the URL in the statusbar when there's a warning.
 
 Type: <<types,QssColor>>
 
-Default: +pass:[yellow]+
+Default: ``yellow``
 
-[[colors.tabs.bar.bg]]
-=== colors.tabs.bar.bg
+_colors.tabs.bar.bg:
+colors.tabs.bar.bg
+^^^^^^^^^^^^^^^^^^
 Background color of the tab bar.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[#555555]+
+Default: ``#555555``
 
-[[colors.tabs.even.bg]]
-=== colors.tabs.even.bg
+_colors.tabs.even.bg:
+colors.tabs.even.bg
+^^^^^^^^^^^^^^^^^^^
 Background color of unselected even tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[darkgrey]+
+Default: ``darkgrey``
 
-[[colors.tabs.even.fg]]
-=== colors.tabs.even.fg
+_colors.tabs.even.fg:
+colors.tabs.even.fg
+^^^^^^^^^^^^^^^^^^^
 Foreground color of unselected even tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.tabs.indicator.error]]
-=== colors.tabs.indicator.error
+_colors.tabs.indicator.error:
+colors.tabs.indicator.error
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color for the tab indicator on errors.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[#ff0000]+
+Default: ``#ff0000``
 
-[[colors.tabs.indicator.start]]
-=== colors.tabs.indicator.start
+_colors.tabs.indicator.start:
+colors.tabs.indicator.start
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient start for the tab indicator.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[#0000aa]+
+Default: ``#0000aa``
 
-[[colors.tabs.indicator.stop]]
-=== colors.tabs.indicator.stop
+_colors.tabs.indicator.stop:
+colors.tabs.indicator.stop
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient end for the tab indicator.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[#00aa00]+
+Default: ``#00aa00``
 
-[[colors.tabs.indicator.system]]
-=== colors.tabs.indicator.system
+_colors.tabs.indicator.system:
+colors.tabs.indicator.system
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Color gradient interpolation system for the tab indicator.
 
 Type: <<types,ColorSystem>>
@@ -1315,99 +1396,111 @@ Valid values:
  * +hsl+: Interpolate in the HSL color system.
  * +none+: Don't show a gradient.
 
-Default: +pass:[rgb]+
+Default: ``rgb``
 
-[[colors.tabs.odd.bg]]
-=== colors.tabs.odd.bg
+_colors.tabs.odd.bg:
+colors.tabs.odd.bg
+^^^^^^^^^^^^^^^^^^
 Background color of unselected odd tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[grey]+
+Default: ``grey``
 
-[[colors.tabs.odd.fg]]
-=== colors.tabs.odd.fg
+_colors.tabs.odd.fg:
+colors.tabs.odd.fg
+^^^^^^^^^^^^^^^^^^
 Foreground color of unselected odd tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.tabs.selected.even.bg]]
-=== colors.tabs.selected.even.bg
+_colors.tabs.selected.even.bg:
+colors.tabs.selected.even.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of selected even tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.tabs.selected.even.fg]]
-=== colors.tabs.selected.even.fg
+_colors.tabs.selected.even.fg:
+colors.tabs.selected.even.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of selected even tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.tabs.selected.odd.bg]]
-=== colors.tabs.selected.odd.bg
+_colors.tabs.selected.odd.bg:
+colors.tabs.selected.odd.bg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Background color of selected odd tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[black]+
+Default: ``black``
 
-[[colors.tabs.selected.odd.fg]]
-=== colors.tabs.selected.odd.fg
+_colors.tabs.selected.odd.fg:
+colors.tabs.selected.odd.fg
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Foreground color of selected odd tabs.
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[colors.webpage.bg]]
-=== colors.webpage.bg
+_colors.webpage.bg:
+colors.webpage.bg
+^^^^^^^^^^^^^^^^^
 Background color for webpages if unset (or empty to use the theme's color).
 
 Type: <<types,QtColor>>
 
-Default: +pass:[white]+
+Default: ``white``
 
-[[completion.cmd_history_max_items]]
-=== completion.cmd_history_max_items
+_completion.cmd_history_max_items:
+completion.cmd_history_max_items
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Number of commands to save in the command history.
 0: no history / -1: unlimited
 
 Type: <<types,Int>>
 
-Default: +pass:[100]+
+Default: ``100``
 
-[[completion.delay]]
-=== completion.delay
+_completion.delay:
+completion.delay
+^^^^^^^^^^^^^^^^
 Delay (in milliseconds) before updating completions after typing a character.
 
 Type: <<types,Int>>
 
-Default: +pass:[0]+
+Default: ``0``
 
-[[completion.height]]
-=== completion.height
+_completion.height:
+completion.height
+^^^^^^^^^^^^^^^^^
 Height (in pixels or as percentage of the window) of the completion.
 
 Type: <<types,PercOrInt>>
 
-Default: +pass:[50%]+
+Default: ``50%``
 
-[[completion.min_chars]]
-=== completion.min_chars
+_completion.min_chars:
+completion.min_chars
+^^^^^^^^^^^^^^^^^^^^
 Minimum amount of characters needed to update completions.
 
 Type: <<types,Int>>
 
-Default: +pass:[1]+
+Default: ``1``
 
-[[completion.open_categories]]
-=== completion.open_categories
+_completion.open_categories:
+completion.open_categories
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Which categories to show (in which order) in the :open completion.
 
 Type: <<types,FlagList>>
@@ -1419,39 +1512,45 @@ Valid values:
  * +bookmarks+
  * +history+
 
-Default:
+Default: 
 
-- +pass:[searchengines]+
-- +pass:[quickmarks]+
-- +pass:[bookmarks]+
-- +pass:[history]+
+* ``searchengines``
+* ``quickmarks``
+* ``bookmarks``
+* ``history``
 
-[[completion.quick]]
-=== completion.quick
+
+
+_completion.quick:
+completion.quick
+^^^^^^^^^^^^^^^^
 Move on to the next part when there's only one possible completion left.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[completion.scrollbar.padding]]
-=== completion.scrollbar.padding
+_completion.scrollbar.padding:
+completion.scrollbar.padding
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Padding (in pixels) of the scrollbar handle in the completion window.
 
 Type: <<types,Int>>
 
-Default: +pass:[2]+
+Default: ``2``
 
-[[completion.scrollbar.width]]
-=== completion.scrollbar.width
+_completion.scrollbar.width:
+completion.scrollbar.width
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Width (in pixels) of the scrollbar in the completion window.
 
 Type: <<types,Int>>
 
-Default: +pass:[12]+
+Default: ``12``
 
-[[completion.show]]
-=== completion.show
+_completion.show:
+completion.show
+^^^^^^^^^^^^^^^
 When to show the autocompletion window.
 
 Type: <<types,String>>
@@ -1462,34 +1561,38 @@ Valid values:
  * +auto+: Whenever a completion is requested.
  * +never+: Never.
 
-Default: +pass:[always]+
+Default: ``always``
 
-[[completion.shrink]]
-=== completion.shrink
+_completion.shrink:
+completion.shrink
+^^^^^^^^^^^^^^^^^
 Shrink the completion to be smaller than the configured size if there are no scrollbars.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[completion.timestamp_format]]
-=== completion.timestamp_format
+_completion.timestamp_format:
+completion.timestamp_format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Format of timestamps (e.g. for the history completion).
 
 Type: <<types,TimestampTemplate>>
 
-Default: +pass:[%Y-%m-%d]+
+Default: ``%Y-%m-%d``
 
-[[completion.use_best_match]]
-=== completion.use_best_match
+_completion.use_best_match:
+completion.use_best_match
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Execute the best-matching command on a partial match.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[completion.web_history.exclude]]
-=== completion.web_history.exclude
+_completion.web_history.exclude:
+completion.web_history.exclude
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 A list of patterns which should not be shown in the history.
 This only affects the completion. Matching URLs are still saved in the history (and visible on the qute://history page), but hidden in the completion.
 Changing this setting will cause the completion history to be regenerated on the next start, which will take a short while.
@@ -1499,17 +1602,19 @@ Type: <<types,List of UrlPattern>>
 
 Default: empty
 
-[[completion.web_history.max_items]]
-=== completion.web_history.max_items
+_completion.web_history.max_items:
+completion.web_history.max_items
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Number of URLs to show in the web history.
 0: no history / -1: unlimited
 
 Type: <<types,Int>>
 
-Default: +pass:[-1]+
+Default: ``-1``
 
-[[confirm_quit]]
-=== confirm_quit
+_confirm_quit:
+confirm_quit
+^^^^^^^^^^^^
 Require a confirmation before quitting the application.
 
 Type: <<types,ConfirmQuit>>
@@ -1521,12 +1626,15 @@ Valid values:
  * +downloads+: Show a confirmation if downloads are running
  * +never+: Never show a confirmation.
 
-Default:
+Default: 
 
-- +pass:[never]+
+* ``never``
 
-[[content.autoplay]]
-=== content.autoplay
+
+
+_content.autoplay:
+content.autoplay
+^^^^^^^^^^^^^^^^
 Automatically start playing `<video>` elements.
 Note: On Qt < 5.11, this option needs a restart and does not support URL patterns.
 
@@ -1534,14 +1642,15 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
 On QtWebEngine, this setting requires Qt 5.10 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-[[content.cache.appcache]]
-=== content.cache.appcache
+_content.cache.appcache:
+content.cache.appcache
+^^^^^^^^^^^^^^^^^^^^^^
 Enable support for the HTML 5 web application cache feature.
 An application cache acts like an HTTP cache in some sense. For documents that use the application cache via JavaScript, the loader engine will first ask the application cache for the contents, before hitting the network.
 
@@ -1549,24 +1658,26 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
 This setting is only available with the QtWebKit backend.
 
-[[content.cache.maximum_pages]]
-=== content.cache.maximum_pages
+_content.cache.maximum_pages:
+content.cache.maximum_pages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Maximum number of pages to hold in the global memory page cache.
 The page cache allows for a nicer user experience when navigating forth or back to pages in the forward/back history, by pausing and resuming up to _n_ pages.
 For more information about the feature, please refer to: http://webkit.org/blog/427/webkit-page-cache-i-the-basics/
 
 Type: <<types,Int>>
 
-Default: +pass:[0]+
+Default: ``0``
 
 This setting is only available with the QtWebKit backend.
 
-[[content.cache.size]]
-=== content.cache.size
+_content.cache.size:
+content.cache.size
+^^^^^^^^^^^^^^^^^^
 Size (in bytes) of the HTTP network cache. Null to use the default value.
 With QtWebEngine, the maximum supported value is 2147483647 (~2 GB).
 
@@ -1574,20 +1685,22 @@ Type: <<types,Int>>
 
 Default: empty
 
-[[content.canvas_reading]]
-=== content.canvas_reading
+_content.canvas_reading:
+content.canvas_reading
+^^^^^^^^^^^^^^^^^^^^^^
 Allow websites to read canvas elements.
 Note this is needed for some websites to work properly.
 This setting requires a restart.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
 This setting is only available with the QtWebEngine backend.
 
-[[content.cookies.accept]]
-=== content.cookies.accept
+_content.cookies.accept:
+content.cookies.accept
+^^^^^^^^^^^^^^^^^^^^^^
 Which cookies to accept.
 
 Type: <<types,String>>
@@ -1599,30 +1712,33 @@ Valid values:
  * +no-unknown-3rdparty+: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
  * +never+: Don't accept cookies at all.
 
-Default: +pass:[all]+
+Default: ``all``
 
 On QtWebEngine, this setting requires Qt 5.11 or newer.
 
-[[content.cookies.store]]
-=== content.cookies.store
+_content.cookies.store:
+content.cookies.store
+^^^^^^^^^^^^^^^^^^^^^
 Store cookies.
 Note this option needs a restart with QtWebEngine on Qt < 5.9.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.default_encoding]]
-=== content.default_encoding
+_content.default_encoding:
+content.default_encoding
+^^^^^^^^^^^^^^^^^^^^^^^^
 Default encoding to use for websites.
-The encoding must be a string describing an encoding such as _utf-8_, _iso-8859-1_, etc.
+The encoding must be a string describing an encoding such as *utf-8*, *iso-8859-1*, etc.
 
 Type: <<types,String>>
 
-Default: +pass:[iso-8859-1]+
+Default: ``iso-8859-1``
 
-[[content.desktop_capture]]
-=== content.desktop_capture
+_content.desktop_capture:
+content.desktop_capture
+^^^^^^^^^^^^^^^^^^^^^^^
 Allow websites to share screen content.
 On Qt < 5.10, a dialog box is always displayed, even if this is set to "true".
 
@@ -1636,22 +1752,24 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
-[[content.dns_prefetch]]
-=== content.dns_prefetch
+_content.dns_prefetch:
+content.dns_prefetch
+^^^^^^^^^^^^^^^^^^^^
 Try to pre-fetch DNS entries to speed up browsing.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
 This setting is only available with the QtWebKit backend.
 
-[[content.frame_flattening]]
-=== content.frame_flattening
+_content.frame_flattening:
+content.frame_flattening
+^^^^^^^^^^^^^^^^^^^^^^^^
 Expand each subframe to its contents.
 This will flatten all the frames to become one scrollable page.
 
@@ -1659,12 +1777,13 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
 This setting is only available with the QtWebKit backend.
 
-[[content.geolocation]]
-=== content.geolocation
+_content.geolocation:
+content.geolocation
+^^^^^^^^^^^^^^^^^^^
 Allow websites to request geolocations.
 
 This setting supports URL patterns.
@@ -1677,10 +1796,11 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
-[[content.headers.accept_language]]
-=== content.headers.accept_language
+_content.headers.accept_language:
+content.headers.accept_language
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Value to send in the `Accept-Language` header.
 Note that the value read from JavaScript is always the global value.
 
@@ -1688,10 +1808,11 @@ This setting supports URL patterns.
 
 Type: <<types,String>>
 
-Default: +pass:[en-US,en]+
+Default: ``en-US,en``
 
-[[content.headers.custom]]
-=== content.headers.custom
+_content.headers.custom:
+content.headers.custom
+^^^^^^^^^^^^^^^^^^^^^^
 Custom headers for qutebrowser HTTP requests.
 
 This setting supports URL patterns.
@@ -1700,8 +1821,9 @@ Type: <<types,Dict>>
 
 Default: empty
 
-[[content.headers.do_not_track]]
-=== content.headers.do_not_track
+_content.headers.do_not_track:
+content.headers.do_not_track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Value to send in the `DNT` header.
 When this is set to true, qutebrowser asks websites to not track your identity. If set to null, the DNT header is not sent at all.
 
@@ -1709,10 +1831,11 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.headers.referer]]
-=== content.headers.referer
+_content.headers.referer:
+content.headers.referer
+^^^^^^^^^^^^^^^^^^^^^^^
 When to send the Referer header.
 The Referer header tells websites from which website you were coming from when visiting them.
 No restart is needed with QtWebKit.
@@ -1726,10 +1849,11 @@ Valid values:
  * +never+: Never send the Referer. This is not recommended, as some sites may break.
  * +same-domain+: Only send the Referer for the same domain. This will still protect your privacy, but shouldn't break any sites. With QtWebEngine, the referer will still be sent for other domains, but with stripped path information.
 
-Default: +pass:[same-domain]+
+Default: ``same-domain``
 
-[[content.headers.user_agent]]
-=== content.headers.user_agent
+_content.headers.user_agent:
+content.headers.user_agent
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 User agent to send. Unset to send the default.
 Note that the value read from JavaScript is always the global value.
 
@@ -1739,18 +1863,20 @@ Type: <<types,String>>
 
 Default: empty
 
-[[content.host_blocking.enabled]]
-=== content.host_blocking.enabled
+_content.host_blocking.enabled:
+content.host_blocking.enabled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Enable host blocking.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.host_blocking.lists]]
-=== content.host_blocking.lists
+_content.host_blocking.lists:
+content.host_blocking.lists
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 List of URLs of lists which contain hosts to block.
 
 The file can be in one of the following formats:
@@ -1768,52 +1894,61 @@ The file `~/.config/qutebrowser/blocked-hosts` is always read if it exists.
 
 Type: <<types,List of Url>>
 
-Default:
+Default: 
 
-- +pass:[https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts]+
+* ``https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts``
 
-[[content.host_blocking.whitelist]]
-=== content.host_blocking.whitelist
+
+
+_content.host_blocking.whitelist:
+content.host_blocking.whitelist
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 A list of patterns that should always be loaded, despite being ad-blocked.
 Note this whitelists blocked hosts, not first-party URLs. As an example, if `example.org` loads an ad from `ads.example.org`, the whitelisted host should be `ads.example.org`. If you want to disable the adblocker on a given page, use the `content.host_blocking.enabled` setting with a URL pattern instead.
 Local domains are always exempt from hostblocking.
 
 Type: <<types,List of UrlPattern>>
 
-Default:
+Default: 
 
-- +pass:[piwik.org]+
+* ``piwik.org``
 
-[[content.hyperlink_auditing]]
-=== content.hyperlink_auditing
+
+
+_content.hyperlink_auditing:
+content.hyperlink_auditing
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Enable hyperlink auditing (`<a ping>`).
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.images]]
-=== content.images
+_content.images:
+content.images
+^^^^^^^^^^^^^^
 Load images automatically in web pages.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.javascript.alert]]
-=== content.javascript.alert
+_content.javascript.alert:
+content.javascript.alert
+^^^^^^^^^^^^^^^^^^^^^^^^
 Show javascript alerts.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.javascript.can_access_clipboard]]
-=== content.javascript.can_access_clipboard
+_content.javascript.can_access_clipboard:
+content.javascript.can_access_clipboard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow JavaScript to read from or write to the clipboard.
 With QtWebEngine, writing the clipboard as response to a user interaction is always allowed.
 
@@ -1821,103 +1956,113 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.javascript.can_close_tabs]]
-=== content.javascript.can_close_tabs
+_content.javascript.can_close_tabs:
+content.javascript.can_close_tabs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow JavaScript to close tabs.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
 This setting is only available with the QtWebKit backend.
 
-[[content.javascript.can_open_tabs_automatically]]
-=== content.javascript.can_open_tabs_automatically
+_content.javascript.can_open_tabs_automatically:
+content.javascript.can_open_tabs_automatically
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow JavaScript to open new tabs without user interaction.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.javascript.enabled]]
-=== content.javascript.enabled
+_content.javascript.enabled:
+content.javascript.enabled
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Enable JavaScript.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.javascript.log]]
-=== content.javascript.log
+_content.javascript.log:
+content.javascript.log
+^^^^^^^^^^^^^^^^^^^^^^
 Log levels to use for JavaScript console logging messages.
 When a JavaScript message with the level given in the dictionary key is logged, the corresponding dictionary value selects the qutebrowser logger to use.
 On QtWebKit, the "unknown" setting is always used.
 
 Type: <<types,Dict>>
 
-Default:
+Default: 
 
-- +pass:[error]+: +pass:[debug]+
-- +pass:[info]+: +pass:[debug]+
-- +pass:[unknown]+: +pass:[debug]+
-- +pass:[warning]+: +pass:[debug]+
+* ``error``: ``debug``
+* ``info``: ``debug``
+* ``unknown``: ``debug``
+* ``warning``: ``debug``
 
-[[content.javascript.modal_dialog]]
-=== content.javascript.modal_dialog
+_content.javascript.modal_dialog:
+content.javascript.modal_dialog
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Use the standard JavaScript modal dialog for `alert()` and `confirm()`.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.javascript.prompt]]
-=== content.javascript.prompt
+_content.javascript.prompt:
+content.javascript.prompt
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Show javascript prompts.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.local_content_can_access_file_urls]]
-=== content.local_content_can_access_file_urls
+_content.local_content_can_access_file_urls:
+content.local_content_can_access_file_urls
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow locally loaded documents to access other local URLs.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.local_content_can_access_remote_urls]]
-=== content.local_content_can_access_remote_urls
+_content.local_content_can_access_remote_urls:
+content.local_content_can_access_remote_urls
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow locally loaded documents to access remote URLs.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.local_storage]]
-=== content.local_storage
+_content.local_storage:
+content.local_storage
+^^^^^^^^^^^^^^^^^^^^^
 Enable support for HTML 5 local storage and Web SQL.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.media_capture]]
-=== content.media_capture
+_content.media_capture:
+content.media_capture
+^^^^^^^^^^^^^^^^^^^^^
 Allow websites to record audio/video.
 
 This setting supports URL patterns.
@@ -1930,12 +2075,13 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
 This setting is only available with the QtWebEngine backend.
 
-[[content.mouse_lock]]
-=== content.mouse_lock
+_content.mouse_lock:
+content.mouse_lock
+^^^^^^^^^^^^^^^^^^
 Allow websites to lock your mouse pointer.
 
 This setting supports URL patterns.
@@ -1948,14 +2094,15 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
 On QtWebEngine, this setting requires Qt 5.8 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-[[content.mute]]
-=== content.mute
+_content.mute:
+content.mute
+^^^^^^^^^^^^
 Automatically mute tabs.
 Note that if the `:tab-mute` command is used, the mute status for the affected tab is now controlled manually, and this setting doesn't have any effect.
 
@@ -1963,10 +2110,11 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.netrc_file]]
-=== content.netrc_file
+_content.netrc_file:
+content.netrc_file
+^^^^^^^^^^^^^^^^^^
 Netrc-file for HTTP authentication.
 If unset, `~/.netrc` is used.
 
@@ -1974,8 +2122,9 @@ Type: <<types,File>>
 
 Default: empty
 
-[[content.notifications]]
-=== content.notifications
+_content.notifications:
+content.notifications
+^^^^^^^^^^^^^^^^^^^^^
 Allow websites to show notifications.
 
 This setting supports URL patterns.
@@ -1988,21 +2137,23 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
 This setting is only available with the QtWebKit backend.
 
-[[content.pdfjs]]
-=== content.pdfjs
+_content.pdfjs:
+content.pdfjs
+^^^^^^^^^^^^^
 Allow pdf.js to view PDF files in the browser.
 Note that the files can still be downloaded by clicking the download button in the pdf.js viewer.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.persistent_storage]]
-=== content.persistent_storage
+_content.persistent_storage:
+content.persistent_storage
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow websites to request persistent storage quota via `navigator.webkitPersistentStorage.requestQuota`.
 
 This setting supports URL patterns.
@@ -2015,44 +2166,48 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
 On QtWebEngine, this setting requires Qt 5.11 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-[[content.plugins]]
-=== content.plugins
+_content.plugins:
+content.plugins
+^^^^^^^^^^^^^^^
 Enable plugins in Web pages.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.print_element_backgrounds]]
-=== content.print_element_backgrounds
+_content.print_element_backgrounds:
+content.print_element_backgrounds
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Draw the background color and images also when the page is printed.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
 On QtWebEngine, this setting requires Qt 5.8 or newer.
 
-[[content.private_browsing]]
-=== content.private_browsing
+_content.private_browsing:
+content.private_browsing
+^^^^^^^^^^^^^^^^^^^^^^^^
 Open new windows in private browsing mode which does not record visited pages.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.proxy]]
-=== content.proxy
+_content.proxy:
+content.proxy
+^^^^^^^^^^^^^
 Proxy to use.
 In addition to the listed values, you can use a `socks://...` or `http://...` URL.
 
@@ -2063,20 +2218,22 @@ Valid values:
  * +system+: Use the system wide proxy.
  * +none+: Don't use any proxy
 
-Default: +pass:[system]+
+Default: ``system``
 
-[[content.proxy_dns_requests]]
-=== content.proxy_dns_requests
+_content.proxy_dns_requests:
+content.proxy_dns_requests
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Send DNS requests over the configured proxy.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
 This setting is only available with the QtWebKit backend.
 
-[[content.register_protocol_handler]]
-=== content.register_protocol_handler
+_content.register_protocol_handler:
+content.register_protocol_handler
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow websites to register protocol handlers via `navigator.registerProtocolHandler`.
 
 This setting supports URL patterns.
@@ -2089,14 +2246,15 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
 On QtWebEngine, this setting requires Qt 5.11 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-[[content.ssl_strict]]
-=== content.ssl_strict
+_content.ssl_strict:
+content.ssl_strict
+^^^^^^^^^^^^^^^^^^
 Validate SSL handshakes.
 
 This setting supports URL patterns.
@@ -2109,28 +2267,31 @@ Valid values:
  * +false+
  * +ask+
 
-Default: +pass:[ask]+
+Default: ``ask``
 
-[[content.user_stylesheets]]
-=== content.user_stylesheets
+_content.user_stylesheets:
+content.user_stylesheets
+^^^^^^^^^^^^^^^^^^^^^^^^
 List of user stylesheet filenames to use.
 
 Type: <<types,List of File&#44; or File>>
 
 Default: empty
 
-[[content.webgl]]
-=== content.webgl
+_content.webgl:
+content.webgl
+^^^^^^^^^^^^^
 Enable WebGL.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[content.webrtc_ip_handling_policy]]
-=== content.webrtc_ip_handling_policy
+_content.webrtc_ip_handling_policy:
+content.webrtc_ip_handling_policy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Which interfaces to expose via WebRTC.
 On Qt 5.10, this option doesn't work because of a Qt bug.
 This setting requires a restart.
@@ -2144,22 +2305,24 @@ Valid values:
  * +default-public-interface-only+: WebRTC should only use the default route used by http. This doesn't expose any local addresses.
  * +disable-non-proxied-udp+: WebRTC should only use TCP to contact peers or servers unless the proxy server supports UDP. This doesn't expose any local addresses either.
 
-Default: +pass:[all-interfaces]+
+Default: ``all-interfaces``
 
 On QtWebEngine, this setting requires Qt 5.9.2 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-[[content.windowed_fullscreen]]
-=== content.windowed_fullscreen
+_content.windowed_fullscreen:
+content.windowed_fullscreen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Limit fullscreen to the browser window (does not expand to fill the screen).
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[content.xss_auditing]]
-=== content.xss_auditing
+_content.xss_auditing:
+content.xss_auditing
+^^^^^^^^^^^^^^^^^^^^
 Monitor load requests for cross-site scripting attempts.
 Suspicious scripts will be blocked and reported in the inspector's JavaScript console.
 
@@ -2167,10 +2330,11 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[downloads.location.directory]]
-=== downloads.location.directory
+_downloads.location.directory:
+downloads.location.directory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Directory to save downloads to.
 If unset, a sensible OS-specific default is used.
 
@@ -2178,25 +2342,28 @@ Type: <<types,Directory>>
 
 Default: empty
 
-[[downloads.location.prompt]]
-=== downloads.location.prompt
+_downloads.location.prompt:
+downloads.location.prompt
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Prompt the user for the download location.
 If set to false, `downloads.location.directory` will be used.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[downloads.location.remember]]
-=== downloads.location.remember
+_downloads.location.remember:
+downloads.location.remember
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Remember the last used download directory.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[downloads.location.suggestion]]
-=== downloads.location.suggestion
+_downloads.location.suggestion:
+downloads.location.suggestion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 What to display in the download filename input.
 
 Type: <<types,String>>
@@ -2207,10 +2374,11 @@ Valid values:
  * +filename+: Show only download filename.
  * +both+: Show download path and filename.
 
-Default: +pass:[path]+
+Default: ``path``
 
-[[downloads.open_dispatcher]]
-=== downloads.open_dispatcher
+_downloads.open_dispatcher:
+downloads.open_dispatcher
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Default program used to open downloads.
 If null, the default internal handler is used.
 Any `{}` in the string will be expanded to the filename, else the filename will be appended.
@@ -2219,8 +2387,9 @@ Type: <<types,String>>
 
 Default: empty
 
-[[downloads.position]]
-=== downloads.position
+_downloads.position:
+downloads.position
+^^^^^^^^^^^^^^^^^^
 Where to show the downloaded files.
 
 Type: <<types,VerticalPosition>>
@@ -2230,227 +2399,256 @@ Valid values:
  * +top+
  * +bottom+
 
-Default: +pass:[top]+
+Default: ``top``
 
-[[downloads.remove_finished]]
-=== downloads.remove_finished
+_downloads.remove_finished:
+downloads.remove_finished
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Duration (in milliseconds) to wait before removing finished downloads.
 If set to -1, downloads are never removed.
 
 Type: <<types,Int>>
 
-Default: +pass:[-1]+
+Default: ``-1``
 
-[[editor.command]]
-=== editor.command
+_editor.command:
+editor.command
+^^^^^^^^^^^^^^
 Editor (and arguments) to use for the `open-editor` command. The following placeholders are defined:
 * `{file}`: Filename of the file to be edited. * `{line}`: Line in which the caret is found in the text. * `{column}`: Column in which the caret is found in the text. * `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`: Same as `{column}`, but starting from index 0.
 
 Type: <<types,ShellCommand>>
 
-Default:
+Default: 
 
-- +pass:[gvim]+
-- +pass:[-f]+
-- +pass:[{file}]+
-- +pass:[-c]+
-- +pass:[normal {line}G{column0}l]+
+* ``gvim``
+* ``-f``
+* ``{file}``
+* ``-c``
+* ``normal {line}G{column0}l``
 
-[[editor.encoding]]
-=== editor.encoding
+
+
+_editor.encoding:
+editor.encoding
+^^^^^^^^^^^^^^^
 Encoding to use for the editor.
 
 Type: <<types,Encoding>>
 
-Default: +pass:[utf-8]+
+Default: ``utf-8``
 
-[[fonts.completion.category]]
-=== fonts.completion.category
+_fonts.completion.category:
+fonts.completion.category
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Font used in the completion categories.
 
 Type: <<types,Font>>
 
-Default: +pass:[bold 10pt monospace]+
+Default: ``bold 10pt monospace``
 
-[[fonts.completion.entry]]
-=== fonts.completion.entry
+_fonts.completion.entry:
+fonts.completion.entry
+^^^^^^^^^^^^^^^^^^^^^^
 Font used in the completion widget.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.debug_console]]
-=== fonts.debug_console
+_fonts.debug_console:
+fonts.debug_console
+^^^^^^^^^^^^^^^^^^^
 Font used for the debugging console.
 
 Type: <<types,QtFont>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.downloads]]
-=== fonts.downloads
+_fonts.downloads:
+fonts.downloads
+^^^^^^^^^^^^^^^
 Font used for the downloadbar.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.hints]]
-=== fonts.hints
+_fonts.hints:
+fonts.hints
+^^^^^^^^^^^
 Font used for the hints.
 
 Type: <<types,Font>>
 
-Default: +pass:[bold 10pt monospace]+
+Default: ``bold 10pt monospace``
 
-[[fonts.keyhint]]
-=== fonts.keyhint
+_fonts.keyhint:
+fonts.keyhint
+^^^^^^^^^^^^^
 Font used in the keyhint widget.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.messages.error]]
-=== fonts.messages.error
+_fonts.messages.error:
+fonts.messages.error
+^^^^^^^^^^^^^^^^^^^^
 Font used for error messages.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.messages.info]]
-=== fonts.messages.info
+_fonts.messages.info:
+fonts.messages.info
+^^^^^^^^^^^^^^^^^^^
 Font used for info messages.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.messages.warning]]
-=== fonts.messages.warning
+_fonts.messages.warning:
+fonts.messages.warning
+^^^^^^^^^^^^^^^^^^^^^^
 Font used for warning messages.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.monospace]]
-=== fonts.monospace
+_fonts.monospace:
+fonts.monospace
+^^^^^^^^^^^^^^^
 Default monospace fonts.
 Whenever "monospace" is used in a font setting, it's replaced with the fonts listed here.
 
 Type: <<types,Font>>
 
-Default: +pass:[&quot;xos4 Terminus&quot;, Terminus, Monospace, &quot;DejaVu Sans Mono&quot;, Monaco, &quot;Bitstream Vera Sans Mono&quot;, &quot;Andale Mono&quot;, &quot;Courier New&quot;, Courier, &quot;Liberation Mono&quot;, monospace, Fixed, Consolas, Terminal]+
+Default: ``&quot;xos4 Terminus&quot;, Terminus, Monospace, &quot;DejaVu Sans Mono&quot;, Monaco, &quot;Bitstream Vera Sans Mono&quot;, &quot;Andale Mono&quot;, &quot;Courier New&quot;, Courier, &quot;Liberation Mono&quot;, monospace, Fixed, Consolas, Terminal``
 
-[[fonts.prompts]]
-=== fonts.prompts
+_fonts.prompts:
+fonts.prompts
+^^^^^^^^^^^^^
 Font used for prompts.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt sans-serif]+
+Default: ``10pt sans-serif``
 
-[[fonts.statusbar]]
-=== fonts.statusbar
+_fonts.statusbar:
+fonts.statusbar
+^^^^^^^^^^^^^^^
 Font used in the statusbar.
 
 Type: <<types,Font>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.tabs]]
-=== fonts.tabs
+_fonts.tabs:
+fonts.tabs
+^^^^^^^^^^
 Font used in the tab bar.
 
 Type: <<types,QtFont>>
 
-Default: +pass:[10pt monospace]+
+Default: ``10pt monospace``
 
-[[fonts.web.family.cursive]]
-=== fonts.web.family.cursive
+_fonts.web.family.cursive:
+fonts.web.family.cursive
+^^^^^^^^^^^^^^^^^^^^^^^^
 Font family for cursive fonts.
 
 Type: <<types,FontFamily>>
 
 Default: empty
 
-[[fonts.web.family.fantasy]]
-=== fonts.web.family.fantasy
+_fonts.web.family.fantasy:
+fonts.web.family.fantasy
+^^^^^^^^^^^^^^^^^^^^^^^^
 Font family for fantasy fonts.
 
 Type: <<types,FontFamily>>
 
 Default: empty
 
-[[fonts.web.family.fixed]]
-=== fonts.web.family.fixed
+_fonts.web.family.fixed:
+fonts.web.family.fixed
+^^^^^^^^^^^^^^^^^^^^^^
 Font family for fixed fonts.
 
 Type: <<types,FontFamily>>
 
 Default: empty
 
-[[fonts.web.family.sans_serif]]
-=== fonts.web.family.sans_serif
+_fonts.web.family.sans_serif:
+fonts.web.family.sans_serif
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Font family for sans-serif fonts.
 
 Type: <<types,FontFamily>>
 
 Default: empty
 
-[[fonts.web.family.serif]]
-=== fonts.web.family.serif
+_fonts.web.family.serif:
+fonts.web.family.serif
+^^^^^^^^^^^^^^^^^^^^^^
 Font family for serif fonts.
 
 Type: <<types,FontFamily>>
 
 Default: empty
 
-[[fonts.web.family.standard]]
-=== fonts.web.family.standard
+_fonts.web.family.standard:
+fonts.web.family.standard
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Font family for standard fonts.
 
 Type: <<types,FontFamily>>
 
 Default: empty
 
-[[fonts.web.size.default]]
-=== fonts.web.size.default
+_fonts.web.size.default:
+fonts.web.size.default
+^^^^^^^^^^^^^^^^^^^^^^
 Default font size (in pixels) for regular text.
 
 Type: <<types,Int>>
 
-Default: +pass:[16]+
+Default: ``16``
 
-[[fonts.web.size.default_fixed]]
-=== fonts.web.size.default_fixed
+_fonts.web.size.default_fixed:
+fonts.web.size.default_fixed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Default font size (in pixels) for fixed-pitch text.
 
 Type: <<types,Int>>
 
-Default: +pass:[13]+
+Default: ``13``
 
-[[fonts.web.size.minimum]]
-=== fonts.web.size.minimum
+_fonts.web.size.minimum:
+fonts.web.size.minimum
+^^^^^^^^^^^^^^^^^^^^^^
 Hard minimum font size (in pixels).
 
 Type: <<types,Int>>
 
-Default: +pass:[0]+
+Default: ``0``
 
-[[fonts.web.size.minimum_logical]]
-=== fonts.web.size.minimum_logical
+_fonts.web.size.minimum_logical:
+fonts.web.size.minimum_logical
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Minimum logical font size (in pixels) that is applied when zooming out.
 
 Type: <<types,Int>>
 
-Default: +pass:[6]+
+Default: ``6``
 
-[[hints.auto_follow]]
-=== hints.auto_follow
+_hints.auto_follow:
+hints.auto_follow
+^^^^^^^^^^^^^^^^^
 When a hint can be automatically followed without pressing Enter.
 
 Type: <<types,String>>
@@ -2462,42 +2660,47 @@ Valid values:
  * +full-match+: Follow the hint when the user typed the whole hint (letter, word or number mode) or the element's text (only in number mode).
  * +never+: The user will always need to press Enter to follow a hint.
 
-Default: +pass:[unique-match]+
+Default: ``unique-match``
 
-[[hints.auto_follow_timeout]]
-=== hints.auto_follow_timeout
+_hints.auto_follow_timeout:
+hints.auto_follow_timeout
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Duration (in milliseconds) to ignore normal-mode key bindings after a successful auto-follow.
 
 Type: <<types,Int>>
 
-Default: +pass:[0]+
+Default: ``0``
 
-[[hints.border]]
-=== hints.border
+_hints.border:
+hints.border
+^^^^^^^^^^^^
 CSS border value for hints.
 
 Type: <<types,String>>
 
-Default: +pass:[1px solid #E3BE23]+
+Default: ``1px solid #E3BE23``
 
-[[hints.chars]]
-=== hints.chars
+_hints.chars:
+hints.chars
+^^^^^^^^^^^
 Characters used for hint strings.
 
 Type: <<types,UniqueCharString>>
 
-Default: +pass:[asdfghjkl]+
+Default: ``asdfghjkl``
 
-[[hints.dictionary]]
-=== hints.dictionary
+_hints.dictionary:
+hints.dictionary
+^^^^^^^^^^^^^^^^
 Dictionary file to be used by the word hints.
 
 Type: <<types,File>>
 
-Default: +pass:[/usr/share/dict/words]+
+Default: ``/usr/share/dict/words``
 
-[[hints.find_implementation]]
-=== hints.find_implementation
+_hints.find_implementation:
+hints.find_implementation
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Which implementation to use to find elements to hint.
 
 Type: <<types,String>>
@@ -2507,28 +2710,31 @@ Valid values:
  * +javascript+: Better but slower
  * +python+: Slightly worse but faster
 
-Default: +pass:[python]+
+Default: ``python``
 
 This setting is only available with the QtWebKit backend.
 
-[[hints.hide_unmatched_rapid_hints]]
-=== hints.hide_unmatched_rapid_hints
+_hints.hide_unmatched_rapid_hints:
+hints.hide_unmatched_rapid_hints
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Hide unmatched hints in rapid mode.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[hints.min_chars]]
-=== hints.min_chars
+_hints.min_chars:
+hints.min_chars
+^^^^^^^^^^^^^^^
 Minimum number of characters used for hint strings.
 
 Type: <<types,Int>>
 
-Default: +pass:[1]+
+Default: ``1``
 
-[[hints.mode]]
-=== hints.mode
+_hints.mode:
+hints.mode
+^^^^^^^^^^
 Mode to use for hints.
 
 Type: <<types,String>>
@@ -2539,48 +2745,56 @@ Valid values:
  * +letter+: Use the characters in the `hints.chars` setting.
  * +word+: Use hints words based on the html elements and the extra words.
 
-Default: +pass:[letter]+
+Default: ``letter``
 
-[[hints.next_regexes]]
-=== hints.next_regexes
+_hints.next_regexes:
+hints.next_regexes
+^^^^^^^^^^^^^^^^^^
 Comma-separated list of regular expressions to use for 'next' links.
 
 Type: <<types,List of Regex>>
 
-Default:
+Default: 
 
-- +pass:[\bnext\b]+
-- +pass:[\bmore\b]+
-- +pass:[\bnewer\b]+
-- +pass:[\b[&gt;→≫]\b]+
-- +pass:[\b(&gt;&gt;|»)\b]+
-- +pass:[\bcontinue\b]+
+* ``\bnext\b``
+* ``\bmore\b``
+* ``\bnewer\b``
+* ``\b[&gt;→≫]\b``
+* ``\b(&gt;&gt;|»)\b``
+* ``\bcontinue\b``
 
-[[hints.prev_regexes]]
-=== hints.prev_regexes
+
+
+_hints.prev_regexes:
+hints.prev_regexes
+^^^^^^^^^^^^^^^^^^
 Comma-separated list of regular expressions to use for 'prev' links.
 
 Type: <<types,List of Regex>>
 
-Default:
+Default: 
 
-- +pass:[\bprev(ious)?\b]+
-- +pass:[\bback\b]+
-- +pass:[\bolder\b]+
-- +pass:[\b[&lt;←≪]\b]+
-- +pass:[\b(&lt;&lt;|«)\b]+
+* ``\bprev(ious)?\b``
+* ``\bback\b``
+* ``\bolder\b``
+* ``\b[&lt;←≪]\b``
+* ``\b(&lt;&lt;|«)\b``
 
-[[hints.scatter]]
-=== hints.scatter
+
+
+_hints.scatter:
+hints.scatter
+^^^^^^^^^^^^^
 Scatter hint key chains (like Vimium) or not (like dwb).
 Ignored for number hints.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[hints.selectors]]
-=== hints.selectors
+_hints.selectors:
+hints.selectors
+^^^^^^^^^^^^^^^
 CSS selectors used to determine which elements on a page should have hints.
 
 This setting supports URL patterns.
@@ -2589,93 +2803,103 @@ This setting can only be set in config.py.
 
 Type: <<types,Dict>>
 
-Default:
+Default: 
 
-- +pass:[all]+:
+* ``all``:
 
-* +pass:[a]+
-* +pass:[area]+
-* +pass:[textarea]+
-* +pass:[select]+
-* +pass:[input:not([type=&quot;hidden&quot;])]+
-* +pass:[button]+
-* +pass:[frame]+
-* +pass:[iframe]+
-* +pass:[img]+
-* +pass:[link]+
-* +pass:[summary]+
-* +pass:[[onclick]]+
-* +pass:[[onmousedown]]+
-* +pass:[[role=&quot;link&quot;]]+
-* +pass:[[role=&quot;option&quot;]]+
-* +pass:[[role=&quot;button&quot;]]+
-* +pass:[[ng-click]]+
-* +pass:[[ngClick]]+
-* +pass:[[data-ng-click]]+
-* +pass:[[x-ng-click]]+
-* +pass:[[tabindex]]+
-- +pass:[images]+:
+  * ``a``
+  * ``area``
+  * ``textarea``
+  * ``select``
+  * ``input:not([type=&quot;hidden&quot;])``
+  * ``button``
+  * ``frame``
+  * ``iframe``
+  * ``img``
+  * ``link``
+  * ``summary``
+  * ``[onclick]``
+  * ``[onmousedown]``
+  * ``[role=&quot;link&quot;]``
+  * ``[role=&quot;option&quot;]``
+  * ``[role=&quot;button&quot;]``
+  * ``[ng-click]``
+  * ``[ngClick]``
+  * ``[data-ng-click]``
+  * ``[x-ng-click]``
+  * ``[tabindex]``
 
-* +pass:[img]+
-- +pass:[inputs]+:
+* ``images``:
 
-* +pass:[input[type=&quot;text&quot;]]+
-* +pass:[input[type=&quot;date&quot;]]+
-* +pass:[input[type=&quot;datetime-local&quot;]]+
-* +pass:[input[type=&quot;email&quot;]]+
-* +pass:[input[type=&quot;month&quot;]]+
-* +pass:[input[type=&quot;number&quot;]]+
-* +pass:[input[type=&quot;password&quot;]]+
-* +pass:[input[type=&quot;search&quot;]]+
-* +pass:[input[type=&quot;tel&quot;]]+
-* +pass:[input[type=&quot;time&quot;]]+
-* +pass:[input[type=&quot;url&quot;]]+
-* +pass:[input[type=&quot;week&quot;]]+
-* +pass:[input:not([type])]+
-* +pass:[textarea]+
-- +pass:[links]+:
+  * ``img``
 
-* +pass:[a[href]]+
-* +pass:[area[href]]+
-* +pass:[link[href]]+
-* +pass:[[role=&quot;link&quot;][href]]+
-- +pass:[media]+:
+* ``inputs``:
 
-* +pass:[audio]+
-* +pass:[img]+
-* +pass:[video]+
-- +pass:[url]+:
+  * ``input[type=&quot;text&quot;]``
+  * ``input[type=&quot;date&quot;]``
+  * ``input[type=&quot;datetime-local&quot;]``
+  * ``input[type=&quot;email&quot;]``
+  * ``input[type=&quot;month&quot;]``
+  * ``input[type=&quot;number&quot;]``
+  * ``input[type=&quot;password&quot;]``
+  * ``input[type=&quot;search&quot;]``
+  * ``input[type=&quot;tel&quot;]``
+  * ``input[type=&quot;time&quot;]``
+  * ``input[type=&quot;url&quot;]``
+  * ``input[type=&quot;week&quot;]``
+  * ``input:not([type])``
+  * ``textarea``
 
-* +pass:[[src]]+
-* +pass:[[href]]+
+* ``links``:
 
-[[hints.uppercase]]
-=== hints.uppercase
+  * ``a[href]``
+  * ``area[href]``
+  * ``link[href]``
+  * ``[role=&quot;link&quot;][href]``
+
+* ``media``:
+
+  * ``audio``
+  * ``img``
+  * ``video``
+
+* ``url``:
+
+  * ``[src]``
+  * ``[href]``
+
+
+_hints.uppercase:
+hints.uppercase
+^^^^^^^^^^^^^^^
 Make characters in hint strings uppercase.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[history_gap_interval]]
-=== history_gap_interval
+_history_gap_interval:
+history_gap_interval
+^^^^^^^^^^^^^^^^^^^^
 Maximum time (in minutes) between two history items for them to be considered being from the same browsing session.
 Items with less time between them are grouped when being displayed in `:history`. Use -1 to disable separation.
 
 Type: <<types,Int>>
 
-Default: +pass:[30]+
+Default: ``30``
 
-[[input.escape_quits_reporter]]
-=== input.escape_quits_reporter
+_input.escape_quits_reporter:
+input.escape_quits_reporter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Allow Escape to quit the crash reporter.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[input.forward_unbound_keys]]
-=== input.forward_unbound_keys
+_input.forward_unbound_keys:
+input.forward_unbound_keys
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Which unbound keys to forward to the webview in normal mode.
 
 Type: <<types,String>>
@@ -2686,70 +2910,78 @@ Valid values:
  * +auto+: Forward unbound non-alphanumeric keys.
  * +none+: Don't forward any keys.
 
-Default: +pass:[auto]+
+Default: ``auto``
 
-[[input.insert_mode.auto_enter]]
-=== input.insert_mode.auto_enter
+_input.insert_mode.auto_enter:
+input.insert_mode.auto_enter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Enter insert mode if an editable element is clicked.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[input.insert_mode.auto_leave]]
-=== input.insert_mode.auto_leave
+_input.insert_mode.auto_leave:
+input.insert_mode.auto_leave
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Leave insert mode if a non-editable element is clicked.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[input.insert_mode.auto_load]]
-=== input.insert_mode.auto_load
+_input.insert_mode.auto_load:
+input.insert_mode.auto_load
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Automatically enter insert mode if an editable element is focused after loading the page.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[input.insert_mode.plugins]]
-=== input.insert_mode.plugins
+_input.insert_mode.plugins:
+input.insert_mode.plugins
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Switch to insert mode when clicking flash and other plugins.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[input.links_included_in_focus_chain]]
-=== input.links_included_in_focus_chain
+_input.links_included_in_focus_chain:
+input.links_included_in_focus_chain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Include hyperlinks in the keyboard focus chain when tabbing.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[input.partial_timeout]]
-=== input.partial_timeout
+_input.partial_timeout:
+input.partial_timeout
+^^^^^^^^^^^^^^^^^^^^^
 Timeout (in milliseconds) for partially typed key bindings.
 If the current input forms only partial matches, the keystring will be cleared after this time.
 
 Type: <<types,Int>>
 
-Default: +pass:[5000]+
+Default: ``5000``
 
-[[input.rocker_gestures]]
-=== input.rocker_gestures
+_input.rocker_gestures:
+input.rocker_gestures
+^^^^^^^^^^^^^^^^^^^^^
 Enable Opera-like mouse rocker gestures.
 This disables the context menu.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[input.spatial_navigation]]
-=== input.spatial_navigation
+_input.spatial_navigation:
+input.spatial_navigation
+^^^^^^^^^^^^^^^^^^^^^^^^
 Enable spatial navigation.
 Spatial navigation consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if the user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.
 
@@ -2757,10 +2989,11 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[keyhint.blacklist]]
-=== keyhint.blacklist
+_keyhint.blacklist:
+keyhint.blacklist
+^^^^^^^^^^^^^^^^^
 Keychains that shouldn't be shown in the keyhint dialog.
 Globs are supported, so `;*` will blacklist all keychains starting with `;`. Use `*` to disable keyhints.
 
@@ -2768,33 +3001,37 @@ Type: <<types,List of String>>
 
 Default: empty
 
-[[keyhint.delay]]
-=== keyhint.delay
+_keyhint.delay:
+keyhint.delay
+^^^^^^^^^^^^^
 Time (in milliseconds) from pressing a key to seeing the keyhint dialog.
 
 Type: <<types,Int>>
 
-Default: +pass:[500]+
+Default: ``500``
 
-[[keyhint.radius]]
-=== keyhint.radius
+_keyhint.radius:
+keyhint.radius
+^^^^^^^^^^^^^^
 Rounding radius (in pixels) for the edges of the keyhint dialog.
 
 Type: <<types,Int>>
 
-Default: +pass:[6]+
+Default: ``6``
 
-[[messages.timeout]]
-=== messages.timeout
+_messages.timeout:
+messages.timeout
+^^^^^^^^^^^^^^^^
 Duration (in milliseconds) to show messages in the statusbar for.
 Set to 0 to never clear messages.
 
 Type: <<types,Int>>
 
-Default: +pass:[2000]+
+Default: ``2000``
 
-[[new_instance_open_target]]
-=== new_instance_open_target
+_new_instance_open_target:
+new_instance_open_target
+^^^^^^^^^^^^^^^^^^^^^^^^
 How to open links in an existing instance if a new one is launched.
 This happens when e.g. opening a link from a terminal.
 See `new_instance_open_target_window` to customize in which window the link is opened in.
@@ -2809,10 +3046,11 @@ Valid values:
  * +tab-bg-silent+: Open a new background tab in the existing window without activating the window.
  * +window+: Open in a new window.
 
-Default: +pass:[tab]+
+Default: ``tab``
 
-[[new_instance_open_target_window]]
-=== new_instance_open_target_window
+_new_instance_open_target_window:
+new_instance_open_target_window
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Which window to choose when opening links as new tabs.
 When `new_instance_open_target` is not set to `window`, this is ignored.
 
@@ -2825,26 +3063,29 @@ Valid values:
  * +last-focused+: Open new tabs in the most recently focused window.
  * +last-visible+: Open new tabs in the most recently visible window.
 
-Default: +pass:[last-focused]+
+Default: ``last-focused``
 
-[[prompt.filebrowser]]
-=== prompt.filebrowser
+_prompt.filebrowser:
+prompt.filebrowser
+^^^^^^^^^^^^^^^^^^
 Show a filebrowser in upload/download prompts.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[prompt.radius]]
-=== prompt.radius
+_prompt.radius:
+prompt.radius
+^^^^^^^^^^^^^
 Rounding radius (in pixels) for the edges of prompts.
 
 Type: <<types,Int>>
 
-Default: +pass:[8]+
+Default: ``8``
 
-[[qt.args]]
-=== qt.args
+_qt.args:
+qt.args
+^^^^^^^
 Additional arguments to pass to Qt, without leading `--`.
 With QtWebEngine, some Chromium arguments (see https://peter.sh/experiments/chromium-command-line-switches/ for a list) will work.
 This setting requires a restart.
@@ -2853,8 +3094,9 @@ Type: <<types,List of String>>
 
 Default: empty
 
-[[qt.force_platform]]
-=== qt.force_platform
+_qt.force_platform:
+qt.force_platform
+^^^^^^^^^^^^^^^^^
 Force a Qt platform to use.
 This sets the `QT_QPA_PLATFORM` environment variable and is useful to force using the XCB plugin when running QtWebEngine on Wayland.
 This setting requires a restart.
@@ -2863,8 +3105,9 @@ Type: <<types,String>>
 
 Default: empty
 
-[[qt.force_software_rendering]]
-=== qt.force_software_rendering
+_qt.force_software_rendering:
+qt.force_software_rendering
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Force software rendering for QtWebEngine.
 This is needed for QtWebEngine to work with Nouveau drivers and can be useful in other scenarios related to graphic issues.
 This setting requires a restart.
@@ -2878,12 +3121,13 @@ Valid values:
  * +chromium+: Tell Chromium to disable GPU support and use Skia software rendering instead. (`--disable-gpu`)
  * +none+: Don't force software rendering.
 
-Default: +pass:[none]+
+Default: ``none``
 
 This setting is only available with the QtWebEngine backend.
 
-[[qt.highdpi]]
-=== qt.highdpi
+_qt.highdpi:
+qt.highdpi
+^^^^^^^^^^
 Turn on Qt HighDPI scaling.
 This is equivalent to setting QT_AUTO_SCREEN_SCALE_FACTOR=1 in the environment.
 It's off by default as it can cause issues with some bitmap fonts. As an alternative to this, it's possible to set font sizes and the `zoom.default` setting.
@@ -2891,10 +3135,11 @@ This setting requires a restart.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[qt.low_end_device_mode]]
-=== qt.low_end_device_mode
+_qt.low_end_device_mode:
+qt.low_end_device_mode
+^^^^^^^^^^^^^^^^^^^^^^
 When to use Chromium's low-end device mode.
 This improves the RAM usage of renderer processes, at the expense of performance.
 This setting requires a restart.
@@ -2907,18 +3152,21 @@ Valid values:
  * +auto+: Decide automatically (uses low-end mode with < 1 GB available RAM).
  * +never+: Never use low-end device mode.
 
-Default: +pass:[auto]+
+Default: ``auto``
 
 This setting is only available with the QtWebEngine backend.
 
-[[qt.process_model]]
-=== qt.process_model
+_qt.process_model:
+qt.process_model
+^^^^^^^^^^^^^^^^
 Which Chromium process model to use.
 Alternative process models use less resources, but decrease security and robustness.
 See the following pages for more details:
 
-  - https://www.chromium.org/developers/design-documents/process-models
-  - https://doc.qt.io/qt-5/qtwebengine-features.html#process-models
+  * https://www.chromium.org/developers/design-documents/process-models
+  * https://doc.qt.io/qt-5/qtwebengine-features.html#process-models
+
+.
 This setting requires a restart.
 
 Type: <<types,String>>
@@ -2929,12 +3177,13 @@ Valid values:
  * +process-per-site+: Pages from separate sites are put into separate processes. Unlike Process per Site Instance, all visits to the same site will share an OS process. The benefit of this model is reduced memory consumption, because more web pages will share processes. The drawbacks include reduced security, robustness, and responsiveness.
  * +single-process+: Run all tabs in a single process. This should be used for debugging purposes only, and it disables `:open --private`.
 
-Default: +pass:[process-per-site-instance]+
+Default: ``process-per-site-instance``
 
 This setting is only available with the QtWebEngine backend.
 
-[[scrolling.bar]]
-=== scrolling.bar
+_scrolling.bar:
+scrolling.bar
+^^^^^^^^^^^^^
 When to show the scrollbar.
 
 Type: <<types,String>>
@@ -2945,10 +3194,11 @@ Valid values:
  * +never+: Never show the scrollbar.
  * +when-searching+: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to `never`.
 
-Default: +pass:[when-searching]+
+Default: ``when-searching``
 
-[[scrolling.smooth]]
-=== scrolling.smooth
+_scrolling.smooth:
+scrolling.smooth
+^^^^^^^^^^^^^^^^
 Enable smooth scrolling for web pages.
 Note smooth scrolling does not work with the `:scroll-px` command.
 
@@ -2956,10 +3206,11 @@ This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[search.ignore_case]]
-=== search.ignore_case
+_search.ignore_case:
+search.ignore_case
+^^^^^^^^^^^^^^^^^^
 When to find text on a page case-insensitively.
 
 Type: <<types,IgnoreCase>>
@@ -2970,18 +3221,20 @@ Valid values:
  * +never+: Search case-sensitively.
  * +smart+: Search case-sensitively if there are capital characters.
 
-Default: +pass:[smart]+
+Default: ``smart``
 
-[[search.incremental]]
-=== search.incremental
+_search.incremental:
+search.incremental
+^^^^^^^^^^^^^^^^^^
 Find text on a page incrementally, renewing the search for each typed character.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[session.default_name]]
-=== session.default_name
+_session.default_name:
+session.default_name
+^^^^^^^^^^^^^^^^^^^^
 Name of the session to save by default.
 If this is set to null, the session which was last loaded is saved.
 
@@ -2989,16 +3242,18 @@ Type: <<types,SessionName>>
 
 Default: empty
 
-[[session.lazy_restore]]
-=== session.lazy_restore
+_session.lazy_restore:
+session.lazy_restore
+^^^^^^^^^^^^^^^^^^^^
 Load a restored tab as soon as it takes focus.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[spellcheck.languages]]
-=== spellcheck.languages
+_spellcheck.languages:
+spellcheck.languages
+^^^^^^^^^^^^^^^^^^^^
 Languages to use for spell checking.
 You can check for available languages and install dictionaries using scripts/dictcli.py. Run the script with -h/--help for instructions.
 
@@ -3056,29 +3311,32 @@ On QtWebEngine, this setting requires Qt 5.8 or newer.
 
 On QtWebKit, this setting is unavailable.
 
-[[statusbar.hide]]
-=== statusbar.hide
+_statusbar.hide:
+statusbar.hide
+^^^^^^^^^^^^^^
 Hide the statusbar unless a message is shown.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[statusbar.padding]]
-=== statusbar.padding
+_statusbar.padding:
+statusbar.padding
+^^^^^^^^^^^^^^^^^
 Padding (in pixels) for the statusbar.
 
 Type: <<types,Padding>>
 
-Default:
+Default: 
 
-- +pass:[bottom]+: +pass:[1]+
-- +pass:[left]+: +pass:[0]+
-- +pass:[right]+: +pass:[0]+
-- +pass:[top]+: +pass:[1]+
+* ``bottom``: ``1``
+* ``left``: ``0``
+* ``right``: ``0``
+* ``top``: ``1``
 
-[[statusbar.position]]
-=== statusbar.position
+_statusbar.position:
+statusbar.position
+^^^^^^^^^^^^^^^^^^
 Position of the status bar.
 
 Type: <<types,VerticalPosition>>
@@ -3088,10 +3346,11 @@ Valid values:
  * +top+
  * +bottom+
 
-Default: +pass:[bottom]+
+Default: ``bottom``
 
-[[statusbar.widgets]]
-=== statusbar.widgets
+_statusbar.widgets:
+statusbar.widgets
+^^^^^^^^^^^^^^^^^
 List of widgets displayed in the statusbar.
 
 Type: <<types,List of String>>
@@ -3106,25 +3365,29 @@ Valid values:
  * +keypress+: Display pressed keys when composing a vi command.
  * +progress+: Progress bar for the current page loading.
 
-Default:
+Default: 
 
-- +pass:[keypress]+
-- +pass:[url]+
-- +pass:[scroll]+
-- +pass:[history]+
-- +pass:[tabs]+
-- +pass:[progress]+
+* ``keypress``
+* ``url``
+* ``scroll``
+* ``history``
+* ``tabs``
+* ``progress``
 
-[[tabs.background]]
-=== tabs.background
+
+
+_tabs.background:
+tabs.background
+^^^^^^^^^^^^^^^
 Open new tabs (middleclick/ctrl+click) in the background.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[tabs.close_mouse_button]]
-=== tabs.close_mouse_button
+_tabs.close_mouse_button:
+tabs.close_mouse_button
+^^^^^^^^^^^^^^^^^^^^^^^
 Mouse button with which to close tabs.
 
 Type: <<types,String>>
@@ -3135,10 +3398,11 @@ Valid values:
  * +middle+: Close tabs on middle-click.
  * +none+: Don't close tabs using the mouse.
 
-Default: +pass:[middle]+
+Default: ``middle``
 
-[[tabs.close_mouse_button_on_bar]]
-=== tabs.close_mouse_button_on_bar
+_tabs.close_mouse_button_on_bar:
+tabs.close_mouse_button_on_bar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 How to behave when the close mouse button is pressed on the tab bar.
 
 Type: <<types,String>>
@@ -3150,19 +3414,21 @@ Valid values:
  * +close-last+: Close the last tab.
  * +ignore+: Don't do anything.
 
-Default: +pass:[new-tab]+
+Default: ``new-tab``
 
-[[tabs.favicons.scale]]
-=== tabs.favicons.scale
+_tabs.favicons.scale:
+tabs.favicons.scale
+^^^^^^^^^^^^^^^^^^^
 Scaling factor for favicons in the tab bar.
 The tab size is unchanged, so big favicons also require extra `tabs.padding`.
 
 Type: <<types,Float>>
 
-Default: +pass:[1.0]+
+Default: ``1.0``
 
-[[tabs.favicons.show]]
-=== tabs.favicons.show
+_tabs.favicons.show:
+tabs.favicons.show
+^^^^^^^^^^^^^^^^^^
 When to show favicons in the tab bar.
 
 Type: <<types,String>>
@@ -3173,31 +3439,34 @@ Valid values:
  * +never+: Always hide favicons.
  * +pinned+: Show favicons only on pinned tabs.
 
-Default: +pass:[always]+
+Default: ``always``
 
-[[tabs.indicator.padding]]
-=== tabs.indicator.padding
+_tabs.indicator.padding:
+tabs.indicator.padding
+^^^^^^^^^^^^^^^^^^^^^^
 Padding (in pixels) for tab indicators.
 
 Type: <<types,Padding>>
 
-Default:
+Default: 
 
-- +pass:[bottom]+: +pass:[2]+
-- +pass:[left]+: +pass:[0]+
-- +pass:[right]+: +pass:[4]+
-- +pass:[top]+: +pass:[2]+
+* ``bottom``: ``2``
+* ``left``: ``0``
+* ``right``: ``4``
+* ``top``: ``2``
 
-[[tabs.indicator.width]]
-=== tabs.indicator.width
+_tabs.indicator.width:
+tabs.indicator.width
+^^^^^^^^^^^^^^^^^^^^
 Width (in pixels) of the progress indicator (0 to disable).
 
 Type: <<types,Int>>
 
-Default: +pass:[3]+
+Default: ``3``
 
-[[tabs.last_close]]
-=== tabs.last_close
+_tabs.last_close:
+tabs.last_close
+^^^^^^^^^^^^^^^
 How to behave when the last tab is closed.
 
 Type: <<types,String>>
@@ -3210,10 +3479,11 @@ Valid values:
  * +default-page+: Load the default page.
  * +close+: Close the window.
 
-Default: +pass:[ignore]+
+Default: ``ignore``
 
-[[tabs.max_width]]
-=== tabs.max_width
+_tabs.max_width:
+tabs.max_width
+^^^^^^^^^^^^^^
 Maximum width (in pixels) of tabs (-1 for no maximum).
 This setting only applies when tabs are horizontal.
 This setting does not apply to pinned tabs, unless `tabs.pinned.shrink` is False.
@@ -3221,20 +3491,22 @@ This setting may not apply properly if max_width is smaller than the minimum siz
 
 Type: <<types,Int>>
 
-Default: +pass:[-1]+
+Default: ``-1``
 
-[[tabs.min_width]]
-=== tabs.min_width
+_tabs.min_width:
+tabs.min_width
+^^^^^^^^^^^^^^
 Minimum width (in pixels) of tabs (-1 for the default minimum size behavior).
 This setting only applies when tabs are horizontal.
 This setting does not apply to pinned tabs, unless `tabs.pinned.shrink` is False.
 
 Type: <<types,Int>>
 
-Default: +pass:[-1]+
+Default: ``-1``
 
-[[tabs.mode_on_change]]
-=== tabs.mode_on_change
+_tabs.mode_on_change:
+tabs.mode_on_change
+^^^^^^^^^^^^^^^^^^^
 When switching tabs, what input mode is applied.
 
 Type: <<types,String>>
@@ -3245,18 +3517,20 @@ Valid values:
  * +restore+: Restore previously saved mode.
  * +normal+: Always revert to normal mode.
 
-Default: +pass:[normal]+
+Default: ``normal``
 
-[[tabs.mousewheel_switching]]
-=== tabs.mousewheel_switching
+_tabs.mousewheel_switching:
+tabs.mousewheel_switching
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Switch between tabs using the mouse wheel.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[tabs.new_position.related]]
-=== tabs.new_position.related
+_tabs.new_position.related:
+tabs.new_position.related
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Position of new tabs opened from another tab.
 See `tabs.new_position.stacking` for controlling stacking behavior.
 
@@ -3269,19 +3543,21 @@ Valid values:
  * +first+: At the beginning.
  * +last+: At the end.
 
-Default: +pass:[next]+
+Default: ``next``
 
-[[tabs.new_position.stacking]]
-=== tabs.new_position.stacking
+_tabs.new_position.stacking:
+tabs.new_position.stacking
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Stack related tabs on top of each other when opened consecutively.
 Only applies for `next` and `prev` values of `tabs.new_position.related` and `tabs.new_position.unrelated`.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[tabs.new_position.unrelated]]
-=== tabs.new_position.unrelated
+_tabs.new_position.unrelated:
+tabs.new_position.unrelated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Position of new tabs which are not opened from another tab.
 See `tabs.new_position.stacking` for controlling stacking behavior.
 
@@ -3294,31 +3570,34 @@ Valid values:
  * +first+: At the beginning.
  * +last+: At the end.
 
-Default: +pass:[last]+
+Default: ``last``
 
-[[tabs.padding]]
-=== tabs.padding
+_tabs.padding:
+tabs.padding
+^^^^^^^^^^^^
 Padding (in pixels) around text for tabs.
 
 Type: <<types,Padding>>
 
-Default:
+Default: 
 
-- +pass:[bottom]+: +pass:[0]+
-- +pass:[left]+: +pass:[5]+
-- +pass:[right]+: +pass:[5]+
-- +pass:[top]+: +pass:[0]+
+* ``bottom``: ``0``
+* ``left``: ``5``
+* ``right``: ``5``
+* ``top``: ``0``
 
-[[tabs.pinned.shrink]]
-=== tabs.pinned.shrink
+_tabs.pinned.shrink:
+tabs.pinned.shrink
+^^^^^^^^^^^^^^^^^^
 Shrink pinned tabs down to their contents.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[tabs.position]]
-=== tabs.position
+_tabs.position:
+tabs.position
+^^^^^^^^^^^^^
 Position of the tab bar.
 
 Type: <<types,Position>>
@@ -3330,10 +3609,11 @@ Valid values:
  * +left+
  * +right+
 
-Default: +pass:[top]+
+Default: ``top``
 
-[[tabs.select_on_remove]]
-=== tabs.select_on_remove
+_tabs.select_on_remove:
+tabs.select_on_remove
+^^^^^^^^^^^^^^^^^^^^^
 Which tab to select when the focused tab is removed.
 
 Type: <<types,SelectOnRemove>>
@@ -3344,10 +3624,11 @@ Valid values:
  * +next+: Select the tab which came after the closed one (right in horizontal, below in vertical).
  * +last-used+: Select the previously selected tab.
 
-Default: +pass:[next]+
+Default: ``next``
 
-[[tabs.show]]
-=== tabs.show
+_tabs.show:
+tabs.show
+^^^^^^^^^
 When to show the tab bar.
 
 Type: <<types,String>>
@@ -3359,26 +3640,29 @@ Valid values:
  * +multiple+: Hide the tab bar if only one tab is open.
  * +switching+: Show the tab bar when switching tabs.
 
-Default: +pass:[always]+
+Default: ``always``
 
-[[tabs.show_switching_delay]]
-=== tabs.show_switching_delay
+_tabs.show_switching_delay:
+tabs.show_switching_delay
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Duration (in milliseconds) to show the tab bar before hiding it when tabs.show is set to 'switching'.
 
 Type: <<types,Int>>
 
-Default: +pass:[800]+
+Default: ``800``
 
-[[tabs.tabs_are_windows]]
-=== tabs.tabs_are_windows
+_tabs.tabs_are_windows:
+tabs.tabs_are_windows
+^^^^^^^^^^^^^^^^^^^^^
 Open a new window for every tab.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[tabs.title.alignment]]
-=== tabs.title.alignment
+_tabs.title.alignment:
+tabs.title.alignment
+^^^^^^^^^^^^^^^^^^^^
 Alignment of the text inside of tabs.
 
 Type: <<types,TextAlignment>>
@@ -3389,10 +3673,11 @@ Valid values:
  * +right+
  * +center+
 
-Default: +pass:[left]+
+Default: ``left``
 
-[[tabs.title.format]]
-=== tabs.title.format
+_tabs.title.format:
+tabs.title.format
+^^^^^^^^^^^^^^^^^
 Format to use for the tab title.
 The following placeholders are defined:
 
@@ -3413,34 +3698,38 @@ The following placeholders are defined:
 
 Type: <<types,FormatString>>
 
-Default: +pass:[{audio}{index}: {title}]+
+Default: ``{audio}{index}: {title}``
 
-[[tabs.title.format_pinned]]
-=== tabs.title.format_pinned
+_tabs.title.format_pinned:
+tabs.title.format_pinned
+^^^^^^^^^^^^^^^^^^^^^^^^
 Format to use for the tab title for pinned tabs. The same placeholders like for `tabs.title.format` are defined.
 
 Type: <<types,FormatString>>
 
-Default: +pass:[{index}]+
+Default: ``{index}``
 
-[[tabs.width]]
-=== tabs.width
+_tabs.width:
+tabs.width
+^^^^^^^^^^
 Width (in pixels or as percentage of the window) of the tab bar if it's vertical.
 
 Type: <<types,PercOrInt>>
 
-Default: +pass:[20%]+
+Default: ``20%``
 
-[[tabs.wrap]]
-=== tabs.wrap
+_tabs.wrap:
+tabs.wrap
+^^^^^^^^^
 Wrap when changing tabs.
 
 Type: <<types,Bool>>
 
-Default: +pass:[true]+
+Default: ``true``
 
-[[url.auto_search]]
-=== url.auto_search
+_url.auto_search:
+url.auto_search
+^^^^^^^^^^^^^^^
 What search to start when something else than a URL is entered.
 
 Type: <<types,String>>
@@ -3451,19 +3740,21 @@ Valid values:
  * +dns+: Use DNS requests (might be slow!).
  * +never+: Never search automatically.
 
-Default: +pass:[naive]+
+Default: ``naive``
 
-[[url.default_page]]
-=== url.default_page
+_url.default_page:
+url.default_page
+^^^^^^^^^^^^^^^^
 Page to open if :open -t/-b/-w is used without URL.
 Use `about:blank` for a blank page.
 
 Type: <<types,FuzzyUrl>>
 
-Default: +pass:[https://start.duckduckgo.com/]+
+Default: ``https://start.duckduckgo.com/``
 
-[[url.incdec_segments]]
-=== url.incdec_segments
+_url.incdec_segments:
+url.incdec_segments
+^^^^^^^^^^^^^^^^^^^
 URL segments where `:navigate increment/decrement` will search for a number.
 
 Type: <<types,FlagList>>
@@ -3476,56 +3767,65 @@ Valid values:
  * +query+
  * +anchor+
 
-Default:
+Default: 
 
-- +pass:[path]+
-- +pass:[query]+
+* ``path``
+* ``query``
 
-[[url.open_base_url]]
-=== url.open_base_url
+
+
+_url.open_base_url:
+url.open_base_url
+^^^^^^^^^^^^^^^^^
 Open base URL of the searchengine if a searchengine shortcut is invoked without parameters.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[url.searchengines]]
-=== url.searchengines
+_url.searchengines:
+url.searchengines
+^^^^^^^^^^^^^^^^^
 Search engines which can be used via the address bar.
 Maps a search engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}` placeholder. The placeholder will be replaced by the search term, use `{{` and `}}` for literal `{`/`}` signs.
 The search engine named `DEFAULT` is used when `url.auto_search` is turned on and something else than a URL was entered to be opened. Other search engines can be used by prepending the search engine name to the search term, e.g.  `:open google qutebrowser`.
 
 Type: <<types,Dict>>
 
-Default:
+Default: 
 
-- +pass:[DEFAULT]+: +pass:[https://duckduckgo.com/?q={}]+
+* ``DEFAULT``: ``https://duckduckgo.com/?q={}``
 
-[[url.start_pages]]
-=== url.start_pages
+_url.start_pages:
+url.start_pages
+^^^^^^^^^^^^^^^
 Page(s) to open at the start.
 
 Type: <<types,List of FuzzyUrl&#44; or FuzzyUrl>>
 
-Default: +pass:[https://start.duckduckgo.com]+
+Default: ``https://start.duckduckgo.com``
 
-[[url.yank_ignored_parameters]]
-=== url.yank_ignored_parameters
+_url.yank_ignored_parameters:
+url.yank_ignored_parameters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 URL parameters to strip with `:yank url`.
 
 Type: <<types,List of String>>
 
-Default:
+Default: 
 
-- +pass:[ref]+
-- +pass:[utm_source]+
-- +pass:[utm_medium]+
-- +pass:[utm_campaign]+
-- +pass:[utm_term]+
-- +pass:[utm_content]+
+* ``ref``
+* ``utm_source``
+* ``utm_medium``
+* ``utm_campaign``
+* ``utm_term``
+* ``utm_content``
 
-[[window.hide_decoration]]
-=== window.hide_decoration
+
+
+_window.hide_decoration:
+window.hide_decoration
+^^^^^^^^^^^^^^^^^^^^^^
 Hide the window decoration.
 
 This setting requires a restart on Wayland.
@@ -3533,143 +3833,336 @@ This setting requires a restart on Wayland.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
-[[window.title_format]]
-=== window.title_format
+_window.title_format:
+window.title_format
+^^^^^^^^^^^^^^^^^^^
 Format to use for the window title. The same placeholders like for
 `tabs.title.format` are defined.
 
 
 Type: <<types,FormatString>>
 
-Default: +pass:[{perc}{title}{title_sep}qutebrowser]+
+Default: ``{perc}{title}{title_sep}qutebrowser``
 
-[[zoom.default]]
-=== zoom.default
+_zoom.default:
+zoom.default
+^^^^^^^^^^^^
 Default zoom level.
 
 Type: <<types,Perc>>
 
-Default: +pass:[100%]+
+Default: ``100%``
 
-[[zoom.levels]]
-=== zoom.levels
+_zoom.levels:
+zoom.levels
+^^^^^^^^^^^
 Available zoom levels.
 
 Type: <<types,List of Perc>>
 
-Default:
+Default: 
 
-- +pass:[25%]+
-- +pass:[33%]+
-- +pass:[50%]+
-- +pass:[67%]+
-- +pass:[75%]+
-- +pass:[90%]+
-- +pass:[100%]+
-- +pass:[110%]+
-- +pass:[125%]+
-- +pass:[150%]+
-- +pass:[175%]+
-- +pass:[200%]+
-- +pass:[250%]+
-- +pass:[300%]+
-- +pass:[400%]+
-- +pass:[500%]+
+* ``25%``
+* ``33%``
+* ``50%``
+* ``67%``
+* ``75%``
+* ``90%``
+* ``100%``
+* ``110%``
+* ``125%``
+* ``150%``
+* ``175%``
+* ``200%``
+* ``250%``
+* ``300%``
+* ``400%``
+* ``500%``
 
-[[zoom.mouse_divider]]
-=== zoom.mouse_divider
+
+
+_zoom.mouse_divider:
+zoom.mouse_divider
+^^^^^^^^^^^^^^^^^^
 Number of zoom increments to divide the mouse wheel movements to.
 
 Type: <<types,Int>>
 
-Default: +pass:[512]+
+Default: ``512``
 
-[[zoom.text_only]]
-=== zoom.text_only
+_zoom.text_only:
+zoom.text_only
+^^^^^^^^^^^^^^
 Apply the zoom factor on a frame only to the text or to all content.
 
 This setting supports URL patterns.
 
 Type: <<types,Bool>>
 
-Default: +pass:[false]+
+Default: ``false``
 
 This setting is only available with the QtWebKit backend.
 
 Setting types
 -------------
-.. _types:
 
-.. csv-table:: Types
-   :header: "Type", "Description"
-   :widths: 25, 75
+Bool
+^^^^
 
-Bool, A boolean setting, either `true` or `false`.
+A boolean setting, either ``true`` or ``false``.
 
-When setting from a string, `1`, `yes`, `on` and `true` count as true, while `0`, `no`, `off` and `false` count as false (case-insensitive).
-BoolAsk, Like `Bool`, but `ask` is allowed as additional value.
-ColorSystem, The color system to use for color interpolation.
-Command, A qutebrowser command with arguments.
-ConfirmQuit, Whether to display a confirmation when the window is closed.
-Dict, A dictionary of values.
+When setting from a string, ``1``, ``yes``, ``on`` and ``true`` count as true,
+while ``0``, ``no``, ``off`` and ``false`` count as false (case-insensitive).
 
-When setting from a string, pass a json-like dict, e.g. `{"key", "value"}`.
-Directory, A directory on the local filesystem.
-Encoding, Setting for a python encoding.
-File, A file on the local filesystem.
-FlagList, A list of flags.
+BoolAsk
+^^^^^^^
 
-Lists with duplicate flags are invalid. Each item is checked against the valid values of the setting.
-Float, Base class for a float setting.
-Font, A font family, with optional style/weight/size.
+Like ``Bool``, but ``ask`` is allowed as additional value.
 
-* Style: `normal`/`italic`/`oblique` * Weight: `normal`, `bold`, `100`..`900` * Size: _number_ `px`/`pt`
-FontFamily, A Qt font family.
-FormatString, A string with placeholders.
-FuzzyUrl, A URL which gets interpreted as search if needed.
-IgnoreCase, Whether to search case insensitively.
-Int, Base class for an integer setting.
-Key, A name of a key.
-List, A list of values.
+ColorSystem
+^^^^^^^^^^^
 
-When setting from a string, pass a json-like list, e.g. `["one", "two"]`.
-ListOrValue, A list of values, or a single value.
-NewTabPosition, How new tabs are positioned.
-Padding, Setting for paddings around elements.
-Perc, A percentage.
-PercOrInt, Percentage or integer.
-Position, The position of the tab bar.
-Proxy, A proxy URL, or `system`/`none`.
-QssColor, A color value supporting gradients.
+The color system to use for color interpolation.
 
-A value can be in one of the following formats: * `#RGB`/`#RRGGBB`/`#RRRGGGBBB`/`#RRRRGGGGBBBB` * An SVG color name as specified in http://www.w3.org/TR/SVG/types.html#ColorKeywords[the W3C specification]. * transparent (no color) * `rgb(r, g, b)` / `rgba(r, g, b, a)` (values 0-255 or percentages) * `hsv(h, s, v)` / `hsva(h, s, v, a)` (values 0-255, hue 0-359) * A gradient as explained in http://doc.qt.io/qt-5/stylesheet-reference.html#list-of-property-types[the Qt documentation] under ``Gradient''
-QtColor, A color value.
+Command
+^^^^^^^
 
-A value can be in one of the following formats: * `#RGB`/`#RRGGBB`/`#RRRGGGBBB`/`#RRRRGGGGBBBB` * An SVG color name as specified in http://www.w3.org/TR/SVG/types.html#ColorKeywords[the W3C specification]. * transparent (no color) * `rgb(r, g, b)` / `rgba(r, g, b, a)` (values 0-255 or percentages) * `hsv(h, s, v)` / `hsva(h, s, v, a)` (values 0-255, hue 0-359)
-QtFont, A font family, with optional style/weight/size.
+A qutebrowser command with arguments.
 
-* Style: `normal`/`italic`/`oblique` * Weight: `normal`, `bold`, `100`..`900` * Size: _number_ `px`/`pt`
-Regex, A regular expression.
+ConfirmQuit
+^^^^^^^^^^^
 
-When setting from `config.py`, both a string or a `re.compile(...)` object are valid.
-SearchEngineUrl, A search engine URL.
-SelectOnRemove, Which tab to select when the focused tab is removed.
-SessionName, The name of a session.
-ShellCommand, A shell command as a list.
+Whether to display a confirmation when the window is closed.
 
-See the documentation for `List`.
-String, A string value.
+Dict
+^^^^
+
+A dictionary of values.
+
+When setting from a string, pass a json-like dict, e.g. ``{"key", "value"}``.
+
+Directory
+^^^^^^^^^
+
+A directory on the local filesystem.
+
+Encoding
+^^^^^^^^
+
+Setting for a python encoding.
+
+File
+^^^^
+
+A file on the local filesystem.
+
+FlagList
+^^^^^^^^
+
+A list of flags.
+
+Lists with duplicate flags are invalid. Each item is checked against
+the valid values of the setting.
+
+Float
+^^^^^
+
+Base class for a float setting.
+
+Font
+^^^^
+
+A font family, with optional style/weight/size.
+
+* Style: ``normal``/``italic``/``oblique``
+* Weight: ``normal``, ``bold``, ``100``..``900``
+* Size: *number* ``px``/``pt``
+
+FontFamily
+^^^^^^^^^^
+
+A Qt font family.
+
+FormatString
+^^^^^^^^^^^^
+
+A string with placeholders.
+
+FuzzyUrl
+^^^^^^^^
+
+A URL which gets interpreted as search if needed.
+
+IgnoreCase
+^^^^^^^^^^
+
+Whether to search case insensitively.
+
+Int
+^^^
+
+Base class for an integer setting.
+
+Key
+^^^
+
+A name of a key.
+
+List
+^^^^
+
+A list of values.
+
+When setting from a string, pass a json-like list, e.g. ``["one", "two"]``.
+
+ListOrValue
+^^^^^^^^^^^
+
+A list of values, or a single value.
+
+NewTabPosition
+^^^^^^^^^^^^^^
+
+How new tabs are positioned.
+
+Padding
+^^^^^^^
+
+Setting for paddings around elements.
+
+Perc
+^^^^
+
+A percentage.
+
+PercOrInt
+^^^^^^^^^
+
+Percentage or integer.
+
+Position
+^^^^^^^^
+
+The position of the tab bar.
+
+Proxy
+^^^^^
+
+A proxy URL, or ``system``/``none``.
+
+QssColor
+^^^^^^^^
+
+A color value supporting gradients.
+
+A value can be in one of the following formats:
+
+* ``#RGB``/``#RRGGBB``/``#RRRGGGBBB``/``#RRRRGGGGBBBB``
+* An SVG color name as specified in
+  `the W3C specification <http://www.w3.org/TR/SVG/types.html#ColorKeywords>`_.
+* transparent (no color)
+* ``rgb(r, g, b)`` / ``rgba(r, g, b, a)`` (values 0-255 or percentages)
+* ``hsv(h, s, v)`` / ``hsva(h, s, v, a)`` (values 0-255, hue 0-359)
+* A gradient as explained in
+  `the Qt documentation <http://doc.qt.io/qt-5/stylesheet-reference.html#list-of-property-types>`_
+  under ``Gradient``
+
+QtColor
+^^^^^^^
+
+A color value.
+
+A value can be in one of the following formats:
+
+* ``#RGB``/``#RRGGBB``/``#RRRGGGBBB``/``#RRRRGGGGBBBB``
+* An SVG color name as specified in
+  http://www.w3.org/TR/SVG/types.html#ColorKeywords[the W3C specification].
+* transparent (no color)
+* ``rgb(r, g, b)`` / ``rgba(r, g, b, a)`` (values 0-255 or percentages)
+* ``hsv(h, s, v)`` / ``hsva(h, s, v, a)`` (values 0-255, hue 0-359)
+
+QtFont
+^^^^^^
+
+A font family, with optional style/weight/size.
+
+* Style: ``normal``/``italic``/``oblique``
+* Weight: ``normal``, ``bold``, ``100``..``900``
+* Size: *number* ``px``/``pt``
+
+Regex
+^^^^^
+
+A regular expression.
+
+When setting from ``config.py``, both a string or a ``re.compile(...)`` object
+are valid.
+
+
+SearchEngineUrl
+^^^^^^^^^^^^^^^
+
+A search engine URL.
+
+SelectOnRemove
+^^^^^^^^^^^^^^
+
+Which tab to select when the focused tab is removed.
+
+SessionName
+^^^^^^^^^^^
+
+The name of a session.
+
+ShellCommand
+^^^^^^^^^^^^
+
+A shell command as a list.
+
+See the documentation for ``List``.
+
+
+String
+^^^^^^
+
+A string value.
 
 See the setting's valid values for more information on allowed values.
-TextAlignment, Alignment of text.
-TimestampTemplate, An strftime-like template for timestamps.
+
+
+TextAlignment
+^^^^^^^^^^^^^
+
+Alignment of text.
+
+TimestampTemplate
+^^^^^^^^^^^^^^^^^
+
+An strftime-like template for timestamps.
 
 See https://sqlite.org/lang_datefunc.html for reference.
-UniqueCharString, A string which may not contain duplicate chars.
-Url, A URL as a string.
-UrlPattern, A match pattern for a URL.
 
-See https://developer.chrome.com/apps/match_patterns for the allowed syntax.
-VerticalPosition, The position of the download bar.
+UniqueCharString
+^^^^^^^^^^^^^^^^
+
+A string which may not contain duplicate chars.
+
+Url
+^^^
+
+A URL as a string.
+
+UrlPattern
+^^^^^^^^^^
+
+A match pattern for a URL.
+
+See https://developer.chrome.com/apps/match_patterns for the allowed
+syntax.
+
+VerticalPosition
+^^^^^^^^^^^^^^^^
+
+The position of the download bar.

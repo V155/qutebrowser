@@ -118,7 +118,7 @@ class DocstringParser:
             desc = re.sub(r', or None($|\.)', r'\1', desc)
             desc = re.sub(r', or None', r', or not given', desc)
             self.arg_descs[k] = desc
-        self.long_desc = ' '.join(self._long_desc_parts)
+        self.long_desc = '\n'.join(self._long_desc_parts)
         self.short_desc = ' '.join(self._short_desc_parts)
 
     def _process_arg(self, line):
@@ -145,8 +145,8 @@ class DocstringParser:
             self._state = self.State.arg_start
         elif line.strip() == '//' or line.startswith('Attributes:'):
             self._state = self.State.desc_hidden
-        elif line.strip():
-            self._long_desc_parts.append(line.strip())
+        else:
+            self._long_desc_parts.append(line)
 
     def _parse_arg_start(self, line):
         """Parse first argument line."""

@@ -291,7 +291,7 @@ class BaseType:
         str_value = self.to_str(value)
         if not str_value:
             return 'empty'
-        return '+pass:[{}]+'.format(html.escape(str_value))
+        return '``{}``'.format(html.escape(str_value))
 
     def complete(self) -> _Completions:
         """Return a list of possible values for completion.
@@ -447,7 +447,7 @@ class List(BaseType):
 
     """A list of values.
 
-    When setting from a string, pass a json-like list, e.g. `["one", "two"]`.
+    When setting from a string, pass a json-like list, e.g. ``["one", "two"]``.
     """
 
     _show_valtype = True
@@ -520,11 +520,11 @@ class List(BaseType):
         assert not isinstance(self.valtype, (Dict, List)), self.valtype
 
         lines = ['\n']
-        prefix = '-' if not indent else '*' * indent
         for elem in value:
-            lines.append('{} {}'.format(
-                prefix,
+            lines.append('{}* {}'.format(
+                '  ' * indent,
                 self.valtype.to_doc(elem, indent=indent+1)))
+        lines.append('\n')
         return '\n'.join(lines)
 
 
@@ -655,10 +655,10 @@ class FlagList(List):
 
 class Bool(BaseType):
 
-    """A boolean setting, either `true` or `false`.
+    """A boolean setting, either ``true`` or ``false``.
 
-    When setting from a string, `1`, `yes`, `on` and `true` count as true,
-    while `0`, `no`, `off` and `false` count as false (case-insensitive).
+    When setting from a string, ``1``, ``yes``, ``on`` and ``true`` count as true,
+    while ``0``, ``no``, ``off`` and ``false`` count as false (case-insensitive).
     """
 
     def __init__(self, none_ok: bool = False) -> None:
@@ -690,7 +690,7 @@ class Bool(BaseType):
 
 class BoolAsk(Bool):
 
-    """Like `Bool`, but `ask` is allowed as additional value."""
+    """Like ``Bool``, but ``ask`` is allowed as additional value."""
 
     def __init__(self, none_ok: bool = False) -> None:
         super().__init__(none_ok)
@@ -993,12 +993,12 @@ class QtColor(BaseType):
 
     A value can be in one of the following formats:
 
-    * `#RGB`/`#RRGGBB`/`#RRRGGGBBB`/`#RRRRGGGGBBBB`
+    * ``#RGB``/``#RRGGBB``/``#RRRGGGBBB``/``#RRRRGGGGBBBB``
     * An SVG color name as specified in
       http://www.w3.org/TR/SVG/types.html#ColorKeywords[the W3C specification].
     * transparent (no color)
-    * `rgb(r, g, b)` / `rgba(r, g, b, a)` (values 0-255 or percentages)
-    * `hsv(h, s, v)` / `hsva(h, s, v, a)` (values 0-255, hue 0-359)
+    * ``rgb(r, g, b)`` / ``rgba(r, g, b, a)`` (values 0-255 or percentages)
+    * ``hsv(h, s, v)`` / ``hsva(h, s, v, a)`` (values 0-255, hue 0-359)
     """
 
     def _parse_value(self, val: str) -> int:
@@ -1054,15 +1054,15 @@ class QssColor(BaseType):
 
     A value can be in one of the following formats:
 
-    * `#RGB`/`#RRGGBB`/`#RRRGGGBBB`/`#RRRRGGGGBBBB`
+    * ``#RGB``/``#RRGGBB``/``#RRRGGGBBB``/``#RRRRGGGGBBBB``
     * An SVG color name as specified in
-      http://www.w3.org/TR/SVG/types.html#ColorKeywords[the W3C specification].
+      `the W3C specification <http://www.w3.org/TR/SVG/types.html#ColorKeywords>`_.
     * transparent (no color)
-    * `rgb(r, g, b)` / `rgba(r, g, b, a)` (values 0-255 or percentages)
-    * `hsv(h, s, v)` / `hsva(h, s, v, a)` (values 0-255, hue 0-359)
+    * ``rgb(r, g, b)`` / ``rgba(r, g, b, a)`` (values 0-255 or percentages)
+    * ``hsv(h, s, v)`` / ``hsva(h, s, v, a)`` (values 0-255, hue 0-359)
     * A gradient as explained in
-      http://doc.qt.io/qt-5/stylesheet-reference.html#list-of-property-types[the Qt documentation]
-      under ``Gradient''
+      `the Qt documentation <http://doc.qt.io/qt-5/stylesheet-reference.html#list-of-property-types>`_
+      under ``Gradient``
     """
 
     def to_py(self, value: _StrUnset) -> _StrUnsetNone:
@@ -1089,9 +1089,9 @@ class Font(BaseType):
 
     """A font family, with optional style/weight/size.
 
-    * Style: `normal`/`italic`/`oblique`
-    * Weight: `normal`, `bold`, `100`..`900`
-    * Size: _number_ `px`/`pt`
+    * Style: ``normal``/``italic``/``oblique``
+    * Weight: ``normal``, ``bold``, ``100``..``900``
+    * Size: *number* ``px``/``pt``
     """
 
     # Gets set when the config is initialized.
@@ -1225,7 +1225,7 @@ class Regex(BaseType):
 
     """A regular expression.
 
-    When setting from `config.py`, both a string or a `re.compile(...)` object
+    When setting from ``config.py``, both a string or a ``re.compile(...)`` object
     are valid.
 
     Attributes:
@@ -1306,7 +1306,7 @@ class Dict(BaseType):
 
     """A dictionary of values.
 
-    When setting from a string, pass a json-like dict, e.g. `{"key", "value"}`.
+    When setting from a string, pass a json-like dict, e.g. ``{"key", "value"}``.
     """
 
     def __init__(self, keytype: typing.Union[String, 'Key'],
@@ -1394,10 +1394,9 @@ class Dict(BaseType):
         if not value:
             return 'empty'
         lines = ['\n']
-        prefix = '-' if not indent else '*' * indent
         for key, val in sorted(value.items()):
-            lines += ('{} {}: {}'.format(
-                prefix,
+            lines += ('{}* {}: {}'.format(
+                '  ' * indent,
                 self.keytype.to_doc(key),
                 self.valtype.to_doc(val, indent=indent+1),
             )).splitlines()
@@ -1492,7 +1491,7 @@ class ShellCommand(List):
 
     """A shell command as a list.
 
-    See the documentation for `List`.
+    See the documentation for ``List``.
 
     Attributes:
         placeholder: If there should be a placeholder.
@@ -1526,7 +1525,7 @@ class ShellCommand(List):
 
 class Proxy(BaseType):
 
-    """A proxy URL, or `system`/`none`."""
+    """A proxy URL, or ``system``/``none``."""
 
     def __init__(self, none_ok: bool = False) -> None:
         super().__init__(none_ok)

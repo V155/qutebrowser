@@ -139,7 +139,7 @@ def _get_command_quickref(cmds):
     out.append('   ')
     for name, cmd in cmds:
         desc = inspect.getdoc(cmd.handler).splitlines()[0]
-        out.append('   :ref:`{}`, {}'.format(name, desc))
+        out.append('   :ref:`{}`, "{}"'.format(name, desc))
     return '\n'.join(out)
 
 
@@ -152,7 +152,7 @@ def _get_setting_quickref():
     out.append('   ')
     for opt in sorted(configdata.DATA.values()):
         desc = opt.description.splitlines()[0]
-        out.append('   :ref:`{}`, {}'.format(opt.name, desc))
+        out.append('   :ref:`{}`, "{}"'.format(opt.name, desc))
     return '\n'.join(out)
 
 
@@ -171,19 +171,18 @@ def _get_configtypes():
 def _get_setting_types_quickref():
     """Generate the setting types quick reference."""
     out = []
-    out.append('.. _types:')
-    out.append('')
-    out.append('.. csv-table:: Types')
-    out.append('   :header: "Type", "Description"')
-    out.append('   :widths: 25, 75')
-    out.append('   ')
 
     for name, typ in _get_configtypes():
         parser = docutils.DocstringParser(typ)
         desc = parser.short_desc
         if parser.long_desc:
             desc += '\n\n' + parser.long_desc
-        out.append('{}, {}'.format(name, desc))
+
+        out.append('')
+        out.append(name)
+        out.append('^' * len(name))
+        out.append('')
+        out.append(desc)
 
     return '\n'.join(out)
 
@@ -433,8 +432,9 @@ def _generate_setting_backend_info(f, opt):
 def _generate_setting_option(f, opt):
     """Generate documentation for a single section."""
     f.write("\n")
-    f.write('[[{}]]'.format(opt.name) + "\n")
-    f.write("=== {}".format(opt.name) + "\n")
+    f.write('_{}:'.format(opt.name) + "\n")
+    f.write("{}".format(opt.name) + "\n")
+    f.write('^' * len(opt.name) + "\n")
     f.write(opt.description + "\n")
     if opt.restart:
         f.write("This setting requires a restart.\n")
@@ -511,8 +511,8 @@ def _format_block(filename, what, data):
                     temp.write(''.join(data))
                     found_start = True
                 elif line.strip() == '.. QUTE_{}_END'.format(what.upper()):
-                    temp.write(line)
                     temp.write('\n')
+                    temp.write(line)
                     found_end = True
                 elif (not found_start) or found_end:
                     temp.write(line)
