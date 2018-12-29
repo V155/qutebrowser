@@ -23,6 +23,7 @@ The following help pages are currently available:
    install
    extapi/index
    qutebrowser.1
+   stacktrace
 
 Getting help
 ============
