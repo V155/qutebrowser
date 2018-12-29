@@ -9,22 +9,20 @@ Documentation
 
 The following help pages are currently available:
 
--  `Quick start guide <../quickstart.xml>`__
+.. toctree::
 
--  `Frequently asked questions <../faq.xml>`__
-
--  `Change Log <../changelog.xml>`__
-
--  `Documentation of commands <commands.xml>`__
-
--  `Configuring qutebrowser <configuring.xml>`__
-
--  `Documentation of settings <settings.xml>`__
-
--  `How to write userscripts <../userscripts.xml>`__
-
--  `Contributing to qutebrowser <../contributing.xml>`__
-
+   quickstart
+   faq
+   changelog
+   commands
+   configuring
+   settings
+   userscripts
+   contributing
+   backers
+   install
+   extapi/index
+   qutebrowser.1
 
 Getting help
 ============
