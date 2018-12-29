@@ -179,14 +179,17 @@ Using :bind without any arguments opens a page showing all keybindings.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `key`: The keychain to bind. Examples of valid keychains are `gC`, `<Ctrl-X>` or `<Ctrl-C>a`.
+* `key`: The keychain to bind. Examples of valid keychains are `gC`,
+  `<Ctrl-X>` or `<Ctrl-C>a`.
 
 * `command`: The command to execute, with optional args.
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-m`, `--mode`: A comma-separated list of modes to bind the key in (default: `normal`). See `:help bindings.commands` for the
- available modes.
+* `-m`, `--mode`: A comma-separated list of modes to bind the key in
+  (default: `normal`). See `:help bindings.commands` for the
+
+  available modes.
 
 * `-d`, `--default`: If given, restore a default binding.
 
@@ -216,13 +219,15 @@ link:qute://bookmarks[bookmarks page].
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `url`: url to save as a bookmark. If not given, use url of current page.
+* `url`: url to save as a bookmark. If not given, use url of current
+  page.
 
 * `title`: title of the new bookmark.
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-t`, `--toggle`: remove the bookmark instead of raising an error if it already exists.
+* `-t`, `--toggle`: remove the bookmark instead of raising an error if it
+  already exists.
 
 
 
@@ -236,7 +241,8 @@ Delete a bookmark.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `url`: The url of the bookmark to delete. If not given, use the current page's url.
+* `url`: The url of the bookmark to delete. If not given, use the
+  current page's url.
 
 
 note
@@ -284,7 +290,8 @@ With neither index nor count given, open the qute://tabs page.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `index`: The [win_id/]index of the tab to focus. Or a substring in which case the closest match will be focused.
+* `index`: The [win_id/]index of the tab to focus. Or a substring
+  in which case the closest match will be focused.
 
 
 count
@@ -324,7 +331,8 @@ error is shown.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `filter`: How to filter the elements. id: Get an element based on its ID.
+* `filter`: How to filter the elements.
+  id: Get an element based on its ID.
 
 * `value`: The value to filter for.
 
@@ -351,7 +359,8 @@ Set all settings back to their default.
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-s`, `--save`: If given, all configuration in autoconfig.yml is also removed.
+* `-s`, `--save`: If given, all configuration in autoconfig.yml is also
+  removed.
 
 
 
@@ -393,7 +402,8 @@ positional arguments
 optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-t`, `--temp`: Add value temporarily until qutebrowser is closed.
-* `-r`, `--replace`: Replace existing values. By default, existing values are not overwritten.
+* `-r`, `--replace`: Replace existing values. By default, existing values are
+  not overwritten.
 
 
 
@@ -474,7 +484,8 @@ Read a config.py file.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `filename`: The file to load. If not given, loads the default config.py.
+* `filename`: The file to load. If not given, loads the default
+  config.py.
 
 
 optional arguments
@@ -588,9 +599,12 @@ application to open the file.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `cmdline`: The command which should be used to open the file. A `{}` is expanded to the temporary file name. If no `{}` is
- present, the filename is automatically appended to the
- cmdline.
+* `cmdline`: The command which should be used to open the file. A `{}`
+  is expanded to the temporary file name. If no `{}` is
+
+  present, the filename is automatically appended to the
+
+  cmdline.
 
 
 count
@@ -666,7 +680,8 @@ optional arguments
 * `-t`, `--tab`: Open in a new tab.
 * `-w`, `--window`: Open in a new window.
 * `-p`, `--private`: Open a new window in private browsing mode.
-* `-r`, `--related`: If opening a new tab, position the tab as related to the current one (like clicking on a link).
+* `-r`, `--related`: If opening a new tab, position the tab as related to the
+  current one (like clicking on a link).
 
 
 
@@ -764,7 +779,8 @@ qutebrowser's data directory (see `:version`).
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-f`, `--force`: For any scripts that have required dependencies, re-download them.
+* `-f`, `--force`: For any scripts that have required dependencies,
+  re-download them.
 
 
 
@@ -778,10 +794,13 @@ Show help about a command or setting.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `topic`: The topic to show help for. 
+* `topic`: The topic to show help for.
+  
 
- - :__command__ for commands.
- - __section__.__option__ for settings.
+
+  - :__command__ for commands.
+
+  - __section__.__option__ for settings.
 
 
 optional arguments
@@ -802,74 +821,126 @@ Start hinting.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `group`: The element types to hint. 
-
- - `all`: All clickable elements.
- - `links`: Only links.
- - `images`: Only images.
- - `inputs`: Only input fields.
- 
-
- Custom groups can be added via the `hints.selectors` setting
- and also used here.
- 
+* `group`: The element types to hint.
+  
 
 
-* `target`: What to do with the selected element. 
+  - `all`: All clickable elements.
 
- - `normal`: Open the link.
- - `current`: Open the link in the current tab.
- - `tab`: Open the link in a new tab (honoring the
- `tabs.background_tabs` setting).
- - `tab-fg`: Open the link in a new foreground tab.
- - `tab-bg`: Open the link in a new background tab.
- - `window`: Open the link in a new window.
- - `hover` : Hover over the link.
- - `yank`: Yank the link to the clipboard.
- - `yank-primary`: Yank the link to the primary selection.
- - `run`: Run the argument as command.
- - `fill`: Fill the commandline with the command given as
- argument.
- - `download`: Download the link.
- - `userscript`: Call a userscript with `$QUTE_URL` set to the
- link.
- - `spawn`: Spawn a command.
- 
+  - `links`: Only links.
+
+  - `images`: Only images.
+
+  - `inputs`: Only input fields.
+
+  
 
 
-* `args`: Arguments for spawn/userscript/run/fill. 
+  Custom groups can be added via the `hints.selectors` setting
 
- - With `spawn`: The executable and arguments to spawn.
- `{hint-url}` will get replaced by the selected
- URL.
- - With `userscript`: The userscript to execute. Either store
- the userscript in
- `~/.local/share/qutebrowser/userscripts`
- (or `$XDG_DATA_HOME`), or use an absolute
- path.
- - With `fill`: The command to fill the statusbar with.
- `{hint-url}` will get replaced by the selected
- URL.
- - With `run`: Same as `fill`.
+  and also used here.
+
+  
+
+
+* `target`: What to do with the selected element.
+  
+
+
+  - `normal`: Open the link.
+
+  - `current`: Open the link in the current tab.
+
+  - `tab`: Open the link in a new tab (honoring the
+
+  `tabs.background_tabs` setting).
+
+  - `tab-fg`: Open the link in a new foreground tab.
+
+  - `tab-bg`: Open the link in a new background tab.
+
+  - `window`: Open the link in a new window.
+
+  - `hover` : Hover over the link.
+
+  - `yank`: Yank the link to the clipboard.
+
+  - `yank-primary`: Yank the link to the primary selection.
+
+  - `run`: Run the argument as command.
+
+  - `fill`: Fill the commandline with the command given as
+
+  argument.
+
+  - `download`: Download the link.
+
+  - `userscript`: Call a userscript with `$QUTE_URL` set to the
+
+  link.
+
+  - `spawn`: Spawn a command.
+
+  
+
+
+* `args`: Arguments for spawn/userscript/run/fill.
+  
+
+
+  - With `spawn`: The executable and arguments to spawn.
+
+  `{hint-url}` will get replaced by the selected
+
+  URL.
+
+  - With `userscript`: The userscript to execute. Either store
+
+  the userscript in
+
+  `~/.local/share/qutebrowser/userscripts`
+
+  (or `$XDG_DATA_HOME`), or use an absolute
+
+  path.
+
+  - With `fill`: The command to fill the statusbar with.
+
+  `{hint-url}` will get replaced by the selected
+
+  URL.
+
+  - With `run`: Same as `fill`.
 
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-m`, `--mode`: The hinting mode to use. 
-
- - `number`: Use numeric hints.
- - `letter`: Use the chars in the hints.chars setting.
- - `word`: Use hint words based on the html elements and the
- extra words.
- 
+* `-m`, `--mode`: The hinting mode to use.
+  
 
 
-* `-a`, `--add-history`: Whether to add the spawned or yanked link to the browsing history.
+  - `number`: Use numeric hints.
 
-* `-r`, `--rapid`: Whether to do rapid hinting. With rapid hinting, the hint mode isn't left after a hint is followed, so you can easily
- open multiple links. This is only possible with targets
- `tab` (with `tabs.background_tabs=true`), `tab-bg`,
- `window`, `run`, `hover`, `userscript` and `spawn`.
+  - `letter`: Use the chars in the hints.chars setting.
+
+  - `word`: Use hint words based on the html elements and the
+
+  extra words.
+
+  
+
+
+* `-a`, `--add-history`: Whether to add the spawned or yanked link to the
+  browsing history.
+
+* `-r`, `--rapid`: Whether to do rapid hinting. With rapid hinting, the hint
+  mode isn't left after a hint is followed, so you can easily
+
+  open multiple links. This is only possible with targets
+
+  `tab` (with `tabs.background_tabs=true`), `tab-bg`,
+
+  `window`, `run`, `hover`, `userscript` and `spawn`.
 
 * `-f`, `--first`: Click the first hinted element without prompting.
 
@@ -959,12 +1030,16 @@ positional arguments
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-f`, `--file`: Interpret js-code as a path to a file. If the path is relative, the file is searched in a js/ subdir
- in qutebrowser's data dir, e.g.
- `~/.local/share/qutebrowser/js`.
+* `-f`, `--file`: Interpret js-code as a path to a file.
+  If the path is relative, the file is searched in a js/ subdir
+
+  in qutebrowser's data dir, e.g.
+
+  `~/.local/share/qutebrowser/js`.
 
 * `-q`, `--quiet`: Don't show resulting JS object.
-* `-w`, `--world`: Ignored on QtWebKit. On QtWebEngine, a world ID or name to run the snippet in.
+* `-w`, `--world`: Ignored on QtWebKit. On QtWebEngine, a world ID or name to
+  run the snippet in.
 
 
 note
@@ -1059,7 +1134,8 @@ Show a log of past messages.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `level`: Include messages with `level` or higher severity. Valid values: vdebug, debug, info, warning, error, critical.
+* `level`: Include messages with `level` or higher severity.
+  Valid values: vdebug, debug, info, warning, error, critical.
 
 
 optional arguments
@@ -1086,20 +1162,33 @@ Alternatively it can navigate by changing the current URL.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `where`: What to open. 
+* `where`: What to open.
+  
 
- - `prev`: Open a _previous_ link.
- - `next`: Open a _next_ link.
- - `up`: Go up a level in the current URL.
- - `increment`: Increment the last number in the URL.
- Uses the
- link:settings{outsuffix}#url.incdec_segments[url.incdec_segments]
- config option.
- - `decrement`: Decrement the last number in the URL.
- Uses the
- link:settings{outsuffix}#url.incdec_segments[url.incdec_segments]
- config option.
- 
+
+  - `prev`: Open a _previous_ link.
+
+  - `next`: Open a _next_ link.
+
+  - `up`: Go up a level in the current URL.
+
+  - `increment`: Increment the last number in the URL.
+
+  Uses the
+
+  link:settings{outsuffix}#url.incdec_segments[url.incdec_segments]
+
+  config option.
+
+  - `decrement`: Decrement the last number in the URL.
+
+  Uses the
+
+  link:settings{outsuffix}#url.incdec_segments[url.incdec_segments]
+
+  config option.
+
+  
 
 
 
@@ -1111,7 +1200,8 @@ optional arguments
 
 count
 ^^^^^
-For `increment` and `decrement`, the number to change the URL by. For `up`, the number of levels to go up in the URL.
+For `increment` and `decrement`, the number to change the
+  URL by. For `up`, the number of levels to go up in the URL.
 
 
 
@@ -1141,7 +1231,8 @@ positional arguments
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-r`, `--related`: If opening a new tab, position the tab as related to the current one (like clicking on a link).
+* `-r`, `--related`: If opening a new tab, position the tab as related to the
+  current one (like clicking on a link).
 
 * `-b`, `--bg`: Open in a new background tab.
 * `-t`, `--tab`: Open in a new tab.
@@ -1214,8 +1305,10 @@ Delete a quickmark.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `name`: The name of the quickmark to delete. If not given, delete the quickmark for the current page (choosing one arbitrarily
- if there are more than one).
+* `name`: The name of the quickmark to delete. If not given, delete the
+  quickmark for the current page (choosing one arbitrarily
+
+  if there are more than one).
 
 
 note
@@ -1267,7 +1360,8 @@ positional arguments
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-s`, `--save`: When given, save the open windows even if auto_save.session is turned off.
+* `-s`, `--save`: When given, save the open windows even if auto_save.session
+  is turned off.
 
 
 
@@ -1404,7 +1498,8 @@ Save configs and state.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `what`: What to save (`config`/`key-config`/`cookies`/...). If not given, everything is saved.
+* `what`: What to save (`config`/`key-config`/`cookies`/...).
+  If not given, everything is saved.
 
 
 
@@ -1422,7 +1517,8 @@ scroll increment.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `direction`: In which direction to scroll (up/down/left/right/top/bottom).
+* `direction`: In which direction to scroll
+  (up/down/left/right/top/bottom).
 
 
 count
@@ -1446,9 +1542,11 @@ positional arguments
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-t`, `--top-navigate`: :navigate action (prev, decrement) to run when scrolling up at the top of the page.
+* `-t`, `--top-navigate`: :navigate action (prev, decrement) to run when
+  scrolling up at the top of the page.
 
-* `-b`, `--bottom-navigate`: :navigate action (next, increment) to run when scrolling down at the bottom of the page.
+* `-b`, `--bottom-navigate`: :navigate action (next, increment) to run when
+  scrolling down at the bottom of the page.
 
 
 count
@@ -1569,7 +1667,8 @@ positional arguments
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-f`, `--force`: Force deleting internal sessions (starting with an underline).
+* `-f`, `--force`: Force deleting internal sessions (starting with an
+  underline).
 
 
 
@@ -1589,7 +1688,8 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-c`, `--clear`: Close all existing windows.
 * `-t`, `--temp`: Don't set the current session for :session-save.
-* `-f`, `--force`: Force loading internal sessions (starting with an underline).
+* `-f`, `--force`: Force loading internal sessions (starting with an
+  underline).
 
 * `-d`, `--delete`: Delete the saved session once it has loaded.
 
@@ -1606,7 +1706,8 @@ Save a session.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `name`: The name of the session. If not given, the session configured in session.default_name is saved.
+* `name`: The name of the session. If not given, the session configured
+  in session.default_name is saved.
 
 
 optional arguments
@@ -1661,7 +1762,8 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-s`, `--space`: If given, a space is added to the end.
 * `-a`, `--append`: If given, the text is appended to the current text.
-* `-r`, `--run-on-count`: If given with a count, the command is run with the given count rather than setting the command text.
+* `-r`, `--run-on-count`: If given with a count, the command is run with the
+  given count rather than setting the command text.
 
 
 count
@@ -1701,11 +1803,16 @@ positional arguments
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-u`, `--userscript`: Run the command as a userscript. You can use an absolute path, or store the userscript in one of those
- locations:
- - `~/.local/share/qutebrowser/userscripts`
- (or `$XDG_DATA_HOME`)
- - `/usr/share/qutebrowser/userscripts`
+* `-u`, `--userscript`: Run the command as a userscript. You can use an
+  absolute path, or store the userscript in one of those
+
+  locations:
+
+  - `~/.local/share/qutebrowser/userscripts`
+
+  (or `$XDG_DATA_HOME`)
+
+  - `/usr/share/qutebrowser/userscripts`
 
 * `-v`, `--verbose`: Show notifications when the command started/exited.
 * `-o`, `--output`: Whether the output should be shown in a new tab.
@@ -1757,7 +1864,8 @@ optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-p`, `--prev`: Force selecting the tab before the current tab.
 * `-n`, `--next`: Force selecting the tab after the current tab.
-* `-o`, `--opposite`: Force selecting the tab in the opposite direction of what's configured in 'tabs.select_on_remove'.
+* `-o`, `--opposite`: Force selecting the tab in the opposite direction of
+  what's configured in 'tabs.select_on_remove'.
 
 * `-f`, `--force`: Avoid confirmation for pinned tabs.
 
@@ -1780,9 +1888,12 @@ If both are given, use count.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `index`: The tab index to focus, starting with 1. The special value `last` focuses the last focused tab (regardless of count).
- Negative indices count from the end, such that -1 is the
- last tab.
+* `index`: The tab index to focus, starting with 1. The special value
+  `last` focuses the last focused tab (regardless of count).
+
+  Negative indices count from the end, such that -1 is the
+
+  last tab.
 
 
 optional arguments
@@ -1831,14 +1942,18 @@ If neither is given, move it to the first position.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `index`: `+` or `-` to move relative to the current tab by count, or a default of 1 space.
- A tab index to move to that index.
+* `index`: `+` or `-` to move relative to the current tab by
+  count, or a default of 1 space.
+
+  A tab index to move to that index.
 
 
 count
 ^^^^^
-If moving relatively: Offset. If moving absolutely: New position (default: 0). This
- overrides the index argument, if given.
+If moving relatively: Offset.
+  If moving absolutely: New position (default: 0). This
+
+  overrides the index argument, if given.
 
 
 
@@ -1916,7 +2031,8 @@ Take a tab from another window.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `index`: The [win_id/]index of the tab to take. Or a substring in which case the closest match will be taken.
+* `index`: The [win_id/]index of the tab to take. Or a substring
+  in which case the closest match will be taken.
 
 
 optional arguments
@@ -1938,12 +2054,14 @@ Unbind a keychain.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `key`: The keychain to unbind. See the help for `:bind` for the correct syntax for keychains.
+* `key`: The keychain to unbind. See the help for `:bind` for the
+  correct syntax for keychains.
 
 
 optional arguments
 ^^^^^^^^^^^^^^^^^^
-* `-m`, `--mode`: A mode to unbind the key in (default: `normal`). See `:help bindings.commands` for the available modes.
+* `-m`, `--mode`: A mode to unbind the key in (default: `normal`).
+  See `:help bindings.commands` for the available modes.
 
 
 
@@ -1978,9 +2096,12 @@ Show the source of the current page in a new tab.
 optional arguments
 ^^^^^^^^^^^^^^^^^^
 * `-e`, `--edit`: Edit the source in the editor instead of opening a tab.
-* `-p`, `--pygments`: Use pygments to generate the view. This is always the case for QtWebKit. For QtWebEngine it may display
- slightly different source.
- Some JavaScript processing may be applied.
+* `-p`, `--pygments`: Use pygments to generate the view. This is always
+  the case for QtWebKit. For QtWebEngine it may display
+
+  slightly different source.
+
+  Some JavaScript processing may be applied.
 
 
 
@@ -2001,15 +2122,23 @@ Yank something to the clipboard or primary selection.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `what`: What to yank. 
+* `what`: What to yank.
+  
 
- - `url`: The current URL.
- - `pretty-url`: The URL in pretty decoded form.
- - `title`: The current page's title.
- - `domain`: The current scheme, domain, and port number.
- - `selection`: The selection under the cursor.
- - `markdown`: Yank title and URL in markdown format.
- 
+
+  - `url`: The current URL.
+
+  - `pretty-url`: The URL in pretty decoded form.
+
+  - `title`: The current page's title.
+
+  - `domain`: The current scheme, domain, and port number.
+
+  - `selection`: The selection under the cursor.
+
+  - `markdown`: Yank title and URL in markdown format.
+
+  
 
 
 
@@ -2387,7 +2516,8 @@ Accept the current prompt.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `value`: If given, uses this value instead of the entered one. For boolean prompts, "yes"/"no" are accepted as value.
+* `value`: If given, uses this value instead of the entered one.
+  For boolean prompts, "yes"/"no" are accepted as value.
 
 
 
@@ -2418,9 +2548,12 @@ application to open the file.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `cmdline`: The command which should be used to open the file. A `{}` is expanded to the temporary file name. If no `{}` is
- present, the filename is automatically appended to the
- cmdline.
+* `cmdline`: The command which should be used to open the file. A `{}`
+  is expanded to the temporary file name. If no `{}` is
+
+  present, the filename is automatically appended to the
+
+  cmdline.
 
 
 optional arguments
@@ -2708,7 +2841,8 @@ Change the log filter for console logging.
 
 positional arguments
 ^^^^^^^^^^^^^^^^^^^^
-* `filters`: A comma separated list of logger names. Can also be "none" to clear any existing filters.
+* `filters`: A comma separated list of logger names. Can also be "none" to
+  clear any existing filters.
 
 
 
