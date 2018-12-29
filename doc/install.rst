@@ -1,9 +1,3 @@
-======================
-Installing qutebrowser
-======================
-
-:Date:   2018-10-01
-
    **Note**
 
    qutebrowser recently had some bigger dependency changes for v1.0.0,
@@ -525,10 +519,6 @@ environment <https://docs.python.org/3/library/venv.html>`__:
 ::
 
    $ tox -e mkvenv-pypi
-
-If your system comes with Python 3.5.3 or older (such as Ubuntu 16.04
-LTS), use ``tox -e mkvenv-pypi-old`` instead. This installs an older Qt
-version (5.10) due to bugs in newer versions.
 
 This installs all needed Python dependencies in a ``.venv`` subfolder.
 

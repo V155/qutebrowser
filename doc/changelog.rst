@@ -1,17 +1,11 @@
-==========
-Change Log
-==========
-
-:Date:   2018-10-08
-
 All notable changes to this project will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`__,
 though minor breaking changes (such as renamed commands) can happen in
 minor releases.
 
-.. __v1_5_0_unreleased:
+.. __v1_6_0_unreleased:
 
-v1.5.0 (unreleased)
+v1.6.0 (unreleased)
 ===================
 
 .. __added:
@@ -19,29 +13,199 @@ v1.5.0 (unreleased)
 Added
 -----
 
--  The qute-pass userscript now has optional OTP support.
+-  New ``tabs.new_position.stacking`` setting which controls whether new
+   tabs opened from a page should stack on each other or not.
 
--  When ``:spawn --userscript`` is called with a count, that count is
-   now passed to userscripts as ``$QUTE_COUNT``.
+-  New ``completion.open_categories`` setting which allows to configure
+   which categories are shown in the ``:open`` completion, and how they
+   are ordered.
 
--  New ``content.mouse_lock`` setting to handle HTML5 pointer locking.
+-  New config manipulation commands:
 
--  New ``completion.web_history.exclude`` setting which hides a list of
-   URL patterns from the completion.
+   -  ``:config-dict-add`` and ``:config-list-add`` to a new element to
+      a dict/list setting.
 
--  Rewritten PDF.js support:
+   -  ``:config-dict-remove`` and ``:config-list-remove`` to remove an
+      element from a dict/list setting.
 
-   -  PDF.js support and the ``content.pdfjs`` setting are now available
-      with QtWebEngine.
+-  New ``hints.selectors`` setting which allows to configure what CSS
+   selectors are used for hints, and also allows adding custom hint
+   groups.
 
-   -  Opening a PDF file now doesn’t start a second request anymore.
-
-   -  Opening PDFs on https:// sites now works properly.
+-  New ``:yank markdown`` feature which yanks the current URL and title
+   in markdown format.
 
 .. __changed:
 
 Changed
 -------
+
+-  ``:q`` now closes current window instead of quitting qutebrowser
+   completely (``:close``), while ``:qa`` quits (``:quit``). The
+   behavior of ``:wq`` remains unchanged (``:quit --save``), as closing
+   a window while saving the session doesn’t make sense.
+
+-  Completion highlighting is now done differently (using
+   ``QSyntaxHighlighter``), which should fix some highlighting
+   corner-cases.
+
+-  The ``QtColor`` config type now also understands colors like
+   ``rgb(...)``.
+
+-  ``:yank`` now has a ``--quiet`` option which causes it to not display
+   a message.
+
+-  The ``:open`` completion now also shows search engines by default.
+
+-  The ``content.host_blocking.enabled`` setting now supports URL
+   patterns, so the adblocker can be disabled on a given page.
+
+-  Elements with a ``tabindex`` attribute now also get hints by default.
+
+-  Various small performance improvements for hints and the completion.
+
+-  The Wayland check for QtWebEngine is now disabled on Qt >= 5.11.2, as
+   those versions should work without any issues.
+
+.. __fixed:
+
+Fixed
+-----
+
+-  Invalid world IDs now get rejected for ``:jseval`` and GreaseMonkey
+   scripts.
+
+-  When websites suggest download filenames with invalid characters,
+   those are now correctly replaced.
+
+-  Invalid hint length calculation in certain rare cases.
+
+-  Dragging tabs in the tab bar (which was broken in v1.5.0)
+
+-  Using Shift-Home in command mode now works properly.
+
+-  Workaround for a Qt bug which prevented
+   ``content.cookies.accept = no-3rdparty`` from working properly on
+   some pages like GMail. However, the default for
+   ``content.cookies.accept`` is still ``all`` to be in line with what
+   other browsers do.
+
+-  ``:navigate`` not incrementing in anchors or queries or anchors.
+
+-  Crash when trying to use a proxy requiring authentication with
+   QtWebKit.
+
+-  Slashes in search terms are now percent-escaped.
+
+.. __v1_5_2:
+
+v1.5.2
+======
+
+.. __changed_2:
+
+Changed
+-------
+
+-  The ``content.cookies.accept`` setting is now set to ``all`` instead
+   of ``no-3rdparty`` by default, as ``no-3rdparty`` breaks various
+   pages such as GMail.
+
+.. __v1_5_1:
+
+v1.5.1
+======
+
+.. __fixed_2:
+
+Fixed
+-----
+
+-  Flickering when opening/closing tabs (as soon as more than 10 are
+   open) on some pages.
+
+-  PDF.js is now bundled again with the macOS/Windows release.
+
+-  PDF.js is now searched in the correct path (if not installed
+   system-wide) instead of hardcoding ``~/.local/share/qutebrowser``.
+
+-  Improved logging for PDF.js resources which fail to load.
+
+-  Crash when closing a tab after doing a search.
+
+-  Tabs appearing when hidden after e.g. closing tabs.
+
+.. __v1_5_0:
+
+v1.5.0
+======
+
+.. __added_2:
+
+Added
+-----
+
+-  Rewritten PDF.js support:
+
+   -  PDF.js support and the ``content.pdfjs`` setting are now also
+      available with QtWebEngine.
+
+   -  Opening a PDF file now doesn’t start a second request anymore.
+
+   -  Opening PDFs on https:// sites now works properly.
+
+   -  New ``--pdfjs`` flag for ``prompt-open-download``, so PDFs can be
+      opened in PDF.js with ``<Ctrl-P>`` in the download prompt.
+
+-  New settings:
+
+   -  ``content.mouse_lock`` to handle HTML5 pointer locking.
+
+   -  ``completion.web_history.exclude`` which hides a list of URL
+      patterns from the completion.
+
+   -  ``qt.process_model`` which can be used to change Chromium’s
+      process model.
+
+   -  ``qt.low_end_device_mode`` which turns on Chromium’s low-end
+      device mode. This mode uses less RAM, but the expense of
+      performance.
+
+   -  ``content.webrtc_ip_handling_policy``, which allows more
+      fine-grained/restrictive control about which IPs are exposed via
+      WebRTC.
+
+   -  ``tabs.max_width`` which allows to have a more "normal" look for
+      tabs.
+
+   -  ``content.mute`` which allows to mute pages (or all tabs) by
+      default.
+
+-  Running qutebrowser with QtWebKit or Qt < 5.9 now shows a warning
+   (only once), as support for those is going to be removed in a future
+   release.
+
+-  New t[iI][hHu] default bindings (similar to ``tsh`` etc.) to toggle
+   images.
+
+-  The qute-pass userscript now has optional OTP support.
+
+-  When ``:spawn --userscript`` is called with a count, that count is
+   now passed to userscripts as ``$QUTE_COUNT``.
+
+.. __changed_3:
+
+Changed
+-------
+
+-  Windows and macOS releases now bundle Python 3.7, PyQt 5.11.3 and Qt
+   5.11.2. QtWebEngine includes security fixes up to Chromium
+   68.0.3440.75 and `various other
+   fixes <http://code.qt.io/cgit/qt/qtwebengine.git/tree/dist/changes-5.11.2/?h=v5.11.2>`__.
+
+-  Various performance improvements when many tabs are opened.
+
+-  The ``content.headers.referer`` setting now works on QtWebEngine.
 
 -  The ``:repeat`` command now takes a count which is multiplied with
    the given "times" argument.
@@ -63,26 +227,66 @@ Changed
    ``completion.web_history.max_items``.
 
 -  The Makefile shipped with qutebrowser now supports overriding
-   variables DATADIR and MANDIR.
-
--  Various performance improvements when many tabs are opened.
+   variables ``DATADIR`` and ``MANDIR``.
 
 -  Regenerating completion history now shows a progress dialog.
-
--  Make qute:// pages work properly on Qt 5.11.2
 
 -  The ``content.autoplay`` setting now supports URL patterns on Qt >=
    5.11.
 
-.. __fixed:
+-  The ``content.host_blocking.whitelist`` setting now takes a list of
+   URL patterns instead of globs.
+
+-  In passthrough mode, Ctrl + Mousewheel now also gets passed through
+   to the page instead of zooming.
+
+-  Editing text in an external editor now simulates a JS "input" event,
+   which improves compatibility with websites reacting via JS to input.
+
+-  The ``qute://settings`` page is now properly sorted on Python 3.5.
+
+-  ``:zoom``, ``:zoom-in`` and ``:zoom-out`` now have a ``--quiet``
+   switch which causes them to not display a message.
+
+-  The ``scrolling.bar`` setting now takes three values instead of being
+   a boolean: ``always``, ``never``, and ``when-searching`` (which only
+   displays it while a search is active).
+
+-  *@@* now repeats the last run macro.
+
+-  The ``content.host_blocking.lists`` setting now accepts a ``file://``
+   URL to a directory, and reads all files in that directory.
+
+-  The ``:tab-give`` and ``:tab-take`` command now have a new flag
+   ``--keep`` which causes them to keep the old tab around.
+
+-  ``:navigate`` now clears the URL query.
+
+.. __fixed_3:
 
 Fixed
 -----
+
+-  ``qute://`` pages now work properly on Qt 5.11.2
 
 -  Error when passing a substring with spaces to ``:tab-take``.
 
 -  Greasemonkey scripts which start with an UTF-8 BOM are now handled
    correctly.
+
+-  When no documentation has been generated, the plaintext documentation
+   now can be shown for more files such as
+   ``qute://help/userscripts.html``.
+
+-  Crash when doing initial run on Wayland without XWayland.
+
+-  Crash when trying to load an empty session file.
+
+-  ``:hint`` with an invalid ``--mode=`` value now shows a proper error.
+
+-  Rare crash on Qt 5.11.2 when clicking on ``<select>`` elements.
+
+-  Rare crash related to the completion.
 
 .. __removed:
 
@@ -91,12 +295,15 @@ Removed
 
 -  Support for importing pre-v1.0.0 history files has been removed.
 
+-  The ``content.webrtc_public_interfaces_only`` setting has been
+   removed and replaced by ``content.webrtc_ip_handling_policy``.
+
 .. __v1_4_2:
 
 v1.4.2
 ======
 
-.. __changed_2:
+.. __changed_4:
 
 Changed
 -------
@@ -108,7 +315,7 @@ Changed
    the middle, to make sure the hostname is completely visible whenever
    possible.
 
-.. __fixed_2:
+.. __fixed_4:
 
 Fixed
 -----
@@ -158,7 +365,7 @@ Security
    to possible arbitrary code execution. See the related GitHub issue
    for details: https://github.com/qutebrowser/qutebrowser/issues/4060
 
-.. __fixed_3:
+.. __fixed_5:
 
 Fixed
 -----
@@ -184,7 +391,7 @@ Fixed
 v1.4.0
 ======
 
-.. __added_2:
+.. __added_3:
 
 Added
 -----
@@ -246,7 +453,7 @@ Added
    -  New ``content.canvas_reading`` setting to disable reading from
       canvas elements.
 
-.. __changed_3:
+.. __changed_5:
 
 Changed
 -------
@@ -335,7 +542,7 @@ Changed
 -  Greasemonkey scripts now support a "@qute-js-world" tag to run them
    in a different JavaScript context.
 
-.. __fixed_4:
+.. __fixed_6:
 
 Fixed
 -----
@@ -386,7 +593,7 @@ Security
    `#4011 <https://github.com/qutebrowser/qutebrowser/issues/4011>`__
    for updates.
 
-.. __fixed_5:
+.. __fixed_7:
 
 Fixed
 -----
@@ -404,7 +611,7 @@ Fixed
 v1.3.2
 ======
 
-.. __fixed_6:
+.. __fixed_8:
 
 Fixed
 -----
@@ -427,7 +634,7 @@ Fixed
 v1.3.1
 ======
 
-.. __fixed_7:
+.. __fixed_9:
 
 Fixed
 -----
@@ -450,7 +657,7 @@ Fixed
 v1.3.0
 ======
 
-.. __added_3:
+.. __added_4:
 
 Added
 -----
@@ -470,7 +677,7 @@ Added
 
    -  ``qute-keepass`` to get passwords from KeePassX.
 
-.. __changed_4:
+.. __changed_6:
 
 Changed
 -------
@@ -507,7 +714,7 @@ Changed
 -  Error messages when trying to wrap when ``tabs.wrap`` is ``False``
    are now logged to debug instead of messages.
 
-.. __fixed_8:
+.. __fixed_10:
 
 Fixed
 -----
@@ -587,7 +794,7 @@ Fixed
 v1.2.1
 ======
 
-.. __fixed_9:
+.. __fixed_11:
 
 Fixed
 -----
@@ -624,7 +831,7 @@ Fixed
 v1.2.0
 ======
 
-.. __added_4:
+.. __added_5:
 
 Added
 -----
@@ -704,7 +911,7 @@ Added
 -  New ``cycle-inputs.js`` script in ``scripts/`` which can be used with
    ``:jseval -f`` to cycle through inputs.
 
-.. __changed_5:
+.. __changed_7:
 
 Changed
 -------
@@ -771,7 +978,7 @@ Changed
 
 -  Replacements like ``{url}`` can now be escaped as ``{{url}}``.
 
-.. __fixed_10:
+.. __fixed_12:
 
 Fixed
 -----
@@ -860,7 +1067,7 @@ Removed
 v1.1.2
 ======
 
-.. __changed_6:
+.. __changed_8:
 
 Changed
 -------
@@ -868,7 +1075,7 @@ Changed
 -  Windows/macOS releases now bundle Qt 5.10.1 which includes security
    fixes from Chromium up to version 64.0.3282.140.
 
-.. __fixed_11:
+.. __fixed_13:
 
 Fixed
 -----
@@ -882,7 +1089,7 @@ Fixed
 v1.1.1
 ======
 
-.. __fixed_12:
+.. __fixed_14:
 
 Fixed
 -----
@@ -897,7 +1104,7 @@ Fixed
 v1.1.0
 ======
 
-.. __added_5:
+.. __added_6:
 
 Added
 -----
@@ -987,7 +1194,7 @@ Added
 -  New ``hist_importer.py`` script to import history from
    Firefox/Chromium.
 
-.. __changed_7:
+.. __changed_9:
 
 Changed
 -------
@@ -1065,7 +1272,7 @@ Changed
 -  The ``colors.completion.fg`` setting can now be a list, allowing to
    specify different colors for the three completion columns.
 
-.. __fixed_13:
+.. __fixed_15:
 
 Fixed
 -----
@@ -1145,7 +1352,7 @@ Removed
 v1.0.4
 ======
 
-.. __fixed_14:
+.. __fixed_16:
 
 Fixed
 -----
@@ -1168,7 +1375,7 @@ Fixed
 v1.0.3
 ======
 
-.. __changed_8:
+.. __changed_10:
 
 Changed
 -------
@@ -1182,7 +1389,7 @@ Changed
 -  The :open-editor command is now not hidden anymore as it’s also
    usable in normal mode.
 
-.. __fixed_15:
+.. __fixed_17:
 
 Fixed
 -----
@@ -1201,7 +1408,7 @@ Fixed
 v1.0.2
 ======
 
-.. __fixed_16:
+.. __fixed_18:
 
 Fixed
 -----
@@ -1219,7 +1426,7 @@ Fixed
 
 -  Fix wrong rendering of keys like ``<back>`` in the completion
 
-.. __changed_9:
+.. __changed_11:
 
 Changed
 -------
@@ -1231,7 +1438,7 @@ Changed
 v1.0.1
 ======
 
-.. __fixed_17:
+.. __fixed_19:
 
 Fixed
 -----
@@ -1300,7 +1507,7 @@ Major changes
    completion, or `restore the old
    behavior <https://github.com/qutebrowser/qutebrowser/blob/master/doc/help/configuring.asciidoc#migrating-older-configurations>`__.
 
-.. __added_6:
+.. __added_7:
 
 Added
 -----
@@ -1338,7 +1545,7 @@ Added
 
 -  QtWebEngine: Support for proxy authentication.
 
-.. __changed_10:
+.. __changed_12:
 
 Changed
 -------
@@ -1433,7 +1640,7 @@ New dependencies
 
 -  New dependency on ``PyOpenGL`` if QtWebEngine is used.
 
-.. __added_7:
+.. __added_8:
 
 Added
 -----
@@ -1472,7 +1679,7 @@ Added
 -  (QtWebEngine) Proxy support with Qt 5.7.1 (already was supported for
    5.8 and newer)
 
-.. __changed_11:
+.. __changed_13:
 
 Changed
 -------
@@ -1553,7 +1760,7 @@ Changed
 
 -  (QtWebKit) PAC now supports SOCKS5 as type.
 
-.. __fixed_18:
+.. __fixed_20:
 
 Fixed
 -----
@@ -1636,7 +1843,7 @@ Fixed
 v0.10.1
 =======
 
-.. __changed_12:
+.. __changed_14:
 
 Changed
 -------
@@ -1644,7 +1851,7 @@ Changed
 -  ``--qt-arg`` and ``--qt-flag`` can now also be used to pass arguments
    to Chromium when using QtWebEngine.
 
-.. __fixed_19:
+.. __fixed_21:
 
 Fixed
 -----
@@ -1677,7 +1884,7 @@ Fixed
 v0.10.0
 =======
 
-.. __added_8:
+.. __added_9:
 
 Added
 -----
@@ -1723,7 +1930,7 @@ Added
 
 -  macOS builds are back, and built with QtWebEngine
 
-.. __changed_13:
+.. __changed_15:
 
 Changed
 -------
@@ -1776,7 +1983,7 @@ Removed
    -  ``storage -> offline-storage-database`` (merged into
       ``storage -> local-storage``)
 
-.. __fixed_20:
+.. __fixed_22:
 
 Fixed
 -----
@@ -1842,7 +2049,7 @@ Fixed
 v0.9.1
 ======
 
-.. __fixed_21:
+.. __fixed_23:
 
 Fixed
 -----
@@ -1855,7 +2062,7 @@ Fixed
 v0.9.0
 ======
 
-.. __added_9:
+.. __added_10:
 
 Added
 -----
@@ -1903,7 +2110,7 @@ Added
 
 -  New ``general -> yank-ignored-url-parameters`` option to configure
    which URL parameters (like ``utm_source`` etc.) to strip off when
-   yanking an URL.
+   yanking a URL.
 
 -  Support for the `HTML5 page visibility
    API <https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API>`__
@@ -1927,7 +2134,7 @@ Added
 
 -  Support for PAC (proxy autoconfig) with QtWebKit
 
-.. __changed_14:
+.. __changed_16:
 
 Changed
 -------
@@ -2104,7 +2311,7 @@ Changed
 -  ``:set`` now cycles through values if more than one argument is
    given.
 
--  ``:open`` now opens ``default-page`` without an URL even without
+-  ``:open`` now opens ``default-page`` without a URL even without
    ``-t``/``-b``/``-w`` given.
 
 .. __deprecated_2:
@@ -2148,7 +2355,7 @@ Removed
 -  The ``-c``/``--confdir``, ``--datadir`` and ``--cachedir`` arguments
    got removed, as ``--basedir`` should be sufficient.
 
-.. __fixed_22:
+.. __fixed_24:
 
 Fixed
 -----
@@ -2177,7 +2384,7 @@ Fixed
 v0.8.3
 ======
 
-.. __fixed_23:
+.. __fixed_25:
 
 Fixed
 -----
@@ -2215,7 +2422,7 @@ Fixed
 v0.8.2
 ======
 
-.. __fixed_24:
+.. __fixed_26:
 
 Fixed
 -----
@@ -2259,7 +2466,7 @@ Fixed
 v0.8.1
 ======
 
-.. __fixed_25:
+.. __fixed_27:
 
 Fixed
 -----
@@ -2276,7 +2483,7 @@ Fixed
 v0.8.0
 ======
 
-.. __added_10:
+.. __added_11:
 
 Added
 -----
@@ -2306,7 +2513,7 @@ Added
 -  New ``--pdf <filename>`` argument for ``:print`` WHICH can be used to
    generate a PDF without a dialog.
 
-.. __changed_15:
+.. __changed_17:
 
 Changed
 -------
@@ -2329,7 +2536,7 @@ Changed
 -  ``:bookmark-del`` and ``:quickmark-del`` now delete the current
    page’s URL if none is given.
 
-.. __fixed_26:
+.. __fixed_28:
 
 Fixed
 =====
@@ -2365,7 +2572,7 @@ Removed
 v0.7.0
 ======
 
-.. __added_11:
+.. __added_12:
 
 Added
 -----
@@ -2407,7 +2614,7 @@ Added
 
 -  New ``inputs`` group for ``:hint`` to hint text input fields.
 
-.. __changed_16:
+.. __changed_18:
 
 Changed
 -------
@@ -2465,7 +2672,7 @@ Changed
    consequence, URLs which redirect to another URL are now added to the
    history too, marked with a ``-r`` suffix to the timestamp field.
 
-.. __fixed_27:
+.. __fixed_29:
 
 Fixed
 =====
@@ -2521,7 +2728,7 @@ Fixed
 v0.6.2
 ======
 
-.. __fixed_28:
+.. __fixed_30:
 
 Fixed
 -----
@@ -2543,7 +2750,7 @@ Fixed
 v0.6.1
 ======
 
-.. __fixed_29:
+.. __fixed_31:
 
 Fixed
 -----
@@ -2563,7 +2770,7 @@ Fixed
 v0.6.0
 ======
 
-.. __added_12:
+.. __added_13:
 
 Added
 -----
@@ -2596,7 +2803,7 @@ Added
 -  New ``current`` hinting mode which forces opening hints in the
    current tab (even with ``target="_blank"``)
 
-.. __changed_17:
+.. __changed_19:
 
 Changed
 -------
@@ -2628,7 +2835,7 @@ Changed
 -  Blocked hosts are now also read from a ``blocked-hosts`` file in the
    config dir (e.g. ``~/.config/qutebrowser/blocked-hosts``).
 
-.. __fixed_30:
+.. __fixed_32:
 
 Fixed
 -----
@@ -2686,7 +2893,7 @@ Removed
 v0.5.1
 ======
 
-.. __fixed_31:
+.. __fixed_33:
 
 Fixed
 -----
@@ -2703,7 +2910,7 @@ Fixed
 v0.5.0
 ======
 
-.. __added_13:
+.. __added_14:
 
 Added
 -----
@@ -2779,7 +2986,7 @@ Added
 -  New option ``tabs -> title-alignment`` to change the alignment of tab
    titles.
 
-.. __changed_18:
+.. __changed_20:
 
 Changed
 -------
@@ -2856,7 +3063,7 @@ Removed
 
 -  The ``:download-page`` command (deprecated in v0.2.0)
 
-.. __fixed_32:
+.. __fixed_34:
 
 Fixed
 -----
@@ -2904,7 +3111,7 @@ Fixed
 v0.4.1
 ======
 
-.. __fixed_33:
+.. __fixed_35:
 
 Fixed
 -----
@@ -2937,7 +3144,7 @@ Fixed
 v0.4.0
 ======
 
-.. __added_14:
+.. __added_15:
 
 Added
 -----
@@ -2979,7 +3186,7 @@ Added
 
 -  Directory browsing via ``file://`` is now supported.
 
-.. __changed_19:
+.. __changed_21:
 
 Changed
 -------
@@ -3016,7 +3223,7 @@ Changed
 
 -  Better support for Qt 5.5 and Python 3.5.
 
-.. __fixed_34:
+.. __fixed_36:
 
 Fixed
 -----
@@ -3084,7 +3291,7 @@ Removed
 v0.3.0
 ======
 
-.. __added_15:
+.. __added_16:
 
 Added
 -----
@@ -3159,7 +3366,7 @@ Added
 
 -  Support for Qt 5.5 and tox 2.0
 
-.. __changed_20:
+.. __changed_22:
 
 Changed
 -------
@@ -3224,7 +3431,7 @@ Removed
 
 -  Support for Qt installations without SSL support was dropped.
 
-.. __fixed_35:
+.. __fixed_37:
 
 Fixed
 -----
@@ -3275,7 +3482,7 @@ Fixed
 `v0.2.1 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.2.1>`__
 ===========================================================================
 
-.. __fixed_36:
+.. __fixed_38:
 
 Fixed
 -----
@@ -3287,7 +3494,7 @@ Fixed
 `v0.2.0 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.2.0>`__
 ===========================================================================
 
-.. __added_16:
+.. __added_17:
 
 Added
 -----
@@ -3450,7 +3657,7 @@ Added
 -  Alternating row colors in completion. This adds a new
    ``colors -> completion.alternate-bg`` option.
 
-.. __changed_21:
+.. __changed_23:
 
 Changed
 -------
@@ -3573,7 +3780,7 @@ Removed
    `tox <http://tox.readthedocs.org/>`__. Install tox and run
    ``tox -e mkvenv`` instead..
 
-.. __fixed_37:
+.. __fixed_39:
 
 Fixed
 -----
@@ -3623,7 +3830,7 @@ Fixed
 `v0.1.4 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.4>`__
 ===========================================================================
 
-.. __changed_22:
+.. __changed_24:
 
 Changed
 -------
@@ -3656,7 +3863,7 @@ Removed
 
 -  Remove debug console completing completely.
 
-.. __fixed_38:
+.. __fixed_40:
 
 Fixed
 -----
@@ -3700,7 +3907,7 @@ Security
 `v0.1.3 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.3>`__
 ===========================================================================
 
-.. __changed_23:
+.. __changed_25:
 
 Changed
 -------
@@ -3713,7 +3920,7 @@ Changed
 
 -  Hide adblocked iframes.
 
-.. __fixed_39:
+.. __fixed_41:
 
 Fixed
 -----
@@ -3758,7 +3965,7 @@ Security
 `v0.1.2 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.2>`__
 ===========================================================================
 
-.. __changed_24:
+.. __changed_26:
 
 Changed
 -------
@@ -3774,7 +3981,7 @@ Removed
 
 -  Remove hosts-file.net from blocker default lists.
 
-.. __fixed_40:
+.. __fixed_42:
 
 Fixed
 -----
@@ -3812,7 +4019,7 @@ Fixed
 `v0.1.1 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.1>`__
 ===========================================================================
 
-.. __added_17:
+.. __added_18:
 
 Added
 -----
@@ -3866,7 +4073,7 @@ Removed
 
 -  Clean up and temporarily disable alias completion.
 
-.. __fixed_41:
+.. __fixed_43:
 
 Fixed
 -----

@@ -1,9 +1,3 @@
-==============
-qutebrowser(1)
-==============
-
-:Date:   2018-07-14
-
 qutebrowser
 1
 qutebrowser

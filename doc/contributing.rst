@@ -1,9 +1,12 @@
-===========================
-Contributing to qutebrowser
-===========================
+   **Important**
 
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-10-08
+   **Currently, bigger changes are going on in qutebrowser, as part of
+   a**\ `student research
+   project <https://lists.schokokeks.org/pipermail/qutebrowser-announce/2018-September/000051.html>`__\ **about
+   adding a plugin API to qutebrowser and moving a lot of code from the
+   code into plugins.** Due to that, bandwidth for pull request review
+   is currently very limited, and contributions might lead to merge
+   conflicts due to ongoing refactorings.
 
 I ``&lt;3``  [1]_ contributors!
 
@@ -106,7 +109,7 @@ patch based on your changes like this:
 Running qutebrowser
 ===================
 
-After `installing qutebrowser via tox <install.html#tox>`__, you can run
+After `installing qutebrowser via tox <install.xml#tox>`__, you can run
 ``.venv/bin/qutebrowser --debug --temp-basedir`` to test your changes
 with debug logging enabled and without affecting existing running
 instances.
@@ -514,7 +517,7 @@ Creating a new command is straightforward:
 
 .. code:: python
 
-   import qutebrowser.commands.cmdutils
+   from qutebrowser.api import cmdutils
 
    ...
 
@@ -537,7 +540,7 @@ section for details.
 
 There are also other arguments to customize the way the command is
 registered; see the class documentation for ``register`` in
-``qutebrowser.commands.cmdutils`` for details.
+``qutebrowser.api.cmdutils`` for details.
 
 The types of the function arguments are inferred based on their default
 values, e.g., an argument ``foo=True`` will be converted to a flag
@@ -590,9 +593,15 @@ The following arguments are supported for ``@cmdutils.argument``:
 
 -  ``flag``: Customize the short flag (``-x``) the argument will get.
 
--  ``win_id=True``: Mark the argument as special window ID argument.
+-  ``value``: Tell qutebrowser to fill the argument with special values:
 
--  ``count=True``: Mark the argument as special count argument.
+-  ``value=cmdutils.Value.count``: The ``count`` given by the user to
+   the command.
+
+-  ``value=cmdutils.Value.win_id``: The window ID of the current window.
+
+-  ``value=cmdutils.Value.cur_tab``: The tab object which is currently
+   focused.
 
 -  ``completion``: A completion function (see
    ``qutebrowser.completions.models.*``) to use when completing
@@ -953,11 +962,11 @@ qutebrowser release
    ``git checkout v1.$x.$y && ./.venv/bin/python3 scripts/dev/build_release.py --upload v1.$x.$y``.
 
 -  Windows: Run
-   ``git checkout v1.X.Y; py -3.6 scripts\dev\build_release.py --asciidoc C:\Python27\python %userprofile%\bin\asciidoc-8.6.10\asciidoc.py --upload v1.X.Y``
+   ``git checkout v1.X.Y; py -3 scripts\dev\build_release.py --asciidoc C:\Python27\python %userprofile%\bin\asciidoc-8.6.10\asciidoc.py --upload v1.X.Y``
    (replace X/Y by hand).
 
 -  macOS: Run
-   ``pyenv shell 3.6.6 && git checkout v1.X.Y && python3 scripts/dev/build_release.py --upload v1.X.Y``
+   ``git checkout v1.X.Y && python3 scripts/dev/build_release.py --upload v1.X.Y``
    (replace X/Y by hand).
 
 -  On server:

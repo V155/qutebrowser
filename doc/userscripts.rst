@@ -1,10 +1,3 @@
-===============================
-Writing qutebrowser userscripts
-===============================
-
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-10-01
-
 qutebrowser is extensible by writing userscripts which can be called via
 the ``:spawn --userscript`` command, or via a key binding.
 

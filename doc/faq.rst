@@ -1,10 +1,3 @@
-==========================
-Frequently asked questions
-==========================
-
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-10-08
-
 **Q:** What is qutebrowser based on?
 
 **A:** qutebrowser uses `Python <https://www.python.org/>`__,
@@ -173,14 +166,15 @@ It also works nicely with rapid hints:
 
 **Q:** How do I use qutebrowser with mutt?
 
-**A:** Due to a Qt limitation, local files without ``.html`` extensions
-are "downloaded" instead of displayed, see
-`#566 <https://github.com/qutebrowser/qutebrowser/issues/566>`__. You
-can work around this by using this in your ``mailcap``:
+**A:** For security reasons, local files without ``.html`` extensions
+aren’t rendered as HTML, see `this Chromium
+issue <https://bugs.chromium.org/p/chromium/issues/detail?id=777737>`__
+for details. You can do this in your ``mailcap`` file to get a proper
+extension:
 
 ::
 
-       text/html; mv %s %s.html && qutebrowser %s.html >/dev/null 2>/dev/null; needsterminal;
+       text/html; qutebrowser %s; nametemplate=%s.html
 
 **Q:** What is the difference between bookmarks and quickmarks?
 
@@ -254,13 +248,13 @@ bound. It might also be useful to rebind escape to something else in
 passthrough mode only, to be able to send an escape keypress to the
 website.
 
-**Q:** Why takes it longer to open an URL in qutebrowser than in
+**Q:** Why does it take longer to open a URL in qutebrowser than in
 chromium?
 
-**A:** When opening an URL in an existing instance the normal
+**A:** When opening a URL in an existing instance, the normal
 qutebrowser Python script is started and a few PyQt libraries need to be
-loaded until it is detected that there is an instance running where the
-URL is then passed to. This takes some time. One workaround is to use
+loaded until it is detected that there is an instance running to which
+the URL is then passed. This takes some time. One workaround is to use
 this
 `script <https://github.com/qutebrowser/qutebrowser/blob/master/scripts/open_url_in_instance.sh>`__
 and place it in your $PATH with the name "qutebrowser". This script
@@ -305,6 +299,13 @@ Note that there are some missing features which you may run into:
 3. Any greasemonkey API function to do with adding UI elements is not
    currently supported. That means context menu extentensions and
    background pages.
+
+**Q:** How do I change the ``WM_CLASS`` used by qutebrowser windows?
+
+**A:** Qt only supports setting ``WM_CLASS`` globally, which you can do
+by starting with ``--qt-arg name foo``. Note that all windows are part
+of the same qutebrowser instance (unless you use ``--temp-basedir`` or
+``--basedir``), so they all will share the same ``WM_CLASS``.
 
 .. __troubleshooting:
 
@@ -373,10 +374,21 @@ Unable to view DRM content (Netflix, Spotify, etc.).
       :set qt.args '["ppapi-widevine-path=/usr/lib64/qt5/plugins/ppapi/libwidevinecdmadapter.so"]'
       :restart
 
+Unable to use ``spawn`` on MacOS.
+   When running qutebrowser from the prebuilt binary
+   (``qutebrowser.app``) it **will not** read any files that would alter
+   your ``$PATH`` (e.g. ``.profile``, ``.bashrc``, etc). This is not a
+   bug, just that ``.profile`` is not propogated to GUI applications in
+   MacOS.
+
+   See `Issue
+   #4273 <https://github.com/qutebrowser/qutebrowser/issues/4273>`__ for
+   details and potential workarounds.
+
 My issue is not listed.
    If you experience any segfaults or crashes, you can report the issue
    in `the issue
    tracker <https://github.com/qutebrowser/qutebrowser/issues>`__ or
    using the ``:report`` command. If you are reporting a segfault, make
-   sure you read the `guide <doc/stacktrace.html>`__ on how to report
-   them with all needed information.
+   sure you read the `guide <stacktrace.xml>`__ on how to report them
+   with all needed information.
