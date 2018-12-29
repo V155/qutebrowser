@@ -2,8 +2,6 @@
 Getting stacktraces on crashes
 ==============================
 
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-12-12
 
 When there is a fatal crash in qutebrowser - most of the times a
 `segfault <https://en.wikipedia.org/wiki/Segmentation_fault>`__ - the
@@ -17,7 +15,6 @@ symbols <https://en.wikipedia.org/wiki/Debug_symbol>`__ is required.
 The rest of this guide is quite Linux specific, though there is a
 `section for Windows <#windows>`__ at the end.
 
-.. __crashes_which_can_be_reproduced:
 
 Crashes which can be reproduced
 ===============================
@@ -25,12 +22,10 @@ Crashes which can be reproduced
 If a crash can be reproduced, packages with debugging symbols should be
 installed, and the crash should be reproduced under gdb.
 
-.. __getting_debugging_symbols:
 
 Getting debugging symbols
 -------------------------
 
-.. __debianubuntu:
 
 Debian/Ubuntu/…​
 ~~~~~~~~~~~~~~~~
@@ -42,7 +37,6 @@ information is available in the repositories:
 
    # apt-get install python3-pyqt5-dbg python3-pyqt5.qtwebkit-dbg python3-dbg libqt5webkit5-dbg
 
-.. __archlinux:
 
 Archlinux
 ~~~~~~~~~
@@ -51,7 +45,6 @@ For Archlinux, no debug information is provided. You can either compile
 Qt yourself (which will take a few hours even on a modern machine) or
 use debugging symbols compiled/packaged by me (x86_64 only).
 
-.. __to_install_my_pre_built_packages:
 
 To install my pre-built packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,7 +74,6 @@ Then install the packages:
 The ``-debug`` packages conflict with the non-debug variants - it’s safe
 to remove them.
 
-.. __to_compile_by_yourself:
 
 To compile by yourself
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -101,7 +93,6 @@ space for a successful compile run.
    $ cd ../pyqt5
    $ makepkg -si --pkg pyqt5-common-debug,python-pyqt5-debug
 
-.. __getting_the_stack_trace:
 
 Getting the stack trace
 -----------------------
@@ -138,7 +129,6 @@ and the full content of ``gdb.txt`` into the bug report. Please also add
 some words about what you were doing (or what pages you visited) before
 the crash happened.
 
-.. __crashes_which_can_not_be_reproduced:
 
 Crashes which can NOT be reproduced
 ===================================
@@ -167,7 +157,6 @@ If your ``/proc/sys/kernel/core_pattern`` contains something like
 
    $ coredumpctl gdb $(readlink -f $(which python3))
 
-.. __getting_the_stack_trace_2:
 
 Getting the stack trace
 -----------------------

@@ -2,7 +2,6 @@
 Configuring qutebrowser
 =======================
 
-:Date:   2018-12-29
 
    **Important**
 
@@ -10,7 +9,6 @@ Configuring qutebrowser
    September 2017. This information is not applicable to older releases,
    and older information elsewhere might be outdated.
 
-.. __qutebrowsers_config_files:
 
 qutebrowser’s config files
 ==========================
@@ -113,7 +111,6 @@ The file should be located in the "config" location listed on
 Two global objects are pre-defined when running ``config.py``: ``c`` and
 ``config``.
 
-.. __changing_settings:
 
 Changing settings
 -----------------
@@ -169,7 +166,6 @@ only exception is the ``Regex`` type, which can take either a string
 If you want to read a setting, you can use the ``c`` object to do so as
 well: ``c.colors.tabs.even.bg = c.colors.tabs.odd.bg``.
 
-.. __using_strings_for_setting_names:
 
 Using strings for setting names
 -------------------------------
@@ -193,7 +189,6 @@ To read a setting, use the ``config.get`` method:
    # color = c.colors.completion.fg
    color = config.get('colors.completion.fg')
 
-.. __per_domain_settings:
 
 Per-domain settings
 -------------------
@@ -213,7 +208,6 @@ shortcut similar to ``c.`` which is scoped to the given domain:
    with config.pattern('*://example.com/') as p:
        p.content.images = False
 
-.. __binding_keys:
 
 Binding keys
 ------------
@@ -280,7 +274,6 @@ above code snippet. Place the snippet at the top to allow ``config.py``
 to override ``autoconfig.yml``. Place the snippet at the bottom for the
 opposite effect.
 
-.. __importing_other_modules:
 
 Importing other modules
 -----------------------
@@ -300,7 +293,6 @@ To read config data from a different file with ``c`` and ``config``
 available, you can use ``config.source('otherfile.py')`` in your
 ``config.py``.
 
-.. __getting_the_config_directory:
 
 Getting the config directory
 ----------------------------
@@ -320,7 +312,6 @@ string:
 
    print(str(config.configdir / 'config.py'))
 
-.. __handling_errors:
 
 Handling errors
 ---------------
@@ -334,12 +325,10 @@ which you find confusing or you think qutebrowser could handle better,
 please `open an
 issue <https://github.com/qutebrowser/qutebrowser/issues>`__!
 
-.. __recipes:
 
 Recipes
 -------
 
-.. __reading_a_yaml_file:
 
 Reading a YAML file
 ~~~~~~~~~~~~~~~~~~~
@@ -367,7 +356,6 @@ You can use:
    for k, v in yaml_data.items():
        config.set(k, v)
 
-.. __reading_a_nested_yaml_file:
 
 Reading a nested YAML file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -409,7 +397,6 @@ You can use:
 
 Note that this won’t work for values which are dictionaries.
 
-.. __binding_chained_commands:
 
 Binding chained commands
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -424,7 +411,6 @@ helper to do so:
 
    bind_chained('<Escape>', 'clear-keychain', 'search')
 
-.. __reading_colors_from_xresources:
 
 Reading colors from Xresources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -448,7 +434,6 @@ file:
    xresources = read_xresources('*')
    c.colors.statusbar.normal.bg = xresources['*.background']
 
-.. __pre_built_colorschemes:
 
 Pre-built colorschemes
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -467,7 +452,6 @@ Pre-built colorschemes
 
 -  `Dracula <https://github.com/evannagle/qutebrowser-dracula-theme>`__
 
-.. __avoiding_flake8_errors:
 
 Avoiding flake8 errors
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -493,7 +477,6 @@ to be stable across qutebrowser versions):
    config = config  # type: ConfigAPI # noqa: F821 pylint: disable=E0602,C0103
    c = c  # type: ConfigContainer # noqa: F821 pylint: disable=E0602,C0103
 
-.. __emacs_like_config:
 
 emacs-like config
 ~~~~~~~~~~~~~~~~~

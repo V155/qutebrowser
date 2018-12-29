@@ -2,9 +2,7 @@
 qutebrowser help
 ================
 
-:Date:   2018-12-29
 
-.. __documentation:
 
 Documentation
 =============
@@ -27,7 +25,6 @@ The following help pages are currently available:
 
 -  `Contributing to qutebrowser <../contributing.xml>`__
 
-.. __getting_help:
 
 Getting help
 ============
@@ -40,7 +37,6 @@ by writing a message to the
 `mailinglist <https://lists.schokokeks.org/mailman/listinfo.cgi/qutebrowser>`__
 at qutebrowser@lists.qutebrowser.org.
 
-.. __bugs:
 
 Bugs
 ====
@@ -56,7 +52,6 @@ several ways:
    `mailinglist <https://lists.schokokeks.org/mailman/listinfo.cgi/qutebrowser>`__
    at qutebrowser@lists.qutebrowser.org.
 
-.. __license:
 
 License
 =======

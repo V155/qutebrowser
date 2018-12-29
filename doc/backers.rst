@@ -2,9 +2,7 @@
 Crowdfunding backers
 ====================
 
-:Date:   2018-12-12
 
-.. __2017:
 
 2017
 ====
@@ -15,7 +13,6 @@ with the goal of implementing the new config system and releasing v1.0.
 
 Thanks a lot to the following people who contributed to it:
 
-.. __gold_sponsors:
 
 Gold sponsors
 -------------
@@ -26,7 +23,6 @@ Gold sponsors
 
 -  2x Anonymous
 
-.. __silver_sponsors:
 
 Silver sponsors
 ---------------
@@ -47,7 +43,6 @@ Silver sponsors
 
 -  Tim Das Mool Wegener
 
-.. __other_sponsors:
 
 Other sponsors
 --------------
@@ -328,7 +323,6 @@ Other sponsors
 
 -  48 Anonymous
 
-.. __2016:
 
 2016
 ====
@@ -339,7 +333,6 @@ in qutebrowser.
 
 Thanks a lot to the following people who contributed to it:
 
-.. __gold_sponsors_2:
 
 Gold sponsors
 -------------
@@ -354,7 +347,6 @@ Gold sponsors
 
 -  1 Anonymous
 
-.. __day_sponsors:
 
 Day sponsors
 ------------
@@ -375,7 +367,6 @@ Day sponsors
 
 -  4 Anonymous
 
-.. __other_sponsors_2:
 
 Other sponsors
 --------------

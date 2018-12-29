@@ -2,7 +2,6 @@
 qutebrowser
 ===========
 
-:Date:   2018-12-29
 
 |qutebrowser logo| **A keyboard-driven, vim-like browser based on PyQt5
 and Qt.**
@@ -22,14 +21,12 @@ on Python and PyQt5 and free software, licensed under the GPL.
 It was inspired by other browsers/addons like dwb and
 Vimperator/Pentadactyl.
 
-.. __screenshots:
 
 Screenshots
 ===========
 
 |screenshot 1| |screenshot 2| |screenshot 3| |screenshot 4|
 
-.. __downloads:
 
 Downloads
 =========
@@ -40,7 +37,6 @@ available downloads and the `INSTALL <doc/install.asciidoc>`__ file for
 detailed instructions on how to get qutebrowser running on various
 platforms.
 
-.. __documentation:
 
 Documentation
 =============
@@ -72,7 +68,6 @@ documents are available:
 
 -  `How to write userscripts <doc/userscripts.asciidoc>`__
 
-.. __getting_help:
 
 Getting help
 ============
@@ -94,7 +89,6 @@ If you’re a reddit user, there’s a
 `/r/qutebrowser <https://www.reddit.com/r/qutebrowser/>`__ subreddit
 there.
 
-.. __contributions_bugs:
 
 Contributions / Bugs
 ====================
@@ -117,7 +111,6 @@ several ways:
 For security bugs, please contact me directly at mail@qutebrowser.org,
 GPG ID `0x916eb0c8fd55a072 <https://www.the-compiler.org/pubkey.asc>`__.
 
-.. __requirements:
 
 Requirements
 ============
@@ -175,7 +168,6 @@ The following libraries are optional:
 See `the documentation <doc/install.asciidoc>`__ for directions on how
 to install qutebrowser and its dependencies.
 
-.. __donating:
 
 Donating
 ========
@@ -193,7 +185,6 @@ you, please get in touch!
 -  Bitcoin:
    `1PMzbcetAHfpxoXww8Bj5XqquHtVvMjJtE <bitcoin:1PMzbcetAHfpxoXww8Bj5XqquHtVvMjJtE>`__
 
-.. __sponsors:
 
 Sponsors
 ========
@@ -211,7 +202,6 @@ qutebrowser extensions as a student research project.
 
 |powered by MacStadium| |HSR Hochschule für Technik Rapperswil|
 
-.. __authors:
 
 Authors
 =======
@@ -231,7 +221,6 @@ Additionally, the following people have contributed graphics:
 Also, thanks to everyone who contributed to one of qutebrowser’s
 `crowdfunding campaigns <doc/backers.asciidoc>`__!
 
-.. __similar_projects:
 
 Similar projects
 ================
@@ -239,7 +228,6 @@ Similar projects
 Many projects with a similar goal as qutebrowser exist. Most of them
 were inspirations for qutebrowser in some way, thanks for that!
 
-.. __active:
 
 Active
 ------
@@ -269,7 +257,6 @@ Active
    `better API <https://bugzilla.mozilla.org/show_bug.cgi?id=1215061>`__
    for keyboard integration in Firefox).
 
-.. __inactive:
 
 Inactive
 --------
@@ -303,7 +290,6 @@ Inactive
    Key <https://key.saka.io>`__,
    `cVim <https://github.com/1995eaton/chromium-vim>`__,
 
-.. __license:
 
 License
 =======
@@ -321,7 +307,6 @@ Public License for more details.
 You should have received a copy of the GNU General Public License along
 with this program. If not, see https://www.gnu.org/licenses/gpl-3.0.txt.
 
-.. __pdf_js:
 
 pdf.js
 ======

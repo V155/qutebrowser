@@ -2,7 +2,6 @@
 Installing qutebrowser
 ======================
 
-:Date:   2018-12-29
 
    **Note**
 
@@ -12,7 +11,6 @@ Installing qutebrowser
    help <https://github.com/qutebrowser/qutebrowser/blob/master/doc/contributing.asciidoc>`__
    updating them if you notice something being broken!
 
-.. __on_debian_ubuntu:
 
 On Debian / Ubuntu
 ==================
@@ -20,7 +18,6 @@ On Debian / Ubuntu
 How to install qutebrowser depends a lot on the version of Debian/Ubuntu
 you’re running.
 
-.. __debian_jessie_ubuntu_14_04_lts_linux_mint_18:
 
 Debian Jessie / Ubuntu 14.04 LTS / Linux Mint < 18
 --------------------------------------------------
@@ -36,7 +33,6 @@ If you get qutebrowser running on those distributions, please
 `contribute <https://github.com/qutebrowser/qutebrowser/blob/master/doc/contributing.asciidoc>`__
 to update this documentation!
 
-.. __ubuntu_16_04_lts_linux_mint_18:
 
 Ubuntu 16.04 LTS / Linux Mint 18
 --------------------------------
@@ -51,7 +47,6 @@ You’ll need some basic libraries to use the tox-installed PyQt:
 
    # apt install libglib2.0-0 libgl1 libfontconfig1 libx11-xcb1 libxi6 libxrender1 libdbus-1-3
 
-.. __debian_stretch_ubuntu_17_04_and_17_10:
 
 Debian Stretch / Ubuntu 17.04 and 17.10
 ---------------------------------------
@@ -86,7 +81,6 @@ downloaded qutebrowser deb files in one apt command):
 For an update after the initial install, you only need to
 download/install the qutebrowser package.
 
-.. __debian_testing_ubuntu_18_04:
 
 Debian Testing / Ubuntu 18.04
 -----------------------------
@@ -98,7 +92,6 @@ can install it with apt:
 
    # apt install qutebrowser
 
-.. __additional_hints:
 
 Additional hints
 ----------------
@@ -125,7 +118,6 @@ Additional hints
 
       # apt install gstreamer1.0-plugins-{bad,base,good,ugly}
 
-.. __on_fedora:
 
 On Fedora
 =========
@@ -144,7 +136,6 @@ qutebrowser is available in the official repositories:
 However, note that Fedora 25/26 won’t be updated to qutebrowser v1.0, so
 you might want to `install qutebrowser via tox <#tox>`__ instead there.
 
-.. __additional_hints_2:
 
 Additional hints
 ----------------
@@ -158,7 +149,6 @@ more information see https://rpmfusion.org/Configuration.
 
    # dnf install qt5-qtwebengine-freeworld
 
-.. __on_archlinux:
 
 On Archlinux
 ============
@@ -191,7 +181,6 @@ plugins:
 
    # pacman -S gst-plugins-{base,good,bad,ugly} gst-libav
 
-.. __on_gentoo:
 
 On Gentoo
 =========
@@ -226,7 +215,6 @@ See the `Gentoo
 Wiki <https://wiki.gentoo.org/wiki/Qutebrowser#USE_flags>`__ for more
 information.
 
-.. __on_void_linux:
 
 On Void Linux
 =============
@@ -244,7 +232,6 @@ the new backend.
 
 Since the v1.0 release, qutebrowser uses QtWebEngine by default.
 
-.. __on_nixos:
 
 On NixOS
 ========
@@ -261,7 +248,6 @@ It’s recommended to install ``qt5.qtwebengine`` and start with
 
 Since the v1.0 release, qutebrowser uses QtWebEngine by default.
 
-.. __on_opensuse:
 
 On openSUSE
 ===========
@@ -271,7 +257,6 @@ There are prebuilt RPMs available at
 
 To use the QtWebEngine backend, install ``libqt5-qtwebengine``.
 
-.. __on_slackware:
 
 On Slackware
 ============
@@ -313,7 +298,6 @@ If you use the dialog screen you can deselect any already-installed
 packages that you don’t need/want to rebuild before starting the build
 process.
 
-.. __on_openbsd:
 
 On OpenBSD
 ==========
@@ -340,7 +324,6 @@ Or alternatively, use the ports system :
    # cd /usr/ports/www/qutebrowser
    # make install
 
-.. __on_freebsd:
 
 On FreeBSD
 ==========
@@ -358,14 +341,12 @@ It can be installed with:
 At present, precompiled packages are not available for this port, and
 QtWebEngine backend is also not available.
 
-.. __on_windows:
 
 On Windows
 ==========
 
 There are different ways to install qutebrowser on Windows:
 
-.. __prebuilt_binaries:
 
 Prebuilt binaries
 -----------------
@@ -384,7 +365,6 @@ The binary release ships with a QtWebEngine built without proprietary
 codec support. To get support for e.g. h264/h265 videos, you’ll need to
 build QtWebEngine from source yourself with support for that enabled.
 
-.. __chocolatey_package:
 
 `Chocolatey package <https://chocolatey.org/packages/qutebrowser>`__
 --------------------------------------------------------------------
@@ -408,7 +388,6 @@ build QtWebEngine from source yourself with support for that enabled.
    C:\> scoop bucket add extras
    C:\> scoop install qutebrowser
 
-.. __manual_install:
 
 Manual install
 --------------
@@ -426,12 +405,10 @@ Manual install
 
 Then `install qutebrowser via tox <#tox>`__.
 
-.. __on_macos:
 
 On macOS
 ========
 
-.. __prebuilt_binary:
 
 Prebuilt binary
 ---------------
@@ -456,7 +433,6 @@ Cask <https://caskroom.github.io/>`__ package manager:
 
    $ brew cask install qutebrowser
 
-.. __manual_install_2:
 
 Manual Install
 --------------
@@ -466,7 +442,6 @@ Alternatively, you can install the dependencies via a package manager
 `MacPorts <https://www.macports.org/>`__) and run qutebrowser from
 source.
 
-.. __homebrew:
 
 Homebrew
 ~~~~~~~~
@@ -484,7 +459,6 @@ doesn’t support anymore). If you want QtWebKit support, you’ll need to
 build an up-to-date QtWebKit
 `manually <https://github.com/annulen/webkit/wiki/Building-QtWebKit-on-OS-X>`__.
 
-.. __packagers:
 
 Packagers
 =========
@@ -501,7 +475,6 @@ have to do it as part of the packaging process.
 Installing qutebrowser with tox
 ===============================
 
-.. __getting_the_repository:
 
 Getting the repository
 ----------------------
@@ -514,7 +487,6 @@ and switch into the repository folder:
    $ git clone https://github.com/qutebrowser/qutebrowser.git
    $ cd qutebrowser
 
-.. __installing_dependencies_including_qt:
 
 Installing dependencies (including Qt)
 --------------------------------------
@@ -561,7 +533,6 @@ few caveats:
 
 See the next section for an alternative.
 
-.. __installing_dependencies_system_wide_qt:
 
 Installing dependencies (system-wide Qt)
 ----------------------------------------
@@ -575,7 +546,6 @@ using an older release of QtWebEngine.
 On Windows, run ``set PYTHON=C:\path\to\python.exe`` (CMD) or
 \``$Env:PYTHON = "…​"\` (Powershell) first.
 
-.. __creating_a_wrapper_script:
 
 Creating a wrapper script
 -------------------------
@@ -596,7 +566,6 @@ your ``$PATH`` (e.g. ``/usr/local/bin/qutebrowser`` or
    #!/bin/bash
    ~/path/to/qutebrowser/.venv/bin/python3 -m qutebrowser "$@"
 
-.. __building_the_docs:
 
 Building the docs
 -----------------
@@ -611,7 +580,6 @@ Then, run:
 
    $ python3 scripts/asciidoc2html.py
 
-.. __updating:
 
 Updating
 --------

@@ -2,8 +2,6 @@
 Frequently asked questions
 ==========================
 
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-12-29
 
 **Q:** What is qutebrowser based on?
 
@@ -314,7 +312,6 @@ by starting with ``--qt-arg name foo``. Note that all windows are part
 of the same qutebrowser instance (unless you use ``--temp-basedir`` or
 ``--basedir``), so they all will share the same ``WM_CLASS``.
 
-.. __troubleshooting:
 
 Troubleshooting
 ===============

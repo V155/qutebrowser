@@ -2,9 +2,7 @@
 Setting reference
 =================
 
-:Date:   2018-12-29
 
-.. __all_settings:
 
 All settings
 ============
@@ -5636,7 +5634,6 @@ Default: false
 
 This setting is only available with the QtWebKit backend.
 
-.. __setting_types:
 
 Setting types
 =============

@@ -2,8 +2,6 @@
 Writing qutebrowser userscripts
 ===============================
 
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-12-29
 
 qutebrowser is extensible by writing userscripts which can be called via
 the ``:spawn --userscript`` command, or via a key binding.
@@ -33,7 +31,6 @@ absolute path.
    On Windows, only userscripts with ``com``, ``bat``, or ``exe``
    extensions will be launched.
 
-.. __getting_information:
 
 Getting information
 ===================
@@ -85,7 +82,6 @@ In ``hints`` mode:
 
 -  ``QUTE_SELECTED_HTML``: The HTML of the element selected via hints.
 
-.. __sending_commands:
 
 Sending commands
 ================
@@ -101,7 +97,6 @@ executed as soon as your userscript terminates. This means when writing
 multiple commands, you should append to the file (``>>`` in bash) rather
 than overwrite it (``>``).
 
-.. __examples:
 
 Examples
 ========
@@ -115,7 +110,6 @@ Opening the currently selected word on
 
    echo "open -t http://www.dict.cc/?s=$QUTE_SELECTED_TEXT" >> "$QUTE_FIFO"
 
-.. __libraries:
 
 Libraries
 =========

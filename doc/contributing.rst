@@ -2,8 +2,6 @@
 Contributing to qutebrowser
 ===========================
 
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-12-29
 
    **Important**
 
@@ -38,7 +36,6 @@ in several ways:
    `Freenode <http://freenode.net/>`__
    (`webchat <https://webchat.freenode.net/?channels=#qutebrowser>`__).
 
-.. __finding_something_to_work_on:
 
 Finding something to work on
 ============================
@@ -74,7 +71,6 @@ There are also some things to do if you don’t want to write code:
 
 -  Help on the website and graphics (logo, etc.).
 
-.. __using_git:
 
 Using git
 =========
@@ -91,7 +87,6 @@ come in handy. Of course, if using git is the issue which prevents you
 from contributing, feel free to send normal patches instead, e.g.,
 generated via ``diff -Nur``.
 
-.. __getting_patches:
 
 Getting patches
 ---------------
@@ -111,7 +106,6 @@ patch based on your changes like this:
 -  Replace ``master`` by the branch your work was based on, e.g.,
    ``origin/develop``.
 
-.. __running_qutebrowser:
 
 Running qutebrowser
 ===================
@@ -124,12 +118,10 @@ instances.
 Alternatively, you can install qutebrowser’s dependencies system-wide
 and run ``python3 -m qutebrowser --debug --temp-basedir``.
 
-.. __useful_utilities:
 
 Useful utilities
 ================
 
-.. __checkers:
 
 Checkers
 --------
@@ -203,7 +195,6 @@ techniques are useful to handle these:
    lot of false-positives, let me know! I’m still tweaking the
    parameters.
 
-.. __running_specific_tests:
 
 Running Specific Tests
 ----------------------
@@ -232,7 +223,6 @@ Examples:
    # run coverage test for specific file (updates htmlcov/index.html)
    tox -e py35-cov -- tests/unit/browser/test_webelem.py
 
-.. __profiling:
 
 Profiling
 ---------
@@ -259,7 +249,6 @@ and can show the output in four different ways:
    from `Graphviz <http://graphviz.org/>`__ and
    `feh <http://feh.finalrewind.org/>`__)
 
-.. __debugging:
 
 Debugging
 ---------
@@ -276,7 +265,6 @@ available, for example ``:debug-all-objects`` and ``:debug-all-widgets``
 which print a list of all Qt objects/widgets to the debug log — this is
 very useful for finding memory leaks.
 
-.. __useful_websites:
 
 Useful websites
 ---------------
@@ -310,7 +298,6 @@ Documentation of used Python libraries:
 
 Related RFCs and standards:
 
-.. __http:
 
 HTTP
 ~~~~
@@ -359,7 +346,6 @@ HTTP
 
 -  `Netscape Cookie Format <http://www.cookiecentral.com/faq/#3.5>`__
 
-.. __other:
 
 Other
 ~~~~~
@@ -389,12 +375,10 @@ Other
 -  `XDG basedir
    specification <http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>`__
 
-.. __hints:
 
 Hints
 =====
 
-.. __python_and_qt_objects:
 
 Python and Qt objects
 ---------------------
@@ -471,7 +455,6 @@ can also be useful in places where using Qt’s `signals and
 slots <http://doc.qt.io/qt-5/signalsandslots.html>`__ mechanism would be
 difficult.
 
-.. __logging:
 
 Logging
 -------
@@ -656,7 +639,6 @@ follow the following guidelines:
    of the current page always could be an invalid QUrl (if nothing is
    loaded yet).
 
-.. __running_valgrind_on_qtwebkit:
 
 Running valgrind on QtWebKit
 ----------------------------
@@ -681,7 +663,6 @@ This is needed so valgrind handles self-modifying code correctly:
    that dynamically generate code and subsequently overwrite part or all
    of it. Running with all will slow Valgrind down noticeably.
 
-.. __setting_up_a_windows_development_environment:
 
 Setting up a Windows Development Environment
 --------------------------------------------
@@ -710,7 +691,6 @@ Setting up a Windows Development Environment
 Note that the ``flake8`` tox env might not run due to encoding errors
 despite having LANG/LC_\* set correctly.
 
-.. __rebuilding_the_website:
 
 Rebuilding the website
 ----------------------
@@ -718,7 +698,6 @@ Rebuilding the website
 If you want to rebuild the website, run
 ``./scripts/asciidoc2html.py --website <outputdir>``.
 
-.. __chrome_urls:
 
 Chrome URLs
 -----------
@@ -764,7 +743,6 @@ urls which can be useful for debugging:
 
 -  chrome://sandbox/ (Qt 5.11, Linux only)
 
-.. __qtwebengine_internals:
 
 QtWebEngine internals
 ---------------------
@@ -799,7 +777,6 @@ The hierarchy of widgets when QtWebEngine is involved looks like this:
    Chromium renders into (?). With it, we can do things like
    ``.setRotation(20)``.
 
-.. __style_conventions:
 
 Style conventions
 =================
@@ -897,14 +874,12 @@ with some additions:
 
    -  overrides of Qt methods
 
-.. __checklists:
 
 Checklists
 ==========
 
 These are mainly intended for myself, but they also fit in here well.
 
-.. __new_qt_release:
 
 New Qt release
 --------------
@@ -926,7 +901,6 @@ New Qt release
    bugs <https://github.com/qutebrowser/qutebrowser/issues?q=is%3Aopen+is%3Aissue+label%3Aqt>`__
    and check if they’re fixed.
 
-.. __new_pyqt_release:
 
 New PyQt release
 ----------------
@@ -936,7 +910,6 @@ New PyQt release
 -  Update ``tox.ini``/``.travis.yml``/``.appveyor.yml`` to test new
    versions.
 
-.. __qutebrowser_release:
 
 qutebrowser release
 -------------------

@@ -2,7 +2,6 @@
 Commands
 ========
 
-:Date:   2018-12-29
 
 In qutebrowser, all keybindings are mapped to commands.
 
@@ -25,7 +24,6 @@ For command arguments, there are also some variables you can use:
 It is possible to run or bind multiple commands by separating them with
 ``;;``.
 
-.. __normal_commands:
 
 Normal commands
 ===============
@@ -408,7 +406,6 @@ Syntax: :back [*--tab*] [*--bg*] [*--window*]
 
 Go back in the history of the current tab.
 
-.. __optional_arguments:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -419,7 +416,6 @@ optional arguments
 
 -  \*-w*, \*--window*: Go back in a new window.
 
-.. __count:
 
 count
 ~~~~~
@@ -436,7 +432,6 @@ Bind a key to a command.
 If no command is given, show the current binding for the given key.
 Using :bind without any arguments opens a page showing all keybindings.
 
-.. __positional_arguments:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -446,7 +441,6 @@ positional arguments
 
 -  'command': The command to execute, with optional args.
 
-.. __optional_arguments_2:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -457,7 +451,6 @@ optional arguments
 
 -  \*-d*, \*--default*: If given, restore a default binding.
 
-.. __note:
 
 note
 ~~~~
@@ -482,7 +475,6 @@ bookmark. If a url and title have been provided, then save the given url
 as a bookmark with the provided title. You can view all saved bookmarks
 on the `bookmarks page <qute://bookmarks>`__.
 
-.. __positional_arguments_2:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -492,7 +484,6 @@ positional arguments
 
 -  'title': title of the new bookmark.
 
-.. __optional_arguments_3:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -507,7 +498,6 @@ Syntax: :bookmark-del ['url']
 
 Delete a bookmark.
 
-.. __positional_arguments_3:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -515,7 +505,6 @@ positional arguments
 -  'url': The url of the bookmark to delete. If not given, use the
    current page’s url.
 
-.. __note_2:
 
 note
 ~~~~
@@ -531,14 +520,12 @@ Syntax: :bookmark-load [*--tab*] [*--bg*] [*--window*] [*--delete*]
 
 Load a bookmark.
 
-.. __positional_arguments_4:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'url': The url of the bookmark to load.
 
-.. __optional_arguments_4:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -551,7 +538,6 @@ optional arguments
 
 -  \*-d*, \*--delete*: Whether to delete the bookmark afterwards.
 
-.. __note_3:
 
 note
 ~~~~
@@ -570,7 +556,6 @@ Focuses window if necessary when index is given. If both index and count
 are given, use count. With neither index nor count given, open the
 qute://tabs page.
 
-.. __positional_arguments_5:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -578,14 +563,12 @@ positional arguments
 -  'index': The [win_id/]index of the tab to focus. Or a substring in
    which case the closest match will be focused.
 
-.. __count_2:
 
 count
 ~~~~~
 
 The tab index to focus, starting with 1.
 
-.. __note_4:
 
 note
 ~~~~
@@ -614,7 +597,6 @@ Click the element matching the given filter.
 The given filter needs to result in exactly one element, otherwise, an
 error is shown.
 
-.. __positional_arguments_6:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -624,7 +606,6 @@ positional arguments
 
 -  'value': The value to filter for.
 
-.. __optional_arguments_5:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -646,7 +627,6 @@ Syntax: :config-clear [*--save*]
 
 Set all settings back to their default.
 
-.. __optional_arguments_6:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -662,7 +642,6 @@ Syntax: :config-cycle [*--pattern\* 'pattern'] [*--temp*] [*--print*]
 
 Cycle an option between multiple values.
 
-.. __positional_arguments_7:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -671,7 +650,6 @@ positional arguments
 
 -  'values': The values to cycle through.
 
-.. __optional_arguments_7:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -689,7 +667,6 @@ Syntax: :config-dict-add [*--temp*] [*--replace*] 'option' 'key' 'value'
 
 Add a key/value pair to a dictionary option.
 
-.. __positional_arguments_8:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -700,7 +677,6 @@ positional arguments
 
 -  'value': The value to place in the dictionary.
 
-.. __optional_arguments_8:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -717,7 +693,6 @@ Syntax: :config-dict-remove [*--temp*] 'option' 'key'
 
 Remove a key from a dict.
 
-.. __positional_arguments_9:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -726,7 +701,6 @@ positional arguments
 
 -  'key': The key to remove from the dict.
 
-.. __optional_arguments_9:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -741,7 +715,6 @@ Syntax: :config-edit [*--no-source*]
 
 Open the config.py file in the editor.
 
-.. __optional_arguments_10:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -755,7 +728,6 @@ Syntax: :config-list-add [*--temp*] 'option' 'value'
 
 Append a value to a config option that is a list.
 
-.. __positional_arguments_10:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -764,7 +736,6 @@ positional arguments
 
 -  'value': The value to append to the end of the list.
 
-.. __optional_arguments_11:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -778,7 +749,6 @@ Syntax: :config-list-remove [*--temp*] 'option' 'value'
 
 Remove a value from a list.
 
-.. __positional_arguments_11:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -787,7 +757,6 @@ positional arguments
 
 -  'value': The value to remove from the list.
 
-.. __optional_arguments_12:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -802,7 +771,6 @@ Syntax: :config-source [*--clear*] ['filename']
 
 Read a config.py file.
 
-.. __positional_arguments_12:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -810,7 +778,6 @@ positional arguments
 -  'filename': The file to load. If not given, loads the default
    config.py.
 
-.. __optional_arguments_13:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -827,14 +794,12 @@ Unset an option.
 This sets an option back to its default and removes it from
 autoconfig.yml.
 
-.. __positional_arguments_13:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'option': The name of the option.
 
-.. __optional_arguments_14:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -848,7 +813,6 @@ Syntax: :config-write-py [*--force*] [*--defaults*] ['filename']
 
 Write the current configuration to a config.py file.
 
-.. __positional_arguments_14:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -856,7 +820,6 @@ positional arguments
 -  'filename': The file to write to, or not given for the default
    config.py.
 
-.. __optional_arguments_15:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -873,14 +836,12 @@ Syntax: :download [*--mhtml*] [*--dest\* 'dest'] ['url']
 
 Download a given URL, or current page if no URL given.
 
-.. __positional_arguments_15:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'url': The URL to download. If not given, download the current page.
 
-.. __optional_arguments_16:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -898,14 +859,12 @@ Syntax: :download-cancel [*--all*]
 
 Cancel the last/[count]th download.
 
-.. __optional_arguments_17:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-a*, \*--all*: Cancel all running downloads
 
-.. __count_3:
 
 count
 ~~~~~
@@ -922,7 +881,6 @@ download-delete
 
 Delete the last/[count]th download from disk.
 
-.. __count_4:
 
 count
 ~~~~~
@@ -939,7 +897,6 @@ Open the last/[count]th download.
 If no specific command is given, this will use the system’s default
 application to open the file.
 
-.. __positional_arguments_16:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -948,14 +905,12 @@ positional arguments
    ``{}`` is expanded to the temporary file name. If no ``{}`` is
    present, the filename is automatically appended to the cmdline.
 
-.. __count_5:
 
 count
 ~~~~~
 
 The index of the download to open.
 
-.. __note_5:
 
 note
 ~~~~
@@ -970,14 +925,12 @@ Syntax: :download-remove [*--all*]
 
 Remove the last/[count]th download from the list.
 
-.. __optional_arguments_18:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-a*, \*--all*: Remove all finished downloads.
 
-.. __count_6:
 
 count
 ~~~~~
@@ -989,7 +942,6 @@ download-retry
 
 Retry the first failed/[count]th download.
 
-.. __count_7:
 
 count
 ~~~~~
@@ -1003,7 +955,6 @@ Syntax: :edit-command [*--run*]
 
 Open an editor to modify the current command.
 
-.. __optional_arguments_19:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1021,14 +972,12 @@ Navigate to a url formed in an external editor.
 The editor which should be launched can be configured via the
 ``editor.command`` config option.
 
-.. __positional_arguments_17:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'url': URL to edit; defaults to the current page url.
 
-.. __optional_arguments_20:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1051,7 +1000,6 @@ Syntax: :enter-mode 'mode'
 
 Enter a key mode.
 
-.. __positional_arguments_18:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1068,14 +1016,12 @@ Send a fake keypress or key string to the website or qutebrowser.
 :fake-key xy - sends the keychain 'xy' :fake-key <Ctrl-x> - sends Ctrl-x
 :fake-key <Escape> - sends the escape key
 
-.. __positional_arguments_19:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'keystring': The keystring to send.
 
-.. __optional_arguments_21:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1090,7 +1036,6 @@ Syntax: :follow-selected [*--tab*]
 
 Follow the selected text.
 
-.. __optional_arguments_22:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1104,7 +1049,6 @@ Syntax: :forward [*--tab*] [*--bg*] [*--window*]
 
 Go forward in the history of the current tab.
 
-.. __optional_arguments_23:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1115,7 +1059,6 @@ optional arguments
 
 -  \*-w*, \*--window*: Go forward in a new window.
 
-.. __count_8:
 
 count
 ~~~~~
@@ -1129,7 +1072,6 @@ Syntax: :fullscreen [*--leave*]
 
 Toggle fullscreen mode.
 
-.. __optional_arguments_24:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1147,7 +1089,6 @@ Re-read Greasemonkey scripts from disk.
 The scripts are read from a 'greasemonkey' subdirectory in qutebrowser’s
 data directory (see ``:version``).
 
-.. __optional_arguments_25:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1162,7 +1103,6 @@ Syntax: :help [*--tab*] [*--bg*] [*--window*] ['topic']
 
 Show help about a command or setting.
 
-.. __positional_arguments_20:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1173,7 +1113,6 @@ positional arguments
 
    -  *section*.\ *option* for settings.
 
-.. __optional_arguments_26:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1192,7 +1131,6 @@ Syntax: :hint [*--mode\* 'mode'] [*--add-history*] [*--rapid*]
 
 Start hinting.
 
-.. __positional_arguments_21:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1258,7 +1196,6 @@ positional arguments
 
    -  With ``run``: Same as ``fill``.
 
-.. __optional_arguments_27:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1283,7 +1220,6 @@ optional arguments
 
 -  \*-f*, \*--first*: Click the first hinted element without prompting.
 
-.. __note_6:
 
 note
 ~~~~
@@ -1298,7 +1234,6 @@ Syntax: :history [*--tab*] [*--bg*] [*--window*]
 
 Show browsing history.
 
-.. __optional_arguments_28:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1320,7 +1255,6 @@ Note this only clears the global history (e.g.
 ``~/.local/share/qutebrowser/history`` on Linux) but not cookies, the
 back/forward history of a tab, cache or other persistent data.
 
-.. __optional_arguments_29:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1339,14 +1273,12 @@ Syntax: :insert-text 'text'
 
 Insert text at cursor position.
 
-.. __positional_arguments_22:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'text': The text to insert.
 
-.. __note_7:
 
 note
 ~~~~
@@ -1369,14 +1301,12 @@ Syntax: :jseval [*--file*] [*--quiet*] [*--world\* 'world'] 'js-code'
 
 Evaluate a JavaScript string.
 
-.. __positional_arguments_23:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'js-code': The string/file to evaluate.
 
-.. __optional_arguments_30:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1390,7 +1320,6 @@ optional arguments
 -  \*-w*, \*--world*: Ignored on QtWebKit. On QtWebEngine, a world ID or
    name to run the snippet in.
 
-.. __note_8:
 
 note
 ~~~~
@@ -1408,7 +1337,6 @@ Syntax: :jump-mark 'key'
 
 Jump to the mark named by ``key``.
 
-.. __positional_arguments_24:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1422,7 +1350,6 @@ Syntax: :later 'ms' 'command'
 
 Execute a command after some time.
 
-.. __positional_arguments_25:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1431,7 +1358,6 @@ positional arguments
 
 -  'command': The command to run, with optional args.
 
-.. __note_9:
 
 note
 ~~~~
@@ -1451,7 +1377,6 @@ Syntax: :message-error 'text'
 
 Show an error message in the statusbar.
 
-.. __positional_arguments_26:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1465,14 +1390,12 @@ Syntax: :message-info 'text'
 
 Show an info message in the statusbar.
 
-.. __positional_arguments_27:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'text': The text to show.
 
-.. __count_9:
 
 count
 ~~~~~
@@ -1486,7 +1409,6 @@ Syntax: :message-warning 'text'
 
 Show a warning message in the statusbar.
 
-.. __positional_arguments_28:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1500,7 +1422,6 @@ Syntax: :messages [*--plain*] [*--tab*] [*--bg*] [*--window*] ['level']
 
 Show a log of past messages.
 
-.. __positional_arguments_29:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1508,7 +1429,6 @@ positional arguments
 -  'level': Include messages with ``level`` or higher severity. Valid
    values: vdebug, debug, info, warning, error, critical.
 
-.. __optional_arguments_31:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1532,7 +1452,6 @@ This tries to automatically click on typical *Previous Page* or *Next
 Page* links using some heuristics. Alternatively it can navigate by
 changing the current URL.
 
-.. __positional_arguments_30:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1553,7 +1472,6 @@ positional arguments
       `url.incdec_segments <settings{outsuffix}#url.incdec_segments>`__
       config option.
 
-.. __optional_arguments_32:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1564,7 +1482,6 @@ optional arguments
 
 -  \*-w*, \*--window*: Open in a new window.
 
-.. __count_10:
 
 count
 ~~~~~
@@ -1587,14 +1504,12 @@ Open a URL in the current/[count]th tab.
 
 If the URL contains newlines, each line gets opened in its own tab.
 
-.. __positional_arguments_31:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'url': The URL to open.
 
-.. __optional_arguments_33:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1612,14 +1527,12 @@ optional arguments
 
 -  \*-p*, \*--private*: Open a new window in private browsing mode.
 
-.. __count_11:
 
 count
 ~~~~~
 
 The tab index to open the URL in.
 
-.. __note_10:
 
 note
 ~~~~
@@ -1642,7 +1555,6 @@ Syntax: :print [*--preview*] [*--pdf\* 'file']
 
 Print the current/[count]th tab.
 
-.. __optional_arguments_34:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1651,7 +1563,6 @@ optional arguments
 
 -  \*-f*, \*--pdf*: The file path to write the PDF to.
 
-.. __count_12:
 
 count
 ~~~~~
@@ -1668,7 +1579,6 @@ Add a new quickmark.
 You can view all saved quickmarks on the `bookmarks
 page <qute://bookmarks>`__.
 
-.. __positional_arguments_32:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1684,7 +1594,6 @@ Syntax: :quickmark-del ['name']
 
 Delete a quickmark.
 
-.. __positional_arguments_33:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1693,7 +1602,6 @@ positional arguments
    quickmark for the current page (choosing one arbitrarily if there are
    more than one).
 
-.. __note_11:
 
 note
 ~~~~
@@ -1708,14 +1616,12 @@ Syntax: :quickmark-load [*--tab*] [*--bg*] [*--window*] 'name'
 
 Load a quickmark.
 
-.. __positional_arguments_34:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'name': The name of the quickmark to load.
 
-.. __optional_arguments_35:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1726,7 +1632,6 @@ optional arguments
 
 -  \*-w*, \*--window*: Load the quickmark in a new window.
 
-.. __note_12:
 
 note
 ~~~~
@@ -1746,14 +1651,12 @@ Syntax: :quit [*--save*] ['session']
 
 Quit qutebrowser.
 
-.. __positional_arguments_35:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'session': The name of the session to save.
 
-.. __optional_arguments_36:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1768,7 +1671,6 @@ Syntax: :record-macro ['register']
 
 Start or stop recording a macro.
 
-.. __positional_arguments_36:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1782,14 +1684,12 @@ Syntax: :reload [*--force*]
 
 Reload the current/[count]th tab.
 
-.. __optional_arguments_37:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-f*, \*--force*: Bypass the page cache.
 
-.. __count_13:
 
 count
 ~~~~~
@@ -1803,7 +1703,6 @@ Syntax: :repeat 'times' 'command'
 
 Repeat a given command.
 
-.. __positional_arguments_37:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1812,14 +1711,12 @@ positional arguments
 
 -  'command': The command to run, with optional args.
 
-.. __count_14:
 
 count
 ~~~~~
 
 Multiplies with 'times' when given.
 
-.. __note_13:
 
 note
 ~~~~
@@ -1837,7 +1734,6 @@ repeat-command
 
 Repeat the last executed command.
 
-.. __count_15:
 
 count
 ~~~~~
@@ -1861,14 +1757,12 @@ Syntax: :run-macro ['register']
 
 Run a recorded macro.
 
-.. __positional_arguments_38:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'register': Which macro to run.
 
-.. __count_16:
 
 count
 ~~~~~
@@ -1884,7 +1778,6 @@ Run a command with the given count.
 
 If run_with_count itself is run with a count, it multiplies count_arg.
 
-.. __positional_arguments_39:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1893,14 +1786,12 @@ positional arguments
 
 -  'command': The command to run, with optional args.
 
-.. __count_17:
 
 count
 ~~~~~
 
 The count that run_with_count itself received.
 
-.. __note_14:
 
 note
 ~~~~
@@ -1920,7 +1811,6 @@ Syntax: :save ['what' ['what' ...]]
 
 Save configs and state.
 
-.. __positional_arguments_40:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1938,7 +1828,6 @@ Scroll the current tab in the given direction.
 Note you can use ``:run-with-count`` to have a keybinding with a bigger
 scroll increment.
 
-.. __positional_arguments_41:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1946,7 +1835,6 @@ positional arguments
 -  'direction': In which direction to scroll
    (up/down/left/right/top/bottom).
 
-.. __count_18:
 
 count
 ~~~~~
@@ -1961,7 +1849,6 @@ Syntax: :scroll-page [*--top-navigate\* 'ACTION'] [*--bottom-navigate\*
 
 Scroll the frame page-wise.
 
-.. __positional_arguments_42:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -1970,7 +1857,6 @@ positional arguments
 
 -  'y': How many pages to scroll down.
 
-.. __optional_arguments_38:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -1981,7 +1867,6 @@ optional arguments
 -  \*-b*, \*--bottom-navigate*: :navigate action (next, increment) to
    run when scrolling down at the bottom of the page.
 
-.. __count_19:
 
 count
 ~~~~~
@@ -1995,7 +1880,6 @@ Syntax: :scroll-px 'dx' 'dy'
 
 Scroll the current tab by 'count \* dx/dy' pixels.
 
-.. __positional_arguments_43:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2004,7 +1888,6 @@ positional arguments
 
 -  'dy': How much to scroll in y-direction.
 
-.. __count_20:
 
 count
 ~~~~~
@@ -2018,7 +1901,6 @@ Syntax: :scroll-to-anchor 'name'
 
 Scroll to the given anchor in the document.
 
-.. __positional_arguments_44:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2035,21 +1917,18 @@ Scroll to a specific percentage of the page.
 The percentage can be given either as argument or as count. If no
 percentage is given, the page is scrolled to the end.
 
-.. __positional_arguments_45:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'perc': Percentage to scroll.
 
-.. __optional_arguments_39:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-x*, \*--horizontal*: Scroll horizontally instead of vertically.
 
-.. __count_21:
 
 count
 ~~~~~
@@ -2063,21 +1942,18 @@ Syntax: :search [*--reverse*] ['text']
 
 Search for a text on the current page. With no text, clear results.
 
-.. __positional_arguments_46:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'text': The text to search for.
 
-.. __optional_arguments_40:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-r*, \*--reverse*: Reverse search direction.
 
-.. __note_15:
 
 note
 ~~~~
@@ -2090,7 +1966,6 @@ search-next
 
 Continue the search to the ([count]th) next term.
 
-.. __count_22:
 
 count
 ~~~~~
@@ -2102,7 +1977,6 @@ search-prev
 
 Continue the search to the ([count]th) previous term.
 
-.. __count_23:
 
 count
 ~~~~~
@@ -2116,14 +1990,12 @@ Syntax: :session-delete [*--force*] 'name'
 
 Delete a session.
 
-.. __positional_arguments_47:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'name': The name of the session.
 
-.. __optional_arguments_41:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2139,14 +2011,12 @@ Syntax: :session-load [*--clear*] [*--temp*] [*--force*] [*--delete*]
 
 Load a session.
 
-.. __positional_arguments_48:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'name': The name of the session.
 
-.. __optional_arguments_42:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2168,7 +2038,6 @@ Syntax: :session-save [*--current*] [*--quiet*] [*--force*]
 
 Save a session.
 
-.. __positional_arguments_49:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2176,7 +2045,6 @@ positional arguments
 -  'name': The name of the session. If not given, the session configured
    in session.default_name is saved.
 
-.. __optional_arguments_43:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2205,7 +2073,6 @@ If the option name ends with '?' or no value is provided, the value of
 the option is shown instead. Using :set without any arguments opens a
 page where settings can be changed interactively.
 
-.. __positional_arguments_50:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2214,7 +2081,6 @@ positional arguments
 
 -  'value': The value to set.
 
-.. __optional_arguments_44:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2232,14 +2098,12 @@ Syntax: :set-cmd-text [*--space*] [*--append*] [*--run-on-count*] 'text'
 
 Preset the statusbar to some text.
 
-.. __positional_arguments_51:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'text': The commandline to set.
 
-.. __optional_arguments_45:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2252,14 +2116,12 @@ optional arguments
 -  \*-r*, \*--run-on-count*: If given with a count, the command is run
    with the given count rather than setting the command text.
 
-.. __count_24:
 
 count
 ~~~~~
 
 The count if given.
 
-.. __note_16:
 
 note
 ~~~~
@@ -2274,7 +2136,6 @@ Syntax: :set-mark 'key'
 
 Set a mark at the current scroll position in the current tab.
 
-.. __positional_arguments_52:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2289,14 +2150,12 @@ Syntax: :spawn [*--userscript*] [*--verbose*] [*--output*] [*--detach*]
 
 Spawn a command in a shell.
 
-.. __positional_arguments_53:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'cmdline': The commandline to execute.
 
-.. __optional_arguments_46:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2316,14 +2175,12 @@ optional arguments
 -  \*-d*, \*--detach*: Whether the command should be detached from
    qutebrowser.
 
-.. __count_25:
 
 count
 ~~~~~
 
 Given to userscripts as $QUTE_COUNT.
 
-.. __note_17:
 
 note
 ~~~~
@@ -2336,7 +2193,6 @@ stop
 
 Stop loading in the current/[count]th tab.
 
-.. __count_26:
 
 count
 ~~~~~
@@ -2350,7 +2206,6 @@ Syntax: :tab-clone [*--bg*] [*--window*]
 
 Duplicate the current tab.
 
-.. __optional_arguments_47:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2366,7 +2221,6 @@ Syntax: :tab-close [*--prev*] [*--next*] [*--opposite*] [*--force*]
 
 Close the current/[count]th tab.
 
-.. __optional_arguments_48:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2380,7 +2234,6 @@ optional arguments
 
 -  \*-f*, \*--force*: Avoid confirmation for pinned tabs.
 
-.. __count_27:
 
 count
 ~~~~~
@@ -2397,7 +2250,6 @@ Select the tab given as argument/[count].
 If neither count nor index are given, it behaves like tab-next. If both
 are given, use count.
 
-.. __positional_arguments_54:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2406,7 +2258,6 @@ positional arguments
    ``last`` focuses the last focused tab (regardless of count). Negative
    indices count from the end, such that -1 is the last tab.
 
-.. __optional_arguments_49:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2414,7 +2265,6 @@ optional arguments
 -  \*-n*, \*--no-last*: Whether to avoid focusing last tab if already
    focused.
 
-.. __count_28:
 
 count
 ~~~~~
@@ -2430,21 +2280,18 @@ Give the current tab to a new or existing window if win_id given.
 
 If no win_id is given, the tab will get detached into a new window.
 
-.. __positional_arguments_55:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'win-id': The window ID of the window to give the current tab to.
 
-.. __optional_arguments_50:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-k*, \*--keep*: If given, keep the old tab around.
 
-.. __count_29:
 
 count
 ~~~~~
@@ -2460,7 +2307,6 @@ Move the current tab according to the argument and [count].
 
 If neither is given, move it to the first position.
 
-.. __positional_arguments_56:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2468,7 +2314,6 @@ positional arguments
 -  'index': ``+`` or ``-`` to move relative to the current tab by count,
    or a default of 1 space. A tab index to move to that index.
 
-.. __count_30:
 
 count
 ~~~~~
@@ -2481,7 +2326,6 @@ tab-mute
 
 Mute/Unmute the current/[count]th tab.
 
-.. __count_31:
 
 count
 ~~~~~
@@ -2493,7 +2337,6 @@ tab-next
 
 Switch to the next tab, or switch [count] tabs forward.
 
-.. __count_32:
 
 count
 ~~~~~
@@ -2507,7 +2350,6 @@ Syntax: :tab-only [*--prev*] [*--next*] [*--force*]
 
 Close all tabs except for the current one.
 
-.. __optional_arguments_51:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2526,7 +2368,6 @@ Pin/Unpin the current/[count]th tab.
 Pinning a tab shrinks it to the size of its title text. Attempting to
 close a pinned tab will cause a confirmation, unless --force is passed.
 
-.. __count_33:
 
 count
 ~~~~~
@@ -2538,7 +2379,6 @@ tab-prev
 
 Switch to the previous tab, or switch [count] tabs back.
 
-.. __count_34:
 
 count
 ~~~~~
@@ -2552,7 +2392,6 @@ Syntax: :tab-take [*--keep*] 'index'
 
 Take a tab from another window.
 
-.. __positional_arguments_57:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2560,14 +2399,12 @@ positional arguments
 -  'index': The [win_id/]index of the tab to take. Or a substring in
    which case the closest match will be taken.
 
-.. __optional_arguments_52:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-k*, \*--keep*: If given, keep the old tab around.
 
-.. __note_18:
 
 note
 ~~~~
@@ -2582,7 +2419,6 @@ Syntax: :unbind [*--mode\* 'mode'] 'key'
 
 Unbind a keychain.
 
-.. __positional_arguments_58:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2590,7 +2426,6 @@ positional arguments
 -  'key': The keychain to unbind. See the help for ``:bind`` for the
    correct syntax for keychains.
 
-.. __optional_arguments_53:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2610,7 +2445,6 @@ Syntax: :version [*--paste*]
 
 Show version information.
 
-.. __optional_arguments_54:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2624,7 +2458,6 @@ Syntax: :view-source [*--edit*] [*--pygments*]
 
 Show the source of the current page in a new tab.
 
-.. __optional_arguments_55:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2648,7 +2481,6 @@ Syntax: :yank [*--sel*] [*--keep*] [*--quiet*] ['what']
 
 Yank something to the clipboard or primary selection.
 
-.. __positional_arguments_59:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -2667,7 +2499,6 @@ positional arguments
 
    -  ``markdown``: Yank title and URL in markdown format.
 
-.. __optional_arguments_56:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2688,21 +2519,18 @@ Set the zoom level for the current tab.
 The zoom can be given as argument or as [count]. If neither is given,
 the zoom is set to the default zoom. If both are given, use [count].
 
-.. __positional_arguments_60:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'level': The zoom percentage to set.
 
-.. __optional_arguments_57:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-q*, \*--quiet*: Don’t show a zoom level message.
 
-.. __count_35:
 
 count
 ~~~~~
@@ -2716,14 +2544,12 @@ Syntax: :zoom-in [*--quiet*]
 
 Increase the zoom level for the current tab.
 
-.. __optional_arguments_58:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-q*, \*--quiet*: Don’t show a zoom level message.
 
-.. __count_36:
 
 count
 ~~~~~
@@ -2737,21 +2563,18 @@ Syntax: :zoom-out [*--quiet*]
 
 Decrease the zoom level for the current tab.
 
-.. __optional_arguments_59:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-q*, \*--quiet*: Don’t show a zoom level message.
 
-.. __count_37:
 
 count
 ~~~~~
 
 How many steps to zoom out.
 
-.. __commands_not_usable_in_normal_mode:
 
 Commands not usable in normal mode
 ==================================
@@ -2964,7 +2787,6 @@ Syntax: :command-accept [*--rapid*]
 
 Execute the command currently in the commandline.
 
-.. __optional_arguments_60:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -2994,14 +2816,12 @@ Syntax: :completion-item-focus [*--history*] 'which'
 
 Shift the focus of the completion menu to another item.
 
-.. __positional_arguments_61:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'which': 'next', 'prev', 'next-category', or 'prev-category'.
 
-.. __optional_arguments_61:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -3016,7 +2836,6 @@ Syntax: :completion-item-yank [*--sel*]
 
 Yank the current completion item into the clipboard.
 
-.. __optional_arguments_62:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -3035,14 +2854,12 @@ Syntax: :follow-hint [*--select*] ['keystring']
 
 Follow a hint.
 
-.. __positional_arguments_62:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'keystring': The hint to follow.
 
-.. __optional_arguments_63:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -3070,7 +2887,6 @@ move-to-end-of-next-block
 
 Move the cursor or selection to the end of next block.
 
-.. __count_38:
 
 count
 ~~~~~
@@ -3082,7 +2898,6 @@ move-to-end-of-prev-block
 
 Move the cursor or selection to the end of previous block.
 
-.. __count_39:
 
 count
 ~~~~~
@@ -3094,7 +2909,6 @@ move-to-end-of-word
 
 Move the cursor or selection to the end of the word.
 
-.. __count_40:
 
 count
 ~~~~~
@@ -3106,7 +2920,6 @@ move-to-next-char
 
 Move the cursor or selection to the next char.
 
-.. __count_41:
 
 count
 ~~~~~
@@ -3118,7 +2931,6 @@ move-to-next-line
 
 Move the cursor or selection to the next line.
 
-.. __count_42:
 
 count
 ~~~~~
@@ -3130,7 +2942,6 @@ move-to-next-word
 
 Move the cursor or selection to the next word.
 
-.. __count_43:
 
 count
 ~~~~~
@@ -3142,7 +2953,6 @@ move-to-prev-char
 
 Move the cursor or selection to the previous char.
 
-.. __count_44:
 
 count
 ~~~~~
@@ -3154,7 +2964,6 @@ move-to-prev-line
 
 Move the cursor or selection to the prev line.
 
-.. __count_45:
 
 count
 ~~~~~
@@ -3166,7 +2975,6 @@ move-to-prev-word
 
 Move the cursor or selection to the previous word.
 
-.. __count_46:
 
 count
 ~~~~~
@@ -3188,7 +2996,6 @@ move-to-start-of-next-block
 
 Move the cursor or selection to the start of next block.
 
-.. __count_47:
 
 count
 ~~~~~
@@ -3200,7 +3007,6 @@ move-to-start-of-prev-block
 
 Move the cursor or selection to the start of previous block.
 
-.. __count_48:
 
 count
 ~~~~~
@@ -3214,7 +3020,6 @@ Syntax: :prompt-accept ['value']
 
 Accept the current prompt.
 
-.. __positional_arguments_63:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3229,7 +3034,6 @@ Syntax: :prompt-item-focus 'which'
 
 Shift the focus of the prompt file completion menu to another item.
 
-.. __positional_arguments_64:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3246,7 +3050,6 @@ Immediately open a download.
 If no specific command is given, this will use the system’s default
 application to open the file.
 
-.. __positional_arguments_65:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3255,14 +3058,12 @@ positional arguments
    ``{}`` is expanded to the temporary file name. If no ``{}`` is
    present, the filename is automatically appended to the cmdline.
 
-.. __optional_arguments_64:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
 
 -  \*-p*, \*--pdfjs*: Open the download via PDF.js.
 
-.. __note_19:
 
 note
 ~~~~
@@ -3277,7 +3078,6 @@ Syntax: :prompt-yank [*--sel*]
 
 Yank URL to clipboard or primary selection.
 
-.. __optional_arguments_65:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -3396,7 +3196,6 @@ toggle-selection
 
 Toggle caret selection mode.
 
-.. __debugging_commands:
 
 Debugging commands
 ==================
@@ -3493,7 +3292,6 @@ Syntax: :debug-crash ['typ']
 
 Crash for debugging purposes.
 
-.. __positional_arguments_66:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3507,7 +3305,6 @@ Syntax: :debug-dump-history 'dest'
 
 Dump the history to a file in the old pre-SQL format.
 
-.. __positional_arguments_67:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3521,14 +3318,12 @@ Syntax: :debug-dump-page [*--plain*] 'dest'
 
 Dump the current page’s content to a file.
 
-.. __positional_arguments_68:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'dest': Where to write the file to.
 
-.. __optional_arguments_66:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -3542,7 +3337,6 @@ Syntax: :debug-log-capacity 'capacity'
 
 Change the number of log lines to be stored in RAM.
 
-.. __positional_arguments_69:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3556,7 +3350,6 @@ Syntax: :debug-log-filter 'filters'
 
 Change the log filter for console logging.
 
-.. __positional_arguments_70:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3571,7 +3364,6 @@ Syntax: :debug-log-level 'level'
 
 Change the log level for console logging.
 
-.. __positional_arguments_71:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3585,14 +3377,12 @@ Syntax: :debug-pyeval [*--file*] [*--quiet*] 's'
 
 Evaluate a python string and display the results as a web page.
 
-.. __positional_arguments_72:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  's': The string to evaluate.
 
-.. __optional_arguments_67:
 
 optional arguments
 ~~~~~~~~~~~~~~~~~~
@@ -3602,7 +3392,6 @@ optional arguments
 
 -  \*-q*, \*--quiet*: Don’t show the output in a new tab.
 
-.. __note_20:
 
 note
 ~~~~
@@ -3620,7 +3409,6 @@ Syntax: :debug-set-fake-clipboard ['s']
 
 Put data into the fake clipboard and enable logging, used for tests.
 
-.. __positional_arguments_73:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
@@ -3635,14 +3423,12 @@ Syntax: :debug-trace ['expr']
 
 Trace executed code via hunter.
 
-.. __positional_arguments_74:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'expr': What to trace, passed to hunter.
 
-.. __note_21:
 
 note
 ~~~~
@@ -3664,14 +3450,12 @@ Available actions:
 http://doc.qt.io/archives/qt-5.5/qwebpage.html#WebAction-enum (WebKit)
 http://doc.qt.io/qt-5/qwebenginepage.html#WebAction-enum (WebEngine)
 
-.. __positional_arguments_75:
 
 positional arguments
 ~~~~~~~~~~~~~~~~~~~~
 
 -  'action': The action to execute, e.g. MoveToNextChar.
 
-.. __count_49:
 
 count
 ~~~~~

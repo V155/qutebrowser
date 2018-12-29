@@ -2,15 +2,12 @@
 qutebrowser quickstart
 ======================
 
-:Author: The Compiler mail@qutebrowser.org
-:Date:   2018-12-12
 
    **Note**
 
    This page will only appear on the first start. To view it at a later
    time, use the ``:help`` command.
 
-.. __basic_keybindings_to_get_you_started:
 
 Basic keybindings to get you started
 ====================================
@@ -48,7 +45,6 @@ Basic keybindings to get you started
    the currently open tabs and quit (note that in the settings you can
    make qutebrowser always save the currently open tabs)
 
-.. __what_to_do_now:
 
 What to do now
 ==============
@@ -80,7 +76,6 @@ What to do now
 -  Let me know what features you are missing or things that need (even
    small!) improvements.
 
-.. __getting_help:
 
 Getting help
 ============
@@ -99,7 +94,6 @@ If you get stuck, you can get help in multiple ways:
 -  Mailinglist: qutebrowser@lists.qutebrowser.org (
    `subscribe <https://lists.schokokeks.org/mailman/listinfo.cgi/qutebrowser>`__)
 
-.. __donating:
 
 Donating
 ========

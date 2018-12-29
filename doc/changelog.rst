@@ -2,19 +2,16 @@
 Change Log
 ==========
 
-:Date:   2018-12-29
 
 All notable changes to this project will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`__,
 though minor breaking changes (such as renamed commands) can happen in
 minor releases.
 
-.. __v1_6_0_unreleased:
 
 v1.6.0 (unreleased)
 ===================
 
-.. __added:
 
 Added
 -----
@@ -41,7 +38,6 @@ Added
 -  New ``:yank markdown`` feature which yanks the current URL and title
    in markdown format.
 
-.. __changed:
 
 Changed
 -------
@@ -73,7 +69,6 @@ Changed
 -  The Wayland check for QtWebEngine is now disabled on Qt >= 5.11.2, as
    those versions should work without any issues.
 
-.. __fixed:
 
 Fixed
 -----
@@ -103,12 +98,10 @@ Fixed
 
 -  Slashes in search terms are now percent-escaped.
 
-.. __v1_5_2:
 
 v1.5.2
 ======
 
-.. __changed_2:
 
 Changed
 -------
@@ -117,12 +110,10 @@ Changed
    of ``no-3rdparty`` by default, as ``no-3rdparty`` breaks various
    pages such as GMail.
 
-.. __v1_5_1:
 
 v1.5.1
 ======
 
-.. __fixed_2:
 
 Fixed
 -----
@@ -141,12 +132,10 @@ Fixed
 
 -  Tabs appearing when hidden after e.g. closing tabs.
 
-.. __v1_5_0:
 
 v1.5.0
 ======
 
-.. __added_2:
 
 Added
 -----
@@ -199,7 +188,6 @@ Added
 -  When ``:spawn --userscript`` is called with a count, that count is
    now passed to userscripts as ``$QUTE_COUNT``.
 
-.. __changed_3:
 
 Changed
 -------
@@ -268,7 +256,6 @@ Changed
 
 -  ``:navigate`` now clears the URL query.
 
-.. __fixed_3:
 
 Fixed
 -----
@@ -294,7 +281,6 @@ Fixed
 
 -  Rare crash related to the completion.
 
-.. __removed:
 
 Removed
 -------
@@ -304,12 +290,10 @@ Removed
 -  The ``content.webrtc_public_interfaces_only`` setting has been
    removed and replaced by ``content.webrtc_ip_handling_policy``.
 
-.. __v1_4_2:
 
 v1.4.2
 ======
 
-.. __changed_4:
 
 Changed
 -------
@@ -321,7 +305,6 @@ Changed
    the middle, to make sure the hostname is completely visible whenever
    possible.
 
-.. __fixed_4:
 
 Fixed
 -----
@@ -357,12 +340,10 @@ Fixed
 -  The ``:buffer`` completion now sorts tabs with indices >= 10
    correctly again.
 
-.. __v1_4_1:
 
 v1.4.1
 ======
 
-.. __security:
 
 Security
 --------
@@ -371,7 +352,6 @@ Security
    to possible arbitrary code execution. See the related GitHub issue
    for details: https://github.com/qutebrowser/qutebrowser/issues/4060
 
-.. __fixed_5:
 
 Fixed
 -----
@@ -392,12 +372,10 @@ Fixed
    installing the new one, fixing issues with qutebrowser not starting
    after installing v1.4.0 over v1.3.3.
 
-.. __v1_4_0:
 
 v1.4.0
 ======
 
-.. __added_3:
 
 Added
 -----
@@ -459,7 +437,6 @@ Added
    -  New ``content.canvas_reading`` setting to disable reading from
       canvas elements.
 
-.. __changed_5:
 
 Changed
 -------
@@ -548,7 +525,6 @@ Changed
 -  Greasemonkey scripts now support a "@qute-js-world" tag to run them
    in a different JavaScript context.
 
-.. __fixed_6:
 
 Fixed
 -----
@@ -564,7 +540,6 @@ Fixed
 
 -  Crash when closing a tab shortly after opening it.
 
-.. __removed_2:
 
 Removed
 -------
@@ -581,12 +556,10 @@ Removed
    developer extras are now automatically enabled when opening the
    inspector.
 
-.. __v1_3_3:
 
 v1.3.3
 ======
 
-.. __security_2:
 
 Security
 --------
@@ -599,7 +572,6 @@ Security
    `#4011 <https://github.com/qutebrowser/qutebrowser/issues/4011>`__
    for updates.
 
-.. __fixed_7:
 
 Fixed
 -----
@@ -612,12 +584,10 @@ Fixed
    accidentally introduced. Since that module isn’t packaged everywhere,
    it’s been removed again.
 
-.. __v1_3_2:
 
 v1.3.2
 ======
 
-.. __fixed_8:
 
 Fixed
 -----
@@ -635,12 +605,10 @@ Fixed
 -  QtWebEngine: It’s now possible to open external links such as
    ``magnet://`` or ``mailto:`` via hints.
 
-.. __v1_3_1:
 
 v1.3.1
 ======
 
-.. __fixed_9:
 
 Fixed
 -----
@@ -658,12 +626,10 @@ Fixed
 
 -  Don’t crash when a tab is opened and quickly closed again.
 
-.. __v1_3_0:
 
 v1.3.0
 ======
 
-.. __added_4:
 
 Added
 -----
@@ -683,7 +649,6 @@ Added
 
    -  ``qute-keepass`` to get passwords from KeePassX.
 
-.. __changed_6:
 
 Changed
 -------
@@ -720,7 +685,6 @@ Changed
 -  Error messages when trying to wrap when ``tabs.wrap`` is ``False``
    are now logged to debug instead of messages.
 
-.. __fixed_10:
 
 Fixed
 -----
@@ -795,12 +759,10 @@ Fixed
 
 -  The macOS release now should work again on macOS 10.11 and newer.
 
-.. __v1_2_1:
 
 v1.2.1
 ======
 
-.. __fixed_11:
 
 Fixed
 -----
@@ -832,12 +794,10 @@ Fixed
 -  Shortcuts now correctly use ``Ctrl`` instead of ``Command`` on macOS
    again.
 
-.. __v1_2_0:
 
 v1.2.0
 ======
 
-.. __added_5:
 
 Added
 -----
@@ -917,7 +877,6 @@ Added
 -  New ``cycle-inputs.js`` script in ``scripts/`` which can be used with
    ``:jseval -f`` to cycle through inputs.
 
-.. __changed_7:
 
 Changed
 -------
@@ -984,7 +943,6 @@ Changed
 
 -  Replacements like ``{url}`` can now be escaped as ``{{url}}``.
 
-.. __fixed_12:
 
 Fixed
 -----
@@ -1054,7 +1012,6 @@ Fixed
 
 -  Bindings to an empty commands are now ignored rather than crashing.
 
-.. __removed_3:
 
 Removed
 -------
@@ -1068,12 +1025,10 @@ Removed
 -  The ``tabs.persist_mode_on_change`` setting has been removed and
    replaced by ``tabs.mode_on_change``.
 
-.. __v1_1_2:
 
 v1.1.2
 ======
 
-.. __changed_8:
 
 Changed
 -------
@@ -1081,7 +1036,6 @@ Changed
 -  Windows/macOS releases now bundle Qt 5.10.1 which includes security
    fixes from Chromium up to version 64.0.3282.140.
 
-.. __fixed_13:
 
 Fixed
 -----
@@ -1090,12 +1044,10 @@ Fixed
 
 -  Compatibility with Python 3.7
 
-.. __v1_1_1:
 
 v1.1.1
 ======
 
-.. __fixed_14:
 
 Fixed
 -----
@@ -1105,12 +1057,10 @@ Fixed
 -  Fixed crashes with Qt 5.10 when closing a tab before it finished
    loading.
 
-.. __v1_1_0:
 
 v1.1.0
 ======
 
-.. __added_6:
 
 Added
 -----
@@ -1200,7 +1150,6 @@ Added
 -  New ``hist_importer.py`` script to import history from
    Firefox/Chromium.
 
-.. __changed_9:
 
 Changed
 -------
@@ -1278,7 +1227,6 @@ Changed
 -  The ``colors.completion.fg`` setting can now be a list, allowing to
    specify different colors for the three completion columns.
 
-.. __fixed_15:
 
 Fixed
 -----
@@ -1328,7 +1276,6 @@ Fixed
 
 -  Fixed a crash when clicking certain form elements with QtWebEngine.
 
-.. __deprecated:
 
 Deprecated
 ----------
@@ -1336,7 +1283,6 @@ Deprecated
 -  ``:tab-detach`` has been deprecated, as ``:tab-give`` without
    argument can be used instead.
 
-.. __removed_4:
 
 Removed
 -------
@@ -1353,12 +1299,10 @@ Removed
 -  The ``x[xtb]`` default bindings got removed again as many users
    accidentally triggered them.
 
-.. __v1_0_4:
 
 v1.0.4
 ======
 
-.. __fixed_16:
 
 Fixed
 -----
@@ -1376,12 +1320,10 @@ Fixed
 
 -  Fix crash when setting content.cache.size to a big value (> 2 GB)
 
-.. __v1_0_3:
 
 v1.0.3
 ======
 
-.. __changed_10:
 
 Changed
 -------
@@ -1395,7 +1337,6 @@ Changed
 -  The :open-editor command is now not hidden anymore as it’s also
    usable in normal mode.
 
-.. __fixed_17:
 
 Fixed
 -----
@@ -1409,12 +1350,10 @@ Fixed
 
 -  Completions are now sorted correctly again when filtered
 
-.. __v1_0_2:
 
 v1.0.2
 ======
 
-.. __fixed_18:
 
 Fixed
 -----
@@ -1432,19 +1371,16 @@ Fixed
 
 -  Fix wrong rendering of keys like ``<back>`` in the completion
 
-.. __changed_11:
 
 Changed
 -------
 
 -  Nicer error messages and other minor improvements
 
-.. __v1_0_1:
 
 v1.0.1
 ======
 
-.. __fixed_19:
 
 Fixed
 -----
@@ -1457,12 +1393,10 @@ Fixed
 
 -  Fixed check for PyQt version to correctly enforce 5.7 (not 5.2).
 
-.. __v1_0_0:
 
 v1.0.0
 ======
 
-.. __major_changes:
 
 Major changes
 -------------
@@ -1513,7 +1447,6 @@ Major changes
    completion, or `restore the old
    behavior <https://github.com/qutebrowser/qutebrowser/blob/master/doc/help/configuring.asciidoc#migrating-older-configurations>`__.
 
-.. __added_7:
 
 Added
 -----
@@ -1551,7 +1484,6 @@ Added
 
 -  QtWebEngine: Support for proxy authentication.
 
-.. __changed_12:
 
 Changed
 -------
@@ -1574,7 +1506,6 @@ Changed
 
 -  ``:scroll-perc`` got renamed to ``:scroll-to-perc``.
 
-.. __removed_5:
 
 Removed
 -------
@@ -1588,7 +1519,6 @@ Removed
 -  The ``--harfbuzz`` and ``--relaxed-config`` commandline arguments got
    dropped.
 
-.. __fixes:
 
 Fixes
 -----
@@ -1605,12 +1535,10 @@ Fixes
 -  The ``window.hide_wayland_decoration`` setting now works correctly
    again.
 
-.. __v0_11_1:
 
 v0.11.1
 =======
 
-.. __fixes_2:
 
 Fixes
 -----
@@ -1629,12 +1557,10 @@ Fixes
 
 -  :spawn -d shows error messages correctly now.
 
-.. __v0_11_0:
 
 v0.11.0
 =======
 
-.. __new_dependencies:
 
 New dependencies
 ----------------
@@ -1646,7 +1572,6 @@ New dependencies
 
 -  New dependency on ``PyOpenGL`` if QtWebEngine is used.
 
-.. __added_8:
 
 Added
 -----
@@ -1685,7 +1610,6 @@ Added
 -  (QtWebEngine) Proxy support with Qt 5.7.1 (already was supported for
    5.8 and newer)
 
-.. __changed_13:
 
 Changed
 -------
@@ -1766,7 +1690,6 @@ Changed
 
 -  (QtWebKit) PAC now supports SOCKS5 as type.
 
-.. __fixed_20:
 
 Fixed
 -----
@@ -1844,12 +1767,10 @@ Fixed
 
 -  (QtWebKit) Fixed Crash when a PAC file returns an invalid value.
 
-.. __v0_10_1:
 
 v0.10.1
 =======
 
-.. __changed_14:
 
 Changed
 -------
@@ -1857,7 +1778,6 @@ Changed
 -  ``--qt-arg`` and ``--qt-flag`` can now also be used to pass arguments
    to Chromium when using QtWebEngine.
 
-.. __fixed_21:
 
 Fixed
 -----
@@ -1885,12 +1805,10 @@ Fixed
 
 -  Crash when trying to open a file twice on Windows
 
-.. __v0_10_0:
 
 v0.10.0
 =======
 
-.. __added_9:
 
 Added
 -----
@@ -1936,7 +1854,6 @@ Added
 
 -  macOS builds are back, and built with QtWebEngine
 
-.. __changed_15:
 
 Changed
 -------
@@ -1965,7 +1882,6 @@ Changed
 -  ``network -> proxy`` can also be set to ``pac+file://...`` now to use
    a local proxy autoconfig file (on QtWebKit)
 
-.. __removed_6:
 
 Removed
 -------
@@ -1989,7 +1905,6 @@ Removed
    -  ``storage -> offline-storage-database`` (merged into
       ``storage -> local-storage``)
 
-.. __fixed_22:
 
 Fixed
 -----
@@ -2050,12 +1965,10 @@ Fixed
 
 -  Lines in Jupyter notebook now trigger insert mode
 
-.. __v0_9_1:
 
 v0.9.1
 ======
 
-.. __fixed_23:
 
 Fixed
 -----
@@ -2063,12 +1976,10 @@ Fixed
 -  Prevent websites from downloading files to a location outside of the
    download folder with QtWebEngine.
 
-.. __v0_9_0:
 
 v0.9.0
 ======
 
-.. __added_10:
 
 Added
 -----
@@ -2140,7 +2051,6 @@ Added
 
 -  Support for PAC (proxy autoconfig) with QtWebKit
 
-.. __changed_16:
 
 Changed
 -------
@@ -2320,7 +2230,6 @@ Changed
 -  ``:open`` now opens ``default-page`` without a URL even without
    ``-t``/``-b``/``-w`` given.
 
-.. __deprecated_2:
 
 Deprecated
 ----------
@@ -2334,7 +2243,6 @@ Deprecated
 -  The ``:prompt-yes`` and ``:prompt-no`` commands got deprecated as
    ``:prompt-accept yes`` and ``:prompt-accept no`` can be used instead.
 
-.. __removed_7:
 
 Removed
 -------
@@ -2361,7 +2269,6 @@ Removed
 -  The ``-c``/``--confdir``, ``--datadir`` and ``--cachedir`` arguments
    got removed, as ``--basedir`` should be sufficient.
 
-.. __fixed_24:
 
 Fixed
 -----
@@ -2385,12 +2292,10 @@ Fixed
 
 -  Fixed crash when a included HTML was not found
 
-.. __v0_8_3:
 
 v0.8.3
 ======
 
-.. __fixed_25:
 
 Fixed
 -----
@@ -2423,12 +2328,10 @@ Fixed
 
 -  Userscripts now can access QUTE_FIFO correctly on Windows
 
-.. __v0_8_2:
 
 v0.8.2
 ======
 
-.. __fixed_26:
 
 Fixed
 -----
@@ -2467,12 +2370,10 @@ Fixed
 -  Fixed ``:restart`` deleting the basedir when it was given with
    ``--basedir``.
 
-.. __v0_8_1:
 
 v0.8.1
 ======
 
-.. __fixed_27:
 
 Fixed
 -----
@@ -2484,12 +2385,10 @@ Fixed
 
 -  Hide Harfbuzz warning with the macOS .app
 
-.. __v0_8_0:
 
 v0.8.0
 ======
 
-.. __added_11:
 
 Added
 -----
@@ -2519,7 +2418,6 @@ Added
 -  New ``--pdf <filename>`` argument for ``:print`` WHICH can be used to
    generate a PDF without a dialog.
 
-.. __changed_17:
 
 Changed
 -------
@@ -2542,7 +2440,6 @@ Changed
 -  ``:bookmark-del`` and ``:quickmark-del`` now delete the current
    page’s URL if none is given.
 
-.. __fixed_28:
 
 Fixed
 =====
@@ -2557,7 +2454,6 @@ Fixed
 -  Using ``:jump-mark`` (e.g. ``''``) when the current URL is invalid
    doesn’t crash anymore.
 
-.. __removed_8:
 
 Removed
 =======
@@ -2573,12 +2469,10 @@ Removed
 -  ``:edit-url`` now doesn’t accept a count anymore as its behavior was
    confusing and it doesn’t make much sense to add a count.
 
-.. __v0_7_0:
 
 v0.7.0
 ======
 
-.. __added_12:
 
 Added
 -----
@@ -2620,7 +2514,6 @@ Added
 
 -  New ``inputs`` group for ``:hint`` to hint text input fields.
 
-.. __changed_18:
 
 Changed
 -------
@@ -2678,7 +2571,6 @@ Changed
    consequence, URLs which redirect to another URL are now added to the
    history too, marked with a ``-r`` suffix to the timestamp field.
 
-.. __fixed_29:
 
 Fixed
 =====
@@ -2729,12 +2621,10 @@ Fixed
 
 -  Strip off trailing spaces for history entries with no title
 
-.. __v0_6_2:
 
 v0.6.2
 ======
 
-.. __fixed_30:
 
 Fixed
 -----
@@ -2751,12 +2641,10 @@ Fixed
 
 -  Fixed various crashes related to PyQt 5.6
 
-.. __v0_6_1:
 
 v0.6.1
 ======
 
-.. __fixed_31:
 
 Fixed
 -----
@@ -2771,12 +2659,10 @@ Fixed
 -  Added workaround for a Qt/PyQt bug which is too weird to describe
    here
 
-.. __v0_6_0:
 
 v0.6.0
 ======
 
-.. __added_13:
 
 Added
 -----
@@ -2809,7 +2695,6 @@ Added
 -  New ``current`` hinting mode which forces opening hints in the
    current tab (even with ``target="_blank"``)
 
-.. __changed_19:
 
 Changed
 -------
@@ -2841,7 +2726,6 @@ Changed
 -  Blocked hosts are now also read from a ``blocked-hosts`` file in the
    config dir (e.g. ``~/.config/qutebrowser/blocked-hosts``).
 
-.. __fixed_32:
 
 Fixed
 -----
@@ -2885,7 +2769,6 @@ Fixed
 -  Fixed "Frame load interrupted by policy change" error showing up when
    downloading files with Qt 5.6.
 
-.. __removed_9:
 
 Removed
 -------
@@ -2894,12 +2777,10 @@ Removed
    were removed (except for existing configs) to make room for the
    ``gt`` binding to show buffers.
 
-.. __v0_5_1:
 
 v0.5.1
 ======
 
-.. __fixed_33:
 
 Fixed
 -----
@@ -2911,12 +2792,10 @@ Fixed
 -  Prevented an error being logged when a website with HTTP
    authentication was opened on Windows.
 
-.. __v0_5_0:
 
 v0.5.0
 ======
 
-.. __added_14:
 
 Added
 -----
@@ -2992,7 +2871,6 @@ Added
 -  New option ``tabs -> title-alignment`` to change the alignment of tab
    titles.
 
-.. __changed_20:
 
 Changed
 -------
@@ -3042,7 +2920,6 @@ Changed
 -  A search engine name can now contain any non-space character, like
    dashes.
 
-.. __deprecated_3:
 
 Deprecated
 ----------
@@ -3053,7 +2930,6 @@ Deprecated
 -  ``:download <url> <destination>`` is now deprecated and
    ``:download --dest <destination> <url>`` should be used instead.
 
-.. __removed_10:
 
 Removed
 -------
@@ -3069,7 +2945,6 @@ Removed
 
 -  The ``:download-page`` command (deprecated in v0.2.0)
 
-.. __fixed_34:
 
 Fixed
 -----
@@ -3112,12 +2987,10 @@ Fixed
 
 -  Removed ``.pyc`` files accidentally contained in source releases.
 
-.. __v0_4_1:
 
 v0.4.1
 ======
 
-.. __fixed_35:
 
 Fixed
 -----
@@ -3145,12 +3018,10 @@ Fixed
 
 -  Fixed various ``PendingDeprecationWarnings`` shown with Python 3.5.
 
-.. __v0_4_0:
 
 v0.4.0
 ======
 
-.. __added_15:
 
 Added
 -----
@@ -3192,7 +3063,6 @@ Added
 
 -  Directory browsing via ``file://`` is now supported.
 
-.. __changed_21:
 
 Changed
 -------
@@ -3229,7 +3099,6 @@ Changed
 
 -  Better support for Qt 5.5 and Python 3.5.
 
-.. __fixed_36:
 
 Fixed
 -----
@@ -3281,7 +3150,6 @@ Fixed
 -  Fixed a race-condition causing an exception when starting
    qutebrowser.
 
-.. __removed_11:
 
 Removed
 -------
@@ -3292,12 +3160,10 @@ Removed
 -  The ``tabs -> hide-always`` and ``tabs -> hide-auto`` settings got
    merged into the new ``tabs -> show`` setting.
 
-.. __v0_3_0:
 
 v0.3.0
 ======
 
-.. __added_16:
 
 Added
 -----
@@ -3372,7 +3238,6 @@ Added
 
 -  Support for Qt 5.5 and tox 2.0
 
-.. __changed_22:
 
 Changed
 -------
@@ -3418,7 +3283,6 @@ Changed
 
 -  Sessions now store zoom/scroll-position separately for each entry.
 
-.. __deprecated_4:
 
 Deprecated
 ----------
@@ -3426,7 +3290,6 @@ Deprecated
 -  ``:scroll`` with two pixel-arguments is now deprecated -
    ``:scroll-px`` should be used instead.
 
-.. __removed_12:
 
 Removed
 -------
@@ -3437,7 +3300,6 @@ Removed
 
 -  Support for Qt installations without SSL support was dropped.
 
-.. __fixed_37:
 
 Fixed
 -----
@@ -3483,24 +3345,20 @@ Fixed
 
 -  Sessions now store zoom/scroll-position correctly.
 
-.. __v0_2_1:
 
 `v0.2.1 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.2.1>`__
 ===========================================================================
 
-.. __fixed_38:
 
 Fixed
 -----
 
 -  Added missing manpage (doc/qutebrowser.1.asciidoc) to archive.
 
-.. __v0_2_0:
 
 `v0.2.0 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.2.0>`__
 ===========================================================================
 
-.. __added_17:
 
 Added
 -----
@@ -3663,7 +3521,6 @@ Added
 -  Alternating row colors in completion. This adds a new
    ``colors -> completion.alternate-bg`` option.
 
-.. __changed_23:
 
 Changed
 -------
@@ -3762,7 +3619,6 @@ Changed
    -  Use `hunter <https://github.com/ionelmc/python-hunter>`__ for line
       tracing instead of a selfmade solution.
 
-.. __deprecated_5:
 
 Deprecated
 ----------
@@ -3777,7 +3633,6 @@ Deprecated
 
 -  The ``:download-page`` command - use ``:download`` instead.
 
-.. __removed_13:
 
 Removed
 -------
@@ -3786,7 +3641,6 @@ Removed
    `tox <http://tox.readthedocs.org/>`__. Install tox and run
    ``tox -e mkvenv`` instead..
 
-.. __fixed_39:
 
 Fixed
 -----
@@ -3831,12 +3685,10 @@ Fixed
 
 -  Various other fixes for small/rare bugs.
 
-.. __v0_1_4:
 
 `v0.1.4 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.4>`__
 ===========================================================================
 
-.. __changed_24:
 
 Changed
 -------
@@ -3860,7 +3712,6 @@ Changed
 
 -  Improve parsing of ``faulthandler`` logs.
 
-.. __removed_14:
 
 Removed
 -------
@@ -3869,7 +3720,6 @@ Removed
 
 -  Remove debug console completing completely.
 
-.. __fixed_40:
 
 Fixed
 -----
@@ -3898,7 +3748,6 @@ Fixed
 
 -  Ignore tab key presses if they’d switch focus.
 
-.. __security_3:
 
 Security
 --------
@@ -3908,12 +3757,10 @@ Security
 
 -  Disable insecure SSL ciphers.
 
-.. __v0_1_3:
 
 `v0.1.3 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.3>`__
 ===========================================================================
 
-.. __changed_25:
 
 Changed
 -------
@@ -3926,7 +3773,6 @@ Changed
 
 -  Hide adblocked iframes.
 
-.. __fixed_41:
 
 Fixed
 -----
@@ -3959,19 +3805,16 @@ Fixed
 
 -  Handle ``UnicodeDecodeError`` when reading configs.
 
-.. __security_4:
 
 Security
 --------
 
 -  Fix for HTTP passwords accidentally being written to debug log.
 
-.. __v0_1_2:
 
 `v0.1.2 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.2>`__
 ===========================================================================
 
-.. __changed_26:
 
 Changed
 -------
@@ -3980,14 +3823,12 @@ Changed
 
 -  Add SSL info to version info.
 
-.. __removed_15:
 
 Removed
 -------
 
 -  Remove hosts-file.net from blocker default lists.
 
-.. __fixed_42:
 
 Fixed
 -----
@@ -4020,12 +3861,10 @@ Fixed
 
 -  Fix user-stylesheet setting with an empty value.
 
-.. __v0_1_1:
 
 `v0.1.1 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1.1>`__
 ===========================================================================
 
-.. __added_18:
 
 Added
 -----
@@ -4040,7 +3879,6 @@ Added
 
 -  Open and remove clicked downloads.
 
-.. __changes:
 
 Changes
 -------
@@ -4072,14 +3910,12 @@ Changes
 
 -  Various other small improvements and cleanups.
 
-.. __removed_16:
 
 Removed
 -------
 
 -  Clean up and temporarily disable alias completion.
 
-.. __fixed_43:
 
 Fixed
 -----
@@ -4126,7 +3962,6 @@ Fixed
 
 -  Fix crash with ``:zoom``.
 
-.. __v0_1:
 
 `v0.1 <https://github.com/qutebrowser/qutebrowser/releases/tag/v0.1>`__
 =======================================================================

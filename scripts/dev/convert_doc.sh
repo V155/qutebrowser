@@ -18,7 +18,11 @@ tmpdir=$(mktemp -d)
 
 asciidoctor -b docbook5 -D "$tmpdir" "$@"
 for f in "$tmpdir"/*.xml; do
-    pandoc -f docbook -t rst --standalone -o "${f/.xml/}".rst "$f"
+    out="${f/.xml/}".rst
+    pandoc -f docbook -t rst --standalone -o "$out" "$f"
+    sed -i '/^\.\. __/d' "$out"
+    sed -i '/^:Date:/d' "$out"
+    sed -i '/^:Author:/d' "$out"
 done
 
 cp "$tmpdir"/*.rst .

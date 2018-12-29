@@ -2,7 +2,6 @@
 qutebrowser(1)
 ==============
 
-:Date:   2018-12-12
 
 qutebrowser
 1
@@ -12,7 +11,6 @@ qutebrowser
 a keyboard-driven, vim-like browser based on PyQt5.
 **qutebrowser** ['-OPTION' ['…​']] [':COMMAND' ['…​']] ['URL' ['…​']]
 
-.. __description:
 
 DESCRIPTION
 ===========
@@ -27,12 +25,10 @@ Note the commands and settings of qutebrowser are not described in this
 manpage, but in the help integrated in qutebrowser - use the ":help"
 command to show it.
 
-.. __options:
 
 OPTIONS
 =======
 
-.. __positional_arguments:
 
 positional arguments
 --------------------
@@ -43,7 +39,6 @@ positional arguments
 **'URL'**
    URLs to open on startup (empty as a window separator).
 
-.. __optional_arguments:
 
 optional arguments
 ------------------
@@ -80,7 +75,6 @@ optional arguments
    for more details. This is not needed anymore since Qt 5.11 where the
    inspector is always enabled and secure.
 
-.. __debug_arguments:
 
 debug arguments
 ---------------
@@ -126,7 +120,6 @@ debug arguments
 **-D** 'DEBUG_FLAGS', **--debug-flag** 'DEBUG_FLAGS'
    Pass name of debugging feature to be turned on.
 
-.. __files:
 
 FILES
 =====
@@ -147,7 +140,6 @@ Note qutebrowser conforms to the XDG basedir specification - if
 environment, the directories configured there are used instead of the
 above defaults.
 
-.. __bugs:
 
 BUGS
 ====
@@ -165,7 +157,6 @@ at qutebrowser@lists.qutebrowser.org instead.
 For security bugs, please contact me directly at me@the-compiler.org,
 GPG ID `0xFD55A072 <https://www.the-compiler.org/pubkey.asc>`__.
 
-.. __copyright:
 
 COPYRIGHT
 =========
@@ -183,7 +174,6 @@ Public License for more details.
 You should have received a copy of the GNU General Public License along
 with this program. If not, see http://www.gnu.org/licenses/.
 
-.. __resources:
 
 RESOURCES
 =========
@@ -202,7 +192,6 @@ RESOURCES
 
 -  Github: https://github.com/qutebrowser/qutebrowser
 
-.. __author:
 
 AUTHOR
 ======
